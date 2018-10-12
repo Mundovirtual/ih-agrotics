@@ -24,16 +24,16 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-10">
-					<form id="formulario_perfil">
+			 
 					<div class="form-group">
 						<h2>Datos personales</h2>
 					</div>
-					<div class="form-group">
+
+					<div class="form-group col-md-6">
 						<label for="#" class="label-control">Nombre</label>
 						<input type="text" class="form-control bg-white" name="nombre" id="nombre" value="prueba" readonly>
-					</div>
-
-					<div class="form-group">
+				 
+					<div class="  col-md-6"> 
 						<label for="#" class="label-control">Apellidos</label>
 						<input type="text" class="form-control bg-white"value="prueba"readonly>
 					</div>
@@ -47,7 +47,7 @@
 						<label for="#" class="label-control">Cel</label>
 						<input type="text" class="form-control bg-white" value="prueba" readonly>
 					</div>
-				</form>
+		 
 				</div>
 			</div>
 		</div>
