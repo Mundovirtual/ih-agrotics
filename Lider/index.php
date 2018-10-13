@@ -1,19 +1,18 @@
  <?php
-
- //include_once("../modulos/login/security.php");
-  include_once("modulos/enrutador.php");   
+include_once("../login/security.php");   
+  require_once("modulos/enrutador.php");   
    
     if (!isset($_GET['cargar'])) {
       $_GET['cargar']="";
       
   } 
-  session_start();
+   
  
 ?>
     <html><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Administrador</title>
+    <title>Lider Proyecto</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -75,7 +74,7 @@
                 <a href="index.php?cargar=3" aria-expanded="false"><i class="fas fa-folder-open"></i>Estado del proyecto</a>
             </li>
             <li>
-                <a href="index.php?cargar=4" aria-expanded="false"><i class="fas fa-bell"></i> Solicitudes <h5 style="display: inline;"><span class="badge badge-pill badge-success">8</span></h5></a>
+                <a href="index.php?cargar=4" aria-expanded="false"><i class="fas fa-bell"></i> Solicitudes <h5 style="display: inline;"></h5></a>
             </li>
           </ul>
         </div>
@@ -98,7 +97,7 @@
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center"> 
                 <!-- Log out-->
-                <li class="nav-item"><a href="../iniciosesion/cerrarsesion.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
+                <li class="nav-item"><a href="../login/SesionClose.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
               </ul>
             </div>
           </div>

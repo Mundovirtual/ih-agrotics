@@ -1,6 +1,9 @@
+ <?php 
+include_once("../login/security.php");  
+   ?>
 <div class="row justify-content-center">
     <div class="col-md-10">
-      <div class="shadow p-3 mb-5 bg-white rounded text-center">PROYECTO : Sistema de registros y evaluación de proyectos InnovaHack</div>
+      <div class="shadow p-3 mb-5 bg-white rounded text-center"><h2>Solicitudes</h2></div>
     </div>
 </div>
 <div class="container-fluid">
@@ -21,22 +24,7 @@
           </tr>
         </thead>
         <tbody>
-           <tr>
-              <th scope="row">1</th>
-              <td>Ian Alejandro</td> 
-              <th>953 562 132 </th>
-              <td>ian@gmail.com</td>
-              <td>
-                   <button type="button" class="btn btn-info fas fa-ellipsis-h" data-toggle="modal" data-target="#DetallesSolicitud" onclick="Detalles()">                     
-                  </button>
-              </td>
-              <td>
-                <button class="btn btn-success fa fa-check" onclick="Aceptar()"></button>
-              </th>
-              <th>
-                <button class="btn btn-danger fas fa-trash-alt" onclick="Eliminar()"></button>
-              </td>
-          </tr>
+           
         </tbody>
       </table>
     </div>
@@ -54,7 +42,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Información Hacker</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -89,10 +77,60 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
       </div>
     </div>
   </div>
 </div>
+
+
+ <div class="modal fade" id="ConfirmarAceptar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="Editar" align="center"><i class="fas fa fa-check"></i>Agregar</h5>        
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <div class="modal-body">            
+    <h1>Estás a punto de agregar al Hacker al proyecto</h2>
+
+    Quiere proceder?
+          
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success" onclick="AgregarHack()">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+  <div class="modal fade" id="ConfirmarEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="Editar" align="center"><i class="fas fa-trash-alt"></i>Eliminar</h5>        
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <div class="modal-body">            
+    <h1>Estás a punto de eliminar al Hacker del proyecto</h2>
+
+    Quiere proceder?
+          
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" onclick="EliminarHack()">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
 <script src="modulos/solicitudes/solicitudes.js"></script>

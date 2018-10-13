@@ -9,8 +9,9 @@ if (isset($_POST['Validar'])) {
 	 if (empty($Siexiste)) {
 	 	 echo json_encode(array('Validar'=>'1'));
 	 }else{
-	 	$VerDatos=$Proyecto->MostrarProyectoPorLider($_SESSION['idUser']);   
-	 	 echo json_encode(array('Validar'=>'0','Equipo'=>$VerDatos[0][2],'Vertical'=>$VerDatos[0][8],'Nombre'=>$VerDatos[0][3],'Descripcion'=>$VerDatos[0][5],'DescripcionVertical'=>$VerDatos[0][9],'Asesoria'=>$VerDatos[0][10]));
+	 	$VerDatos=$Proyecto->MostrarProyectoPorLider($_SESSION['idUser']); 
+	 
+	 	 echo json_encode(array('Validar'=>'0','Equipo'=>$VerDatos[0][11],'Vertical'=>$VerDatos[0][13],'Nombre'=>$VerDatos[0][12],'Descripcion'=>$VerDatos[0][13],'DescripcionVertical'=>$VerDatos[0][9],'Asesoria'=>$VerDatos[0][15]));
  
 	 }
 	 

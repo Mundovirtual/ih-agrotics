@@ -1,26 +1,25 @@
-$( document ).ready(function() {
-	 
- CargarTablaSolicitudes();
+$( document ).ready(function() {	 
+ CargarTablaIntegrantes();
 });
 
 function Detalles(Institucion,carrera,Habilidades,Hobbies,FechaNac){
-$("#Institucionhacker").val(Institucion);
-$("#Carrerahacker").val(carrera);
-$("#Habilidadeshacker").val(Habilidades);
-$("#Hobbieshacker").val(Hobbies);
-$("#FechaNacimientohacker").val(FechaNac);
+    $("#Institucionhacker").val(Institucion);
+    $("#Carrerahacker").val(carrera);
+    $("#Habilidadeshacker").val(Habilidades);
+    $("#Hobbieshacker").val(Hobbies);
+    $("#FechaNacimientohacker").val(FechaNac);
 
 }
  
  var tabla_nombre; 
- function CargarTablaSolicitudes() {
+ function CargarTablaIntegrantes() {
  	
     tabla_nombre = $("#MostrarSolicitudes").dataTable({
     	"destroy":true,
     	"bDeferRender": true,
         "sPaginationType": "full_numbers",
         "ajax": {
-            "url": "modulos/solicitudes/tablaSolicitudes.php",
+            "url": "modulos/Equipo/TablaIntegrantes.php",
             "type": "POST"
         },
         "columns": [ 
@@ -28,8 +27,7 @@ $("#FechaNacimientohacker").val(FechaNac);
             { "data": "Nombre" },
             { "data": "Correo" },
             { "data": "Cel" },
-            { "data": "Inf" }, 
-            { "data": "Aceptar" },
+            { "data": "Inf" },  
             { "data": "Eliminar" } 
         ],
         "oLanguage": {
@@ -67,37 +65,9 @@ $("#FechaNacimientohacker").val(FechaNac);
     });
 }
 
-let varAceptar="";
-function Aceptar(id){
-    varAceptar=id;
-}
-
  
-function AgregarHack(){
-    
-    $.ajax({
-        url: 'modulos/solicitudes/Solicitudes.php',
-        type: 'POST',
-        dataType: 'json',
-        data: {'IdAgregar': varAceptar}
-    })
-    .done(function(resp) { 
-        if (resp.Estado=='1') {
-            alertify.set('notifier','position', 'top-right');
-            alertify.success("Hacker agregado correctamente"); 
-            $("#ConfirmarAceptar").modal('hide');
-            CargarTablaSolicitudes();  
-        }
-        else  {
-            alertify.set('notifier','position', 'top-right');
-            alertify.error("Has excedido el número de participantes");   
-            $("#ConfirmarAceptar").modal('hide');
-        }
-    });
-    
-}
-
 let VarEliminar="";
+
 function Eliminar(id){
     VarEliminar=id;
 }
@@ -114,7 +84,7 @@ function EliminarHack(){
     .done(function(resp) { 
         if (resp.Estado=='0') {
              alertify.set('notifier','position', 'top-right');
-            alertify.error("Solicitud Eliminada");   
+            alertify.error("Has Eliminado a un Hacker");   
             $("#ConfirmarEliminar").modal('hide');
             CargarTablaSolicitudes();  
         }

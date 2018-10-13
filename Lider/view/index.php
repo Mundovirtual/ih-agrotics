@@ -1,7 +1,8 @@
  <?php
 
- include_once("../modulos/login/security.php");
-  include_once("../modulos/enrutador.php");   
+include_once("../login/security.php"); 
+   
+  require_once("../modulos/enrutador.php");   
     if (!isset($_GET['cargar'])) {
       $_GET['cargar']="";
       
@@ -96,7 +97,7 @@
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center"> 
                 <!-- Log out-->
-                <li class="nav-item"><a href="../iniciosesion/cerrarsesion.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
+                <li class="nav-item"><a href="../login/SesionClose.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
               </ul>
             </div>
           </div>

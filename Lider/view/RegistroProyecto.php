@@ -1,4 +1,5 @@
  <?php 
+include_once("../login/security.php"); 
 	require_once "../class/proyectos.php";
  ?>
 
@@ -58,7 +59,9 @@
 <div class="row justify-content-center" id="ProyectoRegistrado">
 	 
 	 	 
-		<h3 class="card-header primary-color bg-dark text-white"><i class="fas fa-plus-circle"></i> Proyecto Registrado</h3>
+		<div class="col-md-12">
+			<h3 class="card-header primary-color bg-dark text-white"><i class="fas fa-plus-circle"></i> Proyecto Registrado</h3>
+		</div>
 		<div class="card-body">
 		 
 			<div class="row">
@@ -71,21 +74,7 @@
 					    <label class="label-control">Nombre Proyecto</label>
 					    <input type="text" class="form-control" name="Mostrarproyecto" id="Mostrarproyecto">
 				</div>
-
-				<div class="col-md-12">
-					    <label class="label-control">Descripción</label>
-					    <textarea class="form-control" name="MostrardescripcionProyecto" id="MostrardescripcionProyecto"></textarea>
-				</div>
-
-				<div class="col-md-12">
-					<label class="label-control">Vertical</label>
-				    <input type="text" class="form-control" name="MVertical" id="MVertical">
-				</div>
-
-				<div class="col-md-12">
-					<label class="label-control">Descripción Vertical</label>
-				    <input type="text" class="form-control" name="MostrarDescripcionVertical" id="MostrarDescripcionVertical">
-				</div>
+   
 
 				<div class="col-md-12">
 					<label class="label-control">Asesoria</label>
