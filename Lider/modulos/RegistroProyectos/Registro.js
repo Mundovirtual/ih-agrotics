@@ -1,7 +1,8 @@
   
  $(document).ready(function(){
- 	$("#RegistrarProyecto").hide();
-   	$("#ProyectoRegistrado").hide();  
+ 	 
+   $("#ProyectoRegistrado").hide(); 
+   	$("#RegistrarProyecto").hide(); 
    	validar();
    		
 });

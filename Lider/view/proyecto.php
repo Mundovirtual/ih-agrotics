@@ -1,5 +1,5 @@
 <?php 
-	require_once("../modulos/perfil/DatosPerfil.php");
+	require_once("modulos/perfil/DatosPerfil.php");
 ?>
 
 <div class="row justify-content-center">
