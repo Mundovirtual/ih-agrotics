@@ -1,5 +1,5 @@
 <?php 
-	require_once "../class/proyectos.php";
+	require_once "modulos/RegistroProyectos/Registro.php";
 
  ?>
 

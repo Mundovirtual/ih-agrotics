@@ -1,6 +1,6 @@
 <?php 
-require_once "../../../class/proyectos.php";
- session_start();
+require_once "../class/proyectos.php";
+ 
 if (isset($_POST['Validar'])) {
 	 $Proyecto=new Proyecto();
 	 $Siexiste=$Proyecto->existe($_SESSION['idUser']);
