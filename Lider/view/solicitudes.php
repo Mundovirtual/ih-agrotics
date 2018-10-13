@@ -1,29 +1,8 @@
 <div class="row justify-content-center">
-		<div class="col-md-10">
-			<div class="shadow p-3 mb-5 bg-white rounded text-center">PROYECTO : Sistema de registros y evaluación de proyectos InnovaHack</div>
-		</div>
+    <div class="col-md-10">
+      <div class="shadow p-3 mb-5 bg-white rounded text-center">PROYECTO : Sistema de registros y evaluación de proyectos InnovaHack</div>
+    </div>
 </div>
-	<table class="table">
-  <thead>
-		<th scope="col">Nombre</th> 
-		<th scope="col">Email</th>
-		<th scope="col">Detalles</th>
-		<th scope="col">Aceptar</th>
-		<th scope="col">Rechazar</th>				
-    </tr>
-  </thead>
-  <tbody>
- 
-      	<th scope="row">1</th>
-		<td>Ian Alejandro</td> 
-		<td>ian@gmail.com</td>
-			<button class="btn btn-success">Aceptar</button>
-		</th>
-		<th scope="col">
-			<button class="btn btn-danger">Rechazar</button>
-		</td>
-  </tbody>
-</table>
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-1">

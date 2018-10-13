@@ -10,6 +10,14 @@ include_once("conexion.php");
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
 	 	}
+	 	function ConsultarProyecto($Id){
+	 		$con=new Conectar();
+	 		$Conexion=$con->conexion();
+	 		$sql=" SELECT `proyectoID`, `HStatus` FROM `detalleequipo` where `IDlider`='$Id' and `HStatus`='1' limit 1 ";
+	 		$resultado=mysqli_query($Conexion,$sql);
+	 		return  mysqli_fetch_all($resultado);
+	 		$Conexion->mysql_close();
+	 	}
 	 	function MostrarHackersAceptados($IdProyecto){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
