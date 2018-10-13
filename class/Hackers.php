@@ -1,6 +1,6 @@
 <?php 
 include_once("conexion.php");
-	 class Juez{
+	 class Hacker{
 	 	/*Modulo slolicitud Jueces*/
 	 	function MostrarHackersPorAceptar($IdProyecto){	 		
 	 		$con=new Conectar();
