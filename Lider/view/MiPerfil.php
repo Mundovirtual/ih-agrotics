@@ -1,9 +1,3 @@
-<?php 
-	require_once("modulos/perfil/DatosPerfil.php");
-	 $Lider = new Lider();
-	 $ver =$Lider->mostrarDatos($id);  
- ?>
-
 <div class="row justify-content-center">
 		<div class="col-md-4">
 			<div class="card">
@@ -14,7 +8,7 @@
 					</div>
 
 					<div class="form-group">
-						<h3 class="text-center"><?php echo $_SESSION['Nombre'];?></h3>
+						<h3 class="text-center">Isaac</h3>
 					</div>
 					<div class="row">	
 						<button class="form-control btn btn-primary">Bienvenid@</button>
@@ -30,29 +24,30 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-10">
-					<form id="formulario_perfil">
+			 
 					<div class="form-group">
 						<h2>Datos personales</h2>
 					</div>
-					<div class="form-group">
-						<label for="#" class="label-control">Nombre</label>
-						<input type="text" class="form-control bg-white" name="nombre" id="nombre" value="<?php  echo $ver[0][1]?>" >
-					</div>
 
-					<div class="form-group">
+					<div class="form-group col-md-6">
+						<label for="#" class="label-control">Nombre</label>
+						<input type="text" class="form-control bg-white" name="nombre" id="nombre" value="prueba" readonly>
+				 
+					<div class="  col-md-6"> 
 						<label for="#" class="label-control">Apellidos</label>
-						<input type="text" class="form-control bg-white" value="<?php echo $ver[0][2];?>">
+						<input type="text" class="form-control bg-white"value="prueba"readonly>
 					</div>
 
 					<div class="form-group">
 						<label for="#" class="label-control">E-mail</label>
-						<input type="text" class="form-control bg-white" value="<?php echo $ver[0][2];?>" >
-					</div>					 
-					<div class="form-group">
-						<label for="#" class="label-control">Celular</label>
-						<input type="text" class="form-control bg-white" value="<?php echo $ver[0][5];?>" >
+						<input type="text" class="form-control bg-white" value="prueba" readonly>
 					</div>
-				</form>
+
+					<div class="form-group">
+						<label for="#" class="label-control">Cel</label>
+						<input type="text" class="form-control bg-white" value="prueba" readonly>
+					</div>
+		 
 				</div>
 			</div>
 		</div>

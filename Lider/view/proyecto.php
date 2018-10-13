@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 <?php 
 	require_once("modulos/perfil/DatosPerfil.php");
 ?>
 
+=======
+>>>>>>> parent of 1830afc... Lider registro proyectos
 <div class="row justify-content-center">
 		<div class="col-md-10">
 			<div class="shadow p-3 mb-5 bg-white rounded text-center">PROYECTO : Sistema de registros y evaluación de proyectos InnovaHack</div>
