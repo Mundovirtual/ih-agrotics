@@ -12,7 +12,7 @@ include_once("../login/security.php");
     <html><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lider Proyecto</title>
+    <title>Hacker</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -51,7 +51,7 @@ include_once("../login/security.php");
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
           <div class="sidenav-header-inner text-center"><div class="fas fa-user-circle fa-3x"></div>
-            <h3 class="h3"><?php echo $_SESSION['Nombre']; ?></h3><span class="text-danger">Lider del proyecto</span>
+            <h3 class="h3"><?php echo $_SESSION['Nombre']; ?></h3><span class="text-danger">Hacker</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
           <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong><i class="fas fa-home"></i></strong></a></div>

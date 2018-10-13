@@ -9,6 +9,7 @@ include_once("conexion.php");
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
+
 	 	}
 
 	 	function MostrarHackersPorAceptar($IdProyecto){	 		
