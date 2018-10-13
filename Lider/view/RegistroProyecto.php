@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  
 <?php 
 	require_once "../class/proyectos.php";
@@ -5,6 +6,9 @@
 
 <div class="row justify-content-center" id="RegistrarProyecto">
  
+=======
+<div class="row justify-content-center">
+>>>>>>> parent of 1830afc... Lider registro proyectos
 	 	<div class="col-md-10">
 	 	<div class="card center-block">
 		<h3 class="card-header primary-color bg-dark text-white"><i class="fas fa-plus-circle"></i> Registro proyecto</h3>
