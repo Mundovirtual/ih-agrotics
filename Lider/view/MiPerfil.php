@@ -1,3 +1,9 @@
+ 
+<?php 
+	require_once("modulos/perfil/DatosPerfil.php");
+	 $Lider = new Lider();
+	 $ver =$Lider->mostrarDatos($id);  
+ ?>
 <div class="row justify-content-center">
 		<div class="col-md-4">
 			<div class="card">
@@ -8,7 +14,7 @@
 					</div>
 
 					<div class="form-group">
-						<h3 class="text-center">Isaac</h3>
+						<h3 class="text-center"><?php echo $_SESSION['Nombre'];?></h3>
 					</div>
 					<div class="row">	
 						<button class="form-control btn btn-primary">Bienvenid@</button>
@@ -24,31 +30,42 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-10">
-			 
+					<form id="formulario_perfil">
 					<div class="form-group">
 						<h2>Datos personales</h2>
 					</div>
-
-					<div class="form-group col-md-6">
+					<div class="form-group">
 						<label for="#" class="label-control">Nombre</label>
-						<input type="text" class="form-control bg-white" name="nombre" id="nombre" value="prueba" readonly>
-				 
-					<div class="  col-md-6"> 
+						<input type="text" class="form-control bg-white" name="nombre" id="nombre" value="<?php  echo $ver[0][1]?>" >
+					</div>
+
+					<div class="form-group">
 						<label for="#" class="label-control">Apellidos</label>
-						<input type="text" class="form-control bg-white"value="prueba"readonly>
+							<input type="text" class="form-control bg-white" id="Apellidos" name="Apellidos" value="<?php echo $ver[0][2];?>">
+
+
 					</div>
 
 					<div class="form-group">
 						<label for="#" class="label-control">E-mail</label>
-						<input type="text" class="form-control bg-white" value="prueba" readonly>
+						<input type="text" class="form-control bg-white"  id="Correos" name="Correos" value="<?php echo $ver[0][3];?>" >
 					</div>
 
 					<div class="form-group">
 						<label for="#" class="label-control">Cel</label>
-						<input type="text" class="form-control bg-white" value="prueba" readonly>
+						<input type="text" class="form-control bg-white" id="cel" name="cel" value="<?php echo $ver[0][2];?>" >
 					</div>
-		 
+				</form>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+	 $(document).ready(function(){
+ 	 	$("#nombre").prop('disabled', true);
+		$("#Apellidos").prop('disabled', true);
+		$("#Correos").prop('disabled', true);
+		$("#cel").prop('disabled', true);
+   		
+});
+	</script>
