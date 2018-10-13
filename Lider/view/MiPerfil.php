@@ -1,5 +1,6 @@
  
 <?php 
+ 	include_once("../login/security.php");  
 	require_once("modulos/perfil/DatosPerfil.php");
 	 $Lider = new Lider();
 	 $ver =$Lider->mostrarDatos($id);  
@@ -53,7 +54,7 @@
 
 					<div class="form-group">
 						<label for="#" class="label-control">Cel</label>
-						<input type="text" class="form-control bg-white" id="cel" name="cel" value="<?php echo $ver[0][2];?>" >
+						<input type="text" class="form-control bg-white" id="cel" name="cel" value="<?php echo $ver[0][5];?>" >
 					</div>
 				</form>
 				</div>

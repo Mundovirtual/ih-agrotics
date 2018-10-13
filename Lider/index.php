@@ -1,45 +1,47 @@
  <?php
-
- //include_once("../modulos/login/security.php");
-  include_once("modulos/enrutador.php");   
+include_once("../login/security.php");   
+  require_once("modulos/enrutador.php");   
    
     if (!isset($_GET['cargar'])) {
       $_GET['cargar']="";
       
   } 
-  session_start();
+   
  
 ?>
     <html><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lider del proyecto</title>
+    <title>Lider Proyecto</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
-     <script type="text/javascript" src="../js/Bootstrap/bootstrap.js"></script>
-    <link rel="shortcut icon" href="../img/favicon.apple-icon.png">
+    <link rel="shortcut icon" href="../img/favicon.png">
 
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-          
+    <link rel="stylesheet" href="../css/bootstrap.css">
+         
     <!-- Custom Scrollbar-->
-    <link rel="stylesheet" type="text/css" href="../js/malihu/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../js/malihu/jquery.mCustomScrollbar.css">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">  
+    <link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">
 
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="../css/fontawesome.min.css">
-    <link rel="stylesheet" href="../css/fontawesome/css/fontawesome.css">
-    <link rel="stylesheet" href="../css/fontawesome/css/brands.css"> 
-    <link rel="stylesheet" href="../css/fontawesome/css/solid.css">
-
+    <link href="../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="../css/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="../css/fontawesome/css/solid.css" rel="stylesheet"> 
     <!-- Popper js--> 
-    <script type="text/javascript" src="../js/popper/popper.min.js" crossorigin="anonymous"></script>   
+    <script src="../js/popper/popper.min.js"   crossorigin="anonymous"></script>    
+    <!-- Alertyfy js-->
+    <link rel="stylesheet" type="text/css" href="../js/alertifyjs/css/alertify.css">
     <!-- Fontastic Custom icon font-->
-
     <link rel="stylesheet" href="../css/fontastic.css">
-    <script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
+    <script src="../js/jquery/jquery.min.js"></script>
+    <!-- Data tables-->
+    <link rel="stylesheet" type="text/css" href="../js/DataTables/datatables.min.css">
+    <script type="text/javascript" src="../js/DataTables/datatables.js"></script>
+  
   </head>
   <body>
     <!-- Side Navbar -->
@@ -72,7 +74,7 @@
                 <a href="index.php?cargar=3" aria-expanded="false"><i class="fas fa-folder-open"></i>Estado del proyecto</a>
             </li>
             <li>
-                <a href="index.php?cargar=4" aria-expanded="false"><i class="fas fa-bell"></i> Solicitudes <h5 style="display: inline;"><span class="badge badge-pill badge-success">8</span></h5></a>
+                <a href="index.php?cargar=4" aria-expanded="false"><i class="fas fa-bell"></i> Solicitudes <h5 style="display: inline;"></h5></a>
             </li>
           </ul>
         </div>
@@ -95,7 +97,7 @@
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center"> 
                 <!-- Log out-->
-                <li class="nav-item"><a href="../iniciosesion/cerrarsesion.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
+                <li class="nav-item"><a href="../login/SesionClose.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
               </ul>
             </div>
           </div>
@@ -149,14 +151,13 @@
     <!-- JavaScript files-->
     
 
+  <script src="../js/Bootstrap/bootstrap.min.js"></script>
+    <script src="../js/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/alertifyjs/alertify.js"></script> 
 
-
-  
-    <script type="text/javascript" src="../js/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Main File-->
-
-    <script type="text/javascript" src="../js/front.js"></script>
-    <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+    <script src="../js/front.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
 
   
 </body>

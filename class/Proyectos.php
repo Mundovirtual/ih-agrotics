@@ -6,22 +6,7 @@
 	 	function MostrarProyectoPorLider($idLider){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql = "SELECT \n"
-		    . "`proyecto`.`id`,\n"
-		    . "`proyecto`.`comunidad_id`, \n"
-		    . "`proyecto`.`NombreDeEquipo`, \n"
-		    . "`proyecto`.`NombreProyecto`, \n"
-		    . "`proyecto`.`Vertical_id`, \n"
-		    . "`proyecto`.`Descripcion`, \n"
-		    . "`proyecto`.`FechaRegistro`,\n"
-		    . "`vertical`.`id`,\n"
-		    . "`vertical`.`Nombre`,\n"
-		    . "`vertical`.`Descripcion`, \n"
-		    . "`vertical`.`InfAsesoria`\n"
-		    . "FROM `proyecto` \n"
-		    . "inner join `vertical` on `proyecto`.`Vertical_id`=`vertical`.`id`\n"
-		    . "\n"
-		    . "where `comunidad_id`='$idLider'";  
+	 		$sql = "SELECT `id`,`Nombre`,`Apellidos`,`E-mail`,`Celular`,`Carrera`,`Institucion`, `FechaNacimiento`, `Habilidades`, `Hobbies`, `IDlider`, `NombreDeEquipo`, `NombreProyecto`, `NVertical`, `VDesc`, `VAsesoria` , `HStatus` FROM `detalleequipo`  where `HStatus`='1' and `IDlider`='$idLider'";  
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
@@ -29,7 +14,7 @@
 	 	function existe($idLider){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="SELECT `comunidad_id` FROM `proyecto` WHERE `comunidad_id`='$idLider'";
+	 		$sql="SELECT `IDlider`, `HStatus` FROM `detalleequipo` WHERE `IDlider`='6' and `HStatus`='1' ";
 	 		$resultado=mysqli_query($Conexion,$sql); 
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
