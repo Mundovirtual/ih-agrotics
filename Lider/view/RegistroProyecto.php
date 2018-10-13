@@ -19,8 +19,7 @@
 					<option  value="00">Seleccionar un vertical</option>
 					<?php 
 						$Vertical=new Proyecto();
-						$verVertical=$Vertical->Verticales();
-						var_dump($verVertical);
+						$verVertical=$Vertical->Verticales(); 
 						foreach ($verVertical as $key) {
 						?>
 							 <option value="<?php echo $key['0']; ?>"><?php echo $key['1']; ?></option>
