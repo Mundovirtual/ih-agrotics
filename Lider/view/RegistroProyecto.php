@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+ 
 <?php 
 	require_once "../class/proyectos.php";
-
  ?>
 
 <div class="row justify-content-center" id="RegistrarProyecto">
