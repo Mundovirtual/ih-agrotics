@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<?php 
-	require_once("modulos/perfil/DatosPerfil.php");
-?>
-=======
- <?php 
+  <?php 
 include_once("../login/security.php");
   ?>
  <div class="row justify-content-center">
@@ -38,7 +33,7 @@ include_once("../login/security.php");
 </div>
  
   
->>>>>>> Lider
+ 
 
 <!-- Button trigger modal -->
 
