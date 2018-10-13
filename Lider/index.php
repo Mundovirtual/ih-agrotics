@@ -27,7 +27,10 @@
     <link rel="stylesheet" type="text/css" href="../js/malihu/jquery.mCustomScrollbar.css">
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">  
-
+    
+    <!-- Alertyfy js-->
+    <link rel="stylesheet" type="text/css" href="../js/alertifyjs/css/alertify.css">
+    
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="../css/fontawesome.min.css">
     <link rel="stylesheet" href="../css/fontawesome/css/fontawesome.css">
@@ -95,7 +98,7 @@
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center"> 
                 <!-- Log out-->
-                <li class="nav-item"><a href="../iniciosesion/cerrarsesion.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
+                <li class="nav-item"><a href="../index.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
               </ul>
             </div>
           </div>
@@ -157,7 +160,7 @@
 
     <script type="text/javascript" src="../js/front.js"></script>
     <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
-
+<script src="../js/alertifyjs/alertify.js"></script> 
   
 </body>
 </html>
