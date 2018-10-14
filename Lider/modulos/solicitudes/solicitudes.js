@@ -85,8 +85,9 @@ function AgregarHack(){
         if (resp.Estado=='1') {
             alertify.set('notifier','position', 'top-right');
             alertify.success("Hacker agregado correctamente"); 
-            $("#ConfirmarAceptar").modal('hide');
             CargarTablaSolicitudes();  
+            $("#ConfirmarAceptar").modal('hide');
+            
         }
         else  {
             alertify.set('notifier','position', 'top-right');
@@ -114,9 +115,10 @@ function EliminarHack(){
     .done(function(resp) { 
         if (resp.Estado=='0') {
              alertify.set('notifier','position', 'top-right');
-            alertify.error("Solicitud Eliminada");   
+            alertify.error("Solicitud Eliminada"); 
+            CargarTablaSolicitudes();    
             $("#ConfirmarEliminar").modal('hide');
-            CargarTablaSolicitudes();  
+            
         }
          
     })
