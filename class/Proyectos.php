@@ -14,7 +14,7 @@
 	 	function existe($idLider){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="SELECT `IDlider`, `HStatus` FROM `detalleequipo` WHERE `IDlider`='6' and `HStatus`='1' ";
+	 		$sql="SELECT `IDlider`, `HStatus` FROM `detalleequipo` WHERE `IDlider`='$idLider' and `HStatus`='1' ";
 	 		$resultado=mysqli_query($Conexion,$sql); 
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
