@@ -19,7 +19,7 @@ jQuery(document).on('submit','#Login',function(event){
 
           } else if (respuesta.Estado=='1') {
               
-             location.href = "Juez/index.php";   
+    
           } else if(respuesta.Estado=='2'){
             
              location.href = "Lider/index.php"; 

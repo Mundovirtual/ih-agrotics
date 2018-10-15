@@ -7,14 +7,14 @@
 			        include_once("view/MiPerfil.php");      
 			        break;
 			    case "2": 
-			        include_once("view/RegistroProyecto.php");			         
+			        include_once("view/MisProyectos.php");			         
 			        break;
 			    case "3": 
 			        include_once("view/proyecto.php");			         
-			        break;
+			        break; 
 		        case "4": 
 			        include_once("view/solicitudes.php");			         
-		        	break;
+			        break; 
 		        
 			    case "error":
 			    	include_once("view/".$vista.".php");

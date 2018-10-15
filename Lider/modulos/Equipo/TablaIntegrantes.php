@@ -1,11 +1,11 @@
  
-<?php 
+<?php  
 require_once "../../../class/Hackers.php";
  
 session_start(); 
 
 	$Proyecto =new Hacker();
-	$ver=$Proyecto->ConsultarProyecto($_SESSION['idUser']);
+	$ver=$Proyecto->ConsultarProyecto($_SESSION['idUserLider']);
 	$tabla="";
 	if (count($ver)!=0) {
 	$Solicitudes=$Proyecto->MostrarHackersAceptados($ver[0][0]); 

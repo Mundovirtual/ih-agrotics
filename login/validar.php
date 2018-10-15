@@ -33,7 +33,7 @@
  			 if ($rol=='5') {/*LiderProyecto*/
  			 	session_start();
 	 			 $_SESSION['activo'] = true;
-	 			 $_SESSION['idUser'] =$res["id"] ;
+	 			 $_SESSION['idUserLider'] =$res["id"] ;
 				 $_SESSION['Nombre'] = $res["Nombre"]; 
 				 $_SESSION['NombreApellido']=$res["Nombre"]." ".$res["Apellidos"];
 				 echo json_encode(array('Estado'=>'2'));  
@@ -41,7 +41,7 @@
  			 if ($rol=='6') { /*hacker*/
  			 	session_start();
 	 			 $_SESSION['activo'] = true;
-	 			 $_SESSION['idUser'] =$res["id"] ;
+	 			 $_SESSION['idUserHacker'] =$res["id"] ;
 				 $_SESSION['Nombre'] = $res["Nombre"]; 
 				 $_SESSION['NombreApellido']=$res["Nombre"]." ".$res["Apellidos"];
 				 echo json_encode(array('Estado'=>'3'));  

@@ -1,3 +1,6 @@
+<?php 
+include_once("../login/security.php");   
+?>
  <div class="row justify-content-center">
     <div class="col-md-10">
       <div class="shadow p-3 mb-5 bg-white rounded text-center"><h2>Catalogo de proyectos</h2></div>

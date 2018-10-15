@@ -4,12 +4,12 @@ require_once "../../../class/proyectos.php";
  session_start();
 if (isset($_POST['Validar'])) {
 	 $Proyecto=new Proyecto();
-	 $Siexiste=$Proyecto->existe($_SESSION['idUser']);
+	 $Siexiste=$Proyecto->existe($_SESSION['idUserLider']);
 
 	 if (empty($Siexiste)) {
 	 	 echo json_encode(array('Validar'=>'1'));
 	 }else{
-	 	$VerDatos=$Proyecto->MostrarProyectoPorLider($_SESSION['idUser']); 
+	 	$VerDatos=$Proyecto->MostrarProyectoPorLider($_SESSION['idUserLider']); 
 	 
 	 	 echo json_encode(array('Validar'=>'0','Equipo'=>$VerDatos[0][11],'Vertical'=>$VerDatos[0][13],'Nombre'=>$VerDatos[0][12],'Descripcion'=>$VerDatos[0][13],'DescripcionVertical'=>$VerDatos[0][9],'Asesoria'=>$VerDatos[0][15]));
  
@@ -41,9 +41,9 @@ if (isset($_POST['equipo'])&&isset($_POST['proyecto'])&&isset($_POST['descripcio
 			/*Validar si no ha registrado Proyecto*/
 			
 			$Proyecto=new Proyecto();
-			$Siexiste=$Proyecto->existe($_SESSION['idUser']); 
+			$Siexiste=$Proyecto->existe($_SESSION['idUserLider']); 
  		 	if (empty($Siexiste)) {
- 		 		$Registrar=$Proyecto->RegistrarProyecto($_SESSION['idUser'],$_POST['equipo'],$_POST['proyecto'],$_POST['vertical'],$_POST['descripcion']);
+ 		 		$Registrar=$Proyecto->RegistrarProyecto($_SESSION['idUserLider'],$_POST['equipo'],$_POST['proyecto'],$_POST['vertical'],$_POST['descripcion']);
 
 		   		$msj='00';
  		 	}else{

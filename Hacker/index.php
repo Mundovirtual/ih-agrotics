@@ -68,14 +68,14 @@ include_once("../login/security.php");
             <h5 class="sidenav-heading">PROYECTOS</h5>                  
             <li>
                 <a href="index.php?cargar=2" aria-expanded="false"> 
-                  <i class="fas fa-chalkboard-teacher"></i>Registro</a>
+                  <i class="fas fa-chalkboard-teacher"></i>Mis Proyectos</a>
             </li>
             <li>
-                <a href="index.php?cargar=3" aria-expanded="false"><i class="fas fa-folder-open"></i>Estado del proyecto</a>
-            </li>
+                <a href="index.php?cargar=3" aria-expanded="false"><i class="fas fas fa-database"></i>Catalogo de proyectos</a>
+            </li> 
             <li>
-                <a href="index.php?cargar=4" aria-expanded="false"><i class="fas fa-bell"></i> Solicitudes <h5 style="display: inline;"></h5></a>
-            </li>
+                <a href="index.php?cargar=4" aria-expanded="false"><i class="fas far fa-folder-plus"></i>Solicitudes</a>
+            </li> 
           </ul>
         </div>
          
