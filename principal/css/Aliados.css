@@ -1,0 +1,26 @@
+.collapse ul li
+{
+    padding: 8px;
+}
+nav.navbar{
+	border-bottom: 5px solid #1293d4;
+}
+nav.navbar div.collapse{
+	float: right;
+}
+nav.navbar a.navbar-brand{
+	color: #1293d4;
+	font-weight: bold;
+}
+.collapse ul.navbar-nav li.nav-item a.nav-link{
+	color: #fff;
+}
+div.contenedor{
+	 width: 100%;
+	 position: relative;
+}
+a.nav-link:hover{
+	color: #ccc;
+	font-weight: bold;
+ 
+}

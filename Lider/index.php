@@ -1,5 +1,6 @@
  <?php
-include_once("../login/security.php");   
+session_start();
+   
   require_once("modulos/enrutador.php");   
    
     if (!isset($_GET['cargar'])) {

@@ -1,0 +1,119 @@
+.collapse ul li
+{
+    padding: 8px;
+}
+nav.navbar{
+	border-bottom: 5px solid #1293d4;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	position: fixed;
+}
+nav.navbar div.collapse{
+	float: right;
+}
+nav.navbar a.navbar-brand{
+	color: #1293d4;/*#1293d4*/
+	font-weight: bold;
+}
+.collapse ul.navbar-nav li.nav-item a.nav-link{
+	color: #fff;
+}
+div.contenedor{
+	 width: 100%;
+	 position: relative;
+}
+a.nav-link:hover{
+	color: #ccc;
+	font-weight: bold;
+ 
+}
+
+/*CONTENEDOR DE LOGIN*/
+div.container-portada{
+	width: 100%;
+	height:687px;
+	max-height: 2000px;
+	margin-top: 50px;
+}
+
+
+div.container-portada div.row div.img-portada{
+	width: 100%;
+	height:600px;
+	margin:auto;
+    margin-top: 15px;
+}
+
+div.container-portada div.row div.img-portada div.carousel div.carousel-inner div.carousel-item img{
+	width: 300px;
+	height: 300px;
+	max-height: 250px;
+	border: 1px solid #E7DEDE;
+}
+
+div.container-portada div.row div.container-login{
+	width: 60%;
+	height: 430px;
+	background-color: white;
+	margin-left: 12%;
+	border-radius: 12px;
+	padding-top: 20px;
+}
+
+div.container-portada div.row div.container-login form.formulario div.form-group label.texto{
+	font-size:22px; 
+}
+
+div.container-portada div.row div.container-login div.botones{
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+
+
+/*FIN DE CONTENEDOR DE LOGIN*/
+
+@media(max-width: 768px) {
+	nav.navbar button.boton{
+		background-color: red;
+		color: white;
+	}
+	div.collapse ul.navbar-nav li.nav-item a.nav-link{
+      font-size: 14px;
+      margin: 0px;
+      background-color: #1293d4;
+      color: white;
+      text-align: left;
+      padding-left: 15px;
+	}
+
+	div.container-portada div.row div.container-login{
+		width: 100%;
+		margin-left: 0px;
+		border-radius: 0px;
+		float: center;
+		margin: auto;
+	}
+	div.container-portada{
+		margin-top: 100px;
+		width: 100%;
+		height: 730px;
+	}
+
+	div.container-portada div.row div.img-portada{
+		width: 540px;
+	    height:300px;
+	    margin: auto;
+	}
+
+	div.container-portada div.row div.img-portada div.carousel div.carousel-inner div.carousel-item img{
+		width: 360px;
+		height: 300px;
+		margin: auto;
+		border: 1px solid;
+
+	}
+}
+

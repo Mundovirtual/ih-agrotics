@@ -1,0 +1,70 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-image: url(../imagenes/fondo1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.error {
+    position: fixed;
+    z-index: 100;
+}
+.boton {
+    position: fixed;
+    z-index: 140;
+    float: right;
+    margin-top: 70px;
+}
+/*LOGOTIPO DE LABSOL*/
+div.contenedor-img{
+    text-align: center;
+    background-color: #fff;
+}
+div.contenedor-img div.caja-img{
+    width: 150px;
+    display: inline-block;
+    margin: 1%;
+}
+div.contenedor-img div.caja-img img{
+    width:100%;
+    max-height: 30px;
+    background-size: cover;
+}
+/*FIN LOGOTIPO LABSOL*/
+.container {
+    padding-top: 50px;
+}
+.container .form-row .form-group label, input {
+    color: #fff;
+    font-weight: normal;
+    text-align: left;
+    padding: 8px 0;
+}
+.container .form-row .form-group input, select.form-control, option, input {
+    background: rgba(0, 0, 0, .6);
+    margin: auto;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+.container .form-row .form-group input#email, input#facebook, input#twitter {
+    text-transform: lowercase;
+}
+.container .form-row .form-group input, select.form-control {
+    backgroun: rgba(0, 0, 0, .7);
+    color: #fff;
+    border-bottom: 2px solid #EBEBDA;
+    font-family: Roboto;
+}
+.container button {
+    margin: 12px 2px;
+}
+.container button.miperfil {
+    width: 4px;
+}
+div.fondo {
+    width: 100%;
+}
