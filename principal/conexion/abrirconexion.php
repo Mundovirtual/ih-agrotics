@@ -1,11 +1,11 @@
 <?php 
 class Conexion extends mysqli
 {
-
+ 
     private $HOST = "localhost";
     private $USER = "root";
-    private $PASS = "";
-    private $BASE = "inovahack";
+    private $PASS = "InnovaHack18";
+    private $BASE = "hacky";
 
     public function __construct()
     {
