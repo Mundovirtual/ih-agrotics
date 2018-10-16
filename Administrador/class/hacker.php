@@ -5,7 +5,7 @@ include_once("conexion.php");
 	 	function MostrarHacker(){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="SELECT `comunidad`.`id`, `comunidad`.`Nombre`, `comunidad`.`Apellidos`, `comunidad`.`E-mail`, `comunidad`.`psw`, `comunidad`.`Celular`, `carrera`.`Carrera`,`institucion`.`Institucion`,`comunidad`.`FechaNacimiento`, `comunidad`.`Rol_idRol`, `comunidad`.`Genero_idSexo` FROM `comunidad` inner join `carrera` on `Carrera_id`= `carrera`.`id` inner join `institucion` on `comunidad`.`Institucion_id`=`institucion`.`id` WHERE `Rol_idRol`='6'";
+	 		$sql="SELECT `comunidad`.`id`, Concat(`comunidad`.`Nombre`, ' ',`comunidad`.`Apellidos`) as nombre, `comunidad`.`E-mail`, `comunidad`.`psw`, `comunidad`.`Celular`, `talla_playera`.`Talla_Playeracol` as 'playera', `carrera`.`Carrera`, `institucion`.`Institucion`, `comunidad`.`FechaNacimiento`, `comunidad`.`Habilidades`, `comunidad`.`Hobbies`, `genero`.`Sexo` FROM `comunidad` inner join `talla_playera` on `comunidad`.`Talla_Playera_idTalla_Playera`=`talla_playera`.`idTalla_Playera` inner join `carrera` on `comunidad`.`Carrera_id`=`carrera`.`id` inner join `institucion` on `institucion`.`id`=`comunidad`.`Institucion_id` inner join `genero` on `comunidad`.`Genero_idSexo`=`genero`.`idSexo`  WHERE `Rol_idRol`='6'";
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
@@ -20,11 +20,11 @@ include_once("conexion.php");
 	 	}
 		 
 	 
-	 	function ActualizarDatosHacker($id,$Nombre,$Apellidos,$Email,$psw,$Celular,$playera,$fcb,$twr,$Habilidades,$Hobbies){
+	 	function ActualizarDatosHacker($id,$Email,$psw,$Celular){
 	 		$Actpsw=md5($psw);
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
- 	 		$sql="UPDATE `comunidad` SET  `Nombre`='$Nombre',`Apellidos`='$Apellidos',`E-mail`='$Email',`psw`='$psw',`Celular`='$Celular',`Talla_Playera_idTalla_Playera`='$playera',`Facebook`='$fcb',`Twitter`='$twr',`Habilidades`='$Habilidades',`Hobbies`='$Hobbies' WHERE `id`='$id'"; 
+ 	 		$sql="UPDATE `comunidad` SET `E-mail`='$Email',`psw`='$psw',`Celular`='$Celular'  WHERE `id`='$id'"; 
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();
