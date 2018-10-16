@@ -25,7 +25,7 @@
 			        include_once("../view/comunidad.php");			         
 		        	break;
 		        case "8": 
-			        include_once("../view/Jueces.php");			         
+			        include_once("../view/jueces.php");			         
 		        	break;
 		        case "9": 
 			        include_once("../view/calificaciones.php");			         
