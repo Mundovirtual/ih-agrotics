@@ -1,6 +1,6 @@
  <?php 
 include_once("../login/security.php"); 
- include_once "proyecto.php";
+ include_once "../class/Proyectos.php";
  ?>
 
 <div class="row justify-content-center" id="RegistrarProyecto">
