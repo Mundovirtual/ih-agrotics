@@ -1,5 +1,5 @@
 	<?php
-	     class Int{
+	     class Institucion{
 	     	public function vis(){
 	     		require 'esqueleto-crud.php';
 	             $esqueleto = new esqueleto();
@@ -24,7 +24,7 @@
 	     }
 
 
-	     $inst = new Int();
+	     $inst = new Institucion();
 	     $inst->vis();
 
 	  
