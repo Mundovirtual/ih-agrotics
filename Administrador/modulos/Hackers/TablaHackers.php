@@ -1,6 +1,6 @@
 <?php 
 
-include_once("../../class/hacker.php");
+include_once("../class/hacker.php");
 	$Hacker=new Hacker();
 	$ver=$Hacker->MostrarHacker(); 
  	$tabla="";
