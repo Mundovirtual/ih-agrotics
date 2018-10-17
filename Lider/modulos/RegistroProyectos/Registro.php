@@ -1,11 +1,10 @@
- 
+
 <?php 
 require_once "../../../class/proyectos.php";
  session_start();
 if (isset($_POST['Validar'])) {
 	 $Proyecto=new Proyecto();
-	 $Siexiste=$Proyecto->existe($_SESSION['idUserLider']);
-
+	 $Siexiste=$Proyecto->existe($_SESSION['idUserLider']);  
 	 if (empty($Siexiste)) {
 	 	 echo json_encode(array('Validar'=>'1'));
 	 }else{

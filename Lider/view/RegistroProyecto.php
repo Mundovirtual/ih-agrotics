@@ -1,6 +1,6 @@
  <?php 
 include_once("../login/security.php"); 
- require_once "../../class/Proyectos.php";
+ require_once "../class/Proyectos.php";
  ?>
 
 <div class="row justify-content-center" id="RegistrarProyecto">
@@ -32,10 +32,7 @@ include_once("../login/security.php");
 						
 					</select>
 				</div>
-				<div class="col-md-12" id="Registrado" >
-					<label for="#" class="label-control">Vertical</label>
-				    <input type="text" class="form-control" name="MostrarVertical" id="MostrarVertical">
-				</div>
+				
 
 			</div>
 			<div class="form-group">
@@ -74,7 +71,10 @@ include_once("../login/security.php");
 					    <label class="label-control">Nombre Proyecto</label>
 					    <input type="text" class="form-control" name="Mostrarproyecto" id="Mostrarproyecto">
 				</div>
-   
+   				<div class="col-md-12" id="Registrado" >
+					<label for="#" class="label-control">Vertical</label>
+				    <input type="text" class="form-control" name="MVertical" id="MVertical">
+				</div>
 
 				<div class="col-md-12">
 					<label class="label-control">Asesoria</label>

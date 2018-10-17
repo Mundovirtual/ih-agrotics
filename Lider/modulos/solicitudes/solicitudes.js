@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-	 
+     
  CargarTablaSolicitudes();
 });
 
@@ -14,10 +14,10 @@ $("#FechaNacimientohacker").val(FechaNac);
  
  var tabla_nombre; 
  function CargarTablaSolicitudes() {
- 	
+    
     tabla_nombre = $("#MostrarSolicitudes").dataTable({
-    	"destroy":true,
-    	"bDeferRender": true,
+        "destroy":true,
+        "bDeferRender": true,
         "sPaginationType": "full_numbers",
         "ajax": {
             "url": "modulos/solicitudes/tablaSolicitudes.php",
@@ -35,7 +35,7 @@ $("#FechaNacimientohacker").val(FechaNac);
         "oLanguage": {
             "sProcessing": "Procesando...",
             "sLengthMenu": 'Mostrar <select>' +
-           		'<option value="5">5</option>' +
+                '<option value="5">5</option>' +
                 '<option value="10">10</option>' +
                 '<option value="20">20</option>' +
                 '<option value="30">30</option>' +

@@ -14,7 +14,7 @@
 	 	function existe($idLider){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="SELECT `IDlider`, `HStatus` FROM `detalleequipo` WHERE `IDlider`='$idLider' and `HStatus`='1' ";
+	 		$sql="SELECT `proyecto`.`comunidad_id` , `Vertical_id` , `vertical`.`id` , `hackatonedicion`.`status` FROM `proyecto` INNER JOIN `vertical` ON `vertical`.`id` = `proyecto`.`Vertical_id` INNER JOIN `hackatonedicion` ON `hackatonedicion`.`id` = `vertical`.`HackatonEdicion_id` WHERE `hackatonedicion`.`status` = '1' and `comunidad_id` ='$idLider' LIMIT 1 ";
 	 		$resultado=mysqli_query($Conexion,$sql); 
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
@@ -26,6 +26,7 @@
 	 		$Conexion=$con->conexion();
 	 		$sql="INSERT INTO `proyecto`(`comunidad_id`, `NombreDeEquipo`, `NombreProyecto`, `Vertical_id`, `Descripcion`, `FechaRegistro`) VALUES ('$idLider','$NombreEquipo','$NombreProyecto','$VerticalId','$Descripcion',current_date())";  
 	 		$resultado=mysqli_query($Conexion,$sql);
+	 		echo($resultado);
 	 		return $resultado;
 	 		$Conexion->mysql_close();
 	 	}
