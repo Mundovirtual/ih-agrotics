@@ -45,7 +45,7 @@ function Eliminar(idhacker){
     	"bDeferRender": true,
         "sPaginationType": "full_numbers",
         "ajax": {
-            "url": "Modulos/Hackers/TablaHackers.php",
+            "url": "../Modulos/Hackers/TablaHackers.php",
             "type": "POST"
         },
         "columns": [ 

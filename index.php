@@ -445,5 +445,5 @@
         </div>
     </body>
 </html>
-<script src="js/bootstrap.min.js">
+<script src="principal/js/bootstrap.min.js">
 </script>
