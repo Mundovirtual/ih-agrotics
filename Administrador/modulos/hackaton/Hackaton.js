@@ -4,7 +4,7 @@ jQuery(document).on('submit', "#ModalRegistroHackaton", function(event){
 	event.preventDefault(); 
      var datos=$("#ModalRegistroHackaton").serialize();  
 	 jQuery.ajax({
-		url: '../Modulos/hackaton/Hackaton.php',
+		url: '../modulos/hackaton/Hackaton.php',
 		type: 'POST',
 		dataType: 'json',
 		data: datos,
@@ -71,7 +71,7 @@ function ActualizandoHackaton() {
 	EhF=$("#EditarFinHack").val();  
 	/*var EhImg=$("#EditarImagenPrincipal").val();*/
 	jQuery.ajax({				
-	url:'../Modulos/hackaton/Hackaton.php',
+	url:'../modulos/hackaton/Hackaton.php',
 	type: 'POST', 
 	dataType:'json',
 	data: {'idAc':actualizar,'EhN':EhN,'EhI':EhI,'EhE':EhE,'EhF':EhF/*,'EhImg':EhImg*/} 
@@ -115,7 +115,7 @@ function ActualizandoHackaton() {
 function ActivarHackaton(id,edicion){
 	
 	$.ajax({
-		url: '../Modulos/hackaton/Hackaton.php',
+		url: '../modulos/hackaton/Hackaton.php',
 		type: 'POST',
 		dataType: 'json',
 		data: {'EstatusHackaton': id},
@@ -147,7 +147,7 @@ function eliminarHackaton(id){
  $(document).ready(function(){
 	$("#bEliminarHackaton").click(function () { 		
 	 	jQuery.ajax({
-		url: '../Modulos/hackaton/Hackaton.php',
+		url: '../modulos/hackaton/Hackaton.php',
 		type: 'POST',
 		dataType: 'json',
 		data: {'IdEliminar':eliminar},
@@ -192,7 +192,7 @@ $( document ).ready(function() {
     	"bDeferRender": true,
         "sPaginationType": "full_numbers",
         "ajax": {
-            "url": "../Modulos/hackaton/tablaHackaton.php",
+            "url": "../modulos/hackaton/tablaHackaton.php",
             "type": "POST"
         },
         "columns": [ 

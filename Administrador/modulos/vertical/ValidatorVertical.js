@@ -5,7 +5,7 @@ jQuery(document).on('submit', "#RV", function(event){
      var datos=$(this).serialize();
 
 	jQuery.ajax({
-		url: '../Modulos/vertical/FuncionesVertical.php',
+		url: '../modulos/vertical/FuncionesVertical.php',
 		type: 'POST',
 		dataType: 'json',
 		data: datos,
@@ -53,7 +53,7 @@ function UpdateVertical() {
 		var eHv=$("#eHv").val(); 
 	 
 	jQuery.ajax({
-		url: '../Modulos/vertical/FuncionesVertical.php',
+		url: '../modulos/vertical/FuncionesVertical.php',
 		type: 'POST',
 		dataType: 'json',
 		data: {'idAc':actualizar,'eNv':eNv,'eDv':eDv,'eAv':eAv,'eHv':eHv},
@@ -97,7 +97,7 @@ function eliminarVertical(id){
  $(document).ready(function(){
 	$("#EliminarVer").click(function () { 
 	 	jQuery.ajax({
-		url: '../Modulos/vertical/FuncionesVertical.php',
+		url: '../modulos/vertical/FuncionesVertical.php',
 		type: 'POST',
 		dataType: 'json',
 		data: {'IdEliminar':eliminar},
@@ -134,7 +134,7 @@ $( document ).ready(function() {
     	"bDeferRender": true,
         "sPaginationType": "full_numbers",
         "ajax": {
-            "url": "../Modulos/vertical/tablavertical.php",
+            "url": "../modulos/vertical/tablavertical.php",
             "type": "POST"
         },
         "columns": [ 
