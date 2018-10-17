@@ -36,7 +36,7 @@ function actualizandoJuez(){
 	 CelularJuez=$("#CelularJuez").val();
 	 CorreoJuez=$("#CorreoJuez").val(); 
 	$.ajax({
-		url: '../Modulos/Juez/juez.php',
+		url: '../modulos/Juez/juez.php',
 		type: 'POST',
 		dataType: 'json',
 		data: {'IdActualizar': idEditar,'psw':PaswJuez,'celular':CelularJuez,'correo':CorreoJuez}
@@ -69,7 +69,7 @@ function actualizandoJuez(){
 }
 function EliminandoJuez(){
 	$.ajax({
-			url: '../Modulos/Juez/juez.php',
+			url: '../modulos/Juez/juez.php',
 			type: 'POST',
 			dataType: 'json',
 			data: {idEliminar: idEliminar},
@@ -104,7 +104,7 @@ $( document ).ready(function() {
     	"bDeferRender": true,
         "sPaginationType": "full_numbers",
         "ajax": {
-            "url": "../Modulos/juez/TablaJuezAceptado.php",
+            "url": "../modulos/juez/TablaJuezAceptado.php",
             "type": "POST"
         },
  
