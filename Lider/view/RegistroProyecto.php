@@ -1,6 +1,6 @@
  <?php 
 include_once("../login/security.php"); 
- include_once "ih-agrotics/class/Proyectos.php";
+ include_once "proyecto.php";
  ?>
 
 <div class="row justify-content-center" id="RegistrarProyecto">
