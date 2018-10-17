@@ -9,12 +9,12 @@
     <title>Registro</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/registro.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
-    <script src="js/jquery-3.33.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="Backend/funciones.js"></script>
+    <link rel="stylesheet" href="principal/css/registro.css">
+    <link rel="stylesheet" href="principal/css/bootstrap.min.css">
+    <link rel="stylesheet" href="principal/fontawesome-free-5.3.1-web/css/all.min.css">
+    <script src="principal/js/jquery-3.33.1.min.js"></script>
+    <script src="principal/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="principal/Backend/funciones.js"></script>
   </head>
   <body>
     <?php include("principal/Backend/modal_institucion.php");?>
