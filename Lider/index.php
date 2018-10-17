@@ -1,7 +1,7 @@
  <?php
 include_once("../login/security.php");   
   require_once("modulos/enrutador.php");   
-   session_start();
+ 
     if (!isset($_GET['cargar'])) {
       $_GET['cargar']="";
       
