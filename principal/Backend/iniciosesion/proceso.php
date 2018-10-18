@@ -37,7 +37,7 @@
     	}else
     	if(isset($_POST['usuario']) && isset($_POST['contra'])){
     		$usuario = $_POST['usuario'];
-    		$contra = md5($_POST['contra']);
+    		$contra = base64_encode($_POST['contra']);
     		$this->busqueda($usuario,$contra);
     	}
      }

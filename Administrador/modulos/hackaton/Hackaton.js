@@ -12,35 +12,21 @@ jQuery(document).on('submit', "#ModalRegistroHackaton", function(event){
 			 
 		}
 	})
-	.done(function(respuesta) {
-		if (respuesta=='1') {
+	.done(function(respuesta) {  
+		if (respuesta.Estado!='1') {
 			$('#ModalHackaton').modal('show');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Fecha limite de Registros no valido');
+	 		alertify.error(respuesta.Estado);
 		} 
-		else if(respuesta=='2'){
-			$('#ModalHackaton').modal('show');
-			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Fecha limite de Registros no valido');
-		}
-		else if (respuesta=='3') {
-
-			$('#ModalHackaton').modal('show');
-			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Fecha de Inicio del Hackaton no valido');
-
-		} else if(respuesta=='0'){
-
+		else{
 			$('#ModalHackaton').modal('hide');
 			alertify.set('notifier','position', 'top-right');
 	 		alertify.success('Hackaton registrado');
-	 		CargarTablaHack();	
-		}
-		else{
-
-			$('#ModalHackaton').modal('hide');
-			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Error desconocido');
+	 		$("#NombreHack").val('');
+	 		$("#InicioHack").val('');
+	 		$("#EntregaProyectos").val('');
+	 		$("#FinHack").val('');
+	 		CargarTablaHack(); 
 		}
 	})
  
@@ -71,47 +57,25 @@ function ActualizandoHackaton() {
 	EhF=$("#EditarFinHack").val();  
 	/*var EhImg=$("#EditarImagenPrincipal").val();*/
 	jQuery.ajax({				
-	url:'../modulos/hackaton/Hackaton.php',
-	type: 'POST', 
-	dataType:'json',
-	data: {'idAc':actualizar,'EhN':EhN,'EhI':EhI,'EhE':EhE,'EhF':EhF/*,'EhImg':EhImg*/} 
-})
-.done(function(Res) {
-	if(Res=='0'){
-			
-		alertify.set('notifier','position', 'top-right');
- 		alertify.success('Hackaton actualizado');
- 		CargarTablaHack();	
- 		$('#EditarHackaton').modal("hide");
-	} 
-	else if (Res=='1') {
-		
-		alertify.set('notifier','position', 'top-right');
- 		alertify.error('Fecha limite de Registros no valido');
-	} 
-	else if(Res=='2'){
-		
-		alertify.set('notifier','position', 'top-right');
- 		alertify.error('Fecha limite de Registros no valido');
-	}
-	else if (Res=='3') {
-
-		
-		alertify.set('notifier','position', 'top-right');
- 		alertify.error('Fecha de Inicio del Hackaton no valido');
-
-	}  else if(Res=='4'){
-
-		
-		alertify.set('notifier','position', 'top-right');
- 		alertify.error('Edición: Minimo 5 Caracteres ');
- 		 
-	}
-
- 
-});
-	
-}
+		url:'../modulos/hackaton/Hackaton.php',
+		type: 'POST', 
+		dataType:'json',
+		data: {'idAc':actualizar,'EhN':EhN,'EhI':EhI,'EhE':EhE,'EhF':EhF/*,'EhImg':EhImg*/} 
+	})
+ 	.done(function(respuesta){
+ 		if (respuesta.Estado!='1') {
+			$('#EditarHackaton').modal('show');
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.error(respuesta.Estado);
+		} 
+		else{
+			$('#EditarHackaton').modal('hide');
+			alertify.set('notifier','position', 'top-right');
+	 		alertify.success('Hackaton Actualizado'); 
+	 		CargarTablaHack(); 
+		}
+ 	});}
+	 
 function ActivarHackaton(id,edicion){
 	
 	$.ajax({
@@ -120,14 +84,14 @@ function ActivarHackaton(id,edicion){
 		dataType: 'json',
 		data: {'EstatusHackaton': id},
 	})
-	.done(function(Respuesta) {
+	.done(function(respuesta) {
 
-		if (Respuesta=='0') {
+		if (respuesta.Estado!='1') {
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.success(edicion+" activado");
+	 		alertify.error(respuesta.Estado);
 		} else {
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.error(edicion+" activado");
+	 		alertify.success(edicion+" activado");
 		}
 		
 
@@ -177,12 +141,6 @@ function eliminarHackaton(id){
 $( document ).ready(function() {
     CargarTablaHack();
 });
-
-
-
-
-
-
 
  var tabla_nombre;
  function CargarTablaHack() {

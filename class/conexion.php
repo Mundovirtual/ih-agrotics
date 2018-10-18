@@ -6,7 +6,7 @@ class Conectar{
 		private $usuario="root";
 		private $bd="hacky";
 		private $password="InnovaHack18";
- //private $password="";
+ //private $password="InnovaHack18";
 		public function conexion(){
 			$conexion=mysqli_connect($this->servidor,
 									 $this->usuario,

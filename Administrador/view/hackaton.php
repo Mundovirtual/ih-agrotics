@@ -57,24 +57,24 @@
 	       		<form class="form" id="ModalRegistroHackaton" method="POST" >
 					<div class="form-group">
 					    <label>Edicion</label>
-					    <input type="text" class="form-control"  minlength="5" maxlength="45" id="NombreHack" name="NombreHack"  placeholder="Edición" required="">
+					    <input type="text" class="form-control"  id="NombreHack" name="NombreHack"  placeholder="Edición" >
 					</div>
 					<div class="form-group">
 					  	<div class="form-row">
 						    <div class="col">
 						      <label class="label-control">Inicio Hackaton</label>
-					   		  <input type="date" id="InicioHack" name="InicioHack"  class="form-control " value="" required="" />
+					   		  <input type="date" id="InicioHack" name="InicioHack"  class="form-control " value=""/>
 						    </div>
 						    <div class="col">
 						       <label class="label-control">Fecha Limite de Registros</label>
-					    	   <input type="date" id="EntregaProyectos" name="EntregaProyectos" class="form-control " value="" required="" />
+					    	   <input type="date" id="EntregaProyectos" name="EntregaProyectos" class="form-control " value=""/>
 						    </div>
 						</div>			    
 				    </div>
        			    <div class="form-group" align="center">
 					  <label class="label-control">Fin de Hackaton</label>
 				    	<div class="col-md-6">
-				    		<input type="date" id="FinHack" name="FinHack" class="form-control"  required="" />
+				    		<input type="date" id="FinHack" name="FinHack" class="form-control" />
 				    	</div>			 	
 					</div>
 	    		    <div class="modal-footer">
@@ -101,25 +101,25 @@
 		       	<form id="ModalEditarHackaton">
 				 	<div class="form-group">
 				    	<label for="inputNombre">Edición</label>
-				    	<input type="text" minlength="5" maxlength="45" class="form-control" id="EditarNombreHack" name="EditarNombreHack" placeholder="Edición" required="">
+				    	<input type="text"  class="form-control" id="EditarNombreHack" name="EditarNombreHack" placeholder="Edición"  >
 				 	</div>
 				  	<div class="form-group">
 				  		<div class="form-row">
 						    <div class="col">
 						      <label class="label-control">Inicio Hackaton</label>
-					   		  <input type="date" id="EditarInicioHack" name="EditarInicioHack" class="form-control " required="" value=""/>
+					   		  <input type="date" id="EditarInicioHack" name="EditarInicioHack" class="form-control "   value=""/>
 						    </div>
 
 						    <div class="col">
 						       	<label class="label-control">Fecha Limite de Registros</label>
-					    	   	<input type="date" id="EditarEntregaProyectos" name="EditarEntregaProyectos" class="form-control " value="" required="" />
+					    	   	<input type="date" id="EditarEntregaProyectos" name="EditarEntregaProyectos" class="form-control " value="" />
 						    </div>
 					    </div>
 				    </div>
 
 				   	<label class="label-control">Fin de Hackaton</label>
 			    	<div class="col-md-6">
-			    		<input type="date" id="EditarFinHack" name="EditarFinHack" class="form-control" required="" />
+			    		<input type="date" id="EditarFinHack" name="EditarFinHack" class="form-control"   />
 			    	</div>
 				    <div class="col-md-6">
 					  

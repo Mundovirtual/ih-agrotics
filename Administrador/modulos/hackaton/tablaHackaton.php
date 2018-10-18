@@ -2,7 +2,7 @@
 
 include_once("../../class/Hackaton.php");
 	$Hackaton=new Hackaton();
-	$ver=$Hackaton->mostrarDatosHackaton();
+	$ver=$Hackaton->HackatonDatos();
  	$tabla="";
 	$i=1; 
  foreach ($ver as $key) {
