@@ -2,8 +2,7 @@
 /*Registrar Verticales*/
 jQuery(document).on('submit', "#RV", function(event){
 	event.preventDefault(); 
-     var datos=$(this).serialize();
-
+     var datos=$(this).serialize(); 
 	jQuery.ajax({
 		url: '../modulos/vertical/FuncionesVertical.php',
 		type: 'POST',
@@ -13,16 +12,20 @@ jQuery(document).on('submit', "#RV", function(event){
 		}
 	})
 	 
-	.done(function(respuesta) {
-		if (respuesta=="0") {
+	.done(function(respuesta) { 
+		if (respuesta.Estado!="1") {
 			$('#ModalVertical').modal('show');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Selecciona una edición');
+	 		alertify.error(respuesta.Estado);
 
 		} else {		
 			$('#ModalVertical').modal('hide');
 			alertify.set('notifier','position', 'top-right');
 	 		alertify.success('Vertical registrada');
+	 		/*Limpiar campos*/
+	 		$("#NombreVertical").val('');
+	 		$("#DescripcionVertical").val('');
+	 		$("#AsesoriaVertical").val(''); 
 			CargarTabla();
 		 }
 	})
@@ -38,7 +41,7 @@ jQuery(document).on('submit', "#RV", function(event){
 
 /*actualizar Verticales*/
 let actualizar="";
-function ActualizarVertical(idd,Nv,Dv,Av,Ev){  
+function ActualizarVertical(idd,Nv,Dv,Av,Ev){   
 	actualizar =idd;
 	$("#eNv").val(Nv);
 	$("#eDv").val(Dv);
@@ -63,22 +66,16 @@ function UpdateVertical() {
 	})
 	.done(function(respuesta) {
 	 
-
-		 if (respuesta=="0") {
+	if (respuesta.EstadoUpdate!="1") {
 			$('#editarVertical').modal('show');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Seleccione una edición');
+	 		alertify.error(respuesta.EstadoUpdate);
 
-		}  else if(respuesta=="1") {		
+		} else {		
 			$('#editarVertical').modal('hide');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.success('Vertical actualizada');
+	 		alertify.success('Vertical Actualizada'); 
 			CargarTabla();
-		 }
-		 else if (respuesta=="3"){
-		 	$('#editarVertical').modal('show');
-			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Verifique los campos');
 		 }
 
 	 		 
@@ -106,16 +103,18 @@ function eliminarVertical(id){
 		}
 		})
 		.done(function(respuesta) {  
-			if (respuesta=='1') {
-			$('#EliminarVertical').modal('hide');				
-			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Vertical Eliminada');
-	 		CargarTabla();
+			
+			if (respuesta.EstadoDelete!='1') {
+				$('#EliminarVertical').modal('hide');				
+				alertify.set('notifier','position', 'top-right');
+		 		alertify.error(respuesta.EstadoDelete);
+			
 			} else {
 				$('#EliminarVertical').modal('hide');				
 				alertify.set('notifier','position', 'top-right');
-		 		alertify.error('Registro referenciado');
-			}	
+		 		alertify.success('Vertical Eliminada');
+		 		CargarTabla();
+				}	
 			
 		})
 		 

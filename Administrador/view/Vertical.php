@@ -54,22 +54,22 @@
 	       	<form class="form" id="RV" method="POST">
 			  <div class="form-group">
 			    <label>Nombre*</label>
-			    <input type="text"  minlength="8" maxlength="45" id="NombreVertical"  name="NombreVertical" class="form-control letras" placeholder="Vertical" required="">
+			    <input type="text"   id="NombreVertical"  name="NombreVertical" class="form-control letras" placeholder="Vertical">
 			  </div>
 			  <div class="form-group">
 			    <label >Descripcion*</label>
-			    <textarea class="form-control letras" id="DescripcionVertical"  name="DescripcionVertical" rows="2" placeholder="Descripcion" minlength="10" maxlength="80" required="" ></textarea>
+			    <textarea class="form-control letras" id="DescripcionVertical"  name="DescripcionVertical" rows="2" placeholder="Descripcion"></textarea>
 			  </div>
 			  <div class="form-group">
 			    <label>Asesoria*</label>
-			    <textarea class="form-control letras" id="AsesoriaVertical "  name="AsesoriaVertical" required="" rows="2" placeholder="Asesoria" minlength="10" maxlength="80" ></textarea>
+			    <textarea class="form-control letras" id="AsesoriaVertical"  name="AsesoriaVertical" rows="2" placeholder="Asesoria" ></textarea>
 			  </div>
 		      <div class="input-group mb-3"> 
 			    <div class="input-group-prepend">
 			      <label class="input-group-text">Edición</label>
 			    </div>
-			    <select  class="custom-select" id="EdicionVertical" name="EdicionVertical" required>
-			      <option selected >Selecciona...</option>
+			    <select  class="custom-select" id="EdicionVertical" name="EdicionVertical" required >
+			     
 				  <?php 
 				  $con=new Hackaton();
 			       $datosH=$con->mostrarDatosHackaton(); 
@@ -111,20 +111,20 @@
 	       	<form class="form" id="EV" method="POST">
 			  <div class="form-group">
 			    <label for="inputNombre">Nombre*</label> 
-			    <input type="text" minlength="8" maxlength="45" required="" class="form-control" id="eNv" name="eNv" placeholder="Hackaton">
+			    <input type="text" class="form-control letras" id="eNv" name="eNv" placeholder="Hackaton">
 			  </div>
 
 			  <div class="form-group">
-			    <label for="exampleFormControlTextarea1">Descripcion*</label>
-			    <textarea class="form-control" id="eDv" name="eDv" rows="2" placeholder="Descripcion" required="" minlength="10" maxlength="80"></textarea>
+			    <label >Descripcion*</label>
+			    <textarea class="form-control letras" id="eDv" name="eDv" rows="2" placeholder="Descripcion"  ></textarea>
 			  </div>
 			  <div class="form-group">
-			    <label for="exampleFormControlTextarea1">Asesoria*</label>
-			    <textarea class="form-control" id="eAv" name="eAv" rows="2" minlength="10" maxlength="80" placeholder="Asesoria"></textarea>
+			    <label >Asesoria*</label>
+			    <textarea class="form-control letras" id="eAv" name="eAv" rows="2"  placeholder="Asesoria"></textarea>
 			  </div>
 		    <div class="input-group mb-3"> 
 			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="inputGroupSelect01">Edición</label>
+			    <label class="input-group-text letras" >Edición</label>
 			  </div>
 			  <select required class="custom-select" id="eHv" name="eHv">
 			    <option selected>Selecciona...</option>
@@ -170,5 +170,6 @@
 	    </div>
 	  </div>
 	</div>
+	<script src="../js/letras.js"></script>
   <script src="../modulos/vertical/ValidatorVertical.js"></script>
  

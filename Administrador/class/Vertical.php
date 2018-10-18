@@ -19,7 +19,10 @@
 	 		$Conexion=$con->conexion();
 	 		$sql="INSERT INTO `vertical`(`Nombre`, `Descripcion`, `InfAsesoria`, `HackatonEdicion_id`) VALUES 		('$Vertical','$Descripcion','$asesoria','$Hackaton')";
 	 		$resultado=mysqli_query($Conexion,$sql);
-	 		return $resultado;
+	 		if ($resultado=true) {
+	 			return true;
+	 		} 
+
 	 		$Conexion->mysql_close();
 	 	}
 
@@ -29,7 +32,9 @@
 
 	 		$sql="UPDATE `vertical` SET `Nombre`='$Nombre',`Descripcion`='$Descripcion',`InfAsesoria`='$asesoria',`HackatonEdicion_id`='$Hackaton' WHERE `id`='$id'";
 	 		$resultado=mysqli_query($Conexion,$sql);
-	 		return $resultado;
+	 		if ($resultado=true) {
+	 			return true;
+	 		} 
 	 		$Conexion->mysql_close();
 	 	}
 
@@ -38,8 +43,10 @@
 	 		$Conexion=$con->conexion();
 
 	 		$sql="DELETE FROM `vertical` WHERE `id`='$id'"; 
-	 		$resultado=mysqli_query($Conexion,$sql);
-	 		return $resultado;
+	 		$resultado=mysqli_query($Conexion,$sql); 
+	 		if ($resultado==true) {
+	 			return true;
+	 		} 
 	 		$Conexion->mysql_close();
 	 	}
 
