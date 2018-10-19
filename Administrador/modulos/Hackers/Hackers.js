@@ -33,6 +33,9 @@ function editarDatos(id,psw,celular,correoEdit){
     $("#password").val(atob(psw));
     $("#CelularEdit").val(celular);
     $("#ActCorreoHacker").val(correoEdit); 
+    $("#password").val();
+    $("#CelularEdit").val();
+    $("#ActCorreoHacker").val(); 
 }
 function ActualizarHacker(){
      psw=$("#password").val();
