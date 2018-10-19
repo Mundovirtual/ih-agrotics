@@ -20,7 +20,7 @@
 	           $this->nombre =utf8_decode(ucwords( $_POST['nombre']));
 		       $this->apellidos =utf8_decode(ucwords( $_POST['apellidos']));
 		       $this->correo = $_POST['correo'];
-		       $this->contraseña =base64_decode($_POST['contraseña']);
+		       $this->contraseña =base64_encode($_POST['contraseña']);
 		       $this->cel = $_POST['cel'];
 		       $this->talla = $_POST['talla'];
 		       $this->carrera =utf8_decode(ucwords( $_POST['carrera']));

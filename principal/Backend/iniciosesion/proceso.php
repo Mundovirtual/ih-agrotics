@@ -58,8 +58,8 @@
       }
     	if($contenido->num_rows > 0){
         if($Rol == 5){
-            session_start();
-       		 $_SESSION['activo'] = true;
+       session_start();
+       $_SESSION['activo'] = true;
  			 $_SESSION['idUserLider'] =$id ;
 			 $_SESSION['Nombre'] = $nombre; 
 			 $_SESSION['NombreApellido']=$nombre." ".$apellidos;
@@ -75,7 +75,7 @@
             echo 3;
         }*/else if($Rol == 6){
             session_start();
-             $_SESSION['activo'] = true;
+       $_SESSION['activo'] = true;
  			 $_SESSION['idUserHacker'] =$id ;
  			 $_SESSION['Nombre'] = $nombre; 
 			 $_SESSION['NombreApellido']=$nombre." ".$apellidos;
