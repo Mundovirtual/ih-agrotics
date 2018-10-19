@@ -5,7 +5,7 @@ class Conectar{
 private $servidor="localhost";
 		private $usuario="root";
 		private $bd="hacky";
-		private $password="InnovaHack18";
+		private $password="";
 		//private $password="InnovaHack18";
 
  
@@ -21,5 +21,4 @@ private $servidor="localhost";
 
 	}
  
-
 ?>

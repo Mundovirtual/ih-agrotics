@@ -1,4 +1,5 @@
-/*Cargar tabla*/
+
+    /*Cargar tabla*/
 $( document ).ready(function() { 
     CargarTablaHackers();
 
@@ -18,7 +19,8 @@ $("#sexo").val(Sexo);
 /*Mostrar en el DOM Editar datos*/
 let idhackerEditar="";
 function editarDatos(id,psw,celular,correoEdit){ 
-
+    
+    $("#password").val(atob(psw));
     $("#CelularEdit").val(celular);
     $("#ActCorreoHacker").val(correoEdit); 
 }
@@ -30,19 +32,15 @@ function Eliminar(idhacker){
 }
 /*Obtener datos y actualizar*/
 
-
 /*Funcion de eliminar usuario*/
-
-
-
 
 /*Datos de la tabla con DataTable de jquery*/
  var tabla_nombre;
  function CargarTablaHackers() {
- 	
+    
     tabla_nombre = $("#Hackers").dataTable({
-    	"destroy":true,
-    	"bDeferRender": true,
+        "destroy":true,
+        "bDeferRender": true,
         "sPaginationType": "full_numbers",
         "ajax": {
             "url": "../modulos/Hackers/TablaHackers.php",
@@ -60,7 +58,7 @@ function Eliminar(idhacker){
         "oLanguage": {
             "sProcessing": "Procesando...",
             "sLengthMenu": 'Mostrar <select>' +
-           		'<option value="5">5</option>' +
+                '<option value="5">5</option>' +
                 '<option value="10">10</option>' +
                 '<option value="20">20</option>' +
                 '<option value="30">30</option>' +
