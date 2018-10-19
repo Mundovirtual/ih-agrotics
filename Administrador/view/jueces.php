@@ -1,6 +1,6 @@
  <?php
  include_once("../modulos/login/security.php");  
- require_once("../modulos/Juez/juezjs.php"); 
+ 
 ?> 
  
 <div class="container">
@@ -187,7 +187,7 @@
     </div>
   </div>
 </div> 
-
+<script src="../modulos/Juez/juez.js"></script>
 
 
  
