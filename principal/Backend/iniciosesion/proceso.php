@@ -85,7 +85,7 @@
     	}else{
     		?>
         
-    		<div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i>
+    		<div class="alert alert-warning alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i>
                <strong> Datos incorrectos !</strong>
                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
