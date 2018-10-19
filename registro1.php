@@ -298,11 +298,12 @@
     <script type="text/javascript">
    /*----------------Guardar el registro del usuario--------------------*/
       $('form').submit(function(e){
+        alert("hola");
         var datos = $('#formulario').serialize();
         e.preventDefault();
          $.ajax({
               type: 'post',
-              url: 'principal/Backend/Create_registro.php',
+              url: 'Backend/Create_registro.php',
               data: datos,
               beforeSend:function(){
                 $("#info").html('<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i><strong> Procesando..... !</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
