@@ -17,8 +17,8 @@
     <script type="text/javascript" src="Backend/funciones.js"></script>
   </head>
   <body>
-    <?php include("principal/Backend/modal_institucion.php");?>
-    <?php include("principal/Backend/modal_carrera.php");?>
+    <?php include("Backend/modal_institucion.php");?>
+    <?php include("Backend/modal_carrera.php");?>
     <div class="boton text-right">
       <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-arrow-circle-left"></i>  Ir a Mi perfil</a>
     </div>
@@ -302,7 +302,7 @@
         e.preventDefault();
          $.ajax({
               type: 'post',
-              url: 'principalprincipal//Backend/Create_registro.php',
+              url: 'principal/Backend/Create_registro.php',
               data: datos,
               beforeSend:function(){
                 $("#info").html('<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i><strong> Procesando..... !</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
