@@ -103,7 +103,7 @@ $( document ).ready(function() {
     	"bDeferRender": true,
         "sPaginationType": "full_numbers",
         "ajax": {
-            "url": "../modulos/juez/TablaJuezAceptado.php",
+            "url": "../modulos/juez/tablajuez.php",
             "type": "POST"
         },
  
