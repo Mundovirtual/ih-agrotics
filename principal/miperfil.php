@@ -134,7 +134,13 @@
               location.href = '../Hacker/index.php';
              }
             }
-        });
+        })
+       .always(function(){
+              setTimeout(function(){
+                $("#info").hide();
+                location.href = "miperfil.php";
+              },2000);
+       })
      }
        </script>
  
