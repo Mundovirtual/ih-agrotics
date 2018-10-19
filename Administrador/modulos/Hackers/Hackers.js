@@ -4,6 +4,16 @@ $( document ).ready(function() {
     CargarTablaHackers();
 
 });
+ 
+//controlador boton
+let Estado="0";
+$( "#MostrarPsw" ).on( "click", function() {
+    if ($('#MostrarPsw').attr('type') === 'text') {
+     $('#MostrarPsw').attr('type', 'password');
+    } else {
+     $('#MostrarPsw').attr('type', 'text');
+    }
+});
 
 /*Detalles */
 function DetallesHacker(institucion,Carrera,Habilidades,Hobbies,feNac,Sexo){ 
