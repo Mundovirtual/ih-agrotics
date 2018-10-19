@@ -8,11 +8,11 @@ $( document ).ready(function() {
 //controlador boton 
 $( "#MostrarPsw" ).on( "click", function() { 
 
-    if ($('#MostrarPsw').attr('type') == 'text') {
-          $('#MostrarPsw').attr('type', 'password');
+    if ($('#password').attr('type') == 'text') {
+          $('#password').attr('type', 'password');
     } else {
-      $('#MostrarPsw').attr('type', 'text');
-    }
+      $('#password').attr('type', 'text');
+    } 
 });
 
 /*Detalles */
@@ -29,12 +29,41 @@ $("#sexo").val(Sexo);
 /*Mostrar en el DOM Editar datos*/
 let idhackerEditar="";
 function editarDatos(id,psw,celular,correoEdit){ 
-    
+    idhackerEditar=id; 
     $("#password").val(atob(psw));
     $("#CelularEdit").val(celular);
     $("#ActCorreoHacker").val(correoEdit); 
 }
+function ActualizarHacker(){
+    let psw=$("#password").val();
+    let cel=$("#CelularEdit").val();
+    let correo=$("#ActCorreoHacker").val(); 
+    $.ajax({
+        url: '../modulos/Hackers/hacker.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {'IdHack': idhackerEditar,"pass":btoa(psw),"celular":cel,"Correo":correo}
+    })
+    .done(function(respuesta) {
+        if (respuesta.Estado!="0") {
+            alertify.set('notifier','position', 'top-right');
+            $("#EditarHacker").modal('show');
+            alertify.error(respuesta.Estado); 
+        }else{
+            alertify.set('notifier','position', 'top-right');
+            alertify.success("Datos actualizados");
+            $("#EditarHacker").modal('hide'); 
+        }
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+    
 
+}
 /*Activar el Id para eliminar*/
 let idhackerEliminar="";
 function Eliminar(idhacker){

@@ -45,9 +45,10 @@
     }/*Cierre del metodo validacion*/
     function busqueda($u,$c){
     	require_once '../../conexion/abrirconexion.php';
+
     	$con = new Conexion();
     	$contenido = $con->query("SELECT `id`,`Nombre`,`Apellidos`,`E-mail`,`Celular`,`Rol_idRol` FROM `comunidad` WHERE `E-mail`='$u' and `psw` = '$c'");
-
+ 
       while($row = mysqli_fetch_array($contenido)) { 
       	$id=$row['id'];
         $nombre = utf8_encode($row['Nombre']);

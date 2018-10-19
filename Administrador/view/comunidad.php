@@ -46,7 +46,8 @@
 		  <span aria-hidden="true">&times;</span>
 		</button>
 	  </div>
-	  <div class="modal-body">		 
+	  <div class="modal-body"> 
+	 	 
 		<div class="form-row">
 			<div class="col-md-12">
 			  <label for="Institucion">Institución</label>
@@ -100,7 +101,7 @@
 	  <div class="modal-body"> 
 		<div class="form-row">
 			<div class="col-md-12">
-			  <label for="password">password</label>
+			  <label>password</label>
 			  <div class="input-group-prepend">
 			   	 <button type="button" class="button fa fa-eye" id="MostrarPsw" name="MostrarPsw"></button>		 
 			 	 <input type="password" class="form-control" id="password" name="password" placeholder="Escribe su nueva contraseña"></button></input>			
@@ -123,7 +124,7 @@
 	  </div>  
 	  <div class="modal-footer">
 		<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
-		<button type="button" class="btn btn-success"   >Actualizar</button>
+		<button type="button" class="btn btn-success" onclick="ActualizarHacker()"  >Actualizar</button>
 	  </div>
 	</div>
   </div>

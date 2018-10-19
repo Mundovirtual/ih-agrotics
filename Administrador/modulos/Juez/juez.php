@@ -2,25 +2,24 @@
 require_once("../../class/Juez.php");
  
 if (isset($_POST["IdActualizar"]) &&isset($_POST["psw"]) &&isset($_POST["celular"]) &&isset($_POST["correo"])) {
-
+	/*Declarando variables*/
+	$id=$_POST["IdActualizar"];
+	$psw=$_POST["psw"];
+	$cel=$_POST["celular"];
+	$email=$_POST["correo"];
 	$msj="";
-	if ($_POST["psw"]=='') {
 
+
+	if ($psw=='') {
 		 $msj="1";
-
 	}
-	elseif ($_POST["celular"]=='' or strlen($_POST["celular"])<9 ) {
-
+	elseif ($cel=='' or strlen($cel)<9 ) {
 		$msj="2";
-
-	}elseif (!filter_var($_POST["correo"], FILTER_VALIDATE_EMAIL) or $_POST["correo"]=='' ) {
-		
+	}elseif (!filter_var($email, FILTER_VALIDATE_EMAIL) or $email=='' ) {		
 		$msj="3";
-
 	}else{
-
 		$ActualizarJuez=new Juez();
-		$Registrar=$ActualizarJuez->ActualizarDatosJueces($_POST["IdActualizar"],$_POST["correo"],$_POST["psw"],$_POST["celular"]);
+		$Registrar=$ActualizarJuez->ActualizarDatosJueces($id,$email,$psw,$cel);
 		$msj="0";
 	}
 	echo $msj;

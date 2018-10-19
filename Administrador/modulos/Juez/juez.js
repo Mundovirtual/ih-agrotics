@@ -80,7 +80,7 @@ function EliminandoJuez(){
 			$("#EliminarJueces").modal('hide');
 			CargarTablaJuez();
 			} else {
-				alertify.set('notifier','position', 'top-right');
+			 alertify.set('notifier','position', 'top-right');
 	 		alertify.error('Error inesperado');			
 			$("#EliminarJueces").modal('hide');
 			}
