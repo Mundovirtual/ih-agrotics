@@ -121,17 +121,26 @@
              $("#info").html('<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i><strong> Procesando..... !</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
             },
             success: function(respuesta) {
+             $("#info").html(respuesta);
              if(respuesta == 5){
+             $("#info").hide();
              location.href='../Lider/index.php';
              } 
              /*if(respuesta == 3){
               location.href = 'Backend/Juez/index.php';
              }*/
              if(respuesta == 6){
+              $("#info").hide();
               location.href = '../Hacker/index.php';
              }
             }
-        });
+        })
+       .always(function(){
+              setTimeout(function(){
+                $("#info").hide();
+                location.href = "miperfil.php";
+              },2000);
+       })
      }
        </script>
  
