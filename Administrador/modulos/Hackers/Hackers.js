@@ -1,7 +1,18 @@
-/*Cargar tabla*/
+
+    /*Cargar tabla*/
 $( document ).ready(function() { 
     CargarTablaHackers();
 
+});
+ 
+//controlador boton 
+$( "#MostrarPsw" ).on( "click", function() { 
+
+    if ($('#password').attr('type') == 'text') {
+          $('#password').attr('type', 'password');
+    } else {
+      $('#password').attr('type', 'text');
+    } 
 });
 
 /*Detalles */
@@ -18,11 +29,41 @@ $("#sexo").val(Sexo);
 /*Mostrar en el DOM Editar datos*/
 let idhackerEditar="";
 function editarDatos(id,psw,celular,correoEdit){ 
-
+    idhackerEditar=id; 
+    $("#password").val(atob(psw));
     $("#CelularEdit").val(celular);
     $("#ActCorreoHacker").val(correoEdit); 
 }
+function ActualizarHacker(){
+    let psw=$("#password").val();
+    let cel=$("#CelularEdit").val();
+    let correo=$("#ActCorreoHacker").val(); 
+    $.ajax({
+        url: '../modulos/Hackers/hacker.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {'IdHack': idhackerEditar,"pass":btoa(psw),"celular":cel,"Correo":correo}
+    })
+    .done(function(respuesta) {
+        if (respuesta.Estado!="0") {
+            alertify.set('notifier','position', 'top-right');
+            $("#EditarHacker").modal('show');
+            alertify.error(respuesta.Estado); 
+        }else{
+            alertify.set('notifier','position', 'top-right');
+            alertify.success("Datos actualizados");
+            $("#EditarHacker").modal('hide'); 
+        }
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+    
 
+}
 /*Activar el Id para eliminar*/
 let idhackerEliminar="";
 function Eliminar(idhacker){
@@ -30,19 +71,15 @@ function Eliminar(idhacker){
 }
 /*Obtener datos y actualizar*/
 
-
 /*Funcion de eliminar usuario*/
-
-
-
 
 /*Datos de la tabla con DataTable de jquery*/
  var tabla_nombre;
  function CargarTablaHackers() {
- 	
+    
     tabla_nombre = $("#Hackers").dataTable({
-    	"destroy":true,
-    	"bDeferRender": true,
+        "destroy":true,
+        "bDeferRender": true,
         "sPaginationType": "full_numbers",
         "ajax": {
             "url": "../modulos/Hackers/TablaHackers.php",
@@ -60,7 +97,7 @@ function Eliminar(idhacker){
         "oLanguage": {
             "sProcessing": "Procesando...",
             "sLengthMenu": 'Mostrar <select>' +
-           		'<option value="5">5</option>' +
+                '<option value="5">5</option>' +
                 '<option value="10">10</option>' +
                 '<option value="20">20</option>' +
                 '<option value="30">30</option>' +

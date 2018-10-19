@@ -5,21 +5,7 @@
 	<h1 align="center">Hackers
 	</h1>     
 </div> 
- <header>
-	<div class="d-flex"> 
-		<div class="col-md-1"></div>
-		<div class="col-md-6">
-			
-		</div>
-		<div class="col-md-5">
-			 <form class="form-inline">
-				<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0 fas fa-search" type="submit">Buscar</button>
-			 </form>
 
-		</div>
-	</div>
- </header>
 <body>
 	 <div class="row">
 		<div class="col-md-1">
@@ -60,7 +46,8 @@
 		  <span aria-hidden="true">&times;</span>
 		</button>
 	  </div>
-	  <div class="modal-body">		 
+	  <div class="modal-body"> 
+	 	 
 		<div class="form-row">
 			<div class="col-md-12">
 			  <label for="Institucion">Institución</label>
@@ -114,9 +101,13 @@
 	  <div class="modal-body"> 
 		<div class="form-row">
 			<div class="col-md-12">
-			  <label for="password">password</label>
-			  <input type="text" class="form-control" id="password" name="password" placeholder="Escribe su nueva contraseña">
+			  <label>password</label>
+			  <div class="input-group-prepend">
+			   	 <button type="button" class="button fa fa-eye" id="MostrarPsw" name="MostrarPsw"></button>		 
+			 	 <input type="password" class="form-control" id="password" name="password" placeholder="Escribe su nueva contraseña"></button></input>			
+				</div>
 			</div>
+			 
 		</div>
 		<div class="form-row">
 			<div class="col-md-12">
@@ -133,7 +124,7 @@
 	  </div>  
 	  <div class="modal-footer">
 		<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> 
-		<button type="button" class="btn btn-success"   >Actualizar</button>
+		<button type="button" class="btn btn-success" onclick="ActualizarHacker()"  >Actualizar</button>
 	  </div>
 	</div>
   </div>

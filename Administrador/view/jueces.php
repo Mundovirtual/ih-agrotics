@@ -1,8 +1,14 @@
  <?php
  include_once("../modulos/login/security.php");  
+<<<<<<< HEAD
  
 ?> 
+=======
+ require_once("../modulos/Juez/juezjs.php"); 
+>>>>>>> NuevosCambios
  
+?> 
+
 <div class="container">
 	<h1 align="center">Jueces
 	</h1>     

@@ -3,7 +3,7 @@ class esqueleto{
 	public function setRead($sql){
 		include '../conexion/abrirconexion.php';
 		$con = new Conexion();
-		$contenido = $con->query($sql);
+		$contenido = $con->query(mysqli_real_escape_string($con,$sql));
 		return $contenido;
 	} 
 }	
