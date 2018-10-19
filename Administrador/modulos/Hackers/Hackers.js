@@ -5,13 +5,13 @@ $( document ).ready(function() {
 
 });
  
-//controlador boton
-let Estado="0";
-$( "#MostrarPsw" ).on( "click", function() {
-    if ($('#MostrarPsw').attr('type') === 'text') {
-     $('#MostrarPsw').attr('type', 'password');
+//controlador boton 
+$( "#MostrarPsw" ).on( "click", function() { 
+
+    if ($('#MostrarPsw').attr('type') == 'text') {
+          $('#MostrarPsw').attr('type', 'password');
     } else {
-     $('#MostrarPsw').attr('type', 'text');
+      $('#MostrarPsw').attr('type', 'text');
     }
 });
 

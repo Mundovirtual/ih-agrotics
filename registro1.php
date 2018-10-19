@@ -49,17 +49,17 @@
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="#">Nombre :<small class="text-danger"> (Required)</small></label>
-                     <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar el Nombre" required="">
+                     <input type="text" class="input form-control letras" name="nombre" id="nombre" placeholder="Ingresar el Nombre" required="">
                   </div>
                   <div class="form-group col-md-6" id="nombre">
                      <label for="inputPassword4">Apellidos :<small class="text-danger"> (Required)</small>:</label>
-                     <input type="text" name="apellidos" class="form-control" id="apellidos" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellidos" required="">
+                     <input type="text" name="apellidos" class="form-control letras" id="apellidos"  placeholder="Ingresar Apellidos" required="">
                   </div>
              </div>
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="#">Email :<small class="text-danger"> (Required)</small> </label>
-                     <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com /Usuario registro" required="">
+                     <input type="email" class="form-control letrasseguras" required="" id="email" name="correo" placeholder="Labsol@gmail.com" required="">
                      <div id="infoemail">
                      </div>
                   </div>
@@ -82,7 +82,7 @@
              <div class="form-row" >
                   <div class="form-group col-md-6">
                      <label for="#">Facebook :</label>
-                     <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta">
+                     <input type="text" class="form-control letrasseguras" name="facebook" id="facebook" placeholder="Ingresar cuenta">
                   </div>
                   <div class="form-group col-md-6">
 
@@ -96,7 +96,7 @@
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="#">Twitter :</label>
-                     <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta">
+                     <input type="text" class="form-control letrasseguras" name="twitter"  id="twitter" placeholder="Ingresar cuenta">
                   </div>
                   <div class="form-group col-md-6">
                      <label for="#">Fecha de Nacimiento :<small class="text-danger"> (Required)</small></label>
@@ -194,12 +194,12 @@
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Habilidades :</label>
-                     <input type="text" class="form-control" name="habilidades" id="habilidades" onkeypress="return sololetras(event)" placeholder="Ingresar habilidad">   
+                     <input type="text" class="form-control letras" name="habilidades" id="habilidades" placeholder="Ingresar habilidad">   
                   </div>
 
                   <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Hobbies :</label>
-                     <input type="text" class="form-control" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies" onkeypress="return sololetras(event)">   
+                     <input type="text" class="form-control letras" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies" >   
                   </div>
              </div>
              <div class="form-row">
@@ -233,7 +233,7 @@
 
                   </div>
             </div>
-
+ 
                   <script type="text/javascript">
                     /*--------------INICIO VALIDACION DE CONTRASENA-------------- */
 
@@ -295,6 +295,9 @@
            </div>
   </form>
    </div>
+
+   <script src="js/letras.js"></script>
+
     <script type="text/javascript">
    /*----------------Guardar el registro del usuario--------------------*/
       $('form').submit(function(e){
@@ -585,6 +588,56 @@
   }); 
 
    
+$(".letras").keypress(function (key) { 
+  console.log("letras "+key.which);
+    if ((key.which < 97 || key.which > 122)//letras mayusculas
+        && (key.which < 65 || key.which > 90) //letras minusculas 
+        && (key.which != 241) //ñ 
+         && (key.which != 209) //Ñ
+         && (key.which != 8) //retroceso
+         && (key.which != 32) //espacio
+         && (key.which != 225) //á
+         && (key.which != 233) //é
+         && (key.which != 237) //í
+         && (key.which != 243) //ó
+         && (key.which != 250) //ú
+         && (key.which != 193) //Á
+         && (key.which != 201) //É
+         && (key.which != 205) //Í
+         && (key.which != 211) //Ó
+         && (key.which != 218) //Ú
+        )
+        return false;
+ 
+});
+
+$(".letrasseguras").keypress(function (key) { 
+    console.log("letras seguras "+key.which);
+    if ((key.which < 97 || key.which > 122)//letras mayusculas
+        && (key.which < 65 || key.which > 90) //letras minusculas 
+         && (key.which < 48 || key.which > 57)//Numeros
+         && (key.which < 96 || key.which > 105)//Numeros
+          && (key.which < 48 || key.which > 57)//CaracteresEspeciales
+        && (key.which != 190) //.
+        && (key.which != 191) //? 
+        && (key.which != 188) //,<   
+        && (key.which != 241) //ñ 
+         && (key.which != 209) //Ñ
+         && (key.which != 8) //retroceso
+         && (key.which != 32) //espacio
+         && (key.which != 225) //á
+         && (key.which != 233) //é
+         && (key.which != 237) //í
+         && (key.which != 243) //ó
+         && (key.which != 250) //ú
+         && (key.which != 193) //Á
+         && (key.which != 201) //É
+         && (key.which != 205) //Í
+         && (key.which != 211) //Ó
+         && (key.which != 218) //Ú
+        )
+        return false;
+});
 
     </script>
   </body>
