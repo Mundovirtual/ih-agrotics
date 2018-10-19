@@ -1,5 +1,4 @@
-<script type="text/javascript">
-
+ 
 
 function DetallesJuez(psw,institucion,carrera,habilidades,Hobbies,FNacimiento,sexo,Playera){
  
@@ -151,4 +150,3 @@ $( document ).ready(function() {
         }
     });
 }
-</script>
