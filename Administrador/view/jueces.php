@@ -1,12 +1,6 @@
  <?php
  include_once("../modulos/login/security.php");  
-<<<<<<< HEAD
- 
-?> 
-=======
- require_once("../modulos/Juez/juezjs.php"); 
->>>>>>> NuevosCambios
- 
+require_once("../modulos/Juez/juez.php"); 
 ?> 
 
 <div class="container">
