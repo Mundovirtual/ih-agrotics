@@ -35,9 +35,9 @@ function editarDatos(id,psw,celular,correoEdit){
     $("#ActCorreoHacker").val(correoEdit); 
 }
 function ActualizarHacker(){
-    let psw=$("#password").val();
-    let cel=$("#CelularEdit").val();
-    let correo=$("#ActCorreoHacker").val(); 
+     psw=$("#password").val();
+     cel=$("#CelularEdit").val();
+     correo=$("#ActCorreoHacker").val(); 
     $.ajax({
         url: '../modulos/Hackers/hacker.php',
         type: 'POST',
