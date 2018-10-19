@@ -53,7 +53,7 @@ function ActualizarHacker(){
             alertify.set('notifier','position', 'top-right');
             alertify.success("Datos actualizados");
             $("#EditarHacker").modal('hide'); 
-        }
+        }  
     })
     .fail(function() {
         console.log("error");
