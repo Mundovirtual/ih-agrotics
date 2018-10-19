@@ -23,8 +23,8 @@ include_once("conexion.php");
 	 	function ActualizarDatosHacker($id,$Email,$psw,$Celular){ 
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="UPDATE `comunidad` SET `E-mail`='$Email',`psw`='$psw',`Celular`='$Celular'  WHERE `id`='$id'";  
-	 		$resultado=mysqli_query($Conexion,$sql); 
+ 	 		$sql="UPDATE `comunidad` SET `E-mail`='$Email',`psw`='$psw',`Celular`='$Celular'  WHERE `id`='$id'";  
+	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();
 
