@@ -51,13 +51,7 @@ require_once("../modulos/Juez/juez.php");
 		</button>
 	  </div>
 	  <div class="modal-body">
-
-		<div class="form-row">
-			<div class="col-md-12">
-			  <label for="password">password</label>
-			  <input type="text" class="form-control" id="PasswordJuez" name="PasswordJuez"  disabled="">
-			</div> 
-		</div>
+ 
 		<div class="form-row">
 			<div class="col-md-12">
 			  <label for="Institucion">Institución</label>
@@ -93,24 +87,6 @@ require_once("../modulos/Juez/juez.php");
 			</div>					     
 		</div>
 
-	<!--		 
-		<span></span>
-		<div class="form-row">
-			<div class="col-md-4"> 					 
-			</div>			    
-			<div class="col-md-8">
-				
-				<a href="https://www.facebook.com/carlosmartinez123456789" target="_blank">
-					<button type="button" class="btn btn-primary fab fa-facebook fa-1x" >
-					</button>
-				</a>	       
-				<a href="https://twitter.com/ereschiste?lang=es" target="_blank">
-					<button type="button" class="btn btn-info fab fa-twitter fa-1x" >
-					</button>
-				</a>
-			</div>
-		</div>
-	-->
    </div>
 	  <div class="modal-footer">
 		<button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button> 
@@ -133,10 +109,11 @@ require_once("../modulos/Juez/juez.php");
 	  <div class="modal-body"> 
 		<div class="form-row">
 			<div class="col-md-12">
-			<!--
-			  <label for="password">password</label>
-			-->
-			  <input type="hidden" class="form-control" id="PaswJuez"  name="PaswJuez" disabled="" placeholder="Password">
+			 <label>password</label>
+			  <div class="input-group-prepend">
+			   	 <button type="button" class="button fa fa-eye" id="MostrarPswJz" name="MostrarPsw"></button>		 
+			 	 <input type="password" class="form-control" id="PaswJuez" name="PaswJuez" placeholder="Escribe su nueva contraseña"></button></input>			
+				</div>
 			</div>
 
 		</div>

@@ -1,4 +1,12 @@
- 
+//controlador boton password
+$( "#MostrarPswJz" ).on( "click", function() { 
+
+    if ($('#PaswJuez').attr('type') == 'text') {
+          $('#PaswJuez').attr('type', 'password');
+    } else {
+      $('#PaswJuez').attr('type', 'text');
+    } 
+}); 
 
 function DetallesJuez(psw,institucion,carrera,habilidades,Hobbies,FNacimiento,sexo,Playera){
  
@@ -17,7 +25,7 @@ let idEditar="";
 
 function EditarJuez(id,psw,celular,corre){
 	idEditar=id;
-	$("#PaswJuez").val(psw);
+	$("#PaswJuez").val(atob(psw));
 	$("#CelularJuez").val(celular);
 	$("#CorreoJuez").val(corre);
 }
@@ -29,8 +37,7 @@ function EliminarJuez(id){
 }
 
 
-function actualizandoJuez(){
- 
+function actualizandoJuez(){ 
 	 PaswJuez=$("#PaswJuez").val();
 	 CelularJuez=$("#CelularJuez").val();
 	 CorreoJuez=$("#CorreoJuez").val(); 

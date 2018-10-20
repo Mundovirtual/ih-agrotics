@@ -5,7 +5,7 @@ $( document ).ready(function() {
 
 });
  
-//controlador boton 
+//controlador boton password
 $( "#MostrarPsw" ).on( "click", function() { 
 
     if ($('#password').attr('type') == 'text') {
