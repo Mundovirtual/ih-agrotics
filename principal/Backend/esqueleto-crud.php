@@ -1,10 +1,16 @@
 <?php
-class esqueleto{
-	public function setRead($sql){
-		include '../conexion/abrirconexion.php';
-		$con = new Conexion();
-		$contenido = $con->query(mysqli_real_escape_string($con,$sql));
-		return $contenido;
-	} 
-}	
+    require_once '../conexion/abrirconexion.php';
+    class registro 
+    {
+
+    	function InsertarRegistro($sql){
+    		$con = new Conexion();
+    		$resultado = mysqli_query($con,$sql);
+    		return $resultado;
+    	}
+
+
+    	
+    	 
+    }
  ?>

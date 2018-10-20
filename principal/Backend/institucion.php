@@ -2,8 +2,8 @@
 	     class Institucion{
 	     	public function vis(){
 	     		require 'esqueleto-crud.php';
-	             $esqueleto = new esqueleto();
-	             $resultado = $esqueleto->setRead("SELECT `id`, `Institucion` FROM `institucion`");
+	             $esqueleto = new registro();
+	             $resultado = $esqueleto->InsertarRegistro("SELECT `id`, `Institucion` FROM `institucion`");
 			     ?>
 			     <div class="input-group">
 			     <span class="input-group-addon btn btn-danger" data-toggle = "modal" id="" data-target = "#miModal"><i class="fas fa-external-link-alt fa-1x">Agregar</i></span>

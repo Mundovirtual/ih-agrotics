@@ -2,9 +2,9 @@
       class Carrera{
       	public function car(){
       		require_once 'esqueleto-crud.php';
-      		$esqueleto = new esqueleto();
+      		$esqueleto = new registro();
 
-      		$resultado = $esqueleto->setRead("SELECT * FROM `carrera`");
+      		$resultado = $esqueleto->InsertarRegistro("SELECT * FROM `carrera`");
       		?>
           <div class="input-group">
             <span class="input-group-addon btn btn-danger" data-toggle = "modal" id = "ca" data-target = "#ca"><i class="fas fa-external-link-alt fa-1x">Agregar</i></span>

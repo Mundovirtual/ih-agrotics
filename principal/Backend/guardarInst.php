@@ -18,9 +18,9 @@
             <?php
           }else{
              require_once 'esqueleto-crud.php';
-          $esqueleto = new esqueleto();
+          $esqueleto = new registro();
           $sql = "INSERT INTO `institucion`(`id`, `Institucion`) VALUES (null,'$this->institucion')";
-          $resultado = $esqueleto->setRead($sql);
+          $resultado = $esqueleto->InsertarRegistro($sql);
           if($resultado){
             ?>
                            <div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-check"></i>
