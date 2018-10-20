@@ -23,19 +23,15 @@ $("#Habilidades").val(Habilidades);
 $("#Hobbies").val(Hobbies);
 $("#FechaNacimiento").val(feNac);
 $("#sexo").val(Sexo); 
-
 }
 
 /*Mostrar en el DOM Editar datos*/
-let idhackerEditar="";
+idhackerEditar="";
 function editarDatos(id,psw,celular,correoEdit){ 
     idhackerEditar=id; 
     $("#password").val(atob(psw));
     $("#CelularEdit").val(celular);
-    $("#ActCorreoHacker").val(correoEdit); 
-    $("#password").val();
-    $("#CelularEdit").val();
-    $("#ActCorreoHacker").val(); 
+    $("#ActCorreoHacker").val(correoEdit);  
 }
 function ActualizarHacker(){
      psw=$("#password").val();
