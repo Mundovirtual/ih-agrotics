@@ -43,11 +43,10 @@ include_once("conexion.php");
  			$resultado=mysqli_query($Conexion,$sql);
 	 		return  mysqli_fetch_all($resultado);
 	 	}
-	 	function ActualizarDatosJueces($id,$correo,$psw,$celular){
-	 		$Actpsw=md5($psw);
+	 	function ActualizarDatosJueces($id,$correo,$psw,$celular){ 
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="UPDATE `comunidad` SET `E-mail`='$correo',`psw`='$Actpsw',`Celular`='$celular' WHERE `id`='$id' and `Rol_idRol`='3' and `status`='1'"; 
+	 		$sql="UPDATE `comunidad` SET `E-mail`='$correo',`psw`='$psw',`Celular`='$celular' WHERE `id`='$id' and `Rol_idRol`='3' and `status`='1'"; 
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();

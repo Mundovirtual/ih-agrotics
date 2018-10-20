@@ -5,7 +5,7 @@ $( document ).ready(function() {
 
 });
  
-//controlador boton 
+//controlador boton password
 $( "#MostrarPsw" ).on( "click", function() { 
 
     if ($('#password').attr('type') == 'text') {
@@ -46,12 +46,16 @@ function ActualizarHacker(){
     .done(function(respuesta) {
         if (respuesta.Estado!="0") {
             alertify.set('notifier','position', 'top-right');
-            $("#EditarHacker").modal('show');
+            $("#EditarHacker").modal('show'); 
             alertify.error(respuesta.Estado); 
+            $('#password').attr('type', 'password'); 
         }else{
             alertify.set('notifier','position', 'top-right');
             alertify.success("Datos actualizados");
-            $("#EditarHacker").modal('hide'); 
+            $("#EditarHacker").modal('hide');
+            $('#password').attr('type', 'password'); 
+            CargarTablaHackers();
+           
         }  
     })
     .fail(function() {
@@ -63,6 +67,10 @@ function ActualizarHacker(){
     
 
 }
+/*Ocultar contrasena►4*/
+ $('#EditarHacker').on('shown.bs.modal', function () {
+   $('#password').attr('type', 'password');  
+})
 /*Activar el Id para eliminar*/
 let idhackerEliminar="";
 function Eliminar(idhacker){

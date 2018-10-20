@@ -1,7 +1,7 @@
-<?php 
+ <?php 
 include_once("conexion.php");
 	 class Hacker{
-	 	/*Modulo slolicitud Jueces*/	 
+	 	/*Modulo solicitud Jueces*/	 
 	 	function MostrarHacker(){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();

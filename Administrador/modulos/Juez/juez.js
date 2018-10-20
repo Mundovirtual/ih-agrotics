@@ -1,4 +1,12 @@
- 
+//controlador boton password
+$( "#MostrarPswJz" ).on( "click", function() { 
+
+    if ($('#PaswJuez').attr('type') == 'text') {
+          $('#PaswJuez').attr('type', 'password');
+    } else {
+      $('#PaswJuez').attr('type', 'text');
+    } 
+}); 
 
 function DetallesJuez(psw,institucion,carrera,habilidades,Hobbies,FNacimiento,sexo,Playera){
  
@@ -17,7 +25,7 @@ let idEditar="";
 
 function EditarJuez(id,psw,celular,corre){
 	idEditar=id;
-	$("#PaswJuez").val(psw);
+	$("#PaswJuez").val(atob(psw));
 	$("#CelularJuez").val(celular);
 	$("#CorreoJuez").val(corre);
 }
@@ -28,44 +36,43 @@ function EliminarJuez(id){
 	idEliminar=id;
 }
 
-
-function actualizandoJuez(){
- 
-	 PaswJuez=$("#PaswJuez").val();
+function actualizandoJuez(){ 
+	 PaswJuez=btoa($("#PaswJuez").val());
 	 CelularJuez=$("#CelularJuez").val();
 	 CorreoJuez=$("#CorreoJuez").val(); 
-	$.ajax({
-		url: '../modulos/Juez/juez.php',
-		type: 'POST',
-		dataType: 'json',
-		data: {'IdActualizar': idEditar,'psw':PaswJuez,'celular':CelularJuez,'correo':CorreoJuez}
-	})
-	.done(function(hola) { 
-		if (hola=='0') {
+	 $.ajax({
+	 	url: '../modulos/Juez/juez.php',
+	 	type: 'POST',
+	 	dataType: 'json',
+	 	data: {'IdActualizar': idEditar,'psw':PaswJuez,'celular':CelularJuez,'correo':CorreoJuez}
+	 })
+	 .done(function(res) {
+	 	if (res.Estado=='0') {
 			CargarTablaJuez();
 			$("#EditarJueces").modal('hide');
 			alertify.set('notifier','position', 'top-right');
 	 		alertify.success('Datos actualizados');
-		} else if(hola=='1'){
-			$("#EditarJueces").modal('show');
+	 		$('#PaswJuez').attr('type', 'password');
+		} else{
+			 $("#EditarJueces").modal('show');
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Contraseña vacía');		
-		}else if(hola=='2'){
-			$("#EditarJueces").modal('show');
-			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('número celular no valido');		
-			
-		}else if(hola=='3'){
-			$("#EditarJueces").modal('show');
-			alertify.set('notifier','position', 'top-right');
-	 		alertify.error('Correo no valido');
-		}
-
-	});
- 
-
-	
+	 		alertify.error(res.Estado);		
+			$('#PaswJuez').attr('type', 'password'); 
+	  }
+	 })
+	 .fail(function() {
+	 	console.log("error");
+	 })
+	 .always(function() {
+	 	console.log("complete");
+	 });
+	 
 }
+/*Ocultar contrasena►4*/
+ $('#EditarJueces').on('shown.bs.modal', function () {
+   $('#PaswJuez').attr('type', 'password');  
+})
+  
 function EliminandoJuez(){
 	$.ajax({
 			url: '../modulos/Juez/juez.php',
