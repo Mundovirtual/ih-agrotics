@@ -9,20 +9,19 @@ if (isset($_POST["IdActualizar"]) &&isset($_POST["psw"]) &&isset($_POST["celular
 	$email=$_POST["correo"];
 	$msj="";
 
-	if ($psw=='') {
-		 $msj="1";
+	if ($psw=='' or $psw==' ') {
+		 $msj="Contraseña vacía";
 	}
 	elseif ($cel=='' or strlen($cel)<9 ) {
-		$msj="2";
+		$msj="Número celular no valido";
 	}elseif (!filter_var($email, FILTER_VALIDATE_EMAIL) or $email=='' ) {		
-		$msj="3";
-	}else{
-		echo $id ." ".$psw." ".$cel." ".$email;
-		//$ActualizarJuez=new Juez();
-		//$Registrar=$ActualizarJuez->ActualizarDatosJueces($id,$email,$psw,$cel);
+		$msj="Correo no valido";
+	}else{ 
+		$ActualizarJuez=new Juez();
+		$Registrar=$ActualizarJuez->ActualizarDatosJueces($id,$email,$psw,$cel);
 		$msj="0";
 	}
-	echo $msj;
+	echo json_encode(array('Estado'=>$msj));
 }
 
  
