@@ -69,10 +69,10 @@
 			      <label class="input-group-text">Edición</label>
 			    </div>
 			    <select  class="custom-select" id="EdicionVertical" name="EdicionVertical" required >
-			     
+			     <option selected>Selecciona...</option>
 				  <?php 
 				  $con=new Hackaton();
-			       $datosH=$con->mostrarDatosHackaton(); 
+			       $datosH=$con->HackatonDatos(); 
 				  foreach ($datosH as $key) {
 				  	?>
 				  	<option value="<?php echo $key["0"];?>"><?php echo $key["1"];?></option>

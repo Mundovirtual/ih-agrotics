@@ -23,20 +23,20 @@ if (isset($_POST['NombreVertical'])&&isset($_POST['DescripcionVertical'])&&isset
 		$msjRegistro="Descripción: campo vacío";
 		$Aux="1";
 	}
-	else if (strlen($descripcion)<7 || strlen($descripcion)>80 ) {
-		$msjRegistro="Descripción: longitud mayor a 8 y menor a 80";
+	else if (strlen($descripcion)<7 || strlen($descripcion)>180 ) {
+		$msjRegistro="Descripción: longitud mayor a 8 y menor a 180";
 		$Aux="1";
 	}
 	else  if ($asesoria=='') {
 		$msjRegistro="Descripción: campo vacío";
 		$Aux="1";
 	}
-	else if (strlen($asesoria)<7 || strlen($asesoria)>80 ) {
-		$msjRegistro="Descripción: longitud mayor a 8 y menor a 80";
+	else if (strlen($asesoria)<7 || strlen($asesoria)>180 ) {
+		$msjRegistro="Descripción: longitud mayor a 8 y menor a 180";
 		$Aux="1";
 	}
 	else if  ($_POST['EdicionVertical']=="Selecciona...") {
-		  echo "Selecciona una vertical";
+		  $msjRegistro= "Selecciona una vertical";
 		  $Aux="1";
 	}	 
 	else if($Aux=="0"){ 		 
@@ -103,7 +103,7 @@ if (isset($_POST["idAc"])&&isset($_POST["eNv"])&&isset($_POST["eDv"])&&isset($_P
 		$AuxUpdate="1";
 	}
 	else if  ($hackaton=="Selecciona...") {
-		  echo "Selecciona una vertical";
+		 $msjUpdate= "Selecciona una vertical";
 		  $AuxUpdate="1";
 	}	 
 	else if($AuxUpdate=="0"){ 		 
