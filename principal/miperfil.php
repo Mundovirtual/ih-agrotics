@@ -126,9 +126,10 @@
              $("#info").hide();
              location.href='../Lider/index.php';
              } 
-             /*if(respuesta == 3){
-              location.href = 'Backend/Juez/index.php';
-             }*/
+             if(respuesta == 3){
+              $("#info").hide();
+              location.href = '../Juez/index.php';
+             }
              if(respuesta == 6){
               $("#info").hide();
               location.href = '../Hacker/index.php';
