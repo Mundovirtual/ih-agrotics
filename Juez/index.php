@@ -92,12 +92,25 @@ include_once("../login/security.php");
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center"> 
                 <!-- Log out-->
-                <li class="nav-item"><a href="../login/SesionClose.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
+                <li class="nav-item"><a href="#" class="nav-link logout" data-toggle = "modal" data-target = "#cerrar"><span class="fas fa-power-off text-danger"></span> Salir</a></li>
               </ul>
             </div>
           </div>
         </nav>
       </header>
+      <div class="modal fade" id="cerrar">
+        <div class="modal-dialog" role = "document">
+          <div class="modal-content text-center text-warning">
+            <div class="modal-body">
+              <i class="fas fa-info-circle fa-5x"></i>
+              <h1 class="modal-title text-center text-dark" id="cerrar">Estas seguro ?</h1>
+              <p class="text-center text-dark">Quieres salir del sistema y finalizar la sesión actual</p>
+              <a class="btn btn-primary" href= "../login/SesionClose.php">si, Salir</a>
+              <a class="btn btn-danger text-white" data-dismiss="modal">Cancelar</a>  
+            </div>
+          </div>
+        </div>  
+      </div>
       <!-- Counts Section -->
       <section class="dashboard-counts section-padding">
         <div class="container-fluid">
