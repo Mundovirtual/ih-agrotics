@@ -1,6 +1,8 @@
  <?php
  include_once("../modulos/login/security.php");    
-?>    
+ include_once("../class/Hackaton.php"); 
+ include("../class/Vertical.php");
+ ?>    
 <div class="container">
 	<h1 align="center">Configuracion de Ediciones</h1>     
 </div>
@@ -8,11 +10,7 @@
  <header>
  	<div class="d-flex"> 
  		<div class="col-md-1"></div>
-	 	<div class="col-md-5">
-			<form class="form-inline">
-			    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-			    <button class="btn btn-outline-success my-2 my-sm-0 fas fa-search" type="submit">Buscar</button>
-			 </form>
+	 	<div class="col-md-5"> 
 		</div>
 		<div class="col-md-6">
 			<div align="right">
@@ -27,7 +25,7 @@
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10">
-			<table class="table table-hover">
+			<table class="table table-hover" id="TablaConfiguracion">
 			  <thead>
 			    <tr>
 			      <th scope="col">#</th>
@@ -35,28 +33,18 @@
 			      <th scope="col">Vertical</th>
 			      <th scope="col">Fase</th>
 			      <th scope="col">Equipos</th>
+			      <th scope="col">Editar</th>
+			      <th scope="col">Eliminar</th>
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr>
-			      <th scope="row">1</th>
-			      <td>Edicion 1 </td>
-			      <td>Agroeconomia</td>
-			      <td>fase 1</td>
-			      <td>5</td> 
-			      <td>
-			      	<button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#EditarConfiguraciones">	 
-			      	 </button>
 
-			      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarConfiguraciones"></button>
-			      </td>
-			      
-			    </tr>			     
 			  </tbody>
 			</table>
 			
 		</div>
 		<div class="col-md-1">
+			
 		</div>
 	</div>
 
@@ -78,11 +66,15 @@
 			  <div class="input-group-prepend">
 			    <label class="input-group-text">Hackaton</label>
 			  </div>
-			  <select class="custom-select" id="Vertical">
-			    <option selected value="s">Selecciona...</option>
-			    <option value="1">Hackaton 1</option>
-			    <option value="2">Hackaton 2</option>
-			    <option value="3">Hackaton 3</option>
+			  <select class="custom-select" id="Hackaton" name="Hackaton" disabled="disabled"> 
+			    <?php 
+			    	$hackaton= new Hackaton();
+			    	$verHackaton=$hackaton->mostrarDatosHackaton();
+			    	foreach ($verHackaton as $key) {?>
+			    		 <option value="<?php echo $key['0']; ?>"><?php echo $key['1']; ?></option>
+			    	<?php	 
+			    	}
+			     ?> 
 			  </select>
 			</div>
 			
@@ -90,22 +82,31 @@
 			  <div class="input-group-prepend">
 			    <label class="input-group-text">Vertical</label>
 			  </div>
-			  <select class="custom-select" id="Vertical">
+			  <select class="custom-select" id="Vertical" name="Vertical">
 			    <option selected value="s">Selecciona...</option>
-			    <option value="1">Vertical 1</option>
-			    <option value="2">Vertical 2</option>
-			    <option value="3">Vertical 3</option>
+				<?php 
+			    	$Vertical= new Vertical();
+			    	$verVertical=$Vertical->mostrarDatos(); 
+			    	foreach ($verVertical as $key) {?>
+			    		 <option value="<?php echo $key['0']; ?>"><?php echo $key['2']; ?></option>
+			    	<?php	 
+			    	}
+			     ?> 
 			  </select>
 			</div>
 			<div class="input-group mb-3"> 
 			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="Fases">Fase</label>
+			    <label class="input-group-text" >Fase</label>
 			  </div>
-			  <select class="custom-select" id="Fases">
-			    <option selected value="s">Selecciona...</option>
-			    <option value="1">Primera</option>
-			    <option value="2">Segunda</option>
-			    <option value="3">Tercera</option>
+			  <select class="custom-select" id="Fases" name="Fases">
+			    <option selected value="s">Selecciona...</option> 
+			    <?php  
+			    	$mostrarFases=$Vertical->mostrarFases(); 
+			    	foreach ($mostrarFases as $key) {?>
+			    		 <option value="<?php echo $key['0']; ?>"><?php echo $key['1']; ?></option>
+			    	<?php	 
+			    	}
+			     ?> 
 			  </select>
 			</div>
 			<div>
@@ -114,7 +115,7 @@
 		        <div class="input-group-prepend">
 		          <div class="input-group-text">Equipos Limite</div>
 		        </div>
-		        <input type="number"  class="form-control col-sm-3" id="nEquipos" placeholder="5">
+		        <input type="number"  class="numero form-control col-sm-3 " id="nEquipos" name="nEquipos" step="1"  min="0">
 		      </div>
 		    </div>
 				 		
@@ -122,7 +123,7 @@
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success" id="GuardarHack">Registrar</button>
+	        <button type="submit" class="btn btn-success" id="GuardarHack" onclick="registrarconf()">Registrar</button>
 	      </div>
 	    </div>
 	  </div>
@@ -140,31 +141,32 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-			  <form>
+			  <form>			  	
+			  	<div class="input-group mb-3"> 
+			  		<div class="input-group-prepend">
+			 		   <label class="input-group-text">Hackaton</label>
+			  		</div>
+				   <input type="text" class="form-control"  id="EditarHack" name="EditarHack" disabled>
+				</div>
 				<div class="input-group mb-3"> 
 				  <div class="input-group-prepend">
 				    <label class="input-group-text" for="Vertical">Vertical</label>
 				  </div> 
-      				<input type="text" class="form-control" placeholder="Vertical 1" disabled>
+      				<input type="text" class="form-control"  id="EditarVertical" name="EditarVertical"  disabled>
 				</div>
 				<div class="input-group mb-3"> 
 				  <div class="input-group-prepend">
 				    <label class="input-group-text" for="Fases">Fase</label>
 				  </div>
-				  <select class="custom-select" id="Fases">
-				    <option selected>Selecciona...</option>
-				    <option value="1">Primera</option>
-				    <option value="2">Segunda</option>
-				    <option value="3">Tercera</option>
-				  </select>
+				  <input type="text" class="form-control" id="EditarFase" name="EditarFase" disabled>
 				</div>
 				<div>
-			      <label class="sr-only" for="nEquipos"></label>
+			      <label class="sr-only" ></label>
 			      <div class="input-group">
 			        <div class="input-group-prepend">
 			          <div class="input-group-text">Equipos Limite</div>
 			        </div>
-			        <input type="number"  class="form-control col-sm-3" id="nEquipos" placeholder="5">
+			        <input type="number"  class="numero form-control col-sm-3 " id="nEquiposEditar" name="nEquiposEditar" min="0" step="1" >
 			      </div>
 			    </div>
 				 		
@@ -172,7 +174,7 @@
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="submit" class="btn btn-success" id="ActualizarHack">Actualizar</button>
+	        <button type="submit" class="btn btn-success" id="ActualizarHack" onclick="actualizar()">Actualizar</button>
 	      </div>
 	    </div>
 	  </div>
@@ -197,11 +199,11 @@
 	    </div>
 	    <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-danger" id="ActualizarHack">Continuar</button>
+	        <button type="button" class="btn btn-danger" onclick="EliminarRegistro()">Continuar</button>
 	      </div>
 	    </div>
 	  </div>
 	</div>
-	
-
+<script src="../modulos/conf/conf.js"></script>
+<script src="../js/letras.js"></script>
  

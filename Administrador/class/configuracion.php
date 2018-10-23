@@ -1,40 +1,46 @@
 <?php 
  include_once("conexion.php");
 	 
-	 class Hackaton{
+	 class configuracion{
 
-	 	function mostrarDatosHackaton(){	 		
+	 	function indexConfiguracion(){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="SELECT * FROM `hackatonedicion`";
+	 		$sql="SELECT `infconfiguracion`.`Id`, `hackatonedicion`.`Edicion`, `vertical`.`Descripcion`, `fases`.`pitch`, `infconfiguracion`.`EquiposLimite` FROM `infconfiguracion` inner join `vertical` on `infconfiguracion`.`Vertical_id`=`vertical`.`id` inner join `hackatonedicion` on `hackatonedicion`.`id`=`vertical`.`HackatonEdicion_id` inner join `fases` on `fases`.`idFases`=`infconfiguracion`.`Fases_idFases` where `hackatonedicion`.`status`='1'  ";
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
 	 	}
-
-	 	function InsertarHackaton($Edicion,$InicioHackaton,$FechLimiteRegProy,$TerminoHack,$Imagen){
+	 	function validar($idHack,$IdVert,$idFase){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="INSERT INTO `hackatonedicion`(`Edicion`, `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack`, `Imagen`) VALUES  ('$Edicion','$InicioHackaton','$FechLimiteRegProy','$TerminoHack','$Imagen')"; 
+	 		$sql="SELECT `infconfiguracion`.`Id`as 'idConf', `hackatonedicion`.`id` as 'idHack', `vertical`.`id` as 'idVertical', `infconfiguracion`.`Fases_idFases` as 'idFases' FROM `infconfiguracion` inner join `vertical` on `infconfiguracion`.`Vertical_id`=`vertical`.`id` inner join `hackatonedicion` on `hackatonedicion`.`id`=`vertical`.`HackatonEdicion_id` where `hackatonedicion`.`id`='$idHack' and `vertical`.`id`='$IdVert' and `infconfiguracion`.`Fases_idFases`='$idFase' ";
+	 		$resultado=mysqli_query($Conexion,$sql);
+	 		return  mysqli_fetch_all($resultado);
+	 		$Conexion->mysql_close();
+	 	}
+	 	function Insertar($Vertical_id,$idfase,$EquiposLimite){
+	 		$con=new Conectar();
+	 		$Conexion=$con->conexion();
+	 		$sql="INSERT INTO `infconfiguracion`(`Vertical_id`, `Fases_idFases`, `EquiposLimite`) VALUES ('$Vertical_id','$idfase','$EquiposLimite')";  
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();
 	 	}
 
-	 	function ActualizarHackaton($id,$Edicion,$InicioHackaton,$FechLimiteRegProy,$TerminoHack,$Imagen){
+	 	function Actualizar($id,$EquiposLimite){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-
-	 		$sql="UPDATE `hackatonedicion` SET `Edicion`='$Edicion',`InicioHackaton`='$InicioHackaton',`FechLimiteRegProy`='$FechLimiteRegProy',`TerminoHack`='$TerminoHack',`Imagen`='$Imagen' WHERE `id`='$id'";  
+	 		$sql="UPDATE `infconfiguracion` SET `EquiposLimite`='$EquiposLimite' WHERE `Id`='$id'";  
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();
 	 	}
 
-	 	function EliminarHackaton($id){
+	 	function eliminar($id){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="DELETE FROM `hackatonedicion` WHERE  `id`='$id'"; 
+	 		$sql="DELETE FROM `infconfiguracion` WHERE `Id`='$id'"; 
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();

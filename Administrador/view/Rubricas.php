@@ -86,7 +86,7 @@
 
 	<!-- REGISTRO -->
 	<div class="modal fade" id="ModalRubricas" tabindex="-1" role="dialog" aria-labelledby="Editar" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
+	  <div class="modal-dialog modal-lg" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <h5 class="modal-title" id="Editar"><i class="fas fa-plus-circle"></i>Registro de Criterios de evaluación</h5>

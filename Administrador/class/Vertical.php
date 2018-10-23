@@ -13,6 +13,16 @@
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
 	 	}
+	 	/*Fases*/
+	 	function mostrarFases(){
+	 		
+	 		$con=new Conectar();
+	 		$Conexion=$con->conexion();
+	 		$sql="SELECT `idFases`, `pitch` FROM `fases`";
+	 		$resultado=mysqli_query($Conexion,$sql);
+	 		return  mysqli_fetch_all($resultado);
+	 		$Conexion->mysql_close();
+	 	}
 
 	 	function InsertarVertical($Vertical,$Descripcion,$asesoria,$Hackaton){
 	 		$con=new Conectar();
