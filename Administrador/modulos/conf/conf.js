@@ -56,8 +56,8 @@ function registrarconf(){
             $("#ModalConfiguraciones").modal('hide'); 
             cargarConfig();
             alertify.success('Configuración registrada');   
-            $("#Vertical").val('');
-            $("#Fases").val('');
+            $("#Vertical").val('s');
+            $("#Fases").val('s');
             $("#nEquipos").val('');          
         } else{
             alertify.set('notifier','position', 'top-right');
