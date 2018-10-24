@@ -10,7 +10,7 @@
           var datos = $('#guardarDatos').serialize();
            $.ajax({
                 type: 'post',
-                url: 'Backend/institucion.php',
+                url: 'principal/Backend/institucion.php',
                 data: datos,
                 beforeSend:function(c){
                  $("#idInstitucion").html("Procesando....");
@@ -29,7 +29,7 @@
             var datos = $('#guardarDatoscarrera').serialize();
             $.ajax({
                 type:'post',
-                url:'Backend/Carrera.php',
+                url:'principal/Backend/Carrera.php',
                 data:datos,
                 beforeSend:function(r){
                     $("#car").html("Procesando....");
