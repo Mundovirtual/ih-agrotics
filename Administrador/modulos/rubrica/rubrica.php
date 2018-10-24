@@ -1,5 +1,5 @@
   <?php
-include_once("../../class/rubricas.php");
+include_once("../../class/Rubricas.php");
 
 if (isset($_POST['idVertical']) && isset($_POST['Rubricas'])) {
   $id=$_POST['idVertical']; 
