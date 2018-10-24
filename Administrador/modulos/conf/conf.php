@@ -18,7 +18,7 @@ if (isset($_POST['idEdit'])&&isset($_POST['equiposEdit'])) {
 		$msj="Equipo límite: Solo números enteros";
 		$aux="1";
 	}else if((int) $Equipo<='0' || (int) $Equipo>'100'){
-		$msj="Equipo límite: Número mayor a uno";
+		$msj="Equipo límite: Número mayor a uno y menor a 100";
 		$aux="1";
 	}
 	else if ($aux=='0') {

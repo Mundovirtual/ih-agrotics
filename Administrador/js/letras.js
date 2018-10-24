@@ -1,6 +1,6 @@
 
  $(document).ready(function(){
-    $(".letras").keypress(function (key) { 
+    $(".letras").keypress(function (key) {  
         if ((key.which < 97 || key.which > 122)//letras mayusculas
             && (key.which < 65 || key.which > 90) //letras minusculas 
             && (key.which != 241) //ñ 
@@ -17,6 +17,7 @@
              && (key.which != 205) //Í
              && (key.which != 211) //Ó
              && (key.which != 218) //Ú
+             && (key.which != 191) //?
 
             )
             return false;

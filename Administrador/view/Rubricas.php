@@ -1,5 +1,6 @@
  <?php
  include_once("../modulos/login/security.php");    
+ include_once("../class/Vertical.php");
 ?>  
 <div class="container">
 	<h1 align="center">Criterios de evaluación</h1></br>  
@@ -7,38 +8,8 @@
  
  <header>
  	<div class="d-flex"> 
- 		<div class="col-md-3">
- 			 <div class="input-group mb-3"> 
-			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="Hackaton">Hackaton</label>
-			  </div>
-			  <select class="custom-select" id="Hackaton">
-			    <option selected>Seleccione...</option>
-			    <option value="1">Hackaton 1</option>
-			    <option value="2">Hackaton 2</option>
-			    <option value="3">Hackaton 3</option>
-			  </select>
-			</div>
- 		</div>
- 		<div class="col-md-3">
- 			 <div class="input-group mb-3"> 
-			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="Vert">Vertical</label>
-			  </div>
-			  <select class="custom-select" id="Vert">
-			    <option selected>Seleccione...</option>
-			    <option value="1">Vertical 1</option>
-			    <option value="2">Vertical 2</option>
-			    <option value="3">Vertical 3</option>
-			  </select>
-			</div>
- 		</div>
-	 	<div class="col-md-5">
-			<form class="form-inline">
-			    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-			    <button class="btn btn-outline-success my-1 my-sm-0 fas fa-search" type="submit">Buscar</button>
-			 </form>
-		</div>
+ 		<div class="col-md-11"> 			 
+ 		</div> 		 
 		<div class="col-md-1">
 			<div align="right">
 				<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalRubricas">Nueva
@@ -52,28 +23,18 @@
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10">
-			<table class="table table-hover">
+			<table class="table table-hover" id="MostrarRubricas">
 			  <thead>
 			    <tr>
-			      <th scope="col">#</th>
+			      <th scope="col">#</th> 
+			      <th scope="col">Vertical</th>
 			      <th scope="col">Pregunta</th> 
-			      <th scope="col">Acciones</th> 
+			      <th scope="col">Editar</th> 
+			      <th scope="col">Eliminar</th> 
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr>
-			      <th scope="row">1</th>
-			      	<td>Un hombre puede imaginar cosas que son falsas, pero sólo puede entender cosas que son ciertas??
- 					</td>
-			       
-			      <td>
-			      	<button type="button" class="btn btn-success fas fa-edit" data-toggle="modal" data-target="#EditarRubricas">	 
-			      	 </button>
-
-			      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarRubricas"></button>
-			      </td>
-			      
-			    </tr>			     
+			     			     
 			  </tbody>
 			</table>
 			
@@ -95,16 +56,21 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	      	<form>
+	      	<form id="RegistrarEvaluacion">
 		      	<div class="input-group mb-2"> 
 				  <div class="input-group-prepend">
 				    <label class="input-group-text" for="Vertical">Vertical</label>
 				  </div>
-				  <select class="custom-select" id="Vertical">
-				    <option selected>Selecciona...</option>
-				    <option value="1">Vertical 1</option>
-				    <option value="2">Vertical 2</option>
-				    <option value="3">Vertical 3</option>
+				  <select class="custom-select" id="idVerticalRubricas">
+				  	<option selected value="s">Selecciona...</option>
+				   <?php 
+				  		$MostrarVertical=new Vertical();
+				  		$mostrar=$MostrarVertical->mostrarDatos();
+				  		foreach ($mostrar as $key) {?>
+						<option value="<?php echo $key["0"];?>"><?php echo $key["2"];?></option>
+				  		<?php	 
+				  		}
+				  	 ?>				     
 				  </select>
 				</div>	    
 				<p class="font-weight-bold" align="center">Ingresa los criterios de evaluación</p>   	
@@ -113,8 +79,12 @@
                       <div class="table-responsive">  
                            <table class="table table-bordered" id="dynamic_field">  
                                 <tr>  
-	                                 <td><textarea type="text" rows="1" name="name[]" placeholder="Criterio de evaluación" class="form-control name_list" /></textarea></td>  
-	                                 <td><button type="button" name="add" id="add" class="btn btn-success">+</button></td>  
+	                                 <td>
+	                                 	<textarea type="text" rows="1" name="rubricas[]" placeholder="Criterio de evaluación" class="form-control name_list letras" /></textarea>
+	                                 </td>  
+	                                 <td>
+	                                 	<button type="button" name="add" id="add" class="btn btn-success">+</button>
+	                                 </td>  
                                 </tr>  
                            </table>                             
                       </div>  	                     
@@ -124,7 +94,7 @@
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success"  name="submit" id="submit">Registrar</button>
+	        <button type="button" class="btn btn-success" onclick="registrar_rubricas()">Registrar</button>
 	      </div>
 	    </div>
 	  </div>
@@ -145,20 +115,21 @@
 	       	<form>
 		      	<div class="input-group mb-3"> 
 				  <div class="input-group-prepend">
-				    <label class="input-group-text" for="Vertical">Vertical</label>
+				    <label class="input-group-text" >Vertical</label>
 				  </div> 
-      				<input type="text" class="form-control" placeholder="Vertical 1" disabled>
+      				<input type="text" class="form-control" id="infoVertical" disabled>
 				</div>
 
-                <div class="form-group">  	                       
-                   <input id="cEvaluacion" type="text" rows="2" value="HOla modificame"  class="form-control name_list" /></input>      
+                <div class="form-group">  
+
+                   <textarea id="cEvaluacion" type="text" rows="2"  placeholder="Criterio de evaluación" class="form-control name_list letras"></textarea>      
                  </div>  	                     
                               			  
 			</form>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success" id="ActualizarHack">Actualizar</button>
+	        <button type="button" class="btn btn-success" onclick="Actualizar()">Actualizar</button>
 	      </div>
 	    </div>
 	  </div>
@@ -183,57 +154,12 @@
 	    </div>
 	    <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-danger" id="ActualizarHack">Continuar</button>
+	        <button type="button" class="btn btn-danger" onclick="Eliminar()">Continuar</button>
 	      </div>
 	    </div>
 	  </div>
 	</div> 
  
   
- <script>  
- $(document).ready(function(){  
-      var i=1;  
-      $('#add').click(function(){  
-           i++;  
-           $('#dynamic_field').append('<tr id="row'+i+'"><td><textarea type="text" rows="1" name="name[]" placeholder="Criterio de evaluación" class="form-control name_list" /></textarea></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
-      });  
-      $(document).on('click', '.btn_remove', function(){  
-           var button_id = $(this).attr("id");   
-           $('#row'+button_id+'').remove();  
-      });  
-      $('#submit').click(function(){            
-           $.ajax({  
-                url:"name.php",  
-                method:"POST",  
-                data:$('#add_name').serialize(),  
-                success:function(data)  
-                {  
-                     alert(data);  
-                     $('#add_name')[0].reset();  
-                }  
-           });  
-      });  
- });  
- 
- </script>
-  <?php
-  /*  
- $connect = mysqli_connect("localhost", "root", "", "test_db");  
- $number = count($_POST["name"]);  
- if($number > 0)  
- {  
-      for($i=0; $i<$number; $i++)  
-      {  
-           if(trim($_POST["name"][$i] != ''))  
-           {  
-                $sql = "INSERT INTO tbl_name(name) VALUES('".mysqli_real_escape_string($connect, $_POST["name"][$i])."')";  
-                mysqli_query($connect, $sql);  
-           }  
-      }  
-      echo "Data Inserted";  
- }  
- else  
- {  
-      echo "Please Enter Name";  `
- }  
- */?> 
+<script src="../modulos/rubrica/rubrica.js"></script>
+<script src="../js/letras.js"></script>
