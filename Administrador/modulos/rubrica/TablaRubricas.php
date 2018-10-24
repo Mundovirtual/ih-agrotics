@@ -1,5 +1,5 @@
 <?php 
-include_once("../../class/rubricas.php");
+include_once("../../class/Rubricas.php");
 	$rubricas=new rubricas();
 	$ver=$rubricas->index(); 
  	$tabla="";
