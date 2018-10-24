@@ -5,43 +5,6 @@
 	<h1 align="center">Proyectos</h1></br>  
 </div>
  
- <header>
- 	<div class="d-flex"> 
- 		<div class="col-md-3">
- 			 <div class="input-group mb-3"> 
-			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="HackatonEquipos">Hackaton</label>
-			  </div>
-			  <select class="custom-select" id="HackatonEquipos">
-			    <option selected>Seleccione...</option>
-			    <option value="1">Hackaton 1</option>
-			    <option value="2">Hackaton 2</option>
-			    <option value="3">Hackaton 3</option>
-			  </select>
-			</div>
- 		</div>
- 		<div class="col-md-3">
- 			 <div class="input-group mb-3"> 
-			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="VertEquipo">Vertical</label>
-			  </div>
-			  <select class="custom-select" id="VertEquipo">
-			    <option selected>Seleccione...</option>
-			    <option value="1">Vertical 1</option>
-			    <option value="2">Vertical 2</option>
-			    <option value="3">Vertical 3</option>
-			  </select>
-			</div>
- 		</div>
-	 	<div class="col-md-5">
-			<form class="form-inline">
-			    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-			    <button class="btn btn-outline-success my-1 my-sm-0 fas fa-search" type="submit">Buscar</button>
-			 </form>
-		</div>
-		 
-	</div>
- </header>
 <body>
 	 <div class="row">
 		<div class="col-md-1">
