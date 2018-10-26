@@ -1,53 +1,16 @@
  <?php
  include_once("../modulos/login/security.php");    
 ?>  
- <div class="container">
+<div class="container">
 	<h1 align="center">Proyectos</h1></br>  
 </div>
  
- <header>
- 	<div class="d-flex"> 
- 		<div class="col-md-3">
- 			 <div class="input-group mb-3"> 
-			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="HackatonEquipos">Hackaton</label>
-			  </div>
-			  <select class="custom-select" id="HackatonEquipos">
-			    <option selected>Seleccione...</option>
-			    <option value="1">Hackaton 1</option>
-			    <option value="2">Hackaton 2</option>
-			    <option value="3">Hackaton 3</option>
-			  </select>
-			</div>
- 		</div>
- 		<div class="col-md-3">
- 			 <div class="input-group mb-3"> 
-			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="VertEquipo">Vertical</label>
-			  </div>
-			  <select class="custom-select" id="VertEquipo">
-			    <option selected>Seleccione...</option>
-			    <option value="1">Vertical 1</option>
-			    <option value="2">Vertical 2</option>
-			    <option value="3">Vertical 3</option>
-			  </select>
-			</div>
- 		</div>
-	 	<div class="col-md-5">
-			<form class="form-inline">
-			    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-			    <button class="btn btn-outline-success my-1 my-sm-0 fas fa-search" type="submit">Buscar</button>
-			 </form>
-		</div>
-		 
-	</div>
- </header>
 <body>
 	 <div class="row">
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10">
-			<table class="table table-hover">
+			<table class="table table-hover" id="TablaProyectos">
 			  <thead>
 			    <tr>
 			      <th scope="col">#</th>
@@ -59,26 +22,10 @@
 
 			    </tr>
 			  </thead>
-			  <tbody>
-			    <tr>
-			      <th scope="row">1</th>
-			      	<td>Inge Juan</td>			      	 
-			      	<td>Vertical 1</td>
-			      	<td>Innovando3.0</td>
-			       <td>
-			      	<a data-toggle="modal" data-target="#DetallesEquipo">
-			      		<i class="fa fa-eye fa-2x" align="center" aria-hidden="true">
-			           	</i>
-			      	</a>			      	
-			      </td>
-			      <td>
-			      	<button type="button" class="btn btn-danger fas fa-trash-alt" data-toggle="modal"  data-target="#EliminarEquipos"></button>
-			      </td>
-			      
-			    </tr>			     
+			  <tbody> 
+
 			  </tbody>
-			</table>
-			
+			</table>			
 		</div>
 		<div class="col-md-1">
 		</div>
@@ -99,29 +46,48 @@
       </div>
       <div class="modal-body">
 
-       	<div class="form-row">
+       	<div class="form-row ">
 		    <div class="col-md-12">
 		      <label for="Descripcion">Descripcion</label>
 		      <textarea type="text" class="form-control" id="DescripcionProyecto"  disabled="">		      	
 		      </textarea> 
 		    </div>
-		    <div class="col-md-12">
+		    <div class="col-md-8">
+		      <label for="Descripcion">Lider</label>
+		      <input  type="text" class="form-control" id="lider"  disabled=""></input> 
+		    </div>
+		     <div class="col-md-4">
 		      <label for="Telefono">Fecha de registro</label>
-		      <input type="text" class="form-control" id="RegistroProyecto" value="2/85/1985" disabled="">
-		    </div>		     
+		      		<input type="text" class="form-control" id="RegistroProyecto" value="2/85/1985" disabled="">
+		    </div>
+		    <div class="row text-center">
+			    <div class="col-md-6">
+			    	<label for="Descripcion">E-mail</label>
+		      		<input  type="text" class="form-control" id="email"  disabled=""></input> 
+			    </div>
+			    <div class="col-md-6">
+			    	<label for="Descripcion">Telefono</label>
+		      		<input  type="text" class="form-control" id="telefono"  disabled=""></input> 
+			    </div>
+			    
+
+		    </div>
+
+		    		     
 	 	</div>
 
-	   	<div class="form-row">
-		    <div class="col-md-7">
-		      <label for="Integrantes">Integrantes</label>
-		      <input type="text" class="form-control" id="Integrantes" value="Integrante Integrante 1" disabled="">
-		      <input type="text" class="form-control" id="Integrantes" value="Integrante Integrante 2" disabled="">
-		      <input type="text" class="form-control" id="Integrantes" value="Integrante Integrante 3" disabled="">
-		      <input type="text" class="form-control" id="Integrantes" value="Integrante Integrante 4" disabled="">
-		    </div>
-		 
-		    
-	 	</div>
+	   	<div class="form-row"> 
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-10">
+					 <header class="text-center">Integrantes</header>
+					<div id="TablaIntegrantes">
+						
+					</div>	  					     
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>	 
    </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button> 
@@ -155,6 +121,5 @@
     </div>
   </div>
 </div> 
- <script type="text/javascript">
- 	document.getElementById("DescripcionProyecto").value = "Isaac Santiago Coronel Isaac Santiago Coronel Isaac Santiago Coronel Isaac Santiago Coronel";
- </script>
+ 
+ <script src="../modulos/proyectos/proyecto.js"></script>
