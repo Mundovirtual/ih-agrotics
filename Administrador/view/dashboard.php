@@ -20,7 +20,7 @@
                   <i class="fas fa-folder fa-5x"></i>
                 </div>
                 <div class="col-md-9 text-right">
-                  <div class="fa-3x">13</div> 
+                  <div id="ProyectosNumero" class="fa-3x"></div> 
                 </div>
               </div>
           </div>
@@ -38,7 +38,7 @@
                 <i class="fas fa-users fa-5x"></i>
               </div>
               <div class="col-md-9 text-right">
-                <div class="fa-3x">123</div> 
+                <div id="ParticipantesNumero" class="fa-3x"></div> 
               </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
                   <i class="fas fa-chalkboard-teacher fa-5x"></i> 
                 </div>
                 <div class="col-md-9 text-right">
-                  <div class="fa-3x">23</div> 
+                  <div id="MentoresNumero" class="fa-3x"></div> 
                 </div>
               </div>
           </div>
@@ -74,7 +74,7 @@
                   <i class="fas fa-user-secret fa-5x"></i>
                 </div>
                 <div class="col-md-9 text-right">
-                  <div class="fa-3x">45</div> 
+                  <div id="HackersNumero" class="fa-3x"></div> 
                 </div>
               </div>
           </div>

@@ -5,7 +5,7 @@ include_once("conexion.php");
 	 	function MostrarJuezPorActivar(){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="SELECT `comunidad`.`id`, `comunidad`.`Nombre`, `comunidad`.`Apellidos`, `comunidad`.`E-mail`, `comunidad`.`psw`, `comunidad`.`Celular`, `carrera`.`Carrera`,`institucion`.`Institucion`,`comunidad`.`FechaNacimiento`,  `comunidad`.`Rol_idRol`, `comunidad`.`Genero_idSexo` FROM `comunidad` inner join `carrera` on `Carrera_id`= `carrera`.`id` inner join `institucion` on `comunidad`.`Institucion_id`=`institucion`.`id` WHERE `Rol_idRol`='3' and `status`='0'";
+	 		$sql="SELECT `comunidad`.`id`, `comunidad`.`Nombre`, `comunidad`.`Apellidos`, `comunidad`.`E-mail`, `comunidad`.`psw`, `comunidad`.`Celular`, `carrera`.`Carrera`, `institucion`.`Institucion`, `comunidad`.`FechaNacimiento`, `comunidad`.`Rol_idRol`, `comunidad`.`Genero_idSexo` FROM `comunidad` inner join `hackatonedicion` on `hackatonedicion`.`status`=`comunidad`.`hackaton` inner join `carrera` on `Carrera_id`= `carrera`.`id` inner join `institucion` on `comunidad`.`Institucion_id`=`institucion`.`id` WHERE `hackatonedicion`.`status`='1' and`comunidad`.`Rol_idRol`='3' and `comunidad`.`status`='0' ";
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
