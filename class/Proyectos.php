@@ -6,7 +6,7 @@
 	 	function MostrarProyectoPorLider($idLider){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql = "SELECT `id`,`Nombre`,`Apellidos`,`E-mail`,`Celular`,`Carrera`,`Institucion`, `FechaNacimiento`, `Habilidades`, `Hobbies`, `IDlider`, `NombreDeEquipo`, `NombreProyecto`, `NVertical`, `VDesc`, `VAsesoria` , `HStatus` FROM `detalleequipo`  where `HStatus`='1' and `IDlider`='$idLider'";  
+			$sql = "SELECT `comunidad`.`id` AS `id`, `comunidad`.`Nombre` AS `Nombre`, `comunidad`.`Apellidos` AS `Apellidos`, `comunidad`.`E-mail` AS `E-mail`, `comunidad`.`Celular` AS `Celular`, `proyecto`.`id` AS `proyectoID`, `proyecto`.`Descripcion` AS `proyectoDesc`, `proyecto`.`comunidad_id` AS `IDlider`, `proyecto`.`NombreDeEquipo` AS `NombreDeEquipo`, `proyecto`.`NombreProyecto` AS `NombreProyecto`, `vertical`.`Nombre` AS `NVertical`, `vertical`.`Descripcion` AS `VDesc`, `vertical`.`InfAsesoria` AS `VAsesoria`, `hackatonedicion`.`Edicion` AS `Hedicion`, `hackatonedicion`.`status` AS `HStatus` from `proyecto` inner join `comunidad` on `proyecto`.`comunidad_id` = `comunidad`.`id` inner join `carrera` on `comunidad`.`Carrera_id` = `carrera`.`id` inner join `institucion` on `comunidad`.`Institucion_id` = `institucion`.`id` inner join `vertical` on `vertical`.`id` = `proyecto`.`Vertical_id` inner join `hackatonedicion` on `vertical`.`HackatonEdicion_id` = `hackatonedicion`.`id`  where `comunidad`.`id`='$idLider'";  
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();

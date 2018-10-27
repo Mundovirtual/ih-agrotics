@@ -53,7 +53,7 @@
         <!-- Sidebar Header    -->
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
-          <div class="sidenav-header-inner text-center"><div class="fas fa-user-astronaut fa-2x"></div>
+          <div class="sidenav-header-inner text-center"><div class="fas fa-user fa-2x"></div>
             <h3 class="h3"><?php echo $_SESSION['IdAdmin']; ?></h2><span>Administrador</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
@@ -113,24 +113,13 @@
                 <a id="toggle-btn" href="#" class="menu-btn">
                   <i class="fas fa-bars"></i>
                 </a>
-                 
-                  <img src="../img/inovahackNavbar.png" height="20" width="100" align="center">
+                  <a href="index.php">
+                    <img src="../img/inovahackNavbar.png" height="20" width="100" align="center">
+                  </a>
+                  
                 
               </div>
-              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                <!-- Notifications dropdown
-                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
-                  <ul aria-labelledby="notifications" class="dropdown-menu">
-                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
-                        <div class="notification d-flex justify-content-between">
-                          <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
-                          <div class="notification-time"><small>4 minutes ago</small></div>
-                        </div></a></li>                     
-                  </ul>
-                </li>
-                 -->
-                <!-- Log out-->
-                <!--<li class="nav-item"><a href="../modulos/login/SesionClose.php" class="nav-link logout"> <span class="fas fa-sign-out-alt">Logout</span></a></li>-->
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">             
                 <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                   <li class="nav-item"><a href="#" class="nav-link logout" data-toggle = "modal" data-target = "#cerrar"><span class="fas fa-power-off text-danger"></span> Salir</a></li><!--Se utiliza para salir del sistema-->  
                 </ul>

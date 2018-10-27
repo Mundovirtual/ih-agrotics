@@ -4,7 +4,7 @@
  include("../class/Vertical.php");
  ?>    
 <div class="container">
-	<h1 align="center">Configuracion de Ediciones</h1>     
+	<h1 align="center">Configuración  de Ediciones</h1>     
 </div>
  
  <header>
