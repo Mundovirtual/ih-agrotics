@@ -26,7 +26,6 @@
 	 		$Conexion=$con->conexion();
 	 		$sql="INSERT INTO `proyecto`(`comunidad_id`, `NombreDeEquipo`, `NombreProyecto`, `Vertical_id`, `Descripcion`, `FechaRegistro`) VALUES ('$idLider','$NombreEquipo','$NombreProyecto','$VerticalId','$Descripcion',current_date())";  
 	 		$resultado=mysqli_query($Conexion,$sql);
-	 		echo($resultado);
 	 		return $resultado;
 	 		$Conexion->mysql_close();
 	 	}

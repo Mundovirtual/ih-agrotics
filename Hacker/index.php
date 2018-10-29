@@ -119,9 +119,10 @@ include_once("../login/security.php");
       <!-- Counts Section -->
       <section class="dashboard-counts section-padding">
         <div class="container-fluid">
+          
          <div class="right_col" role="main">
           
-          <div>
+         
           <?php 
               $enrutador = new enrutador();
                 if ($enrutador->validarGET($_GET['cargar'])) { 
@@ -129,7 +130,10 @@ include_once("../login/security.php");
                  } 
                  else{
                     ?>
-                    <div class="row justify-content-center" id="bienvenido">
+                    <div class="row" id="bienvenido">
+                      <div class="col-md-1">
+                         
+                      </div>
                       <div class="col-md-10">
                         <div class="jumbotron jumbotron-fluid">
                           <div class="container">
@@ -144,7 +148,7 @@ include_once("../login/security.php");
                  }
 
             ?>
-       </div>
+       
         </div>
       </div></section>
       <footer class="main-footer ">

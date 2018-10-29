@@ -5,12 +5,11 @@ require_once "../../../class/Hackers.php";
 session_start(); 
 
 	$Proyecto =new Hacker();
-	$ver=$Proyecto->ConsultarProyecto($_SESSION['idUserLider']);
+	$ver=$Proyecto->ConsultarProyecto($_SESSION['idUserLider']);  
 	$tabla="";
-	
-	if(!empty($ver)){
-		
-		$Solicitudes=$Proyecto->MostrarHackersPorAceptar($ver[0][0]); 
+	 
+	if(!empty($ver)>0){		
+		$Solicitudes=$Proyecto->MostrarHackersPorAceptar($ver[0][0]);  	 
 		$_SESSION['IdProyecto']=$ver[0][0]; 
 		$i=1;
 	

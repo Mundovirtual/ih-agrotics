@@ -1,9 +1,10 @@
   
  $(document).ready(function(){
- 	 
-   $("#ProyectoRegistrado").hide(); 
+ 	$("#ProyectoRegistrado").hide(); 
    	$("#RegistrarProyecto").hide(); 
-   	validar();
+ 	validar(); 
+   	
+   
    		
 });
 /*Validar si existe */
@@ -17,6 +18,7 @@ function validar(){
    		})
    		.done(function(respuesta) { 
    			if (respuesta.Validar=="0") {
+   				$("#RegistrarProyecto").hide(); 
 	 		 	$("#Mostrarequipo").prop('disabled', true);
 				$("#Mostrarproyecto").prop('disabled', true);
 				$("#MostrardescripcionProyecto").prop('disabled', true);
@@ -59,7 +61,7 @@ function validar(){
 		console.log(respuesta.Estado);
 		if (respuesta.Estado=="00") { 
 			alertify.set('notifier','position', 'top-right');
-	 		alertify.success('Proyecto registrada');
+	 		alertify.success('Proyecto registrado');
 	 		validar();
 		} else {
  

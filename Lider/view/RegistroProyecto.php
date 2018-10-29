@@ -11,7 +11,7 @@ include_once("../login/security.php");
 		<form method="POST" id="RegistroProyecto">
 			<div class="row">
 				<div class="col-md-6">
-					<label for="#" class="label-control">Equipo</label>
+					<label for="#" class="label-control">Nombre del Equipo</label>
 				    <input type="text" class="form-control" name="equipo" id="equipo">
 				</div>	
 				<div class="col-md-6" id="VerticalRegistrar">
@@ -23,7 +23,7 @@ include_once("../login/security.php");
 						$verVertical=$Vertical->Verticales(); 
 						foreach ($verVertical as $key) {
 						?>
-							 <option value="<?php echo $key['0']; ?>"><?php echo $key['1']; ?></option>
+							 <option value="<?php echo $key['0']; ?>"><?php echo $key['2']; ?></option>
 						<?php
 					}
 					 ?>
