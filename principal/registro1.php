@@ -1,5 +1,6 @@
-   <?php 
-  include 'principal/conexion/abrirconexion.php';
+ 
+<?php 
+  include 'conexion/abrirconexion.php';
   $con = new Conexion();
   ?>
   <!DOCTYPE html>
@@ -9,35 +10,35 @@
     <title>Registro</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="principal/css/registro.css">
-    <link rel="stylesheet" href="principal/css/bootstrap.min.css">
-    <link rel="stylesheet" href="principal/fontawesome-free-5.3.1-web/css/all.min.css">
-    <script src="principal/js/jquery-3.33.1.min.js"></script>
-    <script src="principal/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="principal/Backend/funciones.js"></script>
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
+    <script src="js/jquery-3.33.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Backend/funciones.js"></script>
   </head>
   <body>
-    <?php include("principal/Backend/modal_institucion.php");?>
-    <?php include("principal/Backend/modal_carrera.php");?>
+    <?php include("Backend/modal_institucion.php");?>
+    <?php include("Backend/modal_carrera.php");?>
     <div class="boton text-right">
-      <a href="principal/miperfil.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-arrow-circle-left"></i>  Ir a Mi perfil</a>
+      <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-arrow-circle-left"></i>  Ir a Mi perfil</a>
     </div>
     <div class="contenedor-img">
       <div class="caja-img">
-        <img src="principal/imagenes/labsol/Logo PTLC_V1.jpg">
+        <img src="imagenes/labsol/Logo PTLC_V1.jpg">
       </div>
       <div class="caja-img">
-        <img src="principal/imagenes/labsol/santa.png" width="100%">
+        <img src="imagenes/labsol/santa.png" width="100%">
       </div>
       <div class="caja-img">
-        <img src="principal/imagenes/labsol/nuevo.png">
+        <img src="imagenes/labsol/nuevo.png">
       </div>
       <div class="caja-img">
-        <img src="principal/imagenes/labsol/LABSOL1/Logo COZCYT Trabajemosunidos.png">
+        <img src="imagenes/labsol/LABSOL1/Logo COZCYT Trabajemosunidos.png">
       </div>
 
       <div class="caja-img">
-        <img src="principal/imagenes/labsol/LABSOL1/LogoLabsol.png">
+        <img src="imagenes/labsol/LABSOL1/LogoLabsol.png">
       </div>
     </div>
     <form class="formulario" name="formulario" id="formulario" method="post">
@@ -49,17 +50,17 @@
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="#">Nombre :<small class="text-danger"> (Required)</small></label>
-                     <input type="text" class="input form-control letras" name="nombre" id="nombre" placeholder="Ingresar el Nombre" required="">
+                     <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar el Nombre" required="">
                   </div>
                   <div class="form-group col-md-6" id="nombre">
                      <label for="inputPassword4">Apellidos :<small class="text-danger"> (Required)</small>:</label>
-                     <input type="text" name="apellidos" class="form-control letras" id="apellidos"  placeholder="Ingresar Apellidos" required="">
+                     <input type="text" name="apellidos" class="form-control" id="apellidos" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellidos" required="">
                   </div>
              </div>
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="#">Email :<small class="text-danger"> (Required)</small> </label>
-                     <input type="email" class="form-control letrasseguras" required="" id="email" name="correo" placeholder="Labsol@gmail.com" required="">
+                     <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com /Usuario registro" required="">
                      <div id="infoemail">
                      </div>
                   </div>
@@ -82,7 +83,7 @@
              <div class="form-row" >
                   <div class="form-group col-md-6">
                      <label for="#">Facebook :</label>
-                     <input type="text" class="form-control letrasseguras" name="facebook" id="facebook" placeholder="Ingresar cuenta">
+                     <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta">
                   </div>
                   <div class="form-group col-md-6">
 
@@ -96,7 +97,7 @@
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="#">Twitter :</label>
-                     <input type="text" class="form-control letrasseguras" name="twitter"  id="twitter" placeholder="Ingresar cuenta">
+                     <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta">
                   </div>
                   <div class="form-group col-md-6">
                      <label for="#">Fecha de Nacimiento :<small class="text-danger"> (Required)</small></label>
@@ -156,7 +157,7 @@
                      <select id="sexo" class="form-control" name = "sexo">
                       <option>Seleccionar sexo</option>
                      <?php 
-                     include_once 'principal/conexion/abrirconexion.php';
+                     include_once 'conexion/abrirconexion.php';
                      $con = new Conexion();
                      $sql = "SELECT * FROM `genero`";
                      $resultado = $con->query($sql);
@@ -174,7 +175,7 @@
                        <option>Seleccionar talla</option>
                      
                       <?php 
-                      require_once 'principal/conexion/abrirconexion.php';
+                      require_once 'conexion/abrirconexion.php';
                       $con = new Conexion();
                       $sql = "SELECT * FROM `talla_playera`";
                       $resultado = $con->query($sql);
@@ -194,12 +195,12 @@
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Habilidades :</label>
-                     <input type="text" class="form-control letras" name="habilidades" id="habilidades" placeholder="Ingresar habilidad">   
+                     <input type="text" class="form-control" name="habilidades" id="habilidades" onkeypress="return sololetras(event)" placeholder="Ingresar habilidad">   
                   </div>
 
                   <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Hobbies :</label>
-                     <input type="text" class="form-control letras" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies" >   
+                     <input type="text" class="form-control" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies" onkeypress="return sololetras(event)">   
                   </div>
              </div>
              <div class="form-row">
@@ -208,7 +209,7 @@
                 <select class="form-control" id="rol" name="rol">
                   <option>Seleccionar Rol</option>
                 <?php 
-                require_once 'principal/conexion/abrirconexion.php';
+                require_once 'conexion/abrirconexion.php';
                 $con = new Conexion();
                 $sql = "SELECT * FROM `rol`";
                 $resultado = $con->query($sql);
@@ -233,7 +234,7 @@
 
                   </div>
             </div>
- 
+
                   <script type="text/javascript">
                     /*--------------INICIO VALIDACION DE CONTRASENA-------------- */
 
@@ -295,13 +296,9 @@
            </div>
   </form>
    </div>
-
-   <script src="js/letras.js"></script>
-
     <script type="text/javascript">
    /*----------------Guardar el registro del usuario--------------------*/
       $('form').submit(function(e){
-        alert("hola");
         var datos = $('#formulario').serialize();
         e.preventDefault();
          $.ajax({
@@ -322,7 +319,7 @@
   function solonumeros(e) {
       key = e.keyCode || e.which;
       teclado = String.fromCharCode(key);
-      numero = "012345789";
+      numero = "0123456789";
       especiales = "8-37-38-46-27";
       teclado_especial = false;
       for (var i in especiales) {
@@ -589,58 +586,7 @@
   }); 
 
    
-$(".letras").keypress(function (key) { 
-  console.log("letras "+key.which);
-    if ((key.which < 97 || key.which > 122)//letras mayusculas
-        && (key.which < 65 || key.which > 90) //letras minusculas 
-        && (key.which != 241) //ñ 
-         && (key.which != 209) //Ñ
-         && (key.which != 8) //retroceso
-         && (key.which != 32) //espacio
-         && (key.which != 225) //á
-         && (key.which != 233) //é
-         && (key.which != 237) //í
-         && (key.which != 243) //ó
-         && (key.which != 250) //ú
-         && (key.which != 193) //Á
-         && (key.which != 201) //É
-         && (key.which != 205) //Í
-         && (key.which != 211) //Ó
-         && (key.which != 218) //Ú
-        )
-        return false;
- 
-});
-
-$(".letrasseguras").keypress(function (key) { 
-    console.log("letras seguras "+key.which);
-    if ((key.which < 97 || key.which > 122)//letras mayusculas
-        && (key.which < 65 || key.which > 90) //letras minusculas 
-         && (key.which < 48 || key.which > 57)//Numeros
-         && (key.which < 96 || key.which > 105)//Numeros
-          && (key.which < 48 || key.which > 57)//CaracteresEspeciales
-        && (key.which != 190) //.
-        && (key.which != 191) //? 
-        && (key.which != 188) //,<   
-        && (key.which != 241) //ñ 
-         && (key.which != 209) //Ñ
-         && (key.which != 8) //retroceso
-         && (key.which != 32) //espacio
-         && (key.which != 225) //á
-         && (key.which != 233) //é
-         && (key.which != 237) //í
-         && (key.which != 243) //ó
-         && (key.which != 250) //ú
-         && (key.which != 193) //Á
-         && (key.which != 201) //É
-         && (key.which != 205) //Í
-         && (key.which != 211) //Ó
-         && (key.which != 218) //Ú
-        )
-        return false;
-});
 
     </script>
   </body>
   </html>
-

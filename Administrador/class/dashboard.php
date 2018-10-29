@@ -72,7 +72,7 @@
 	 	function jueces(){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="SELECT DISTINCT  `comunidad`.`id`  as 'NJueces' FROM `comunidad` inner join `hackatonedicion` on `comunidad`.`hackaton`= `hackatonedicion`.`id` WHERE `Rol_idRol`='3' and `hackatonedicion`.`status`='1'";
+	 		$sql="SELECT DISTINCT `comunidad`.`id` as 'NJueces' FROM `comunidad` inner join `hackatonedicion` on `comunidad`.`hackaton`= `hackatonedicion`.`id` WHERE`hackatonedicion`.`status`='1'and `Rol_idRol`='3' and `comunidad`.`status`='1' ";
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close(); 
