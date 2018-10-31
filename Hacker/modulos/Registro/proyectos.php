@@ -1,5 +1,4 @@
 <?php 
- 
 include_once "../../../class/RegistroHackerP.php";
 session_start();
  

@@ -2,7 +2,7 @@
 <?php 
 	 include_once("conexion.php");
 	 
-	 class Lider{
+	 class comunidad{
 
 	 	function mostrarDatos($Id){
 	 		
@@ -14,7 +14,7 @@
 	 		$Conexion->mysql_close();
 	 	}
  
-	 	function ActualizarDatosLider($id,$Nombre,$Apellidos,$Correo,$Psw,$Celular,$Playera,$Carrera,$Institucion,$fcb,$twt,$Habilidades,$Hobbies){
+	 	function ActualizarDatos($id,$Nombre,$Apellidos,$Correo,$Psw,$Celular,$Playera,$Carrera,$Institucion,$fcb,$twt,$Habilidades,$Hobbies){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="UPDATE `comunidad` SET  `Nombre`='$Nombre',`Apellidos`='$Apellidos',`E-mail`='$Correo',`psw`='$Psw',`Celular`='$Celular',`Talla_Playera_idTalla_Playera`='$Playera',`Carrera_id`='$Carrera',`Institucion_id`='$Institucion',`Facebook`='$fcb',`Twitter`='$twt',`Habilidades`='$Habilidades',`Hobbies`='$Hobbies' where `id`='$id'";

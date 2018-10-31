@@ -1,22 +1,27 @@
-$(document).ready(function(){
-   $(".letras").keypress(function (key) { 
-           
-    if ((key.charCode < 97 || key.charCode > 122)//letras mayusculas
-        && (key.charCode < 65 || key.charCode > 90) //letras minusculas
-        && (key.charCode != 45) //retroceso 
-         && (key.charCode != 32) //espacio
-         && (key.charCode != 225) //á
-         && (key.charCode != 233) //é
-         && (key.charCode != 237) //í
-         && (key.charCode != 243) //ó
-         && (key.charCode != 250) //ú
-         && (key.charCode != 193) //Á
-         && (key.charCode != 201) //É
-         && (key.charCode != 205) //Í
-         && (key.charCode != 211) //Ó
-         && (key.charCode != 218) //Ú
+   
+ $(document).ready(function(){
+    $(".letras").keypress(function (key) {  
+        if ((key.which < 97 || key.which > 122)//letras mayusculas
+            && (key.which < 65 || key.which > 90) //letras minusculas 
+            && (key.which != 241) //ñ 
+             && (key.which != 209) //Ñ
+             && (key.which != 8) //retroceso
+             && (key.which != 32) //espacio
+             && (key.which != 225) //á
+             && (key.which != 233) //é
+             && (key.which != 237) //í
+             && (key.which != 243) //ó
+             && (key.which != 250) //ú
+             && (key.which != 193) //Á
+             && (key.which != 201) //É
+             && (key.which != 205) //Í
+             && (key.which != 211) //Ó
+             && (key.which != 218) //Ú
+             && (key.which != 191) //?
 
-        )
-        return false;
-    });      
-});
+            )
+            return false;
+    }); 
+    
+}); 
+   

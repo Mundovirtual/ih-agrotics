@@ -1,9 +1,7 @@
  
 <?php 
- 	include_once("../login/security.php");  
-	require_once("modulos/perfil/DatosPerfil.php");
-	 $Lider = new Lider();
-	 $ver =$Lider->mostrarDatos($id);  
+ 	include_once("../login/securityHacker.php");   
+	require_once("modulos/perfil/DatosPerfil.php"); 
  ?>
 <div class="row justify-content-center">
 		<div class="col-md-4">
@@ -15,7 +13,7 @@
 					</div>
 
 					<div class="form-group">
-						<h3 class="text-center"><?php echo $_SESSION['Nombre'];?></h3>
+						<h3 class="text-center"><?php echo $ver[0][1];?></h3>
 					</div>
 					<div class="row">	
 						<button class="form-control btn btn-primary">Bienvenid@</button>

@@ -8,8 +8,9 @@ session_start();
 	$ver=$Proyecto->ConsultarProyecto($_SESSION['idUserLider']);
 	$tabla="";
 	if (count($ver)!=0) {
-	$Solicitudes=$Proyecto->MostrarHackersAceptados($ver[0][0]); 
-	$_SESSION['IdProyecto']=$ver[0][0]; 
+	$Solicitudes=$Proyecto->MostrarHackersAceptados($ver[0][11]); 	 
+	$_SESSION['IdProyecto']=$ver[0][10]; 
+	
 	$i=1;
 	
 	 foreach ($Solicitudes as $key) {

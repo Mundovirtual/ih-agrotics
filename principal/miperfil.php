@@ -83,7 +83,7 @@
                   <div class="row botones">
                     <div class="col-lg-12">
                      <button type="button" class="btn btn-danger" id="a" onclick="acep();"><i class="fas fa-user-check"></i> ACEPTAR</button>
-                     <a href="registro1.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-user-plus"></i> REGISTRARSE</a>
+                     <a href="../registro.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-user-plus"></i> REGISTRARSE</a>
                      
                     </div>
                   </div>
@@ -120,11 +120,12 @@
             beforeSend:function(c){
              $("#info").html('<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i><strong> Procesando..... !</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
             },
-            success: function(respuesta) {
-             $("#info").html(respuesta);
+            success: function(respuesta) { 
+             $("#info").html(respuesta); 
              if(respuesta == 5){
              $("#info").hide();
              location.href='../Lider/index.php';
+
              } 
              if(respuesta == 3){
               $("#info").hide();

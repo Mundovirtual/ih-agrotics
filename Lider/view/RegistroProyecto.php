@@ -1,5 +1,5 @@
  <?php 
-include_once("../login/security.php"); 
+include_once("../login/securityLider.php");  
  include_once "../class/Proyectos.php";
  ?>
 
@@ -11,7 +11,7 @@ include_once("../login/security.php");
 		<form method="POST" id="RegistroProyecto">
 			<div class="row">
 				<div class="col-md-6">
-					<label for="#" class="label-control">Equipo</label>
+					<label for="#" class="label-control">Nombre del Equipo</label>
 				    <input type="text" class="form-control" name="equipo" id="equipo">
 				</div>	
 				<div class="col-md-6" id="VerticalRegistrar">
@@ -23,7 +23,7 @@ include_once("../login/security.php");
 						$verVertical=$Vertical->Verticales(); 
 						foreach ($verVertical as $key) {
 						?>
-							 <option value="<?php echo $key['0']; ?>"><?php echo $key['1']; ?></option>
+							 <option value="<?php echo $key['0']; ?>"><?php echo $key['2']; ?></option>
 						<?php
 					}
 					 ?>
@@ -42,7 +42,7 @@ include_once("../login/security.php");
 
 			<div class="form-group">
 				    <label for="#" class="label-control">Descripción</label>
-				    <textarea class="form-control" name="descripcion" id="descripcion"></textarea>
+				    <textarea class="form-control letras" name="descripcion" id="descripcion"></textarea>
 			</div>
 			<div class="form-group text-right" id="BotonRegistrar">
 				<button class="btn btn-primary" type="submit" id="registro"><i class="fas fa-sign-out-alt"></i> Registrar Proyecto</button>
@@ -86,4 +86,5 @@ include_once("../login/security.php");
 	 
 	 </div>
 </div>
+<script src="../js/Validaciones.js"></script>
 	 <script src="modulos/RegistroProyectos/Registro.js"></script>

@@ -1,4 +1,5 @@
 <?php 
+ include_once("../modulos/login/security.php"); 
   include_once("../class/Hackaton.php");
   $hackaton=new Hackaton();
   $Mostrar=$hackaton->mostrarDatosHackaton();  
