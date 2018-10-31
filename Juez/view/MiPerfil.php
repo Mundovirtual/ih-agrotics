@@ -2,8 +2,8 @@
 <?php 
  	include_once("../login/securityJuez.php"); 
 	require_once("modulos/perfil/DatosPerfil.php");
-	 $Lider = new Lider();
-	 $ver =$Lider->mostrarDatos($id);  
+	 $Juez = new comunidad();
+	 $ver =$Juez->mostrarDatos($id);  
  ?>
 <div class="row justify-content-center">
 		<div class="col-md-4">
