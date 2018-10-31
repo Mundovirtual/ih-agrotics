@@ -94,6 +94,5 @@
 	 		$Conexion->mysql_close(); 
 	 	}
 
-
 	 } 
 ?>
