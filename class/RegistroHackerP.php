@@ -24,9 +24,18 @@ class RegistroProyHack{
 	function EnviarSolicitud($idHacker,$idProyecto){
 		$con=new Conectar();
 	 	$Conexion=$con->conexion();
-		$sql="INSERT INTO `team`(`comunidad_id`, `Proyecto_id`, `status`) VALUES ($idHacker,$idProyecto,0)";
-		$resultado=mysqli_query($Conexion,$sql); 
- 		return $resultado;
+	 	$Validar="SELECT `comunidad_id`, `Proyecto_id`, `status` FROM `team` WHERE `comunidad_id`='$idHacker' and `Proyecto_id`='$idProyecto'";
+	 	$Validacion=mysqli_query($Conexion,$Validar);
+	 	$ResultadoVal=mysqli_num_rows($Validacion);
+	 	if ($ResultadoVal==0) {
+	 		$sql="INSERT INTO `team`(`comunidad_id`, `Proyecto_id`, `status`) VALUES ($idHacker,$idProyecto,0)";
+		    $resultado=mysqli_query($Conexion,$sql);  
+	 		return $resultado;	 		 
+	 	}
+	 	else{
+	 		return "0";
+	 	}
+	 	
  		$Conexion->mysql_close();
 	}
 

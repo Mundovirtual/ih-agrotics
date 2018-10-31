@@ -42,7 +42,7 @@ include_once("../login/security.php");
 
 			<div class="form-group">
 				    <label for="#" class="label-control">Descripción</label>
-				    <textarea class="form-control" name="descripcion" id="descripcion"></textarea>
+				    <textarea class="form-control letras" name="descripcion" id="descripcion"></textarea>
 			</div>
 			<div class="form-group text-right" id="BotonRegistrar">
 				<button class="btn btn-primary" type="submit" id="registro"><i class="fas fa-sign-out-alt"></i> Registrar Proyecto</button>
@@ -86,4 +86,5 @@ include_once("../login/security.php");
 	 
 	 </div>
 </div>
+<script src="../js/Validaciones.js"></script>
 	 <script src="modulos/RegistroProyectos/Registro.js"></script>

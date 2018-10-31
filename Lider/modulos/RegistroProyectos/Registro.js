@@ -19,6 +19,7 @@ function validar(){
    		.done(function(respuesta) { 
    			if (respuesta.Validar=="0") {
    				$("#RegistrarProyecto").hide(); 
+   				$("#ProyectoRegistrado").show(); 
 	 		 	$("#Mostrarequipo").prop('disabled', true);
 				$("#Mostrarproyecto").prop('disabled', true);
 				$("#MostrardescripcionProyecto").prop('disabled', true);
@@ -26,7 +27,7 @@ function validar(){
 				$("#MostrarDescripcionVertical").prop('disabled', true);
 				$("#MostrarAsesoria").prop('disabled', true);
 
-   				$("#ProyectoRegistrado").show();  
+   				 
    				$("#Mostrarequipo").val(respuesta.Equipo);
 				$("#Mostrarproyecto").val(respuesta.Nombre);
 				$("#MostrardescripcionProyecto").val(respuesta.Descripcion);

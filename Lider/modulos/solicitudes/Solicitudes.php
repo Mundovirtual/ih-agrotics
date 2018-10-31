@@ -6,8 +6,8 @@ $Proyecto=$_SESSION["IdProyecto"];
 if (isset($_POST["IdAgregar"])) {
 	$msj="";
 	$Agregar =new Hacker();
-	$SiExcede=$Agregar->TotalHackers($Proyecto); 
-	if ( count($SiExcede)<6 ) {		 
+	$SiExcede=$Agregar->TotalHackers($Proyecto);  
+	if ( count($SiExcede)<5) {		 
 		 $Aceptar=$Agregar->AceptarHacker($_POST["IdAgregar"],$Proyecto);
 		 $msj="1";
 	}

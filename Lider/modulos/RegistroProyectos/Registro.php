@@ -5,10 +5,11 @@ require_once "../../../class/Proyectos.php";
 if (isset($_POST['Validar'])) {
 	 $Proyecto=new Proyecto();
 	 $Siexiste=$Proyecto->existe($_SESSION['idUserLider']);  
-	 if (empty($Siexiste) and !isset($Siexiste) or sizeof($Siexiste)==0) {
+	 if (empty($Siexiste)) {
 	 	 echo json_encode(array('Validar'=>'1'));
 	 }else{
 	 	$VerDatos=$Proyecto->MostrarProyectoPorLider($_SESSION['idUserLider']);   
+
 	 	echo json_encode(array('Validar'=>'0','Equipo'=>$VerDatos[0][8],'Vertical'=>$VerDatos[0][10],'Nombre'=>$VerDatos[0][9],'Descripcion'=>$VerDatos[0][13],'DescripcionVertical'=>$VerDatos[0][11],'Asesoria'=>$VerDatos[0][12]));
 	 }
 	 

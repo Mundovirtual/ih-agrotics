@@ -76,10 +76,12 @@ function Registrar(idHacker,idProyecto){
       data: {'idH':idHacker,'idP':idProyecto},
    })
    .done(function(respuesta) {
-      if (respuesta=='0') {
+      if (respuesta.Estado=='0') {
          alertify.set('notifier','position', 'top-right');
-         alertify.success("Solicitud enviada");
-         Proyectos();  
+         alertify.error("Ya has enviado tu solicitud");
+      }else{
+         alertify.set('notifier','position', 'top-right');
+         alertify.success("Solicitud enviada"); 
       }
    })
    .fail(function() {

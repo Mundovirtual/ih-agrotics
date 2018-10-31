@@ -84,7 +84,7 @@ function EliminarHack(){
     .done(function(resp) { 
         if (resp.Estado=='0') {
              alertify.set('notifier','position', 'top-right');
-            alertify.error("Has Eliminado a un Hacker");   
+            alertify.success("Hacker eliminado");   
             $("#ConfirmarEliminar").modal('hide');
             CargarTablaIntegrantes();  
         }

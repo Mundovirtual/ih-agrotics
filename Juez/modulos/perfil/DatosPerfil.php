@@ -5,5 +5,4 @@ $id=$_SESSION['idUserJuez'];
 $Lider = new Lider();
 $ver =$Lider->mostrarDatos($id);
  
-
  ?>
