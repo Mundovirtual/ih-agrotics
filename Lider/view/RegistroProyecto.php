@@ -1,5 +1,5 @@
  <?php 
-include_once("../login/security.php"); 
+include_once("../login/securityLider.php");  
  include_once "../class/Proyectos.php";
  ?>
 

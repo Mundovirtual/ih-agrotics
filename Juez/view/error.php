@@ -1,5 +1,5 @@
  <?php
-include_once("../login/security.php"); 
+include_once("../login/securityJuez.php");   
 ?>  
 <html>
 	<head>

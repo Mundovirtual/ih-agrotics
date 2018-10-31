@@ -1,3 +1,6 @@
+<?php 
+include_once("../login/securityJuez.php");   
+ ?>
 <div class="container-fluid">
 	<div class="form-group">
 		<div class="row">

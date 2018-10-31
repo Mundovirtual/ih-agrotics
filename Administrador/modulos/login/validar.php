@@ -17,7 +17,7 @@ function login($usr,$pss){
 		if ($num=mysqli_num_rows(mysqli_query($Conexion,$sql)) !=0) { 
 				$resultado=mysqli_fetch_assoc(mysqli_query($Conexion,$sql));
 				session_start();
-				$_SESSION['activo'] = true;
+				$_SESSION['Administrador'] = "Administrador";
 				$_SESSION['NombreAdmin'] = $resultado["id"]; 
 				$_SESSION['IdAdmin'] =$resultado["Nombre"] ;
  

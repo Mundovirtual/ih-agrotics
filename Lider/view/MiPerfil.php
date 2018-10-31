@@ -1,6 +1,6 @@
  
 <?php 
- 	include_once("../login/security.php");  
+include_once("../login/securityLider.php");   
 	require_once("modulos/perfil/DatosPerfil.php");
 	 $Lider = new Lider();
 	 $ver =$Lider->mostrarDatos($id);  

@@ -1,5 +1,5 @@
  <?php
-include_once("../login/security.php");   
+include_once("../login/securityJuez.php");   
   require_once("modulos/enrutador.php");   
    
     if (!isset($_GET['cargar'])) {
