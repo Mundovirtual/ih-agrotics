@@ -51,9 +51,7 @@
       while($row = mysqli_fetch_array($contenido)) { 
       	$id=$row['id'];
         $nombre = utf8_encode($row['Nombre']);
-        $apellidos = utf8_encode($row['Apellidos']);
-        $correo = $row['E-mail'];
-        $cel = $row['Celular'];
+        $apellidos = utf8_encode($row['Apellidos']); 
         $Rol = $row['Rol_idRol'];
       }
     	if($contenido->num_rows > 0){
@@ -61,26 +59,21 @@
         if($Rol == 5){
            session_start(); 
             $_SESSION['Lider'] = "Lider"; 
-       			$_SESSION['idUserLider'] =$id ;
-      			$_SESSION['Nombre'] = $nombre; 
-      			$_SESSION['NombreApellido']=$nombre." ".$apellidos;
+       			$_SESSION['idUserLider'] =$id ; 
+             $_SESSION['NombreLider'] =$nombre ; 
             echo 5;
         }else
         if($Rol == 3){    
          session_start();        
             $_SESSION['Juez'] ="Juez";
-            $_SESSION['idUserJuez'] =$id ;
-            $_SESSION['nombre'] =$nombre;
-            /*$_SESSION['Apellidos'] = $apellidos;
-            $_SESSION['correo'] = $correo;
-            $_SESSION['cel'] = $cel;*/
+            $_SESSION['idUserJuez'] =$id ; 
+             $_SESSION['NombreJuez'] =$nombre ; 
             echo 3;
         }else if($Rol == 6){
              session_start();
            $_SESSION['Hacker'] = "Hacker";
-     			  $_SESSION['idUserHacker'] =$id ;
-     			  $_SESSION['Nombre'] = $nombre; 
-    			 /*  $_SESSION['NombreApellido']=$nombre." ".$apellidos;*/
+     			  $_SESSION['idUserHacker'] =$id ; 
+             $_SESSION['NombreHacker'] =$nombre ;  
             echo 6;
         }
     	}else{

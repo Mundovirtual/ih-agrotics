@@ -1,9 +1,8 @@
 <?php 
-include_once "../class/Lider.php";
+include_once "../class/comunidad.php";
  
 $id=$_SESSION['idUserLider'];
-$Lider = new Lider();
-$ver =$Lider->mostrarDatos($id);
- 
-
+$Comunidad = new comunidad();
+$ver =$Comunidad->mostrarDatos($id);
+  
  ?>

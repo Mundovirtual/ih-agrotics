@@ -1,9 +1,9 @@
 <?php 
-include_once("../login/security.php"); 
-include_once "../class/Lider.php"; 
+include_once("../login/securityHacker.php"); 
+include_once "../class/comunidad.php"; 
 $id=$_SESSION['idUserHacker'];
-$Lider = new Lider();
-$ver =$Lider->mostrarDatos($id);
+$comunidad = new comunidad();
+$ver =$comunidad->mostrarDatos($id);
  
 
  ?>

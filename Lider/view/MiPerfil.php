@@ -2,7 +2,7 @@
 <?php 
 include_once("../login/securityLider.php");   
 	require_once("modulos/perfil/DatosPerfil.php");
-	 $Lider = new Lider();
+	 $Lider = new comunidad();
 	 $ver =$Lider->mostrarDatos($id);  
  ?>
 <div class="row justify-content-center">
@@ -15,7 +15,7 @@ include_once("../login/securityLider.php");
 					</div>
 
 					<div class="form-group">
-						<h3 class="text-center"><?php echo $_SESSION['Nombre'];?></h3>
+						<h3 class="text-center"><?php  echo $ver[0][1];?></h3>
 					</div>
 					<div class="row">	
 						<button class="form-control btn btn-primary">Bienvenid@</button>

@@ -51,7 +51,7 @@ include_once("../login/securityJuez.php");
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
           <div class="sidenav-header-inner text-center"><div class="fas fa-user-circle fa-3x"></div>
-            <h3 class="h3"><?php echo $_SESSION['nombre']; ?></h3><span class="text-danger">Juez / Mentor</span>
+            <h3 class="h3"><?php echo $_SESSION['NombreJuez']; ?></h3><span class="text-danger">Juez / Mentor</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
           <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong><i class="fas fa-home"></i></strong></a></div>
@@ -128,7 +128,7 @@ include_once("../login/securityJuez.php");
                       <div class="col-md-10">
                         <div class="jumbotron jumbotron-fluid">
                           <div class="container">
-                            <h1 class="display-4 text-center">Bienvenid@ <?php echo $_SESSION['nombre'];  ?></h1>
+                            <h1 class="display-4 text-center">Bienvenid@ <?php echo $_SESSION['NombreJuez'];  ?></h1>
                             <p class="lead">Esta es tu portada principal, en donde podrás visualizar tu perfil, registro de proyecto, estado del proyecto donde podrás ver los integrantes de tu equipo </p>
                           </div>
                           
