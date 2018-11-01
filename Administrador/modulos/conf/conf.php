@@ -65,11 +65,9 @@ if (isset($_POST['Hack'])&&isset($_POST['vert'])&&isset($_POST['fase'])&&isset($
 	}else if ($Aux=='0') {
 		$Validar=new configuracion();
 		$val=$Validar->validar($Hack,$vert,$fase);
-		 if (empty($val)) 	{
-		 	$registrar=$Validar->Insertar($vert,$fase,$Nequipos);
+		 if (empty($val)) 	{ 
+		 	$registrar=$Validar->Insertar(json_decode($vert),json_decode($fase),json_decode($Nequipos));
 		 	$msj="1";
-			
-
 		}
 		else{
 			$msj="Ya existe el registro";
