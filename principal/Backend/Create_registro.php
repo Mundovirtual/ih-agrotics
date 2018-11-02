@@ -1,4 +1,5 @@
 	<?php 
+	
 	class Create_registro{
 		    public function __construct(){
 	           $this->nombre =utf8_decode(ucwords( $_POST['nombre']));
@@ -21,10 +22,28 @@
 
 		    public function Create_registro(){
 		    	include 'esqueleto-crud.php';
+		    	include("../../class/Hackaton.php"); 
+		    	$Hack=new idHackaton();
+		    	$MostrarHack=$Hack->mostrarDatosHackaton(); 
+		    	$idHack= $MostrarHack[0][0];
 		    	$registro = new registro();
-		    	$sql = "INSERT INTO `comunidad` (`id`, `Nombre`, `Apellidos`, `E-mail`, `psw`, `Celular`, `Talla_Playera_idTalla_Playera`, `Carrera_id`, `Institucion_id`, `Facebook`, `Twitter`, `FechaNacimiento`, `Habilidades`, `Hobbies`, `Rol_idRol`, `Genero_idSexo`,`hackaton`) VALUES (NULL, '$this->nombre', '$this->apellidos', '$this->correo', '$this->contrasena', '$this->cel', '$this->talla', '$this->carrera', '$this->institucion', '$this->facebook', '$this->twitter', '$this->fecha', '$this->habilidades', '$this->hobbies', '$this->rol', '$this->sexo','1')";
-		    	 
-		    		$resultado =  $registro->InsertarRegistro($sql);
+
+		    	$sql = "INSERT INTO `comunidad` (`id`, `Nombre`, `Apellidos`, `E-mail`, `psw`, `Celular`, `Talla_Playera_idTalla_Playera`, `Carrera_id`, `Institucion_id`, `Facebook`, `Twitter`, `FechaNacimiento`, `Habilidades`, `Hobbies`, `Rol_idRol`, `Genero_idSexo`,`hackaton`) VALUES (NULL, '$this->nombre', '$this->apellidos', '$this->correo', '$this->contrasena', '$this->cel', '$this->talla', '$this->carrera', '$this->institucion', '$this->facebook', '$this->twitter', '$this->fecha', '$this->habilidades', '$this->hobbies', '$this->rol', '$this->sexo','$idHack')";
+		    	 	
+		    	 	$validar=$registro->ValidarUsuario($this->nombre,$this->apellidos,$this->correo,$this->cel); 
+		    	 	if (count($validar)!=0) {
+			    	 		if ($validar[0][4] ==$idHack) {
+			    	 		 ?>
+		    				<div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-check"></i>
+	                             <strong>Usuario ya registrado!</strong>
+	                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	                             <span aria-hidden="true">&times;</span>
+	                             </button>
+	                        </div>
+		    				<?php
+			    	 	}
+			    	 	else{
+			    	 			$resultado =  $registro->InsertarRegistro($sql);
 		    		 
 		    			if($resultado){
 		    				?>
@@ -46,6 +65,9 @@
 		    				<?php
 		    				
 		    			}
+			    	 	}		    	 	
+		    		}
+		    	 	
 		    	 
 		    }
 

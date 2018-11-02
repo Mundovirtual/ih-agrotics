@@ -47,12 +47,12 @@
     	require_once '../../conexion/abrirconexion.php';
 
     	$con = new Conexion();
-    	$contenido = $con->query("SELECT `id`,`Nombre`,`Apellidos`,`E-mail`,`Celular`,`Rol_idRol` FROM `comunidad` WHERE `E-mail`='$u' and `psw` = '$c'");
+    	$contenido = $con->query("SELECT `comunidad`.`id`,`comunidad`.`Nombre`,`comunidad`.`Apellidos`,`comunidad`.`E-mail`,`comunidad`.`Celular`,`comunidad`.`Rol_idRol` FROM `comunidad`  inner join `hackatonedicion` on `comunidad`.`hackaton`=`hackatonedicion`.`id` WHERE `comunidad`.`E-mail`='$u' and `comunidad`.`psw` = '$c' and `hackatonedicion`.`status`='1'"); 
       while($row = mysqli_fetch_array($contenido)) { 
-      	$id=$row['id'];
-        $nombre = utf8_encode($row['Nombre']);
-        $apellidos = utf8_encode($row['Apellidos']); 
-        $Rol = $row['Rol_idRol'];
+      	$id=$row[`comunidad`.'id'];
+        $nombre = utf8_encode($row[`comunidad`.'Nombre']);
+        $apellidos = utf8_encode($row[`comunidad`.'Apellidos']); 
+        $Rol = $row[`comunidad`.'Rol_idRol'];
       }
     	if($contenido->num_rows > 0){
         

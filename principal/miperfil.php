@@ -83,7 +83,7 @@
                   <div class="row botones">
                     <div class="col-lg-12">
                      <button type="button" class="btn btn-danger" id="a" onclick="acep();"><i class="fas fa-user-check"></i> ACEPTAR</button>
-                     <a href="../registro.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-user-plus"></i> REGISTRARSE</a>
+                     <a href="registro.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-user-plus"></i> REGISTRARSE</a>
                      
                     </div>
                   </div>
