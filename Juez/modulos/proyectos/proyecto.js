@@ -1,30 +1,61 @@
-$(document).ready(function(){
-   Proyectos();  
+/*Declarando valores para consulta de integrantes*/
+let idproyectos="";
+function detalles(id,descProyecto,lider,email,cel,fRegistro){
+ 
+    idproyectos=id;
+    $("#DescripcionProyecto").val(descProyecto);
+    $("#lider").val(lider);
+    $("#email").val(email);
+    $("#telefono").val(cel);
+    $("#RegistroProyecto").val(fRegistro); 
+    $.ajax({
+ 
+        url: 'modulos/proyectos/proyecto.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {'idproyectos': idproyectos},
+    })
+    .done(function(respuesta) {  
+        $("#TablaIntegrantes").html(respuesta); 
+    });
+    
+}
+
+
+
+$( document ).ready(function() {
+ 	Tablaproyectos();
 });
- var tabla_nombre; 
- function Proyectos() {
-   
-    tabla_nombre = $("#MostrarProyectos").dataTable({
-      "destroy":true,
-      "bDeferRender": true,
+
+ 
+
+
+
+
+ var tabla_nombre;
+ function Tablaproyectos() {
+  
+    tabla_nombre = $("#TablaProyectos").dataTable({
+    	"destroy":true,
+    	"bDeferRender": true,
         "sPaginationType": "full_numbers",
         "ajax": {
-            "url": "modulos/Registro/proyectos.php",
+            "url": "modulos/proyectos/tablaProyectos.php",
             "type": "POST"
         },
-        "columns": [ 
-            { "data": "Numero" },
-            { "data": "NombreLider" },
+  
+           "columns": [ 
+            { "data": "Num" },
             { "data": "Equipo" },
+            { "data": "Vertical" },
             { "data": "proyecto" },
-            { "data": "Vertical" }, 
-            { "data": "Mas" },
-            { "data": "solicitar" } 
+            { "data": "Detalles" }, 
+            { "data": "delete" } 
         ],
         "oLanguage": {
             "sProcessing": "Procesando...",
             "sLengthMenu": 'Mostrar <select>' +
-               '<option value="5">5</option>' +
+           		'<option value="5">5</option>' +
                 '<option value="10">10</option>' +
                 '<option value="20">20</option>' +
                 '<option value="30">30</option>' +
@@ -38,7 +69,7 @@ $(document).ready(function(){
             "sInfoEmpty": "Mostrando del 0 al 0 de un total de 0 registros",
             "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
             "sInfoPostFix": "",
-            "sSearch": "Buscar:",
+            "sSearch": "Filtrar:",
             "sUrl": "",
             "sInfoThousands": ",",
             "sLoadingRecords": "Por favor espere - cargando...",
@@ -54,39 +85,4 @@ $(document).ready(function(){
             }
         }
     });
-}
-function DetallesProyecto(NombreProyecto,DescProyecto,Vertical,DescVertical,infVertical,NombreLider,email,celular,carrera,Institucion){
-$("#DProyecto").val(NombreProyecto);
-$("#DDescripción").val(DescProyecto);
-$("#DVertical").val(Vertical);
-$("#DDescripciónv").val(Vertical);
-$("#DInformación").val(infVertical);
-$("#NombreLider").val(NombreLider);
-$("#CorreoLider").val(email);
-$("#CelularLider").val(celular);
-$("#CarreraLider").val(carrera);
-$("#InstituciónLider").val(Institucion);
-}
-
-function Registrar(idHacker,idProyecto){
-   $.ajax({
-      url: 'modulos/Registro/registrar.php',
-      type: 'POST',
-      dataType: 'json',
-      data: {'idH':idHacker,'idP':idProyecto},
-   })
-   .done(function(respuesta) {
-      if (respuesta=='0') {
-         alertify.set('notifier','position', 'top-right');
-         alertify.success("Solicitud enviada");
-         Proyectos();  
-      }
-   })
-   .fail(function() {
-      console.log("error");
-   })
-   .always(function() {
-      console.log("complete");
-   });
-   
 }
