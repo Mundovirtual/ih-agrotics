@@ -11,14 +11,8 @@ include_once("../login/securityJuez.php");
 	</div>
 	<div class="form-group">
 		<div class="row justify-content-center">
-			<div class="col-md-4">
-				<select class="form-control text-center">
-			        <option>Seleccionar vertical</option>
-			        <option>Vertical 1</option>
-			        <option>Vertical 2</option>
-			        <option>Vertical 3</option>
-			        <option>Vertical 4</option>
-		       </select>
+			<div class="col-md-4" id="CategoriaVerticales">
+ 			
 			</div>
 			<div class="col-md-3">
 				<h1 class="text-center text-danger aling-self-center">ETAPA 1</h1>
@@ -43,8 +37,7 @@ include_once("../login/securityJuez.php");
 			      <th scope="col">Vertical</th>
 			      <th scope="col">proyecto</th> 
 			      <th scope="col">Detalles</th>
-			      <th scope="col">Eliminar</th>
-
+			      <th scope="col">Calificar</th>
 			    </tr>
 			  </thead>
 			  <tbody> 
@@ -121,30 +114,36 @@ include_once("../login/securityJuez.php");
   </div>
 </div>
 
- 
-<!-- Eliminar -->	
+  
 
-<div class="modal fade" id="EliminarEquipos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="CalificarProyecto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="Editar" align="center"><i class="fas fa-trash-alt"></i>Eliminar</h5>	      
+        
+        <h5 class="modal-title">
+        	<i class="fas fa-chalkboard-teacher"></i>Calificaciones
+        </h5>	      
+
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
+      
       </div>
     <div class="modal-body">	      		
-	<h1>Estás a punto de eliminar</h1>
+	  	<section id="TablaRubricas">
+	  		
+	  	</section>
 
-	Quiere proceder?
-      	
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-danger" id="ActualizarHack">Continuar</button>
+        <button type="button" class="btn btn-danger" id="ActualizarHack" onclick="RegistrarEvaluacion()">Continuar</button>
       </div>
     </div>
   </div>
 </div> 
  
  <script src="modulos/proyectos/proyecto.js"></script>
+
+ 

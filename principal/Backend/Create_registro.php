@@ -29,7 +29,7 @@
 		    	$registro = new registro();
 
 		    	$sql = "INSERT INTO `comunidad` (`id`, `Nombre`, `Apellidos`, `E-mail`, `psw`, `Celular`, `Talla_Playera_idTalla_Playera`, `Carrera_id`, `Institucion_id`, `Facebook`, `Twitter`, `FechaNacimiento`, `Habilidades`, `Hobbies`, `Rol_idRol`, `Genero_idSexo`,`hackaton`) VALUES (NULL, '$this->nombre', '$this->apellidos', '$this->correo', '$this->contrasena', '$this->cel', '$this->talla', '$this->carrera', '$this->institucion', '$this->facebook', '$this->twitter', '$this->fecha', '$this->habilidades', '$this->hobbies', '$this->rol', '$this->sexo','$idHack')";
-		    	 	
+		     
 		    	 	$validar=$registro->ValidarUsuario($this->nombre,$this->apellidos,$this->correo,$this->cel); 
 		    	 	if (count($validar)!=0) {
 			    	 		if ($validar[0][4] ==$idHack) {

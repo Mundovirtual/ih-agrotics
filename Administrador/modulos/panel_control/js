@@ -21,8 +21,6 @@ function botones(){
 		console.log("complete");
 	});
 }
-
-
 function controlBotones(){
 	 
 	let botonUno="Empezar";
@@ -116,6 +114,4 @@ function controlBotones(){
 	function VerticalAlerta(vertical){  
 		alertify.set('notifier','position', 'top-right');
  		alertify.success( 'Seleccionaste : '+vertical);
-
- 		
  }

@@ -55,7 +55,6 @@
 		 
 
 	</div>
-</div>
+</div> 
  
-  
- <script src="../modulos/panel_control/panel_control.js"></script>
+ <script src="../modulos/panel_control/panel_control.js"> </script>

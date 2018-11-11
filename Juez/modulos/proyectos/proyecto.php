@@ -1,5 +1,9 @@
 <?php 
 include_once("../../../class/proyectosJuez.php");
+include_once("../../../class/VerticalesJuez.php");
+/*Cargar verticales*/
+
+/*Cargar proyectos*/
 if (isset($_POST['idproyectos'])) {
 	 $idProyectos=$_POST['idproyectos'];
 	 $tabla="";
@@ -16,10 +20,26 @@ if (isset($_POST['idproyectos'])) {
 	  }
 
 	 }
-	 echo json_encode($InicioTabla.$tabla.$finTabla);
+	 echo  json_encode(array('Integrantes'=>$InicioTabla.$tabla.$finTabla)); 
 }
  
+
+ if (isset($_POST['InsertarVerticales'])) {
+ 	$verticales=new MostrarProyectosPorVerticales();
+ 	$mostrar=$verticales->verticales(); 
+ 	$head='<select class="form-control text-center"><<option onclick="VerticalesMostrar('."'".'0'."'".')">Mostrar todos</option>';
+ 	$body="";
+
+ 	foreach ($mostrar as $key ) {
+ 		$body.='<option onclick="VerticalesMostrar('."'".$key['0']."'".')">'.$key['1']."-> ".$key['2'].'</option>';		
+ 	}
+ 	$foot="</select>";
+ 	echo json_encode(array('SelectVerticales'=>$head.$body.$foot)); 
+ }
  ?>
 
  		
   
+			        
+			        
+		       

@@ -3,12 +3,11 @@ include_once("../../../class/proyectosJuez.php");
 	$index=new proyectos();
 	$ver=$index->index();   
  	$tabla="";
-	$i=1;
-
+	$i=1;  
    foreach ($ver as $key ) {
  	$detalles='<a data-toggle=\"modal\" data-target=\"#DetallesEquipo\"><i class=\"fa fa-eye fa-2x\" align=\"center\" onclick=\"detalles('."'".$key['0']."','".$key['8']."','".$key['1']."','".$key['2']."','".$key['3']."','".$key['9']."'".')\"></i></a>'; 
 
- 	$eliminar='<button type=\"button\" class=\"btn btn-danger fas fa-trash-alt\" data-toggle=\"modal\" data-target=\"#EliminarEquipos\" onclick=\"eliminar('."'".$key['0']."'".')\"></button>'; 
+ 	$calificar='<button type=\"button\" class=\"btn btn-info fas fa-pen-square\" data-toggle=\"modal\" data-target=\"#CalificarProyecto\" onclick=\"verticalId('."'".$key['10']."'".')\"></button>'; 
   
   	$tabla.='{
 				  "Num":"'.$i.'",
@@ -16,7 +15,7 @@ include_once("../../../class/proyectosJuez.php");
 				  "Vertical":"'.$key['6'].'", 
 				  "proyecto":"'.$key['5'].'" ,
 				  "Detalles":"'.$detalles.'" ,
-				  "delete":"'.$eliminar.'"
+				  "calificar":"'.$calificar.'"
 			},';
  
  	$i++;	

@@ -1,6 +1,6 @@
  <?php
 	 
-session_start();  
+	session_start();  
  if (!isset($_SESSION['Juez']) and $_SESSION['Juez']!="Juez") {
 
 	header("location:../principal/miperfil.php");
