@@ -8,7 +8,7 @@ include_once("../login/securityJuez.php");
   } 
    
  
-?>
+?> 
     <html><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -72,7 +72,7 @@ include_once("../login/securityJuez.php");
             </li>
             <li>
                 <a href="index.php?cargar=3" aria-expanded="false"><i class="fas fas fa-database"></i>Historial</a>
-            </li>
+            </li> 
           </ul>
         </div>
          

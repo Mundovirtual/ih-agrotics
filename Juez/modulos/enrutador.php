@@ -11,7 +11,7 @@
 			        break;
 			    case "3": 
 			        include_once("view/historial.php");			         
-			        break; 
+			        break;  
 			    case "error":
 			    	include_once("view/".$vista.".php");
 			    	break;	
