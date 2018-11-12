@@ -10,7 +10,7 @@ class RegistroProyHack{
  		return  mysqli_fetch_all($resultado);
  		$Conexion->mysql_close();
 	}
- 	
+ 	/*Modulo del lider de proyecto*/
  	function BuscarProyectosLider($id){
 		$con=new Conectar();
 	 	$Conexion=$con->conexion();
