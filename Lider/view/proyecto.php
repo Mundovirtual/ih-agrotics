@@ -33,9 +33,7 @@ include_once("../login/securityLider.php");
 </div>
  
   
- 
-
-<!-- Button trigger modal -->
+  
 
 <!-- Modal -->
 <div class="modal fade" id="DetallesSolicitud" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

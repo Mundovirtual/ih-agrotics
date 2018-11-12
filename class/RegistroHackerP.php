@@ -10,7 +10,15 @@ class RegistroProyHack{
  		return  mysqli_fetch_all($resultado);
  		$Conexion->mysql_close();
 	}
- 
+ 	
+ 	function BuscarProyectosLider($id){
+		$con=new Conectar();
+	 	$Conexion=$con->conexion();
+		$sql="SELECT * FROM `detprodesglozado` WHERE `IDComunidad`!='$id' ";
+		$resultado=mysqli_query($Conexion,$sql);
+ 		return  mysqli_fetch_all($resultado);
+ 		$Conexion->mysql_close();
+	}
 	/*existe*/
 	function ValidarRegistroUsuario(){
 		$con=new Conectar();

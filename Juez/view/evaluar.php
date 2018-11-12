@@ -11,9 +11,10 @@ include_once("../login/securityJuez.php");
 	</div>
 	<div class="form-group">
 		<div class="row justify-content-center">
-			<div class="col-md-4" id="CategoriaVerticales">
- 			
+
+			<div class="col-md-4" id="CategoriaVerticales"> 			
 			</div>
+			
 			<div class="col-md-3">
 				<h1 class="text-center text-danger aling-self-center">ETAPA 1</h1>
 			</div>
@@ -21,9 +22,9 @@ include_once("../login/securityJuez.php");
 		
 	</div>
 	<div class="container">
-	<h1 align="center">Proyectos</h1></br>  
+		<h1 align="center">Proyectos</h1></br>  
 </div>
- 
+ </div>
 <body>
 	 <div class="row">
 		<div class="col-md-1">
@@ -138,7 +139,7 @@ include_once("../login/securityJuez.php");
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-danger" id="ActualizarHack" onclick="RegistrarEvaluacion()">Continuar</button>
+        <button type="button" class="btn btn-success" id="ActualizarHack" onclick="RegistrarEvaluacion()">Continuar</button>
       </div>
     </div>
   </div>
