@@ -10,7 +10,7 @@ if (isset($_POST['Validar'])) {
 	 }else{
 	 	$VerDatos=$Proyecto->MostrarProyectoPorLider($_SESSION['idUserLider']);   
 
-	 	echo json_encode(array('Validar'=>'0','Equipo'=>$VerDatos[0][8],'Vertical'=>$VerDatos[0][10],'Nombre'=>$VerDatos[0][9],'Descripcion'=>$VerDatos[0][13],'DescripcionVertical'=>$VerDatos[0][11],'Asesoria'=>$VerDatos[0][12]));
+	 	echo json_encode(array('Validar'=>'0','Equipo'=>$VerDatos[0][8],'Vertical'=>$VerDatos[0][11],'Nombre'=>$VerDatos[0][9],'Descripcion'=>$VerDatos[0][13],'DescripcionVertical'=>$VerDatos[0][11],'Asesoria'=>$VerDatos[0][12]));
 	 }
 	 
 }
