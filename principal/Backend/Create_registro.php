@@ -29,10 +29,34 @@
 		    	$registro = new registro();
 
 		    	$sql = "INSERT INTO `comunidad` (`id`, `Nombre`, `Apellidos`, `E-mail`, `psw`, `Celular`, `Talla_Playera_idTalla_Playera`, `Carrera_id`, `Institucion_id`, `Facebook`, `Twitter`, `FechaNacimiento`, `Habilidades`, `Hobbies`, `Rol_idRol`, `Genero_idSexo`,`hackaton`) VALUES (NULL, '$this->nombre', '$this->apellidos', '$this->correo', '$this->contrasena', '$this->cel', '$this->talla', '$this->carrera', '$this->institucion', '$this->facebook', '$this->twitter', '$this->fecha', '$this->habilidades', '$this->hobbies', '$this->rol', '$this->sexo','$idHack')";
-		     
+		     	 
 		    	 	$validar=$registro->ValidarUsuario($this->nombre,$this->apellidos,$this->correo,$this->cel); 
-		    	 	if (count($validar)!=0) {
-			    	 		if ($validar[0][4] ==$idHack) {
+ 
+		    	 	if (count($validar)==0) {
+		    	 		$resultado =  $registro->InsertarRegistro($sql);
+		    		 
+				    			if($resultado){
+				    				?>
+				    				<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-check"></i>
+			                             <strong>Usuario registrado! ir a mi perfil para iniciar sesion</strong>
+			                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			                             <span aria-hidden="true">&times;</span>
+			                             </button>
+			                        </div>
+				    				<?php
+				    			}else {
+				    				?>
+				    				<div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i>
+			                             <strong> Error al insertar registros!</strong>
+			                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			                             <span aria-hidden="true">&times;</span>
+			                             </button>
+			                        </div>
+				    				<?php
+				    				
+				    			}
+		    	 	}else{
+		    	 		if ($validar[0][4] ==$idHack) {
 			    	 		 ?>
 		    				<div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-check"></i>
 	                             <strong>Usuario ya registrado!</strong>
@@ -42,32 +66,8 @@
 	                        </div>
 		    				<?php
 			    	 	}
-			    	 	else{
-			    	 			$resultado =  $registro->InsertarRegistro($sql);
-		    		 
-		    			if($resultado){
-		    				?>
-		    				<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-check"></i>
-	                             <strong>Usuario registrado! ir a mi perfil para iniciar sesion</strong>
-	                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-	                             <span aria-hidden="true">&times;</span>
-	                             </button>
-	                        </div>
-		    				<?php
-		    			}else {
-		    				?>
-		    				<div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i>
-	                             <strong> Error al insertar registros!</strong>
-	                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-	                             <span aria-hidden="true">&times;</span>
-	                             </button>
-	                        </div>
-		    				<?php
-		    				
-		    			}
-			    	 	}		    	 	
-		    		}
-		    	 	
+		    	 	}
+		    	 
 		    	 
 		    }
 

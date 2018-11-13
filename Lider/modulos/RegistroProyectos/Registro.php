@@ -14,6 +14,7 @@ if (isset($_POST['Validar'])) {
 	 }
 	 
 }
+ 
 
 /*Registro*/
 if (isset($_POST['equipo'])&&isset($_POST['proyecto'])&&isset($_POST['descripcion'])&&isset($_POST['vertical'])) {

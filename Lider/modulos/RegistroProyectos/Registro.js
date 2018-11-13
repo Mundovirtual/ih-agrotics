@@ -15,6 +15,9 @@ function validar(){
    			type: 'POST',
    			dataType: 'json',
    			data: {'Validar': "1"},
+   			beforeSend: function () {
+                  //  $("#Cargarpagina").html("Procesando, espere por favor...");
+            },
    		})
    		.done(function(respuesta) { 
    			if (respuesta.Validar=="0") {
@@ -26,7 +29,6 @@ function validar(){
 				$("#MVertical").prop('disabled', true);
 				$("#MostrarDescripcionVertical").prop('disabled', true);
 				$("#MostrarAsesoria").prop('disabled', true);
-
    				 
    				$("#Mostrarequipo").val(respuesta.Equipo);
 				$("#Mostrarproyecto").val(respuesta.Nombre);
@@ -34,9 +36,9 @@ function validar(){
 				$("#MVertical").val(respuesta.Vertical);
 				$("#MostrarDescripcionVertical").val(respuesta.DescripcionVertical);
 				$("#MostrarAsesoria").val(respuesta.Asesoria);
-  
-
+ 
    		  	}
+
    			if(respuesta.Validar=="1") {  
    				
    				$("#RegistrarProyecto").show();   

@@ -3,7 +3,8 @@ include_once("../login/securityLider.php");
  include_once "../class/Proyectos.php";
  ?>
 
-<div class="row justify-content-center" id="RegistrarProyecto">
+<div id="Cargarpagina">
+	<div class="row justify-content-center" id="RegistrarProyecto"  style="display: none">
 	 	<div class="col-md-10">
 	 	<div class="card center-block">
 		<h3 class="card-header primary-color bg-dark text-white"><i class="fas fa-plus-circle"></i> Registro proyecto</h3>
@@ -53,7 +54,7 @@ include_once("../login/securityLider.php");
 	    </div>
 </div>
 
-<div class="row justify-content-center" id="ProyectoRegistrado">
+<div class="row justify-content-center" id="ProyectoRegistrado"  style="display: none">
 	 
 	 	 
 		<div class="col-md-12">
@@ -85,6 +86,7 @@ include_once("../login/securityLider.php");
 		</div>
 	 
 	 </div>
+</div>
 </div>
 <script src="../js/Validaciones.js"></script>
 	 <script src="modulos/RegistroProyectos/Registro.js"></script>
