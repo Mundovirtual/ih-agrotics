@@ -20,7 +20,7 @@ $tabla="";
 					  "NombreLider":"'.$key['2'].'",
 					  "Equipo":"'.$key['7'].'",
 					  "proyecto":"'.$key['8'].'",
-					  "Vertical":"'.$key['12'].'",					  
+					  "Vertical":"'.$key['10'].'",					  
 					  "Mas":"'.$inf .'",					  
 					  "Eliminar":"'. $Eliminar.'" 
 				},';
