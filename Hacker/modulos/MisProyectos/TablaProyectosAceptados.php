@@ -1,7 +1,6 @@
 <?php 
- 
-include_once "../../../class/MisProyectos.php";
-session_start();
+ include_once("../../../login/securityHacker.php"); 
+include_once "../../../class/MisProyectos.php"; 
 $id=$_SESSION['idUserHacker'];
 $Proyectos = new MisProyectos(); 
 $ver=$Proyectos->SolicitudesAceptados($id);

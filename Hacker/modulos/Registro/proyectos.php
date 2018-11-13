@@ -1,6 +1,6 @@
-<?php 
+<?php
+include_once("../../../login/securityHacker.php");  
 include_once "../../../class/RegistroHackerP.php";
-session_start();
  
  
 $vistadeProyectos= new RegistroProyHack(); 

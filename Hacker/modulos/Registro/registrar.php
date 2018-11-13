@@ -1,5 +1,5 @@
 <?php 
-  
+  include_once("../../../login/securityHacker.php"); 
 include_once "../../../class/RegistroHackerP.php"; 
 if (isset($_POST["idH"])&&isset($_POST["idP"])) {
 	$Proyectos= new RegistroProyHack();
