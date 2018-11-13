@@ -61,7 +61,7 @@
         </div>
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">
-          <h5 class="sidenav-heading">Main</h5>
+          <h5 class="sidenav-heading">Menu</h5>
 
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
           
@@ -96,8 +96,8 @@
               <a href="../view/index.php?cargar=5" aria-expanded="false"> 
                 <i class="fa fa-bell"></i>Solicitudes</a>
             </li>
-            
-
+            <h5 class="sidenav-heading">Mantenimiento</h5>
+              <li><a href="../view/index.php?cargar=12">Mi perfil</a></li> 
           </ul>
         </div>
          

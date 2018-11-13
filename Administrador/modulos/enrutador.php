@@ -34,7 +34,10 @@
 			        include_once("../view/proceso.php");			         
 		        	break;
 	        	case "11": 
-		        include_once("../view/panelControl.php");			         
+		      		  include_once("../view/panelControl.php");			         
+	        	break;
+	        	case "12": 
+		       		 include_once("../view/MiPerfil.php");			         
 	        	break;	
 			    case "error":
 			    	include_once("../view/".$vista.".php");

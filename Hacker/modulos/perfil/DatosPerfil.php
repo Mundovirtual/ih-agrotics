@@ -16,7 +16,7 @@ if (isset($_POST['idAct']) && isset($_POST['Correo']) && isset($_POST['cel']) &&
 		$aux="1";
 	}
 	else if(strlen($cel)<9 || strlen($cel)>13){
-		$msj="Celular: Logitud no valida";
+		$msj="Celular: Longitud no valida";
 		$aux="1";
 	}
 	else if(!is_numeric($cel)){
