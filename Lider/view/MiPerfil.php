@@ -6,6 +6,7 @@ require_once("../class/comunidad.php");
 $id=$_SESSION['idUserLider'];
 $Comunidad = new comunidad();
 $ver =$Comunidad->mostrarDatos($id);
+ 
 
  ?>
 <div class="row justify-content-center">
