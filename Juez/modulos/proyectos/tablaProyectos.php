@@ -1,4 +1,5 @@
 <?php 
+include_once("../../../login/securityJuez.php");
 include_once("../../../class/proyectosJuez.php");
 	$index=new proyectos();
 	$ver=$index->index();   

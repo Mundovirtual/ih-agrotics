@@ -1,4 +1,5 @@
-<?php 
+<?php
+include_once("../../../login/securityJuez.php"); 
 include_once("../../../class/proyectosJuez.php");
 	
 	if (isset($_POST['IdVertical'])) {

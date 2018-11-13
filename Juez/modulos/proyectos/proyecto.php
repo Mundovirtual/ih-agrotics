@@ -1,4 +1,5 @@
 <?php 
+include_once("../../../login/securityJuez.php");
 include_once("../../../class/proyectosJuez.php");
 include_once("../../../class/VerticalesJuez.php");
 /*Cargar verticales*/
