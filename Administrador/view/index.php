@@ -96,8 +96,8 @@
               <a href="../view/index.php?cargar=5" aria-expanded="false"> 
                 <i class="fa fa-bell"></i>Solicitudes</a>
             </li>
-            <h5 class="sidenav-heading">Mantenimiento</h5>
-              <li><a href="../view/index.php?cargar=12">Mi perfil</a></li> 
+            <h5 class="sidenav-heading">Mantenimiento</h5> 
+              <li><a href="../view/index.php?cargar=12"><i class="fa fa-user"></i>Mi perfil</a></li> 
           </ul>
         </div>
          
