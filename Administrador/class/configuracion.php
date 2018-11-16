@@ -1,4 +1,5 @@
-<?php 
+
+<?php  
  include_once("conexion.php");
 	 
 	 class configuracion{
@@ -43,4 +44,4 @@
 	 }
  
 
- ?>
+  ?>
