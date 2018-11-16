@@ -52,7 +52,7 @@
 		<div  class="card text-white bg-dark mb-3" style="max-width: 18rem;">
 		  <div class="card-header bg-primary" align="center"><h2>Tercera Fase</h2><div align="center">2 Equipos</div></div>
 		  <div class="card-body" align="center">
-		      <button id="faseTres" type="button" class="btn  btn-success" value="3"></button>	   
+		      <button id="faseTres" type="button" class="btn  btn-success" value="3" disabled="true"></button>	   
 			</div>
 		</div>
 		 

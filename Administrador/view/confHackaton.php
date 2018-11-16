@@ -80,17 +80,34 @@
 		 	 		<?php  
 			    	$Vertical= new Vertical();
 			    	$mostrarFases=$Vertical->mostrarFases(); 
-			    	foreach ($mostrarFases as $key) {?>
-			    		<div>		  	
-					      <div class="input-group align-content-center">
-					        <div class="input-group-prepend">
-					          <div class="input-group-text"><?php echo $key['1']; ?></div>
-					        </div>
-					        <input type="text"  class="numero form-control col-sm-3 " placeholder="Número" id="<?php echo $key['0']; ?>" name="<?php echo $key['0']; ?>"step="1"  min="0">
-					      </div>
-					    </div>
-					    <hr> 
-			    	<?php	 
+			    	$i=1;
+			    	foreach ($mostrarFases as $key) {
+			    		if ($i==1) {?>
+				    		<div>		  	
+						      <div class="input-group align-content-center">
+						        <div class="input-group-prepend">
+						          <div class="input-group-text"><?php echo $key['1']; ?></div>
+						        </div>
+						        <input type="text" class="numero form-control col-sm-3 " placeholder="Número" id="<?php echo $key['0']; ?>" name="<?php echo $key['0']; ?>"step="1"  value="No aplica" readonly >
+						      </div>
+						    </div>
+						    <hr> 
+				    		<?php 			
+			    		}else{?>
+				    		<div>		  	
+						      <div class="input-group align-content-center">
+						        <div class="input-group-prepend">
+						          <div class="input-group-text"><?php echo $key['1']; ?></div>
+						        </div>
+						        <input type="text"  class="numero form-control col-sm-3 " placeholder="Número" id="<?php echo $key['0']; ?>" name="<?php echo $key['0']; ?>"step="1"  min="0">
+						      </div>
+						    </div>
+						    <hr> 
+				    	<?php
+
+			    		}
+ 
+			    	$i++;	 
 			    	}
 			     ?> 
 		 	 	</div>

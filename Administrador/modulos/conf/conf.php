@@ -16,7 +16,7 @@ if (isset($_POST['Registro'])) {
 		$ArrayFaseUno=explode("=", $FaseUno);
 		/*Var para insertar*/
 			$idFaseUno=$ArrayFaseUno[0];
-			$valFaseUno=$ArrayFaseUno[1];
+			$valFaseUno="0";
 
 
 	/*Var fase dos*/  
@@ -48,25 +48,16 @@ if (isset($_POST['Registro'])) {
 	} else if ($valFaseTres=='') {
 		 $msj="Pitch 3: Campo vacío ";
 		 $aux="1";
-	}else if (!is_numeric($valFaseUno) or !filter_var($valFaseUno,FILTER_VALIDATE_INT)) {
-		 $msj="Pitch 1: Solo campos enteros";
-		 $aux="1";
 	} else if (!is_numeric($valFaseDos) or !filter_var($valFaseDos,FILTER_VALIDATE_INT)) {
 		 $msj="Pitch 2: Solo campos enteros";
 		 $aux="1";
 	} else if (!is_numeric($valFaseTres) or !filter_var($valFaseTres,FILTER_VALIDATE_INT)) {
 		 $msj="Pitch 3: Solo campos enteros";
 		 $aux="1";
-	} else if($valFaseUno<$valFaseDos){
-		$msj="Pitch 1: El número debe ser mayor a los demás pitch";
+	} else if($valFaseDos<$valFaseTres){
+		$msj="Pitch 2: El número debe ser mayor a pitch 3";
 		 $aux="1";	
-	}else if($valFaseDos<$valFaseTres){
-		$msj="Pitch 2: El número debe ser menor al Pitch 1 y mayor a pitch 2";
-		 $aux="1";	
-	}else if($valFaseTres>$valFaseUno){
-		$msj="Pitch 3: El número debe ser menor a los demás pitch";
-		 $aux="1";	
-	}else if ($Aux=='0') {
+	} else if ($Aux=='0') {
 		$Validar=new configuracion();
 		/*Insertar registros uno*/
 		$val=$Validar->validar($idHack,$idFaseUno);
