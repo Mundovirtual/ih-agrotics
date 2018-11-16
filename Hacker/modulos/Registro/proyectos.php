@@ -6,6 +6,7 @@ include_once "../../../class/RegistroHackerP.php";
 $vistadeProyectos= new RegistroProyHack(); 
 $ver=$vistadeProyectos->BuscarProyectos();
  
+
 $i=1; 
 $tabla=""; 
 

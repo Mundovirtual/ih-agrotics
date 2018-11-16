@@ -47,7 +47,7 @@ if (isset($_POST['NombreHack'])&&isset($_POST['InicioHack'])&&isset($_POST['Entr
 		
 		$Hackaton=new Hackaton();
 		$Registrar=$Hackaton->InsertarHackaton($nombreHack,$_POST['InicioHack'],$_POST['EntregaProyectos'],$_POST['FinHack'], $imagen);
-		 if ($Registrar=='1') {
+		 if ($Registrar!='0') {
 		 	$msj="1";
 		 }else{
 		 	$msj="Ya existe el registro";
@@ -78,10 +78,10 @@ if (isset($_POST['EstatusHackaton'])) {
 
 
 /*Actualizar*/
-
-
+ 
 if (isset($_POST["idAc"])&&isset($_POST['EhN'])&&isset($_POST['EhI'])&&isset($_POST['EhE'])&&isset($_POST['EhF'])){
 
+	$id=$_POST["idAc"];
 	$nombreHack=$_POST['EhN'];
 	$inicioHack=strtotime($_POST['EhI']);
 	$EntregaHack=strtotime($_POST['EhE']);
@@ -132,18 +132,7 @@ if (isset($_POST["idAc"])&&isset($_POST['EhN'])&&isset($_POST['EhI'])&&isset($_P
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+ 
  
  
 ?>
