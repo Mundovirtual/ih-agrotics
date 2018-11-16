@@ -2,7 +2,7 @@
 include_once("../../../login/securityJuez.php");
 include_once("../../../class/proyectosJuez.php");
 	$index=new proyectos();
-	$ver=$index->index();   
+	$ver=$index->index();   	
  	$tabla="";
 	$i=1;  
    foreach ($ver as $key ) {

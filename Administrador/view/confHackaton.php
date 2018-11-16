@@ -1,7 +1,7 @@
  <?php
  include_once("../modulos/login/security.php");    
  include_once("../class/Hackaton.php"); 
- include("../class/Vertical.php");
+ include_once("../class/Vertical.php");
  ?>    
 <div class="container">
 	<h1 align="center">Configuración  de Ediciones</h1>     
@@ -29,11 +29,9 @@
 			  <thead>
 			    <tr>
 			      <th scope="col">#</th>
-			      <th scope="col">Edicion</th>
-			      <th scope="col">Vertical</th>
+			      <th scope="col">Edicion</th> 
 			      <th scope="col">Fase</th>
-			      <th scope="col">Equipos</th>
-			      <th scope="col">Editar</th>
+			      <th scope="col">Equipos finalistas</th> 
 			      <th scope="col">Eliminar</th>
 			    </tr>
 			  </thead>
@@ -61,12 +59,12 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	       	<form>
+	       	<form id="ConfiguracionForm">
 			<div class="input-group mb-3"> 
 			  <div class="input-group-prepend">
 			    <label class="input-group-text">Hackaton</label>
 			  </div>
-			  <select class="custom-select" id="Hackaton" name="Hackaton" disabled="disabled"> 
+			  <select class="custom-select" id="Hackaton" name="Hackaton"> 
 			    <?php 
 			    	$hackaton= new Hackaton();
 			    	$verHackaton=$hackaton->mostrarDatosHackaton();
@@ -77,48 +75,25 @@
 			     ?> 
 			  </select>
 			</div>
-			
-			<div class="input-group mb-3"> 
-			  <div class="input-group-prepend">
-			    <label class="input-group-text">Vertical</label>
-			  </div>
-			  <select class="custom-select" id="Vertical" name="Vertical">
-			    <option selected value="s">Selecciona...</option>
-				<?php 
+		 	 	<div>
+
+		 	 		<?php  
 			    	$Vertical= new Vertical();
-			    	$verVertical=$Vertical->mostrarDatos(); 
-			    	foreach ($verVertical as $key) {?>
-			    		 <option value="<?php echo $key['0']; ?>"><?php echo $key['2']; ?></option>
-			    	<?php	 
-			    	}
-			     ?> 
-			  </select>
-			</div>
-			<div class="input-group mb-3"> 
-			  <div class="input-group-prepend">
-			    <label class="input-group-text" >Fase</label>
-			  </div>
-			  <select class="custom-select" id="Fases" name="Fases">
-			    <option selected value="s">Selecciona...</option> 
-			    <?php  
 			    	$mostrarFases=$Vertical->mostrarFases(); 
 			    	foreach ($mostrarFases as $key) {?>
-			    		 <option value="<?php echo $key['0']; ?>"><?php echo $key['1']; ?></option>
+			    		<div>		  	
+					      <div class="input-group align-content-center">
+					        <div class="input-group-prepend">
+					          <div class="input-group-text"><?php echo $key['1']; ?></div>
+					        </div>
+					        <input type="text"  class="numero form-control col-sm-3 " placeholder="Número" id="<?php echo $key['0']; ?>" name="<?php echo $key['0']; ?>"step="1"  min="0">
+					      </div>
+					    </div>
+					    <hr> 
 			    	<?php	 
 			    	}
 			     ?> 
-			  </select>
-			</div>
-			<div>
-		  
-		      <div class="input-group">
-		        <div class="input-group-prepend">
-		          <div class="input-group-text">Equipos Limite</div>
-		        </div>
-		        <input type="number"  class="numero form-control col-sm-3 " id="nEquipos" name="nEquipos" step="1"  min="0">
-		      </div>
-		    </div>
-				 		
+		 	 	</div>
 			</form>
 	      </div>
 	      <div class="modal-footer">
@@ -128,57 +103,7 @@
 	    </div>
 	  </div>
 	</div>
-
-	 
-	<!-- Editar -->
-	<div class="modal fade" id="EditarConfiguraciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="Editar"><i class="fas fa-pencil-alt"></i>Editar Configuración</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
-	      </div>
-	      <div class="modal-body">
-			  <form>			  	
-			  	<div class="input-group mb-3"> 
-			  		<div class="input-group-prepend">
-			 		   <label class="input-group-text">Hackaton</label>
-			  		</div>
-				   <input type="text" class="form-control"  id="EditarHack" name="EditarHack" disabled>
-				</div>
-				<div class="input-group mb-3"> 
-				  <div class="input-group-prepend">
-				    <label class="input-group-text" for="Vertical">Vertical</label>
-				  </div> 
-      				<input type="text" class="form-control"  id="EditarVertical" name="EditarVertical"  disabled>
-				</div>
-				<div class="input-group mb-3"> 
-				  <div class="input-group-prepend">
-				    <label class="input-group-text" for="Fases">Fase</label>
-				  </div>
-				  <input type="text" class="form-control" id="EditarFase" name="EditarFase" disabled>
-				</div>
-				<div>
-			      <label class="sr-only" ></label>
-			      <div class="input-group">
-			        <div class="input-group-prepend">
-			          <div class="input-group-text">Equipos Limite</div>
-			        </div>
-			        <input type="number"  class="numero form-control col-sm-3 " id="nEquiposEditar" name="nEquiposEditar" min="0" step="1" >
-			      </div>
-			    </div>
-				 		
-			</form>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="submit" class="btn btn-success" id="ActualizarHack" onclick="actualizar()">Actualizar</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+ 
 
 	<!-- Eliminar -->	
  

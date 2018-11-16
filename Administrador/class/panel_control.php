@@ -1,12 +1,13 @@
+
 <?php 
  include_once("conexion.php");
 	 
 	 class panel_control{
 
-	 	function verticales(){	 		
+	 	function Configuracion($id){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="SELECT `vertical`.`id`, `vertical`.`Nombre`, `vertical`.`Descripcion` FROM `vertical` INNER JOIN `hackatonedicion` on `hackatonedicion`.`id`=`vertical`.`HackatonEdicion_id` where `hackatonedicion`.`status`='1'";
+	 		$sql="SELECT `Id`, `HackatonEdicion_id`, `Fases_idFases`, `EquiposLimite`, `Estatus_idEstatus` FROM `infconfiguracion` WHERE `HackatonEdicion_id`='$id'";
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();

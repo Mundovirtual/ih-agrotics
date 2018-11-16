@@ -27,7 +27,7 @@
 	 	function InsertarVertical($Vertical,$Descripcion,$asesoria,$Hackaton){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="INSERT INTO `vertical`(`Nombre`, `Descripcion`, `InfAsesoria`, `HackatonEdicion_id`) VALUES 		('$Vertical','$Descripcion','$asesoria','$Hackaton')";
+	 		$sql="INSERT INTO `vertical`(`Nombre`, `Descripcion`, `InfAsesoria`, `HackatonEdicion_id`) VALUES ('$Vertical','$Descripcion','$asesoria','$Hackaton')";
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		if ($resultado=true) {
 	 			return true;

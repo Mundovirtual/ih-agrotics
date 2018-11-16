@@ -6,59 +6,28 @@ $( document ).ready(function() {
   
 /*Valor id para editar*/
 let idEditar="";
-function editar(id,hackaton,vertical,pitch,EqLimite){
+function editar(id,hackaton,pitch,EqLimite){
     idEditar=id;
-    $("#EditarHack").val(hackaton);
-    $("#EditarVertical").val(vertical);
+    $("#EditarHack").val(hackaton); 
     $("#EditarFase").val(pitch);
     $("#nEquiposEditar").val(EqLimite); 
 }
-
-function actualizar(){
-    let hackaton=$("#EditarHack").val();
-    let vertical=$("#EditarVertical").val();
-    let fase=$("#EditarFase").val();
-    let equipos=$("#nEquiposEditar").val();  
-    $.ajax({
-        url: '../modulos/conf/conf.php',
-        type: 'POST',
-        dataType: 'json',
-        data: {'idEdit': idEditar,'hackEdit':hackaton,'verticalEdit':fase,'equiposEdit':equipos},
-    })
-    .done(function(respuesta) { 
-         if (respuesta.Estado=="1") {
-            alertify.set('notifier','position', 'top-right');
-            $("#EditarConfiguraciones").modal('hide'); 
-            cargarConfig();
-            alertify.success('Datos actualizados');             
-        } else{
-            alertify.set('notifier','position', 'top-right');
-            $("#EditarConfiguraciones").modal('show'); 
-            alertify.error(respuesta.Estado);   
-        }
-    })
-    
-}
+ 
 function registrarconf(){
-   let hack= $("#Hackaton").val();
-   let vert=$("#Vertical").val();
-   let fases=$("#Fases").val();
-   let nEquipos=$("#nEquipos").val();
+   let Registro= $("#ConfiguracionForm").serialize();
+   
    $.ajax({
         url: '../modulos/conf/conf.php',
         type: 'POST',
         dataType: 'json',
-        data: {'Hack':hack,'vert':vert,'fase':fases,"Nequipos":nEquipos}
+        data: {'Registro':Registro}
     })
     .done(function(respuesta) { 
          if (respuesta.Estado=="1") {
             alertify.set('notifier','position', 'top-right');
             $("#ModalConfiguraciones").modal('hide'); 
             cargarConfig();
-            alertify.success('Configuración registrada');   
-            $("#Vertical").val('s');
-            $("#Fases").val('s');
-            $("#nEquipos").val('');          
+            alertify.success('Configuración registrada');          
         } else{
             alertify.set('notifier','position', 'top-right');
             $("#ModalConfiguraciones").modal('show'); 
@@ -106,11 +75,9 @@ var tabla_nombre;
         },
         "columns": [ 
             { "data": "id" },
-            { "data": "NombreHack" },
-            { "data": "Vertical" },
+            { "data": "NombreHack" }, 
             { "data": "fase" },
-            { "data": "limites" }, 
-            { "data": "Editar" },
+            { "data": "limites" },  
             { "data": "Eliminar" } 
         ],
         "oLanguage": {
