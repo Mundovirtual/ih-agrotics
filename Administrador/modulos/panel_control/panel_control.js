@@ -11,8 +11,20 @@ function botones(){
 		dataType: 'json',
 		data: {'botones': 'btn'},
 	})
-	.done(function(respuesta) {
-		  $("#MostrarBotonesVerticales").html(respuesta.Botones); 
+	.done(function(respuesta) { 
+
+		if (respuesta.Botones=='0') {
+			$("#AlertaConfiguracionPanel").show(); 
+			
+		}else{ 
+			$("#BottonPanel").show();
+			$("#BottonFaseUno").html(respuesta['0']['faseButton']);			
+			$("#BottonFaseDos").html(respuesta['1']['faseButton']);
+			$("#NEquipoFaseDos").text(respuesta['1']['NEquipos']+" finalistas");			
+			$("#BottonFaseTres").html(respuesta['2']['faseButton']);
+			$("#NEquipoFaseTres").text(respuesta['2']['NEquipos']+" finalistas");
+		}
+		 
 	})
 	.fail(function() {
 		console.log("error");
@@ -22,7 +34,10 @@ function botones(){
 	});
 }
 
- 
+ function EstadoFase(uno,dos,tres){
+
+ }
+
 /*Alerty fy*/
 	 
 	function VerticalAlerta(vertical){  
