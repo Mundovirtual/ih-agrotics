@@ -1,6 +1,5 @@
 $( document ).ready(function() {
- 	botones();
- 	controlBotones();
+ 	botones(); 
 });
 
  
@@ -34,8 +33,25 @@ function botones(){
 	});
 }
 
- function EstadoFase(uno,dos,tres){
+ function EstadoFase(id,fase,equipos,estatus){
+ 	  
+  $.ajax({
+		url: '../modulos/panel_control/panel_control.php',
+		type: 'POST', 
+		data: {'id': id,'fase': fase ,'Equipos': equipos,'Estatus':estatus},
+	})
+	.done(function(respuesta) { 
+ 			botones(); 
+	})
+	.fail(function() {
+	 
+    })
+	.always(function() {
+		console.log("complete");
+	});
 
+ 
+ 	
  }
 
 /*Alerty fy*/

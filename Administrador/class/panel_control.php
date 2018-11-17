@@ -14,11 +14,11 @@
 	 	}
 	 	 
 
-	 	function Actualizar($id,$EquiposLimite){
+	 	function Actualizar($id,$fase){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="UPDATE `infconfiguracion` SET `EquiposLimite`='$EquiposLimite' WHERE `Id`='$id'";  
-	 		$resultado=mysqli_query($Conexion,$sql);
+	 		$sql="UPDATE `infconfiguracion` SET `Estatus_idEstatus`='$fase' WHERE `Id`='$id'";  
+	 		$resultado=mysqli_query($Conexion,$sql); 
 	 		return $resultado;
 	 		$Conexion->mysql_close();
 	 	}

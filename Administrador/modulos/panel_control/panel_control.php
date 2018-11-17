@@ -1,15 +1,17 @@
 <?php 
-include_once("../../class/panel_control.php"); 
-include_once("../../class/Hackaton.php");
+	include_once("../../class/panel_control.php"); 
+	include_once("../../class/Hackaton.php");
 
+	/*Obtener valor del hack activo*/
 	$hackaton= new Hackaton();
 	$verHackaton=$hackaton->mostrarDatosHackaton();
 	$idHack=$verHackaton['0']['0'];
-	
+	$Panel=new panel_control();
 
 	if (isset($_POST['botones'])) {
-		$botones=new panel_control();
-		$insertar=$botones->Configuracion($idHack);
+		/**/
+		
+		$insertar=$Panel->Configuracion($idHack);
 		 
 
 		if (count($insertar)<3) {
@@ -41,77 +43,77 @@ include_once("../../class/Hackaton.php");
 			$EstatusTres=$insertar[2][4];
 			
 			if ($EstatusUno=='1') {
-				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-success" onclick="EstadoFase('."'".$idUno."','".$NEquiposUno."','".$EstatusUno."'".')">Empezar</button>';
+				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-success" onclick="EstadoFase('."'".$idUno."','".$FaseUno."','".$NEquiposUno."','".$EstatusUno."'".')">Empezar</button>';
 				$NequiposFaseUno=$NEquiposUno;
 
-				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-success" disabled="true"  onclick="EstadoFase('."'".$idDos."','".$NEquiposDos."','".$EstatusDos."'".')">Empezar</button>';
+				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-success" disabled="true"  onclick="EstadoFase('."'".$idDos."','".$FaseDos."','".$NEquiposDos."','".$EstatusDos."'".')">Empezar</button>';
 				$NequiposFaseDos=$NEquiposDos;
 
-				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" disabled="true" onclick="EstadoFase('."'".$idTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
+				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" disabled="true" onclick="EstadoFase('."'".$idTres."','".$FaseTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
 
 				$NequiposFaseTres=$NEquiposTres;
 				
 			}else if ($EstatusUno=='2') {
-				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-warning" onclick="EstadoFase('."'".$idUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizar</button>';
+				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-warning" onclick="EstadoFase('."'".$idUno."','".$FaseUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizar</button>';
 				$NequiposFaseUno=$NEquiposUno;
 
-				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-success" disabled="true"  onclick="EstadoFase('."'".$idDos."','".$NEquiposDos."','".$EstatusDos."'".')">Empezar</button>';
+				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-success" disabled="true"  onclick="EstadoFase('."'".$idDos."','".$FaseDos."','".$NEquiposDos."','".$EstatusDos."'".')">Empezar</button>';
 				$NequiposFaseDos=$NEquiposDos;
 
-				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" disabled="true" onclick="EstadoFase('."'".$idTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
+				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" disabled="true" onclick="EstadoFase('."'".$idTres."','".$FaseTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
 				
 				$NequiposFaseTres=$NEquiposTres;
 				
 			}else if ($EstatusUno=='3' and $EstatusDos=='1') {
-				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
+				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$FaseUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
 				$NequiposFaseUno=$NEquiposUno;
 
-				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-success"  onclick="EstadoFase('."'".$idDos."','".$NEquiposDos."','".$EstatusDos."'".')">Empezar</button>';
+				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-success"  onclick="EstadoFase('."'".$idDos."','".$FaseDos."','".$NEquiposDos."','".$EstatusDos."'".')">Empezar</button>';
 				$NequiposFaseDos=$NEquiposDos;
 
-				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" disabled="true" onclick="EstadoFase('."'".$idTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
+				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" disabled="true" onclick="EstadoFase('."'".$idTres."','".$FaseTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
 				
 				$NequiposFaseTres=$NEquiposTres;
 			}else if ($EstatusUno=='3' and $EstatusDos=='2') {
-				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
+				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$FaseUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
 				$NequiposFaseUno=$NEquiposUno;
 
-				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-warning"  onclick="EstadoFase('."'".$idDos."','".$NEquiposDos."','".$EstatusDos."'".')">Finalizar</button>';
+				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-warning"  onclick="EstadoFase('."'".$idDos."','".$FaseDos."','".$NEquiposDos."','".$EstatusDos."'".')">Finalizar</button>';
 				$NequiposFaseDos=$NEquiposDos;
 
-				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" disabled="true" onclick="EstadoFase('."'".$idTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
+				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" disabled="true" onclick="EstadoFase('."'".$idTres."','".$FaseTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
 				
 				$NequiposFaseTres=$NEquiposTres;
 				
 			}else if ($EstatusUno=='3' and $EstatusDos=='3' and $EstatusTres=='1') {
-				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
+				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$FaseUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
 				$NequiposFaseUno=$NEquiposUno;
 
-				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idDos."','".$NEquiposDos."','".$EstatusDos."'".')">Finalizado</button>';
+				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idDos."','".$FaseDos."','".$NEquiposDos."','".$EstatusDos."'".')">Finalizado</button>';
 				$NequiposFaseDos=$NEquiposDos;
 
-				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" onclick="EstadoFase('."'".$idTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
+				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" onclick="EstadoFase('."'".$idTres."','".$FaseTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
 				
 				$NequiposFaseTres=$NEquiposTres;
 			}else if ($EstatusUno=='3' and $EstatusDos=='3' and $EstatusTres=='2') {
-				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
+				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$FaseUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
 				$NequiposFaseUno=$NEquiposUno;
 
-				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idDos."','".$NEquiposDos."','".$EstatusDos."'".')">Finalizado</button>';
+				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idDos."','".$FaseDos."','".$NEquiposDos."','".$EstatusDos."'".')">Finalizado</button>';
 				$NequiposFaseDos=$NEquiposDos;
 
-				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-warning" onclick="EstadoFase('."'".$idTres."','".$NEquiposTres."','".$EstatusTres."'".')">FInalizar</button>';
+				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-warning" onclick="EstadoFase('."'".$idTres."','".$FaseTres."','".$NEquiposTres."','".$EstatusTres."'".')">FInalizar</button>';
 				
 				$NequiposFaseTres=$NEquiposTres;
 				
 			}else if ($EstatusUno=='3' and $EstatusDos=='3' and $EstatusTres=='3') {
-				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
+				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$FaseUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
 				$NequiposFaseUno=$NEquiposUno;
 
-				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idDos."','".$NEquiposDos."','".$EstatusDos."'".')">Finalizado</button>';
+				$BotonFaseDos='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idDos."','".$FaseDos."','".$NEquiposDos."','".$EstatusDos."'".')">Finalizado</button>';
 				$NequiposFaseDos=$NEquiposDos;
 
-				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idTres."','".$NEquiposTres."','".$EstatusTres."'".')">FInalizar</button>';
+				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idTres."','".$FaseTres."','".$NEquiposTres."','".$EstatusTres."'".')">FInalizar</button>';
 				
 				$NequiposFaseTres=$NEquiposTres;
 			}
@@ -131,14 +133,36 @@ include_once("../../class/Hackaton.php");
 						);
  			echo json_encode($Button);
 		}
-
-
-		/*if (count($insertar)>0) {
  
-			foreach ($insertar as $key) {
-				$botones.='<button type="button" class="btn btn-info" id="'.$key['0'].'" name="'.$key['2'].'" title="'.$key['2'].'" value="'.$key['0'].'" onclick="VerticalAlerta('."'".$key['0']."','".$key['1']."'".')" style="margin: 20px">'.$key['1'].'</button>';
-			}
-		}*/
 		
+	
 	}
+	if (isset($_POST['id']) &&isset($_POST['fase']) &&isset($_POST['Equipos']) &&isset($_POST['Estatus'])) {
+		$id= $_POST['id'];
+		$Fase= $_POST['fase'];
+		$Nequipos= $_POST['Equipos'];
+		$Estatus=$_POST['Estatus'];
+
+
+		if ($Estatus==1) {
+
+			 $EstatusActualidos=2;
+			 $ActualizarFases=$Panel->Actualizar($id,$EstatusActualidos);
+
+		}else if ($Estatus==2) {
+
+			 $EstatusActualidos=3; 
+			 $ActualizarFases=$Panel->Actualizar($id,$EstatusActualidos);
+
+		} 
+		else if ($Estatus==3) {
+			$EstatusActualidos=3;
+			 $ActualizarFases=$Panel->Actualizar($id,$EstatusActualidos);
+			  
+
+		}
+
+
+	}
+
  ?>

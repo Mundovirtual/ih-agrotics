@@ -4,7 +4,7 @@ $( document ).ready(function() {
 });
   
 
-/**/  
+/*Mostrar tabla por verticales*/  
 function VerticalesMostrar(id){
     tabla_nombre = $("#TablaProyectos").dataTable({
         "destroy":true,

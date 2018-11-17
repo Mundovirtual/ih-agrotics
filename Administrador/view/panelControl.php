@@ -16,7 +16,8 @@
 <hr>
 
 
- 
+  
+
 	<div id="AlertaConfiguracionPanel" class="alert alert-danger text-center" role="alert" style="display: none;" >
 	  <h4 class="alert-heading">Configuración  Incompleta!!</h4>
 	  <p>Favor de configurar todas las fases<a href="../view/index.php?cargar=3"><h2>👉 Ir</h2></a></p>
