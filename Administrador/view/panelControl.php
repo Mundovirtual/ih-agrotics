@@ -61,3 +61,4 @@
 </div> 
  
  <script src="../modulos/panel_control/panel_control.js"> </script>
+ <script src="../../Juez/view/evaluar.php"></script>

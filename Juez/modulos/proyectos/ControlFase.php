@@ -12,7 +12,7 @@ if (count($idhack)!=0) {
 	$fase=new proyectos();
 	$Estatus=$fase->EstadoFases($Idhack);
 
-	if (count($Estatus)==3) {
+	if (count($Estatus)==3 and isset($_POST['Key'])) {
 		/*Botones*/
 		$FaseUno=$Estatus['0']['4'];
 		$FaseDos=$Estatus['1']['4'];
@@ -57,7 +57,7 @@ if (count($idhack)!=0) {
 			$Aux="3"; 
 		}
 
-		echo json_encode(array('Fase'=>$fase,'$Mensaje'=>$Estado,'$Estatus'=>$Aux));
+		echo json_encode(array('Fase'=>$fase,'Mensaje'=>$Estado,'Estatus'=>$Aux));
 	 
 
 	}

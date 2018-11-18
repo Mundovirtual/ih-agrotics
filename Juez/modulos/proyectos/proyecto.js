@@ -1,8 +1,41 @@
 $( document ).ready(function() {
-    Tablaproyectos();
-    InsertarVerticales();
+    ControlFases();
+    
 });
   
+
+function ControlFases(){
+  
+    $.ajax({
+ 
+        url: 'modulos/proyectos/ControlFase.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {'Key': 'True'},
+    })
+    .done(function(respuesta) { 
+        if (respuesta.Estatus!=2) {
+            $("#MostrarMensajeFase").text(respuesta.Fase);
+            $("#MostrarEstadoFase").text(respuesta.Mensaje);
+            $("#MostrarEstado").show();
+            if (respuesta.Estatus==3) {
+                $("#MostrarEstado").hide();
+            } 
+            
+        }else{
+            $("#ControlVistaFase").show();
+            Tablaproyectos();
+             InsertarVerticales();
+        }
+ 
+         
+    });
+    
+}
+
+
+
+
 
 /*Mostrar tabla por verticales*/  
 function VerticalesMostrar(id){
