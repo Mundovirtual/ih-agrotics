@@ -47,7 +47,8 @@
 	 		return   mysqli_fetch_all($resultado);;
 	 		$Conexion->mysql_close();
 	 	}
- 
+ 	
+ 		
 
 	 }
  
