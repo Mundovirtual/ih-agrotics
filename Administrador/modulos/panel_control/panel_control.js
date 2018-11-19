@@ -1,6 +1,9 @@
 $( document ).ready(function() {
- 	botones(); 
+ 	botones();  
 });
+
+
+
 
  
 function botones(){
@@ -10,8 +13,7 @@ function botones(){
 		dataType: 'json',
 		data: {'botones': 'btn'},
 	})
-	.done(function(respuesta) { 
-
+	.done(function(respuesta) {  
 		if (respuesta.Botones=='0') {
 			$("#AlertaConfiguracionPanel").show(); 
 			
@@ -22,6 +24,8 @@ function botones(){
 			$("#NEquipoFaseDos").text(respuesta['1']['NEquipos']+" finalistas");			
 			$("#BottonFaseTres").html(respuesta['2']['faseButton']);
 			$("#NEquipoFaseTres").text(respuesta['2']['NEquipos']+" finalistas");
+
+ 
 		}
 		 
 	})

@@ -1,12 +1,13 @@
 <?php 
 include_once("../login/securityJuez.php");   
+
  ?>
  
  <div id="MostrarEstado" style="display: none;"> 	
  	<div class="starter-template text-center">
 		<h1 class="display-1" id="MostrarMensajeFase"></h1>
         <h1 id="MostrarEstadoFase"></h1>
-        <p class="lead" id="MensajeInformacion">Espere a que el administrador active la siguiente fase</p>
+        <p class="lead" id="MensajeInformacion">Espere a que el administrador active la fase</p>
       
       </div>
  </div>
@@ -32,7 +33,7 @@ include_once("../login/securityJuez.php");
 				</div>
 				
 				<div class="col-md-3">
-					<h1 class="text-center text-danger aling-self-center">ETAPA 1</h1>
+					<h1 class="text-center text-danger aling-self-center" id="TextoEtapa"></h1>
 				</div>
 			</div>
 			
@@ -166,5 +167,6 @@ include_once("../login/securityJuez.php");
 
  
  <script src="modulos/proyectos/proyecto.js"></script>
+
  
  

@@ -53,7 +53,7 @@ if (count($idhack)!=0) {
 			$Aux="2";  
 		}else if ($FaseUno==3 && $FaseDos==3 && $FaseTres==3) {
 			$fase="Fase 3";
-			$Estado="Proceso de evaluacion terminado";
+			$Estado="Proceso de evaluación terminado,gracias por su participación!!";
 			$Aux="3"; 
 		}
 

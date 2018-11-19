@@ -1,8 +1,10 @@
 $( document ).ready(function() {
-    ControlFases();
-    
+    ControlFases(); 
+   
 });
   
+ 
+
 
 function ControlFases(){
   
@@ -14,16 +16,17 @@ function ControlFases(){
         data: {'Key': 'True'},
     })
     .done(function(respuesta) { 
-        if (respuesta.Estatus!=2) {
+        if (respuesta.Estatus!=2) { 
             $("#MostrarMensajeFase").text(respuesta.Fase);
-            $("#MostrarEstadoFase").text(respuesta.Mensaje);
+            $("#MostrarEstadoFase").text(respuesta.Mensaje); 
             $("#MostrarEstado").show();
-            if (respuesta.Estatus==3) {
-                $("#MostrarEstado").hide();
+            if (respuesta.Estatus==3 && respuesta.Fase=="Fase 3") {
+                $("#MensajeInformacion").hide();
             } 
             
         }else{
             $("#ControlVistaFase").show();
+            $("#TextoEtapa").text(respuesta.Fase);
             Tablaproyectos();
              InsertarVerticales();
         }
