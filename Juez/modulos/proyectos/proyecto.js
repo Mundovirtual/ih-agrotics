@@ -2,8 +2,36 @@ $( document ).ready(function() {
     ControlFases(); 
    
 });
-  
- 
+
+bandera="";
+  /*Mandar peticion a servidor para verificar si las fases estan activas*/
+ function MandarPeticion() {
+    $.ajax({
+        url: 'modulos/ControlFases/ControlTiempoFase.php',
+        type: 'POST', 
+        dataType: 'json',
+        data: {'Data': 'Peticion'},
+    })
+    .done(function(respuesta) {
+        if (respuesta.validar=='0') {
+                  
+        }
+        else{
+                 
+        }   
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+    
+       
+}
+
+ setInterval("MandarPeticion()",2000);
+
 
 
 function ControlFases(){
