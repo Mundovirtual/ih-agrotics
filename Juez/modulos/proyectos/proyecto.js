@@ -4,8 +4,10 @@ $( document ).ready(function() {
 });
 
 bandera="";
+
   /*Mandar peticion a servidor para verificar si las fases estan activas*/
  function MandarPeticion() {
+    
     $.ajax({
         url: 'modulos/ControlFases/ControlTiempoFase.php',
         type: 'POST', 
@@ -13,12 +15,15 @@ bandera="";
         data: {'Data': 'Peticion'},
     })
     .done(function(respuesta) {
-        if (respuesta.validar=='0') {
-                  
+        /*si la fase no esta activa*/
+        
+        if (respuesta.validar!=bandera) {      
+            
+            location.reload(); 
+            bandera=respuesta.validar;
         }
-        else{
-                 
-        }   
+
+        alert("server"+respuesta.validar+"bandera "+bandera);
     })
     .fail(function() {
         console.log("error");
@@ -30,9 +35,12 @@ bandera="";
        
 }
 
- setInterval("MandarPeticion()",2000);
+ setInterval("MandarPeticion()",20000);
 
+ 
 
+/*Mostrar informacion*/
+ 
 
 function ControlFases(){
   
@@ -63,6 +71,7 @@ function ControlFases(){
     });
     
 }
+
 
 
 
