@@ -1,5 +1,5 @@
 <?php 
-require_once("../../class/Juez.php");
+require_once("../class/Juez.php");
  
 if (isset($_POST["IdActualizar"]) &&isset($_POST["psw"]) &&isset($_POST["celular"]) &&isset($_POST["correo"])) {
 	/*Declarando variables*/
