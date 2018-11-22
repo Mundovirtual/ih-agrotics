@@ -31,11 +31,15 @@
 				 echo  json_encode(array('Tabla'=>$head.$body.$foot));
 		 	}
 		}
+ 
 
-		if (isset($_POST['Registrar']) and isset($_POST['Califacaciones'])) {
+ 
+		if (isset($_POST['Registrar']) and isset($_POST['Califacaciones']) and isset($_POST['idJuezR']) and isset($_POST['idproyectoR']) and isset($_POST['idfaseR'])) {
 			/*Creamos variables*/
 			$idJuez=$_SESSION['idUserJuez'];
 			$calf=$_POST['Califacaciones'];
+			$idProyecto=$_POST['idproyectoR'];
+			$idFase=$_POST['idfaseR'];
 			$msj="";
 			$Aux="0";
 			/*LA cadena que se recibe del formulario lo convertimos en arreglo*/
@@ -55,14 +59,29 @@
 				 }
 
 			}
-			
+			 
 			if ($msj=="" and $Aux=="0" ) {
-				$rubricas =new rubricas();
-				echo $Registrar;
-				/*$Juez,$idProyecto,$idFase,$idRubrica,$calf)
-		 		$Mostrar=$rubricas->InsertarCalificacion($Juez,$idProyecto,$idFase,$idRubrica,$calf);
-*/
-				$msj="0";
+ 					
+				$InsertarCalificacion =new rubricas(); 
+				 
+				$SiCalificar=$InsertarCalificacion->validarSiJuezAvaluo($idJuez,$idProyecto,$idFase);
+
+				 if ($SiCalificar=='0') {
+				 	$preguntas=explode("&", $calf);
+
+					foreach ($preguntas as $key ) {
+						$PreguntaValor = explode("=", $key); 
+						$Mostrar=$InsertarCalificacion->InsertarCalificacion($idJuez,$idProyecto,$idFase,$PreguntaValor['0'],$PreguntaValor['1']);
+				 
+					} 
+				 	$msj="0"; 
+				 }else{
+				 	$msj="3";
+
+				 }
+				
+		 	 	
+				
 
 				echo json_encode(array('ValidarRubrica'=>$msj));
 			}

@@ -20,8 +20,19 @@
 	 		return $resultado;
 	 		$Conexion->mysql_close();
 	 	}
+
+	 	function validarSiJuezAvaluo($Juez,$Proyecto_id,$idFase){
+	 		$con=new Conectar();
+	 		$Conexion=$con->conexion();
+	 		$sql="SELECT `Comunidad_id`, `Proyecto_id`, `Fases_idFases`, `Rubricas_idPreguntas`, `calif` FROM `evaluacion` WHERE `Comunidad_id`='$Juez' and `Proyecto_id`='$Proyecto_id' and `Fases_idFases`='$idFase' limit 1";	 	 
+	 		$resultado=mysqli_query($Conexion,$sql);
+	 		return mysqli_num_rows($resultado);
+	 		$Conexion->mysql_close();
+	 	}
+
+	 	 
  
- 
+ 		 
  
 
 	 }

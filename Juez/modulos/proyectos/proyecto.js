@@ -4,9 +4,9 @@ $( document ).ready(function() {
 });
  
 /*Var globales*/
-idjuez="";
-idproyecto="";
-idfase="";
+idjuez_registrar="";
+idproyecto_registrar="";
+idfase_registrar="";
 
 
   /*Mandar peticion a servidor para verificar si las fases estan activas*/
@@ -179,7 +179,7 @@ function RegistrarEvaluacion(){
             url: 'modulos/rubricas/rubricas.php',
             type: 'POST',
             dataType: 'json',
-            data: {'Registrar': 'registrar','Califacaciones':$("#Calificacion").serialize()},
+            data: {'Registrar': 'registrar','Califacaciones':$("#Calificacion").serialize(),'idJuezR':idjuez_registrar,'idproyectoR':idproyecto_registrar,'idfaseR':idfase_registrar},
              
         })
 
@@ -195,10 +195,19 @@ function RegistrarEvaluacion(){
                      $("#CalificarProyecto").modal('hide');
                 }
                 else{
-                    alertify.set('notifier','position', 'top-right');
-                    alertify.error(respuesta.ValidarRubrica); 
+                    
+                    if (respuesta.ValidarRubrica=='3') {
+                        
+                        alertify.set('notifier','position', 'top-right');
+                         alertify.error('El proyecto ya ha sido evaluado');
+                         $("#CalificarProyecto").modal('hide');
+                    } else{
+                        alertify.set('notifier','position', 'top-right');
+                        alertify.error(respuesta.ValidarRubrica);
+                    }
                 }
             }
+            
         })
         .fail(function() {
             console.log("error");
@@ -226,7 +235,10 @@ function verticalId(idJuez,idProyecto,idVertical,idFase){
             if (respuesta.Tabla=='0') {
                   window.location = '../principal/miperfil.php';   
              }
-            else{                
+            else{    
+                idjuez_registrar=idJuez;
+                idproyecto_registrar=idProyecto;
+                idfase_registrar=idFase;            
              $("#TablaRubricas").html(respuesta.Tabla); 
             }
         })
