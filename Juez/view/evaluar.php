@@ -156,7 +156,7 @@ include_once("../login/securityJuez.php");
 	    </div>
 	    <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        <button type="button" class="btn btn-success" id="ActualizarHack" onclick="RegistrarEvaluacion()">Continuar</button>
+	        <button type="button" class="btn btn-success" id="ActualizarHack" onclick="RegistrarEvaluacion()">Registrar</button>
 	      </div>
 	    </div>
 	  </div>

@@ -1,9 +1,13 @@
 $( document ).ready(function() {
-    ControlFases(); 
-   
+     
+  ControlFases();
 });
+ 
+/*Var globales*/
+idjuez="";
+idproyecto="";
+idfase="";
 
-bandera="";
 
   /*Mandar peticion a servidor para verificar si las fases estan activas*/
  function MandarPeticion() {
@@ -15,15 +19,11 @@ bandera="";
         data: {'Data': 'Peticion'},
     })
     .done(function(respuesta) {
-        /*si la fase no esta activa*/
+        /*si la fase no esta activa*/ 
         
-        if (respuesta.validar!=bandera) {      
-            
-            location.reload(); 
-            bandera=respuesta.validar;
-        }
-
         alert("server"+respuesta.validar+"bandera "+bandera);
+
+       
     })
     .fail(function() {
         console.log("error");
@@ -35,7 +35,7 @@ bandera="";
        
 }
 
- setInterval("MandarPeticion()",20000);
+// setInterval("MandarPeticion()",20000);
 
  
 
@@ -78,7 +78,8 @@ function ControlFases(){
 
 
 /*Mostrar tabla por verticales*/  
-function VerticalesMostrar(id){
+function VerticalesMostrar(idVertical){
+
     tabla_nombre = $("#TablaProyectos").dataTable({
         "destroy":true,
         "bDeferRender": true,
@@ -87,7 +88,7 @@ function VerticalesMostrar(id){
             "url": "modulos/proyectos/proyectosPorVertical.php",
             "type": "POST",
             'dataType': 'json',
-            'data': {'IdVertical': id}
+            'data': {'IdVertical': idVertical}
         },
   
            "columns": [ 
@@ -210,12 +211,12 @@ function RegistrarEvaluacion(){
 
 
 /*Cargar Rubricas*/
-function verticalId(id){  
+function verticalId(idJuez,idProyecto,idVertical,idFase){  
         $.ajax({
             url: 'modulos/rubricas/rubricas.php',
             type: 'POST',
             dataType: 'json',
-            data: {'IdVertical': id},
+            data: {'IdVertical': idVertical},
             beforeSend: function () {
                     $("#TablaRubricas").html("Procesando, espere por favor...");
             },

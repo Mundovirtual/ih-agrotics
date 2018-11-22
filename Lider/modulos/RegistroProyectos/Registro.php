@@ -22,14 +22,14 @@ if (isset($_POST['equipo'])&&isset($_POST['proyecto'])&&isset($_POST['descripcio
 	$msj="";
 	$error="0";
 	if (strlen($_POST['equipo'])<5) {
-		$msj="Equipo: Longitud mayor a 5";
+		$msj="Nombre de Equipo: Longitud mayor a 5";
 		$error="1";
 	     
 	} else if(strlen($_POST['proyecto']) < 	5){
-		$msj="Proyecto: Longitud mayor a 5";
+		$msj="Nombre del Proyecto: Longitud mayor a 5";
 		$error="1";
 	}else if (strlen($_POST['descripcion']) < 5 ) {
-		$msj="Descripcion: Longitud mayor a 5";
+		$msj="Descripción: Longitud mayor a 5";
 		 $error="1";
 	}
 	else if ( $_POST['vertical']=='00') {
@@ -43,8 +43,13 @@ if (isset($_POST['equipo'])&&isset($_POST['proyecto'])&&isset($_POST['descripcio
 			$Siexiste=$Proyecto->existe($_SESSION['idUserLider']); 
  		 	if (empty($Siexiste)) {
  		 		$Registrar=$Proyecto->RegistrarProyecto($_SESSION['idUserLider'],$_POST['equipo'],$_POST['proyecto'],$_POST['vertical'],$_POST['descripcion']);
-
-		   		$msj='00';
+ 
+ 		 		 if ($Registrar=="") {
+ 		 		  	$msj='Este proyecto ya ha sido registrado';
+ 		 		 }else{
+ 		 		 	$msj='00';
+ 		 		 }
+		   		
  		 	}else{
  		 		$msj='01';
  		 	}

@@ -57,7 +57,13 @@
 			}
 			
 			if ($msj=="" and $Aux=="0" ) {
+				$rubricas =new rubricas();
+				echo $Registrar;
+				/*$Juez,$idProyecto,$idFase,$idRubrica,$calf)
+		 		$Mostrar=$rubricas->InsertarCalificacion($Juez,$idProyecto,$idFase,$idRubrica,$calf);
+*/
 				$msj="0";
+
 				echo json_encode(array('ValidarRubrica'=>$msj));
 			}
   		}
