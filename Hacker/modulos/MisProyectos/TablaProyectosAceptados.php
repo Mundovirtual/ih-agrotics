@@ -1,10 +1,11 @@
 <?php 
+ 
  include_once("../../../login/securityHacker.php"); 
 include_once "../../../class/MisProyectos.php"; 
 $id=$_SESSION['idUserHacker'];
 $Proyectos = new MisProyectos(); 
 $ver=$Proyectos->SolicitudesAceptados($id);
- 
+
 $i=1; 
 $tabla=""; 
 

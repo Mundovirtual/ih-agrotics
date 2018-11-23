@@ -5,7 +5,7 @@ class proyectos{
 	function index(){
 		$con=new Conectar();
  		$Conexion=$con->conexion();
- 		$sql="SELECT `proyecto`.`id`, concat(`comunidad`.`Nombre`,' ', `comunidad`.`Apellidos`) as 'Nlider', `comunidad`.`E-mail`, `comunidad`.`Celular`, `proyecto`.`NombreDeEquipo`, `proyecto`.`NombreProyecto`, `vertical`.`Nombre`, `vertical`.`Descripcion`, `proyecto`.`Descripcion`, `proyecto`.`FechaRegistro`,`proyecto`.`Vertical_id`, `proyecto`.`fase`  FROM `proyecto` inner join `comunidad` on `comunidad`.`id`=`proyecto`.`comunidad_id` inner join `vertical` on `proyecto`.`Vertical_id`=`vertical`.`id` inner join `hackatonedicion` on `vertical`.`HackatonEdicion_id`=`hackatonedicion`.`id` where `hackatonedicion`.`status`='1'";
+ 		$sql="SELECT `proyecto`.`id`, concat(`comunidad`.`Nombre`, ' ', `comunidad`.`Apellidos`) as 'Nlider', `comunidad`.`E-mail`, `comunidad`.`Celular`, `proyecto`.`NombreDeEquipo`, `proyecto`.`NombreProyecto`, `vertical`.`Nombre`, `vertical`.`Descripcion`, `proyecto`.`Descripcion`, `proyecto`.`FechaRegistro`, `proyecto`.`Vertical_id`, `proyecto`.`fase`, `hackatonedicion`.`id` as `hackId` FROM `proyecto` inner join `comunidad` on `comunidad`.`id`=`proyecto`.`comunidad_id` inner join `vertical` on `proyecto`.`Vertical_id`=`vertical`.`id` inner join `hackatonedicion` on `vertical`.`HackatonEdicion_id`=`hackatonedicion`.`id` where `hackatonedicion`.`status`='1' ";
  		$resultado=mysqli_query($Conexion,$sql);
  		return  mysqli_fetch_all($resultado);
  		$Conexion->mysql_close();
@@ -23,7 +23,7 @@ class proyectos{
 	function ProyectosXvertical($id){
 		$con=new Conectar();
  		$Conexion=$con->conexion();
- 		$sql="SELECT `proyecto`.`id`, concat(`comunidad`.`Nombre`,' ', `comunidad`.`Apellidos`) as 'Nlider', `comunidad`.`E-mail`, `comunidad`.`Celular`, `proyecto`.`NombreDeEquipo`, `proyecto`.`NombreProyecto`, `vertical`.`Nombre`, `vertical`.`Descripcion`, `proyecto`.`Descripcion`, `proyecto`.`FechaRegistro`,`proyecto`.`Vertical_id`, `proyecto`.`fase` FROM `proyecto` inner join `comunidad` on `comunidad`.`id`=`proyecto`.`comunidad_id` inner join `vertical` on `proyecto`.`Vertical_id`=`vertical`.`id` inner join `hackatonedicion` on `vertical`.`HackatonEdicion_id`=`hackatonedicion`.`id` where `hackatonedicion`.`status`='1' and `proyecto`.`Vertical_id`='$id' ";
+ 		$sql="SELECT `proyecto`.`id`, concat(`comunidad`.`Nombre`,' ', `comunidad`.`Apellidos`) as 'Nlider', `comunidad`.`E-mail`, `comunidad`.`Celular`, `proyecto`.`NombreDeEquipo`, `proyecto`.`NombreProyecto`, `vertical`.`Nombre`, `vertical`.`Descripcion`, `proyecto`.`Descripcion`, `proyecto`.`FechaRegistro`,`proyecto`.`Vertical_id`, `proyecto`.`fase`, `hackatonedicion`.`id` as `hackId` FROM `proyecto` inner join `comunidad` on `comunidad`.`id`=`proyecto`.`comunidad_id` inner join `vertical` on `proyecto`.`Vertical_id`=`vertical`.`id` inner join `hackatonedicion` on `vertical`.`HackatonEdicion_id`=`hackatonedicion`.`id` where `hackatonedicion`.`status`='1' and `proyecto`.`Vertical_id`='$id' ";
  		$resultado=mysqli_query($Conexion,$sql);
  		return  mysqli_fetch_all($resultado);
  		$Conexion->mysql_close();

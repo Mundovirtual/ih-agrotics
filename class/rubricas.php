@@ -12,10 +12,11 @@
 	 		$Conexion->mysql_close();
 	 	}
 
-	 	function InsertarCalificacion($Juez,$idProyecto,$idFase,$idRubrica,$calf){
+	 	function InsertarCalificacion($Juez,$idProyecto,$idFase,$idVertical,$idHack,$idRubrica,$calf){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="INSERT INTO `evaluacion`( `Comunidad_id`, `Proyecto_id`, `Fases_idFases`, `Rubricas_idPreguntas`, `calif`) VALUES ('$Juez','$idProyecto','$idFase','$idRubrica','$calf')";
+	 		$sql="INSERT INTO `evaluacion`(`Comunidad_id`, `Proyecto_id`, `Fases_idFases`, `idvertical`, `idhack`, `Rubricas_idPreguntas`, `calif`) VALUES ('$Juez','$idProyecto','$idFase','$idVertical','$idHack','$idRubrica','$calf') ";
+	 		  
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();

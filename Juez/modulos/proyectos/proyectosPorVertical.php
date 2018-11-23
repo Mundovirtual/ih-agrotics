@@ -18,11 +18,11 @@ include_once("../../../class/proyectosJuez.php");
 		}
 		else{
 			$ver=$index->ProyectosXvertical($id);
-		}
+		} 
 		foreach ($ver as $key ) {
 		 	$detalles='<a data-toggle=\"modal\" data-target=\"#DetallesEquipo\"><i class=\"fa fa-eye fa-2x\" align=\"center\" onclick=\"detalles('."'".$key['0']."','".$key['8']."','".$key['1']."','".$key['2']."','".$key['3']."','".$key['9']."'".')\"></i></a>'; 
 
-		 	$calificar='<button type=\"button\" class=\"btn btn-info fas fa-pen-square\" data-toggle=\"modal\" data-target=\"#CalificarProyecto\" onclick=\"verticalId('."'".$idJuez."','".$key['0']."','".$key['10']."','".$key['11']."'".')\"></button>'; 
+		 	$calificar='<button type=\"button\" class=\"btn btn-info fas fa-pen-square\" data-toggle=\"modal\" data-target=\"#CalificarProyecto\" onclick=\"verticalId('."'".$idJuez."','".$key['0']."','".$key['10']."','".$key['11']."','".$key['12']."'".')\"></button>';
 		  
 		  	$tabla.='{
 						  "Num":"'.$i.'",

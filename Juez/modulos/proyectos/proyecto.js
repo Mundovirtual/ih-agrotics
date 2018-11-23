@@ -6,6 +6,8 @@ $( document ).ready(function() {
 /*Var globales*/
 idjuez_registrar="";
 idproyecto_registrar="";
+idVertical_registrar="";
+idhack_registrar="";
 idfase_registrar="";
 
 
@@ -171,7 +173,7 @@ function InsertarVerticales(){
     });
     
 }
-
+ 
 /*Insertar calificaciones*/
 function RegistrarEvaluacion(){
      
@@ -179,7 +181,7 @@ function RegistrarEvaluacion(){
             url: 'modulos/rubricas/rubricas.php',
             type: 'POST',
             dataType: 'json',
-            data: {'Registrar': 'registrar','Califacaciones':$("#Calificacion").serialize(),'idJuezR':idjuez_registrar,'idproyectoR':idproyecto_registrar,'idfaseR':idfase_registrar},
+            data: {'Registrar': 'registrar','Califacaciones':$("#Calificacion").serialize(),'idJuezR':idjuez_registrar,'idproyectoR':idproyecto_registrar,'idfaseR':idfase_registrar,'idVertical':idVertical_registrar,'idHack':idhack_registrar},
              
         })
 
@@ -217,10 +219,9 @@ function RegistrarEvaluacion(){
         });
 
 }
-
-
+ 
 /*Cargar Rubricas*/
-function verticalId(idJuez,idProyecto,idVertical,idFase){  
+function verticalId(idJuez,idProyecto,idVertical,idFaseP,idHack){  
         $.ajax({
             url: 'modulos/rubricas/rubricas.php',
             type: 'POST',
@@ -235,10 +236,12 @@ function verticalId(idJuez,idProyecto,idVertical,idFase){
             if (respuesta.Tabla=='0') {
                   window.location = '../principal/miperfil.php';   
              }
-            else{    
+            else{   
                 idjuez_registrar=idJuez;
                 idproyecto_registrar=idProyecto;
-                idfase_registrar=idFase;            
+                idVertical_registrar=idVertical;
+                idfase_registrar=idFaseP;
+                idhack_registrar=idHack;
              $("#TablaRubricas").html(respuesta.Tabla); 
             }
         })
