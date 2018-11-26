@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-     
+  
   ControlFases();
 });
  
@@ -11,7 +11,7 @@ idhack_registrar="";
 idfase_registrar="";
 
 
-  /*Mandar peticion a servidor para verificar si las fases estan activas*/
+  /*Mandar peticion a servidor para verificar si las fases estan activas 
  function MandarPeticion() {
     
     $.ajax({
@@ -21,7 +21,7 @@ idfase_registrar="";
         data: {'Data': 'Peticion'},
     })
     .done(function(respuesta) {
-        /*si la fase no esta activa*/ 
+         si la fase no esta activa  
         
         alert("server"+respuesta.validar+"bandera "+bandera);
 
@@ -37,8 +37,8 @@ idfase_registrar="";
        
 }
 
-// setInterval("MandarPeticion()",20000);
-
+  setInterval("MandarPeticion()",2000);
+*/
  
 
 /*Mostrar informacion*/
