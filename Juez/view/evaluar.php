@@ -7,7 +7,7 @@ include_once("../login/securityJuez.php");
  	<div class="starter-template text-center">
 		<h1 class="display-1" id="MostrarMensajeFase"></h1>
         <h1 id="MostrarEstadoFase"></h1>
-        <p class="lead" id="MensajeInformacion">Espere a que el administrador active la fase</p>
+        <p class="lead" id="MensajeInformacion">Espere a que el administrador active la siguiente fase</p>
       
       </div>
  </div>

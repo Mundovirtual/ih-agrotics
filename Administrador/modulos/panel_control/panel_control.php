@@ -7,9 +7,9 @@
 	$verHackaton=$hackaton->mostrarDatosHackaton();
 	$idHack=$verHackaton['0']['0'];
 	$Panel=new panel_control();
-
+	 
 	if (isset($_POST['botones'])) {
-		/**/
+		/*cargar botones*/
 		
 		$insertar=$Panel->Configuracion($idHack);
 		 
@@ -63,8 +63,9 @@
 				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" disabled="true" onclick="EstadoFase('."'".$idTres."','".$FaseTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
 				
 				$NequiposFaseTres=$NEquiposTres;
+
 				
-			}else if ($EstatusUno=='3' and $EstatusDos=='1') {
+			}else if ($EstatusUno=='3' and $EstatusDos=='1' and $EstatusTres=='1') {
 				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$FaseUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
 				$NequiposFaseUno=$NEquiposUno;
 
@@ -74,6 +75,7 @@
 				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" disabled="true" onclick="EstadoFase('."'".$idTres."','".$FaseTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
 				
 				$NequiposFaseTres=$NEquiposTres;
+
 			}else if ($EstatusUno=='3' and $EstatusDos=='2') {
 				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$FaseUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
 				$NequiposFaseUno=$NEquiposUno;
@@ -83,8 +85,7 @@
 
 				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" disabled="true" onclick="EstadoFase('."'".$idTres."','".$FaseTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
 				
-				$NequiposFaseTres=$NEquiposTres;
-				
+				$NequiposFaseTres=$NEquiposTres; 
 			}else if ($EstatusUno=='3' and $EstatusDos=='3' and $EstatusTres=='1') {
 				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$FaseUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
 				$NequiposFaseUno=$NEquiposUno;
@@ -94,7 +95,7 @@
 
 				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-success" onclick="EstadoFase('."'".$idTres."','".$FaseTres."','".$NEquiposTres."','".$EstatusTres."'".')">Empezar</button>';
 				
-				$NequiposFaseTres=$NEquiposTres;
+				$NequiposFaseTres=$NEquiposTres;  
 			}else if ($EstatusUno=='3' and $EstatusDos=='3' and $EstatusTres=='2') {
 				$BotonFaseUno='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idUno."','".$FaseUno."','".$NEquiposUno."','".$EstatusUno."'".')">Finalizado</button>';
 				$NequiposFaseUno=$NEquiposUno;
@@ -116,6 +117,8 @@
 				$BotonFaseTres='<button id="faseUno" type="button" class="btn btn-danger" disabled="true" onclick="EstadoFase('."'".$idTres."','".$FaseTres."','".$NEquiposTres."','".$EstatusTres."'".')">FInalizar</button>';
 				
 				$NequiposFaseTres=$NEquiposTres;
+				 
+
 			}
 			$Button = array(
 						    array(
@@ -137,32 +140,78 @@
 		
 	
 	}
+
+	/*Actualizar estados*/
 	if (isset($_POST['id']) &&isset($_POST['fase']) &&isset($_POST['Equipos']) &&isset($_POST['Estatus'])) {
 		$id= $_POST['id'];
-		$Fase= $_POST['fase'];
+		$Fase= $_POST['fase']+1;
 		$Nequipos= $_POST['Equipos'];
 		$Estatus=$_POST['Estatus'];
 
+			
 
 		if ($Estatus==1) {
 
 			 $EstatusActualidos=2;
 			 $ActualizarFases=$Panel->Actualizar($id,$EstatusActualidos);
 
-		}else if ($Estatus==2) {
+		} 
+		else if ($Estatus==2) {
 
 			 $EstatusActualidos=3; 
-			 $ActualizarFases=$Panel->Actualizar($id,$EstatusActualidos);
-
-		} 
-		else if ($Estatus==3) {
+			 $ActualizarFases=$Panel->Actualizar($id,$EstatusActualidos); 
+			 Calificar_Fase($Fase);
+		}
+		  
+		else if ($Estatus==3) { 
 			$EstatusActualidos=3;
 			 $ActualizarFases=$Panel->Actualizar($id,$EstatusActualidos);
-			  
+			 
 
 		}
 
 
 	}
 
+	function Calificar_Fase($Fase){
+		$Panel=new panel_control();
+		$Consultar_N_Equipos=$Panel->NumeroPorFase($Fase);  
+		$Consultar_verticales=$Panel->verticales();
+		
+		if ($Fase!=4) {
+			$Nequipo=$Consultar_N_Equipos['0']['0'];
+	 	 
+			/*Fase uno y dos*/
+			
+			foreach ($Consultar_verticales as $key ) {
+		 			 
+		 			$Calificar=$Panel-> Calificar($key['0'],($Fase-1),$Nequipo); 
+		 			foreach ($Calificar as $key2) {
+		 				$update=$Panel->Update($key2['0'],$Fase); 
+		 				$insertar=$Panel->guardarDatos($key2['0'],$key2['1'],$key2['2'],$key2['3'],$key2['4']);
+		 				 
+		 			}
+		 			 
+		 	}
+
+		}
+		else if($Fase==4){
+			/*Fase tres*/ 
+			foreach ($Consultar_verticales as $key ) {
+				$Calificar=$Panel-> Calificar($key['0'],($Fase-1),'1');
+				foreach ($Calificar as $key2 ) {
+					
+					$update=$Panel->Update($key2['0'],$Fase-1); 
+					$insertar=$Panel->guardarDatos($key2['0'],$key2['1'],$key2['2'],$key2['3'],$key2['4']);
+				}
+		 	}
+		}
+	 
+			
+	 
+
+		}
+		
+
+ 
  ?>

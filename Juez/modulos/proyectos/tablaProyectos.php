@@ -6,8 +6,12 @@ include_once("../../../class/proyectosJuez.php");
  	  echo  json_encode(array('Tabla'=>'0'));
 	  session_destroy();
 	}
+
 	$index=new proyectos();
-	$ver=$index->index();   
+	/*Validar fases activos*/
+	$fases=$index->ConsultarFases();
+ 
+	$ver=$index->index($fases['0']['0']);   
 	$idJuez= $_SESSION['idUserJuez'];	
  	$tabla="";
 	$i=1;   	

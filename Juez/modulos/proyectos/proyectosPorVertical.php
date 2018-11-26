@@ -13,11 +13,15 @@ include_once("../../../class/proyectosJuez.php");
 		$ver="";
 		$i=1;  
 
+		/*Fase activos*/
+		$fases=$index->ConsultarFases();
+ 		$faseActivo=$fases['0']['0'];
+
 		if ($id=='0') {
-			$ver=$index->index();
+			$ver=$index->index($faseActivo);
 		}
 		else{
-			$ver=$index->ProyectosXvertical($id);
+			$ver=$index->ProyectosXvertical($id,$faseActivo);
 		} 
 		foreach ($ver as $key ) {
 		 	$detalles='<a data-toggle=\"modal\" data-target=\"#DetallesEquipo\"><i class=\"fa fa-eye fa-2x\" align=\"center\" onclick=\"detalles('."'".$key['0']."','".$key['8']."','".$key['1']."','".$key['2']."','".$key['3']."','".$key['9']."'".')\"></i></a>'; 

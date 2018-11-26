@@ -18,6 +18,7 @@ function botones(){
 			$("#AlertaConfiguracionPanel").show(); 
 			
 		}else{ 
+		 
 			$("#BottonPanel").show();
 			$("#BottonFaseUno").html(respuesta['0']['faseButton']);			
 			$("#BottonFaseDos").html(respuesta['1']['faseButton']);

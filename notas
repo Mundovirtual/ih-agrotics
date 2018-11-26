@@ -58,16 +58,22 @@ infdetalladaproyecto select `evaluacion`.`idCalf` AS `idCalf`,
 `vertical`.`id`,`evaluacion`.`Proyecto_id`,`evaluacion`.`Comunidad_id`,'fase',`evaluacion`.`Rubricas_idPreguntas`;
 
 
-infdetalladaproyecto select `evaluacion`.`idCalf` AS `idCalf`,
-`evaluacion`.`Proyecto_id` AS `idproyecto`,
-`vertical`.`id` AS `idvertical`,
-`hackatonedicion`.`id` AS `idHack`, 
-`evaluacion`.`Rubricas_idPreguntas` AS `pregunta`,
-`evaluacion`.`Comunidad_id` AS `juez`,
-`evaluacion`.`Fases_idFases` AS `fase`,
-`evaluacion`.`calif` AS `Calif` from `evaluacion`
- inner join `proyecto` on `evaluacion`.`Proyecto_id` = `proyecto`.`id`
- inner join `vertical` on `proyecto`.`Vertical_id` = `vertical`.`id`
- inner join `hackatonedicion` on `vertical`.`HackatonEdicion_id` = `hackatonedicion`.`id`
-  order by `hackatonedicion`.`id`,
-`vertical`.`id`,`evaluacion`.`Proyecto_id`,`evaluacion`.`Comunidad_id`,'fase',`evaluacion`.`Rubricas_idPreguntas`;
+
+create view calificacion_x_Juez as select `Proyecto_id` AS `idproyecto`, `idvertical` AS `idvertical`, `idHack` AS `idHack`, `Comunidad_id` AS `juez`, `Fases_idFases` AS `fase`, round(avg(`calif`),4) AS `calfi` from `evaluacion` group by `idproyecto`,`fase`,`juez` 
+
+
+create view calificacion_final_proyecto as select `idproyecto` AS `idproyecto`, `idvertical` AS `idvertical`, `idHack` AS `idHack`, `fase` AS `fase`, round(avg(`calfi`),4) AS `calf` from `calificacion_x_juez` group by `idHack`, `idvertical`, `fase`, `idproyecto` order by `idHack`, `idvertical`, `fase`, round(avg(`calfi`),4) desc 
+
+select 
+`idCalf` AS `idcalf`,
+`idproyecto` AS `idproyecto`,
+`idvertical` AS `idvertical`,
+`idHack` AS `idHack`,
+`equipoLimite` AS `equipoLimite`,
+`juez` AS `juez`,
+`fase` AS `fase`,
+round(avg(`Calif`),4) AS `calfi` 
+from `infdetalladaproyecto` group by `idproyecto`,`fase`,`juez`
+
+
+SELECT `calificacion_final_proyecto`.`idproyecto`, `calificacion_final_proyecto`.`idvertical`, `calificacion_final_proyecto`.`idHack`, `calificacion_final_proyecto`.`fase`, `calificacion_final_proyecto`.`calf` FROM `calificacion_final_proyecto` inner join `hackatonedicion` on `hackatonedicion`.`id`=`calificacion_final_proyecto`.`idHack` WHERE `hackatonedicion`.`status`='1' and `idvertical`='22' and `fase`= '1' ORDER BY `calf` desc limit 4 
