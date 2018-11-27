@@ -1,0 +1,6 @@
+El nombre y la contraseña de la base de datos se pondra en las siguientes rutas;
+
+
+1.  Administrado/class/conexion.php	
+2.	class/conexion.php
+3.	principal/conexion/abrirconexion.php
