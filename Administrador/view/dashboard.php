@@ -6,7 +6,20 @@
  ?>
 <div class="row">
     <div class="col-md">
-      <h1 class="text-center"><?php echo $Mostrar[0][1]; ?></h1>
+      <h1 class="text-center">
+        <?php 
+        if(!empty($Mostrar)){
+            echo $Mostrar[0][1];
+         }
+         {
+          ?>
+            <div align="center" >
+                <h1>Registra tu edición </h1> <a href="../view/index.php?cargar=1"> aqui &#128070;</a> 
+            </div>
+          
+          <?php
+         }
+       ?></h1>
     </div>  
 </div>
  
