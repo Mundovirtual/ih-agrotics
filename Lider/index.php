@@ -87,6 +87,7 @@ include_once("../login/securityLider.php");
     </div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 149px; max-height: 233px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></nav>
     <div class="page ">
       <!-- navbar-->
+       <!-- navbar-->
       <header class="header sticky-top  ">
         <nav class="navbar">
           <div class="container-fluid ">
@@ -95,9 +96,7 @@ include_once("../login/securityLider.php");
                 <a id="toggle-btn" href="#" class="menu-btn">
                   <i class="fas fa-bars"></i>
                 </a>
-                 
                   <img src="../img/inovahackNavbar.png" height="20" width="100" align="center">
-                
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center"> 
                 <!-- Log out-->
@@ -107,6 +106,22 @@ include_once("../login/securityLider.php");
           </div>
         </nav>
       </header>
+
+
+      
+      <div class="modal fade" id="cerrar">
+        <div class="modal-dialog" role = "document">
+          <div class="modal-content text-center text-warning">
+            <div class="modal-body">
+              <i class="fas fa-info-circle fa-5x"></i>
+              <h1 class="modal-title text-center text-dark" id="cerrar">Estas seguro ?</h1>
+              <p class="text-center text-dark">Quieres salir del sistema y finalizar la sesión actual</p>
+              <a class="btn btn-primary" href= "../login/SesionClose.php">si, Salir</a>
+              <a class="btn btn-danger text-white" data-dismiss="modal">Cancelar</a>  
+            </div>
+          </div>
+        </div>  
+      </div>
       <div class="modal fade" id="cerrar">
         <div class="modal-dialog" role = "document">
           <div class="modal-content text-center text-warning">
