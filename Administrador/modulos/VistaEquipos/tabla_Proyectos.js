@@ -54,10 +54,12 @@ TablaCalificaciones
 var tabla_nombre;
  function MostrarCalificaciones() {
   
-    tabla_nombre = $("#TablaCalificaciones").dataTable({
+    tabla_nombre = $("#TablaCalificaciones").dataTable({ 
+    	'dom': 'Bfrtip',
         "destroy":true,
         "bDeferRender": true,
         "sPaginationType": "full_numbers",
+          
         "ajax": {
             "url": "../modulos/VistaEquipos/Tabla_Proyectos.php",
             "type": "POST"
@@ -97,14 +99,10 @@ var tabla_nombre;
                 "sLast": "Último",
                 "sNext": "Siguiente",
                 "sPrevious": "Anterior"
-            },
-            "oAria": {
-                "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
-                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-            },
-          buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
-        ]
+            } 
+       
+               
+
         }
     });
 }

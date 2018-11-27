@@ -135,7 +135,7 @@ include_once("../login/securityLider.php");
                         <div class="jumbotron jumbotron-fluid">
                           <div class="container">
                             <h1 class="display-4 text-center">Bienvenid@ <?php echo $_SESSION['NombreLider'];  ?></h1>
-                            <p class="lead">Esta es tu portada principal, en donde podrás visualizar tu perfil, registro de proyecto, estado del proyecto donde podrás ver los integrantes de tu equipo </p>
+                            <p class="lead text-center">Esta es tu portada principal, en donde podrás visualizar tu perfil, registrar proyectos,el estado, y sus integrantes </p>
                           </div>
                           
                         </div>

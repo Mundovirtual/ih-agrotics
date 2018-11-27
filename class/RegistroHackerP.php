@@ -47,7 +47,15 @@ class RegistroProyHack{
  		$Conexion->mysql_close();
 	}
 
-
+	function validarFecha(){
+		$con=new Conectar();
+ 		$Conexion=$con->conexion();
+ 		$sql="SELECT `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack` FROM `hackatonedicion` where `status`='1' ";
+	 	 $resultado=mysqli_query($Conexion,$sql);
+ 		return  mysqli_fetch_all($resultado);
+ 		$Conexion->mysql_close();
+		
+	}
 
 
 

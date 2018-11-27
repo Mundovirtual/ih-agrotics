@@ -121,7 +121,7 @@ include_once("../login/securityHacker.php");
           
          <div class="right_col" role="main">
           
-         
+       
           <?php 
               $enrutador = new enrutador();
                 if ($enrutador->validarGET($_GET['cargar'])) { 
@@ -137,7 +137,7 @@ include_once("../login/securityHacker.php");
                         <div class="jumbotron jumbotron-fluid">
                           <div class="container">
                             <h1 class="display-4 text-center">Bienvenid@ <?php echo $_SESSION['NombreHacker'];  ?></h1>
-                            <p class="lead">Esta es tu portada principal, en donde podrás visualizar tu perfil, registro de proyecto, estado del proyecto donde podrás ver los integrantes de tu equipo </p>
+                            <p class="lead text-center">Esta es tu portada principal, en donde podrás visualizar tu perfil y enviar solicitudes de registro de proyectos </p>
                           </div>
                           
                         </div>

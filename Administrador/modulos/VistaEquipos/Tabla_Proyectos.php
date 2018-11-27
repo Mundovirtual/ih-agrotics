@@ -14,7 +14,7 @@
 						  "Lider":"'.$key['2'].'",
 						  "Vertical":"'.$key['3'].'",
 						  "Fase":"'."Fase ".$key['4'].'",
-						  "Calificacion":"'.$key['5'].'"
+						  "Calificacion":"'.round($key['5'], 2).'"
 					},';
 	 
 	 	$i++;	
