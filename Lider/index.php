@@ -71,7 +71,10 @@ include_once("../login/securityLider.php");
                   <i class="fas fa-chalkboard-teacher"></i>Registro</a>
             </li>
             <li>
-                <a href="index.php?cargar=3" aria-expanded="false"><i class="fas fa-folder-open"></i>Estado del proyecto</a>
+                <a href="index.php?cargar=3" aria-expanded="false"><i class="fas fa-folder-open"></i>Integrantes</a>
+            </li>
+            <li>
+                <a href="index.php?cargar=5" aria-expanded="false"><i class="fas fas fa-database"></i>Calificaciones</a>
             </li>
             <li>
                 <a href="index.php?cargar=4" aria-expanded="false"><i class="fas fa-bell"></i> Solicitudes <h5 style="display: inline;"></h5></a>

@@ -44,10 +44,19 @@
 	 		$Conexion=$con->conexion();
 	 		$sql = "SELECT `vertical`.`id`, `vertical`.`Nombre`, `vertical`.`Descripcion`, `vertical`.`InfAsesoria`, `vertical`.`HackatonEdicion_id`, `hackatonedicion`.`id`, `hackatonedicion`.`status` FROM `vertical` inner join `hackatonedicion` on `hackatonedicion`.`id`=`vertical`.`HackatonEdicion_id` where `hackatonedicion`.`status` ='1' "; 
 	 		$resultado=mysqli_query($Conexion,$sql);
-	 		return   mysqli_fetch_all($resultado);;
+	 		return   mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
 	 	}
- 	
+	 	
+ 		function calificaciones_x_proyecto($idLider){
+	 		$con=new Conectar();
+	 		$Conexion=$con->conexion();
+	 		$sql = "SELECT  `calificacion_final_proyecto`.`fase`, `calificacion_final_proyecto`.`calf`  FROM `calificacion_final_proyecto` inner join `proyecto` on `proyecto`.`id`=`calificacion_final_proyecto`.`idproyecto` inner join `comunidad` on `proyecto`.`comunidad_id`=`comunidad`.`id` inner join `vertical` on `vertical`.`id`=`calificacion_final_proyecto`.`idvertical` inner join `hackatonedicion` on `hackatonedicion`.`id`=`calificacion_final_proyecto`.`idHack` WHERE `hackatonedicion`.`status`='1' and `proyecto`.`comunidad_id`='$idLider' ORDER BY `vertical`.`id`,`calificacion_final_proyecto`.`fase`,`calificacion_final_proyecto`.`calf` DESC "; 
+	 		 
+	 		$resultado=mysqli_query($Conexion,$sql);
+	 		return   mysqli_fetch_all($resultado);
+	 		$Conexion->mysql_close();
+	 	}
  		
 
 	 }

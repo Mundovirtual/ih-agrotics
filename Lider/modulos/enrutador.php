@@ -16,14 +16,9 @@
 			        include_once("view/solicitudes.php");			         
 		        	break;
 		        case "5": 
-			        include_once("view/ColabSolicitudesAceptadas.php");			         
+			        include_once("view/historial.php");			         
 		        	break;
-		        case "6": 
-			        include_once("view/CatalogoProyectos.php");			         
-		        	break;
-		        case "7": 
-			        include_once("view/ColbSolicitudesEnviadas.php");			         
-		        	break;
+		        
 			    case "error":
 			    	include_once("view/".$vista.".php");
 			    	break;	
