@@ -6,7 +6,8 @@
 	$hackaton= new Hackaton();
 	$verHackaton=$hackaton->mostrarDatosHackaton();
 	$idHack=$verHackaton['0']['0'];
-	$Panel=new panel_control();
+	if (!empty($idhack)) {
+		$Panel=new panel_control();
 	 
 	if (isset($_POST['botones'])) {
 		/*cargar botones*/
@@ -212,6 +213,7 @@
 
 		}
 		
+	}
 
  
  ?>

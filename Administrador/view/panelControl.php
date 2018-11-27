@@ -11,7 +11,18 @@
  
 
 <div class="card-header font-weight-bold font-italic" align="center">
-    <h3><?php echo $Mostrar[0][1]; ?></h3>  		 
+   <?php
+   	if (!empty($Mostrar)) {
+   			?>
+   			 <h3><?php echo $Mostrar[0][1]; ?></h3>
+   			<?php
+   		}
+   	else{
+   		?>
+   			  <h1>Registra tu edición </h1> <a href="../view/index.php?cargar=1"> aqui &#128072;</a> 
+   		<?php
+   	}
+    ?>  		 
 </div>
 <hr>
 

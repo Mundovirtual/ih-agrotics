@@ -4,7 +4,7 @@ include_once("../../class/Vertical.php");
  if (isset($_POST['InsertarVerticales'])) {
  	$verticales=new Vertical();
  	$mostrar=$verticales->mostrarDatos(); 
- 	$head='<select class="form-control text-center"><option onclick="VerticalesMostrar('."'".'0'."'".')">Selecciona una vertical</option>';
+ 	$head='<select class="form-control text-center"><option onclick="VerticalesMostrar('."'".'0'."'".')">Seccionar todo</option>';
  	$body="";
 
  	foreach ($mostrar as $key ) {
