@@ -19,7 +19,7 @@
 		 		$body="";
 		 		$i=1;
 
-		 		$head='<form id="Calificacion"><table class=\"table table-hover\"><thead><tr><th scope=\"col\">#</th><th scope=\"col\">pregunta</th><th scope=\"col\">Calificacion</th></tr></thead><tbody>';
+		 		$head='<form id="Calificacion"><table class=\"table table-hover\"><thead><tr><th scope=\"col\">#</th><th scope=\"col\">pregunta</th><th scope=\"col\">Calificación </th></tr></thead><tbody>';
 
 		 		foreach ($Mostrar as $key ) {
 		 			$body.='<tr><th scope="row">'.$i.'</th><td>'.$key['1'].'</td><td><div class="form-group"><select class="custom-select" name="'.$key['0'].'"><option>...</option><option>0</option> 
@@ -31,11 +31,20 @@
 				 echo  json_encode(array('Tabla'=>$head.$body.$foot));
 		 	}
 		}
+ 
+ 
 
-		if (isset($_POST['Registrar']) and isset($_POST['Califacaciones'])) {
+
+
+ 
+		if (isset($_POST['Registrar']) and isset($_POST['Califacaciones']) and isset($_POST['idJuezR']) and isset($_POST['idproyectoR']) and isset($_POST['idfaseR']) and isset($_POST['idVertical']) and isset($_POST['idHack'])) {
 			/*Creamos variables*/
 			$idJuez=$_SESSION['idUserJuez'];
 			$calf=$_POST['Califacaciones'];
+			$idProyecto=$_POST['idproyectoR'];
+			$idVertical=$_POST['idVertical'];
+			$idHack=$_POST['idHack'];
+			$idFase=$_POST['idfaseR'];
 			$msj="";
 			$Aux="0";
 			/*LA cadena que se recibe del formulario lo convertimos en arreglo*/
@@ -55,9 +64,31 @@
 				 }
 
 			}
-			
+			 
 			if ($msj=="" and $Aux=="0" ) {
-				$msj="0";
+ 					
+				$InsertarCalificacion =new rubricas(); 
+				 
+				$SiCalificar=$InsertarCalificacion->validarSiJuezAvaluo($idJuez,$idProyecto,$idFase);
+			 
+				 if ($SiCalificar=='0') {
+				 	$preguntas=explode("&", $calf);
+
+					foreach ($preguntas as $key ) {
+						$PreguntaValor = explode("=", $key); 
+					 
+						$Mostrar=$InsertarCalificacion->InsertarCalificacion($idJuez,$idProyecto,$idFase,$idVertical,$idHack,$PreguntaValor['0'],$PreguntaValor['1']);
+				 
+					} 
+				 	$msj="0"; 
+				 }else{
+				 	$msj="3";
+
+				 }
+				
+		 	 	
+				
+
 				echo json_encode(array('ValidarRubrica'=>$msj));
 			}
   		}

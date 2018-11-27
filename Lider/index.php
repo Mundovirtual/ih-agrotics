@@ -71,22 +71,15 @@ include_once("../login/securityLider.php");
                   <i class="fas fa-chalkboard-teacher"></i>Registro</a>
             </li>
             <li>
-                <a href="index.php?cargar=3" aria-expanded="false"><i class="fas fa-folder-open"></i>Estado del proyecto</a>
+                <a href="index.php?cargar=3" aria-expanded="false"><i class="fas fa-folder-open"></i>Integrantes</a>
+            </li>
+            <li>
+                <a href="index.php?cargar=5" aria-expanded="false"><i class="fas fas fa-database"></i>Calificaciones</a>
             </li>
             <li>
                 <a href="index.php?cargar=4" aria-expanded="false"><i class="fas fa-bell"></i> Solicitudes <h5 style="display: inline;"></h5></a>
             </li>
-            
-            <h5 class="sidenav-heading">Otros proyectos</h5>
-
-            <li><a href="#Colaboraciones" aria-expanded="false" data-toggle="collapse"><i class="fa fa-laptop"></i>Proyectos</a>
-              <ul id="Colaboraciones" class="collapse list-unstyled ">                
-                  <a href="index.php?cargar=5" aria-expanded="false"><i class="fas fa-chalkboard-teacher"></i>Mis Proyectos</a>
-
-                  <a href="index.php?cargar=6" aria-expanded="false"><i class="fas fas fa-database"></i>Catalogo de proyectos</a>
-                  <a href="index.php?cargar=7" aria-expanded="false"><i class="fas far fa-folder-plus"></i>Solicitudes</a>
-              </ul>
-            </li>
+           
           </ul>
         </div>
          
@@ -145,7 +138,7 @@ include_once("../login/securityLider.php");
                         <div class="jumbotron jumbotron-fluid">
                           <div class="container">
                             <h1 class="display-4 text-center">Bienvenid@ <?php echo $_SESSION['NombreLider'];  ?></h1>
-                            <p class="lead">Esta es tu portada principal, en donde podrás visualizar tu perfil, registro de proyecto, estado del proyecto donde podrás ver los integrantes de tu equipo </p>
+                            <p class="lead text-center">Esta es tu portada principal, en donde podrás visualizar tu perfil, registrar proyectos,el estado, y sus integrantes </p>
                           </div>
                           
                         </div>

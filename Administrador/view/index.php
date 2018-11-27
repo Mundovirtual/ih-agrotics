@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="../css/fontastic.css">
     <script src="../js/jquery/jquery.min.js"></script>
     <!-- Data tables-->
+    
     <link rel="stylesheet" type="text/css" href="../js/DataTables/datatables.min.css">
     <script type="text/javascript" src="../js/DataTables/datatables.js"></script>
     <!--====================================DASBOARD======================================-->

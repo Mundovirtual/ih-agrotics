@@ -24,7 +24,8 @@
 	 	function InsertarHackaton($Edicion,$InicioHackaton,$FechLimiteRegProy,$TerminoHack,$Imagen){
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="INSERT INTO `hackatonedicion`(`Edicion`, `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack`, `Imagen`) VALUES  ('$Edicion','$InicioHackaton','$FechLimiteRegProy','$TerminoHack','$Imagen')"; 	 		 
+	 		$sql="UPDATE `hackatonedicion` SET `status`='0' ";
+	 		$sql="INSERT INTO `hackatonedicion`(`Edicion`, `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack`, `Imagen`,`status`) VALUES  ('$Edicion','$InicioHackaton','$FechLimiteRegProy','$TerminoHack','$Imagen','1')"; 	 		 
 	 		$resultado=mysqli_query($Conexion,$sql); 
 	 		return mysqli_insert_id($Conexion);
 	 		$Conexion->mysql_close();

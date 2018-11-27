@@ -53,7 +53,7 @@ include_once("../login/securityLider.php");
 	    </div>
 	    </div>
 </div>
-
+ 
 <div class="row justify-content-center" id="ProyectoRegistrado"  style="display: none">
 	 
 	 	 

@@ -1,11 +1,87 @@
 $( document ).ready(function() {
-    Tablaproyectos();
-    InsertarVerticales();
-});
   
+  ControlFases();
+});
+ 
+/*Var globales*/
+idjuez_registrar="";
+idproyecto_registrar="";
+idVertical_registrar="";
+idhack_registrar="";
+idfase_registrar="";
+
+
+  /*Mandar peticion a servidor para verificar si las fases estan activas 
+ function MandarPeticion() {
+    
+    $.ajax({
+        url: 'modulos/ControlFases/ControlTiempoFase.php',
+        type: 'POST', 
+        dataType: 'json',
+        data: {'Data': 'Peticion'},
+    })
+    .done(function(respuesta) {
+         si la fase no esta activa  
+        
+        alert("server"+respuesta.validar+"bandera "+bandera);
+
+       
+    })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+        console.log("complete");
+    });
+    
+       
+}
+
+  setInterval("MandarPeticion()",2000);
+*/
+ 
+
+/*Mostrar informacion*/
+ 
+
+function ControlFases(){
+  
+    $.ajax({
+ 
+        url: 'modulos/proyectos/ControlFase.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {'Key': 'True'},
+    })
+    .done(function(respuesta) { 
+        if (respuesta.Estatus!=2) { 
+            $("#MostrarMensajeFase").text(respuesta.Fase);
+            $("#MostrarEstadoFase").text(respuesta.Mensaje); 
+            $("#MostrarEstado").show();
+            if (respuesta.Estatus==3 && respuesta.Fase=="Fase 3") {
+                $("#MensajeInformacion").hide();
+            } 
+            
+        }else{
+            $("#ControlVistaFase").show();
+            $("#TextoEtapa").text(respuesta.Fase);
+            Tablaproyectos();
+             InsertarVerticales();
+        }
+ 
+         
+    });
+    
+}
+
+
+
+
+
 
 /*Mostrar tabla por verticales*/  
-function VerticalesMostrar(id){
+function VerticalesMostrar(idVertical){
+
     tabla_nombre = $("#TablaProyectos").dataTable({
         "destroy":true,
         "bDeferRender": true,
@@ -14,7 +90,7 @@ function VerticalesMostrar(id){
             "url": "modulos/proyectos/proyectosPorVertical.php",
             "type": "POST",
             'dataType': 'json',
-            'data': {'IdVertical': id}
+            'data': {'IdVertical': idVertical}
         },
   
            "columns": [ 
@@ -97,7 +173,7 @@ function InsertarVerticales(){
     });
     
 }
-
+ 
 /*Insertar calificaciones*/
 function RegistrarEvaluacion(){
      
@@ -105,7 +181,7 @@ function RegistrarEvaluacion(){
             url: 'modulos/rubricas/rubricas.php',
             type: 'POST',
             dataType: 'json',
-            data: {'Registrar': 'registrar','Califacaciones':$("#Calificacion").serialize()},
+            data: {'Registrar': 'registrar','Califacaciones':$("#Calificacion").serialize(),'idJuezR':idjuez_registrar,'idproyectoR':idproyecto_registrar,'idfaseR':idfase_registrar,'idVertical':idVertical_registrar,'idHack':idhack_registrar},
              
         })
 
@@ -121,10 +197,19 @@ function RegistrarEvaluacion(){
                      $("#CalificarProyecto").modal('hide');
                 }
                 else{
-                    alertify.set('notifier','position', 'top-right');
-                    alertify.error(respuesta.ValidarRubrica); 
+                    
+                    if (respuesta.ValidarRubrica=='3') {
+                        
+                        alertify.set('notifier','position', 'top-right');
+                         alertify.error('El proyecto ya ha sido evaluado');
+                         $("#CalificarProyecto").modal('hide');
+                    } else{
+                        alertify.set('notifier','position', 'top-right');
+                        alertify.error(respuesta.ValidarRubrica);
+                    }
                 }
             }
+            
         })
         .fail(function() {
             console.log("error");
@@ -134,15 +219,14 @@ function RegistrarEvaluacion(){
         });
 
 }
-
-
+ 
 /*Cargar Rubricas*/
-function verticalId(id){  
+function verticalId(idJuez,idProyecto,idVertical,idFaseP,idHack){  
         $.ajax({
             url: 'modulos/rubricas/rubricas.php',
             type: 'POST',
             dataType: 'json',
-            data: {'IdVertical': id},
+            data: {'IdVertical': idVertical},
             beforeSend: function () {
                     $("#TablaRubricas").html("Procesando, espere por favor...");
             },
@@ -152,7 +236,12 @@ function verticalId(id){
             if (respuesta.Tabla=='0') {
                   window.location = '../principal/miperfil.php';   
              }
-            else{                
+            else{   
+                idjuez_registrar=idJuez;
+                idproyecto_registrar=idProyecto;
+                idVertical_registrar=idVertical;
+                idfase_registrar=idFaseP;
+                idhack_registrar=idHack;
              $("#TablaRubricas").html(respuesta.Tabla); 
             }
         })
