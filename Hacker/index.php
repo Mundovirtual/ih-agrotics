@@ -107,8 +107,7 @@ include_once("../login/securityHacker.php");
           <div class="modal-content text-center text-warning">
             <div class="modal-body">
               <i class="fas fa-info-circle fa-5x"></i>
-              <h1 class="modal-title text-center text-dark" id="cerrar">Estas seguro ?</h1>
-              <p class="text-center text-dark">Quieres salir del sistema y finalizar la sesión actual</p>
+              <h1 class="modal-title text-center text-dark" id="cerrar">Estas seguro ?</h1> 
               <a class="btn btn-primary" href= "../login/SesionClose.php">si, Salir</a>
               <a class="btn btn-danger text-white" data-dismiss="modal">Cancelar</a>  
             </div>

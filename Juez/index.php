@@ -13,11 +13,10 @@ include_once("../login/securityJuez.php");
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Juez/Mentor</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=""> 
     <meta name="robots" content="all,follow">
     <link rel="shortcut icon" href="../img/favicon.png">
-
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="../css/bootstrap.css">
          
@@ -103,8 +102,7 @@ include_once("../login/securityJuez.php");
           <div class="modal-content text-center text-warning">
             <div class="modal-body">
               <i class="fas fa-info-circle fa-5x"></i>
-              <h1 class="modal-title text-center text-dark" id="cerrar">Estas seguro ?</h1>
-              <p class="text-center text-dark">Quieres salir del sistema y finalizar la sesión actual</p>
+              <h1 class="modal-title text-center text-dark" id="cerrar">Estas seguro ?</h1> 
               <a class="btn btn-primary" href= "../login/SesionClose.php">si, Salir</a>
               <a class="btn btn-danger text-white" data-dismiss="modal">Cancelar</a>  
             </div>
