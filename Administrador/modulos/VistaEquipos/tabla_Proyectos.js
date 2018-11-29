@@ -49,7 +49,7 @@ function VerticalesMostrar(idVertical){
 	}
 	
 }
-TablaCalificaciones
+ 
  
 var tabla_nombre;
  function MostrarCalificaciones() {
