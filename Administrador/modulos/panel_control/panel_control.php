@@ -5,13 +5,14 @@
 	/*Obtener valor del hack activo*/
 	$hackaton= new Hackaton();
 	$verHackaton=$hackaton->mostrarDatosHackaton();
-	$idHack=$verHackaton['0']['0'];
-	if (!empty($idhack)) {
+	   
+	if (count($verHackaton)>0) {
 		$Panel=new panel_control();
-	 
+	 	$idHack=$verHackaton['0']['0'];
+
 	if (isset($_POST['botones'])) {
 		/*cargar botones*/
-		
+			
 		$insertar=$Panel->Configuracion($idHack);
 		 
 

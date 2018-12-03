@@ -19,7 +19,7 @@ $( document ).ready(function() {
 		$("#ProyectosNumero").text(respuesta[8]);
 		$("#ParticipantesNumero").text(respuesta[9]);
 		$("#MentoresNumero").text(respuesta[10]);
-		$("#HackersNumero").text(respuesta[11]);
+		$("#HackersNumero").text(respuesta[11]); 
 	})
 	.fail(function() {
 		console.log("error");
