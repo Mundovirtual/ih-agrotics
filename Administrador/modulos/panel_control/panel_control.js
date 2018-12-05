@@ -22,7 +22,6 @@ function botones(){
 			$("#NEquipoFaseDos").text(respuesta['1']['NEquipos']+" finalistas");			
 			$("#BottonFaseTres").html(respuesta['2']['faseButton']);
 			$("#NEquipoFaseTres").text(respuesta['2']['NEquipos']+" finalistas");
-
  
 		}
 		 

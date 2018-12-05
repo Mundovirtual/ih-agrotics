@@ -8,10 +8,10 @@
     <div class="col-md">
       <h1 class="text-center">
         <?php 
-        if(!empty($Mostrar)){
+        if(count($Mostrar)>0){
             echo $Mostrar[0][1];
          }
-         {
+         else{
           ?>
             <div align="center" >
                 <h1>Registra tu edición </h1> <a href="../view/index.php?cargar=1"> aqui &#128070;</a> 

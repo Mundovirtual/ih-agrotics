@@ -62,6 +62,9 @@
         </div>
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">
+          <li><a href="../view/index.php" aria-expanded="false"> 
+                <i class="fas fa-chart-bar"></i>Dashboard </a>
+          </li>   
           <h5 class="sidenav-heading">Menu</h5>
 
           <ul id="side-main-menu" class="side-menu list-unstyled">                  

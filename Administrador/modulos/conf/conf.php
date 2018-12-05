@@ -61,7 +61,7 @@ if (isset($_POST['Registro'])) {
 		$Validar=new configuracion();
 		/*Insertar registros uno*/
 		$val=$Validar->validar($idHack,$idFaseUno);
-		 if (empty($val)) 	{ 
+		 if (empty($val)) { 
 		 	$registrar=$Validar->Insertar(json_decode($idHack),json_decode($idFaseUno),json_decode($valFaseUno));
 
 		 	$msj="1";

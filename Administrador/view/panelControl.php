@@ -42,7 +42,7 @@
 <div class="row" id="BottonPanel" style="display: none;">
 	<div class="col-md-4">
 		<div  class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-			  <div class="card-header bg-success" align="center"><h2>Primera Fase </h2><div align="center">Sin limite</div></div>
+			  <div class="card-header bg-success" align="center"><h2>Primera Fase </h2><div align="center" id="NEquipoFaseDos"></div></div>
 
 			  <div class="card-body"  align="center">
 		 	 		<div id="BottonFaseUno"></div>
@@ -51,7 +51,7 @@
 	</div>
 	<div class="col-md-4">	
 		<div  class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-		  <div class="card-header bg-info" align="center"><h2>Segunda Fase </h2><div align="center" id="NEquipoFaseDos"></div></div>
+		  <div class="card-header bg-info" align="center"><h2>Segunda Fase </h2><div align="center" id="NEquipoFaseTres"></div></div>
 		  <div class="card-body"  align="center">
 		  		<div id="BottonFaseDos"></div>
  
@@ -61,7 +61,7 @@
 	<div class="col-md-4">
 
 		<div  class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-		  <div class="card-header bg-primary" align="center"><h2>Tercera Fase</h2><div align="center" id="NEquipoFaseTres"></div></div>
+		  <div class="card-header bg-primary" align="center"><h2>Tercera Fase</h2><div align="center">1 finalista</div></div>
 		  <div class="card-body" align="center">
 		      <div id="BottonFaseTres"></div>	   
 		  </div>
