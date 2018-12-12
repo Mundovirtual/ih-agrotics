@@ -4,6 +4,8 @@
 class MisProyectos{
 
 	function SolicitudesAceptados($idHack){
+		$idHack=sanitizar($idHack);
+
 		$con=new Conectar();
  		$Conexion=$con->conexion();
  		$sql="SELECT `comunidad_id`, `status`, `nombreLider`, `EmailLider`, `CelularLider`, `CarreraLider`, `InstLider`, `NombreDeEquipo`, `NombreProyecto`, `DesProyecto`, `Vertical`, `VerticalDesc`, `InfAsesoria`, `Hack`, `statusHack`, `IdProyecto` FROM `comunidadlider` WHERE `comunidad_id`='$idHack' and `status`='1' ";    
@@ -12,6 +14,8 @@ class MisProyectos{
  		$Conexion->mysql_close();
 	}
 	function SolicitudesEnEspera($idHack){
+		$idHack=sanitizar($idHack);
+
 		$con=new Conectar();
  		$Conexion=$con->conexion();
  		$sql="SELECT `comunidad_id`, `status`, `nombreLider`, `EmailLider`, `CelularLider`, `CarreraLider`, `InstLider`, `NombreDeEquipo`, `NombreProyecto`, `DesProyecto`, `Vertical`, `VerticalDesc`, `InfAsesoria`, `Hack`, `statusHack`,`IdProyecto` FROM `comunidadlider` WHERE `comunidad_id`='$idHack' and `status`='0'";
@@ -20,6 +24,8 @@ class MisProyectos{
  		$Conexion->mysql_close();
 	}
 	function EliminarSolicitud($idHack,$IdProyecto){
+			$idHack=sanitizar($idHack);
+			$IdProyecto=sanitizar($IdProyecto);
 			$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="DELETE FROM `team` WHERE  `team`.`comunidad_id`='$idHack' and  `team`.`Proyecto_id`= '$IdProyecto'";
@@ -37,6 +43,10 @@ class MisProyectos{
  		$Conexion->mysql_close();
 		
 	}
+	function sanitizar($text){ 		
+	 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
+	 		return htmlspecialchars($variable);
+	 }
 
 
 }

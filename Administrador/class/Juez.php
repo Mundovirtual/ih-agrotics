@@ -18,7 +18,8 @@ include_once("conexion.php");
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
 	 	}
-	 	function EliminarSolicitudJuez($id){	 		
+	 	function EliminarSolicitudJuez($id){
+	 		$id=sanitizar($id); 		 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="DELETE FROM `comunidad` WHERE `id`='".$id."' and `Rol_idRol`='3'";
@@ -27,7 +28,8 @@ include_once("conexion.php");
 	 		$Conexion->mysql_close();
 	 	}
 		 
-	 	function aceptarSolicitud($id){	 		
+	 	function aceptarSolicitud($id){	
+	 		$id=sanitizar($id); 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="UPDATE `comunidad` set `status`='1' WHERE `id`='".$id."' and `Rol_idRol`='3'";
@@ -43,7 +45,12 @@ include_once("conexion.php");
  			$resultado=mysqli_query($Conexion,$sql);
 	 		return  mysqli_fetch_all($resultado);
 	 	}
-	 	function ActualizarDatosJueces($id,$correo,$psw,$celular){ 
+	 	function ActualizarDatosJueces($id,$correo,$psw,$celular){
+	 	    $id=sanitizar($id);
+	 	    $correo=sanitizar($correo);
+	 	    $psw=sanitizar($psw);
+	 	    $celular =sanitizar($celular);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="UPDATE `comunidad` SET `E-mail`='$correo',`psw`='$psw',`Celular`='$celular' WHERE `id`='$id' and `Rol_idRol`='3' and `status`='1'"; 
@@ -52,6 +59,12 @@ include_once("conexion.php");
 	 		$Conexion->mysql_close();
 
 	 	}
+
+	 	function sanitizar($text){ 		
+	 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
+	 		return htmlspecialchars($variable);
+	 	}
+
   		 
 
 	 }

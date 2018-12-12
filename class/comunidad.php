@@ -6,6 +6,7 @@
 	 class comunidad{
 
 	 	function mostrarDatos($Id){
+	 		$Id=sanitizar($Id);
 	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
@@ -15,14 +16,23 @@
 	 		$Conexion->mysql_close();
 	 	}
  
-	 	function ActualizarDatosHacker($id,$Email,$psw,$Celular){ 
+	 	function ActualizarDatosHacker($id,$Email,$psw,$Celular){
+	 		$id=sanitizar($id);
+	 		$Email=sanitizar($Email);
+	 		$psw=sanitizar($psw);
+	 		$Celular =sanitizar($Celular);
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion(); 
- 	 		$sql="UPDATE `comunidad` SET `E-mail`='$Email',`psw`='$psw',`Celular`='$Celular'  WHERE `id`='$id'"; 
+ 	 		$sql="UPDATE `comunidad` SET `E-mail`='$Email',`psw`='$psw',`Celular`='$Celular' WHERE `id`='$id'"; 
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();
 
+	 	}
+
+	 	function sanitizar($text){ 		
+	 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
+	 		return htmlspecialchars($variable);
 	 	}
 
 	 

@@ -22,6 +22,10 @@
 	 	}
 
 	 	function InsertarHackaton($Edicion,$InicioHackaton,$FechLimiteRegProy,$TerminoHack,$Imagen){
+	 		$Edicion=sanitizar($Edicion);
+	 		$InicioHackaton=sanitizar($InicioHackaton);
+	 		$FechLimiteRegProy=sanitizar($FechLimiteRegProy);
+	 		$TerminoHack=sanitizar($TerminoHack); 
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="UPDATE `hackatonedicion` SET `status`='0' ";
@@ -32,6 +36,11 @@
 	 	}
 
 	 	function ActualizarHackaton($id,$Edicion,$InicioHackaton,$FechLimiteRegProy,$TerminoHack,$Imagen){
+	 		$id=sanitizar($id);
+	 		$Edicion=sanitizar($Edicion);
+	 		$InicioHackaton=sanitizar($InicioHackaton);
+	 		$FechLimiteRegProy=sanitizar($FechLimiteRegProy);
+	 		$TerminoHack=sanitizar($TerminoHack);
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 
@@ -42,6 +51,7 @@
 	 	}
 
 	 	function EliminarHackaton($id){
+	 		$id=sanitizar($id);
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="DELETE FROM `hackatonedicion` WHERE  `id`='$id'"; 
@@ -50,6 +60,8 @@
 	 		$Conexion->mysql_close();
 	 	}
 	 	function CambiarEstado($idActualizar){
+	 		$idActualizar=sanitizar($idActualizar);
+	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		/*Deshabilitar hackatones*/
@@ -61,5 +73,12 @@
 	 		return $resultado;
 	 		$Conexion->mysql_close();
 	 	}
+
+	 	
+	 	function sanitizar($text){ 		
+ 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
+ 		return htmlspecialchars($variable);
+ 	}
+
 	 }
  

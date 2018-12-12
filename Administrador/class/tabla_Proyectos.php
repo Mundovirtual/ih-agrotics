@@ -13,7 +13,8 @@
 	 		$Conexion->mysql_close();
 	 	}
 
-	 	function EtapaUno($idVertical){	 		
+	 	function EtapaUno($idVertical){	 
+	 		$idVertical=sanitizar($idVertical);		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="SELECT `proyecto`.`NombreProyecto`, `equiposfinales`.`calf` FROM `equiposfinales` inner join `proyecto` on `proyecto`.`id`=`equiposfinales`.`idproyecto` WHERE `equiposfinales`.`fase` ='1' and `equiposfinales`.`idvertical`='$idVertical' ORDER BY `equiposfinales`.`calf` DESC "; 
@@ -21,7 +22,8 @@
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
 	 	}
-	 	function EtapaDos($idVertical){	 		
+	 	function EtapaDos($idVertical){	 
+	 		$idVertical=sanitizar($idVertical);		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="SELECT `proyecto`.`NombreProyecto`, `equiposfinales`.`calf` FROM `equiposfinales` inner join `proyecto` on `proyecto`.`id`=`equiposfinales`.`idproyecto` WHERE `equiposfinales`.`fase` ='2' and `equiposfinales`.`idvertical`='$idVertical' ORDER BY `equiposfinales`.`calf` DESC ";
@@ -30,7 +32,8 @@
 	 		return  mysqli_fetch_all($resultado);
 	 		$Conexion->mysql_close();
 	 	} 
-	 	function EtapaTres($idVertical){	 		
+	 	function EtapaTres($idVertical){	
+	 		$idVertical=sanitizar($idVertical); 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="SELECT `proyecto`.`NombreProyecto`, `equiposfinales`.`calf` FROM `equiposfinales` inner join `proyecto` on `proyecto`.`id`=`equiposfinales`.`idproyecto` WHERE `equiposfinales`.`fase` ='3' and `equiposfinales`.`idvertical`='$idVertical' ORDER BY `equiposfinales`.`calf` DESC ";
@@ -40,6 +43,10 @@
 	 		$Conexion->mysql_close();
 	 	} 
 
+	 	function sanitizar($text){ 		
+ 			$variable=filter_var($text, FILTER_SANITIZE_STRING);
+	 		return htmlspecialchars($variable);
+	 	}
 
 	 	 
 

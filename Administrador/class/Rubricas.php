@@ -13,6 +13,9 @@
 	 	}
 	 	 
 	 	function Insertar($id,$preg){
+	 		$id=sanitizar($id);
+	 		$preg=sanitizar($preg);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="INSERT INTO `rubricas`(`Pregunta`,`Vertical_id`) VALUES ('$preg','$id')";   
@@ -21,7 +24,12 @@
 	 		$Conexion->mysql_close();
 	 	}
 
+
 	 	function Actualizar($id,$Pregunta){
+	 		$id=sanitizar($id);
+	 		$Pregunta=sanitizar($preg);
+
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="UPDATE `rubricas` SET `Pregunta`='$Pregunta' WHERE  `idPreguntas`='$id'";   
@@ -31,12 +39,19 @@
 	 	}
 
 	 	function eliminar($id){
+	 		$id=sanitizar($id);
+	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="DELETE FROM `rubricas` WHERE `idPreguntas`='$id'";  
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();
+	 	}
+
+	 	function sanitizar($text){ 		
+	 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
+	 		return htmlspecialchars($variable);
 	 	}
 
 	 }

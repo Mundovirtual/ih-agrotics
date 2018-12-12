@@ -4,7 +4,8 @@
 	 
 	 class panel_control{
 
-	 	function Configuracion($id){	 		
+	 	function Configuracion($id){	 
+	 		$id=sanitizar($id);		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="SELECT `Id`, `HackatonEdicion_id`, `Fases_idFases`, `EquiposLimite`, `Estatus_idEstatus` FROM `infconfiguracion` WHERE `HackatonEdicion_id`='$id'";
@@ -15,6 +16,9 @@
 	 	 
 
 	 	function Actualizar($id,$fase){
+	 		$id=sanitizar($id);
+	 		$fase=sanitizar($fase);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="UPDATE `infconfiguracion` SET `Estatus_idEstatus`='$fase' WHERE `Id`='$id'";  
@@ -24,6 +28,8 @@
 	 	}
 
 	 	function NumeroPorFase($fase){
+	 		$fase=sanitizar($fase);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="SELECT  `infconfiguracion`.`EquiposLimite` FROM `infconfiguracion` inner join `hackatonedicion` on `hackatonedicion`.`id`=`infconfiguracion`.`HackatonEdicion_id` where  `infconfiguracion`.`Fases_idFases` ='$fase' and `hackatonedicion`.`status`='1'  ";
@@ -42,6 +48,10 @@
  
 	 	}
 	 	function Calificar($idvertical,$fase,$limite){
+	 		$idvertical=sanitizar($idvertical);
+	 		$fase=sanitizar($fase);
+	 		$limite=sanitizar($limite);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="SELECT `calificacion_final_proyecto`.`idproyecto`, `calificacion_final_proyecto`.`idvertical`, `calificacion_final_proyecto`.`idHack`, `calificacion_final_proyecto`.`fase`, `calificacion_final_proyecto`.`calf` FROM `calificacion_final_proyecto` inner join `hackatonedicion` on `hackatonedicion`.`id`=`calificacion_final_proyecto`.`idHack` WHERE `hackatonedicion`.`status`='1' and `calificacion_final_proyecto`.`idvertical`='$idvertical' and `calificacion_final_proyecto`.`fase`= '$fase' ORDER BY `calificacion_final_proyecto`.`calf` desc limit $limite  "; 
@@ -52,6 +62,9 @@
  
 	 	}
 	 	function Update($idproyecto,$fase){
+	 		$idproyecto=sanitizar($idproyecto);
+	 		$fase=sanitizar($fase);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="UPDATE `proyecto` SET  `fase`= '$fase' WHERE `id`='$idproyecto'"; 
@@ -61,6 +74,12 @@
  
 	 	}
 	 	function guardarDatos($idProyecto,$idvertical,$idhack,$fase,$calf){
+	 		$idProyecto=sanitizar($idProyecto);
+	 		$idvertical=sanitizar($idvertical);
+	 		$idhack=sanitizar($idhack);
+	 		$fase=sanitizar($fase);
+	 		$calf=sanitizar($calf);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="INSERT INTO `equiposfinales`(`idproyecto`, `idvertical`, `idhack`, `fase`, `calf`) VALUES ('$idProyecto','$idvertical','$idhack','$fase','$calf')"; 
@@ -71,12 +90,18 @@
 	 	}
 
 	 	function eliminar($id){
+	 		$id=sanitizar($id);
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="DELETE FROM `infconfiguracion` WHERE `Id`='$id'"; 
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();
+	 	}
+
+	 	function sanitizar($text){ 		
+	 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
+	 		return htmlspecialchars($variable);
 	 	}
 
 	 }

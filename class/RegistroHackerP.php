@@ -12,6 +12,7 @@ class RegistroProyHack{
 	}
  	/*Modulo del lider de proyecto*/
  	function BuscarProyectosLider($id){
+ 		$id=sanitizar($id);
 		$con=new Conectar();
 	 	$Conexion=$con->conexion();
 		$sql="SELECT * FROM `detprodesglozado` WHERE `IDComunidad`!='$id' ";
@@ -30,6 +31,8 @@ class RegistroProyHack{
 	}
 	/*RegistrarProyecto*/
 	function EnviarSolicitud($idHacker,$idProyecto){
+		$idHacker=sanitizar($idHacker);
+		$idProyecto=sanitizar($idProyecto);
 		$con=new Conectar();
 	 	$Conexion=$con->conexion();
 	 	$Validar="SELECT `comunidad_id`, `Proyecto_id`, `status` FROM `team` WHERE `comunidad_id`='$idHacker' and `Proyecto_id`='$idProyecto'";
@@ -57,7 +60,10 @@ class RegistroProyHack{
 		
 	}
 
-
+	function sanitizar($text){ 		
+	 	$variable=filter_var($text, FILTER_SANITIZE_STRING);
+	 	return htmlspecialchars($variable);
+	 }
 
 }
 

@@ -3,6 +3,8 @@ include_once("conexion.php");
 	 class Hacker{
 	 	/*Modulo slolicitud Jueces*/
 	 	function ConsultarProyecto($Id){
+	 		$Id=sanitizar($Id);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="select `comunidad`.`id` AS `id`,`comunidad`.`Nombre` AS `Nombre`,`comunidad`.`Apellidos` AS `Apellidos`,`comunidad`.`E-mail` AS `E-mail`,`comunidad`.`Celular` AS `Celular`,`carrera`.`Carrera` AS `Carrera`,`institucion`.`Institucion` AS `Institucion`, `comunidad`.`FechaNacimiento` AS `FechaNacimiento`,`comunidad`.`Habilidades` AS `Habilidades`,`comunidad`.`Hobbies` AS `Hobbies`,`team`.`status` AS `Estado`,`proyecto`.`id` AS `proyectoID`,`proyecto`.`Descripcion` AS `proyectoDesc`,`proyecto`.`comunidad_id` AS `IDlider`,`proyecto`.`NombreDeEquipo` AS `NombreDeEquipo`,`proyecto`.`NombreProyecto` AS `NombreProyecto`,`vertical`.`Nombre` AS `NVertical`,`vertical`.`Descripcion` AS `VDesc`,`vertical`.`InfAsesoria` AS `VAsesoria`,`hackatonedicion`.`Edicion` AS `Hedicion`,`hackatonedicion`.`status` AS `HStatus` from `team` inner join `comunidad` on `team`.`comunidad_id` = `comunidad`.`id` inner join `carrera` on `comunidad`.`Carrera_id` = `carrera`.`id` inner join `institucion` on `comunidad`.`Institucion_id` = `institucion`.`id` inner join `proyecto` on `team`.`Proyecto_id` = `proyecto`.`id` inner join `vertical` on `vertical`.`id` = `proyecto`.`Vertical_id` inner join `hackatonedicion` on `vertical`.`HackatonEdicion_id` = `hackatonedicion`.`id` WHERE `proyecto`.`comunidad_id`='$Id' and `hackatonedicion`.`status`='1'  limit 1 "; 
@@ -12,7 +14,10 @@ include_once("conexion.php");
 
 	 	}
 
-	 	function MostrarHackersPorAceptar($IdProyecto){	 		
+	 	function MostrarHackersPorAceptar($IdProyecto){	 
+
+	 		$IdProyecto=sanitizar($IdProyecto);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="select `comunidad`.`id` AS `idcomunidad`,`comunidad`.`Nombre` AS `Nombre`,`comunidad`.`Apellidos` AS `Apellidos`,`comunidad`.`E-mail` AS `E-mail`,`comunidad`.`Celular` AS `Celular`,`carrera`.`Carrera` AS `Carrera`,`institucion`.`Institucion` AS `Institucion`,`comunidad`.`FechaNacimiento` AS `FechaNacimiento`,`comunidad`.`Habilidades` AS `Habilidades`,`comunidad`.`Hobbies` AS `Hobbies`,`team`.`status` AS `Estado`,`proyecto`.`id` AS `proyectoID`,`proyecto`.`Descripcion` AS `proyectoDesc`,`proyecto`.`comunidad_id` AS `IDlider`,`proyecto`.`NombreDeEquipo` AS `NombreDeEquipo`,`proyecto`.`NombreProyecto` AS `NombreProyecto`,`vertical`.`Nombre` AS `NVertical`,`vertical`.`Descripcion` AS `VDesc`,`vertical`.`InfAsesoria` AS `VAsesoria`,`hackatonedicion`.`Edicion` AS `Hedicion`,`hackatonedicion`.`status` AS `HStatus` from `team` inner join `comunidad` on `team`.`comunidad_id` = `comunidad`.`id` inner join `carrera` on `comunidad`.`Carrera_id` = `carrera`.`id` inner join `institucion` on `comunidad`.`Institucion_id` = `institucion`.`id` inner join `proyecto` on `team`.`Proyecto_id` = `proyecto`.`id` inner join `vertical` on `vertical`.`id` = `proyecto`.`Vertical_id` inner join `hackatonedicion` on `vertical`.`HackatonEdicion_id` = `hackatonedicion`.`id` WHERE `hackatonedicion`.`status`='1' and `team`.`Proyecto_id`='$IdProyecto' and `team`.`status`='0'";
@@ -22,7 +27,9 @@ include_once("conexion.php");
 	 		$Conexion->mysql_close();
 	 	}
 	 	
-	 	function MostrarHackersAceptados($IdProyecto){	 		
+	 	function MostrarHackersAceptados($IdProyecto){	
+	 		$IdProyecto=sanitizar($IdProyecto); 		
+	 	
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="select `comunidad`.`id` AS `id`,`comunidad`.`Nombre` AS `Nombre`,`comunidad`.`Apellidos` AS `Apellidos`,`comunidad`.`E-mail` AS `E-mail`,`comunidad`.`Celular` AS `Celular`,`carrera`.`Carrera` AS `Carrera`,`institucion`.`Institucion` AS `Institucion`,`comunidad`.`FechaNacimiento` AS `FechaNacimiento`,`comunidad`.`Habilidades` AS `Habilidades`,`comunidad`.`Hobbies` AS `Hobbies`,`team`.`status` AS `Estado`,`proyecto`.`id` AS `proyectoID`,`proyecto`.`Descripcion` AS `proyectoDesc`,`proyecto`.`comunidad_id` AS `IDlider`,`proyecto`.`NombreDeEquipo` AS `NombreDeEquipo`,`proyecto`.`NombreProyecto` AS `NombreProyecto`,`vertical`.`Nombre` AS `NVertical`,`vertical`.`Descripcion` AS `VDesc`,`vertical`.`InfAsesoria` AS `VAsesoria`,`hackatonedicion`.`Edicion` AS `Hedicion`,`hackatonedicion`.`status` AS `HStatus` from `team` inner join `comunidad` on `team`.`comunidad_id` = `comunidad`.`id` inner join `carrera` on `comunidad`.`Carrera_id` = `carrera`.`id` inner join `institucion` on `comunidad`.`Institucion_id` = `institucion`.`id` inner join `proyecto` on `team`.`Proyecto_id` = `proyecto`.`id` inner join `vertical` on `vertical`.`id` = `proyecto`.`Vertical_id` inner join `hackatonedicion` on `vertical`.`HackatonEdicion_id` = `hackatonedicion`.`id` WHERE `proyecto`.`id`='$IdProyecto' and `hackatonedicion`.`status`='1' and `team`.`status`='1'"; 
@@ -32,6 +39,8 @@ include_once("conexion.php");
 	 	}
 
 	 	function TotalHackers($IdProyecto){
+	 		$IdProyecto=sanitizar($IdProyecto);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="select  `team`.`status` AS `Estado`,`proyecto`.`id` AS `proyectoID`, `hackatonedicion`.`status` AS `HStatus` from `team` inner join `comunidad` on `team`.`comunidad_id` = `comunidad`.`id` inner join `carrera` on `comunidad`.`Carrera_id` = `carrera`.`id` inner join `institucion` on `comunidad`.`Institucion_id` = `institucion`.`id` inner join `proyecto` on `team`.`Proyecto_id` = `proyecto`.`id` inner join `vertical` on `vertical`.`id` = `proyecto`.`Vertical_id` inner join `hackatonedicion` on `vertical`.`HackatonEdicion_id` = `hackatonedicion`.`id` WHERE `proyecto`.`id`='$IdProyecto' and `hackatonedicion`.`status`='1' and `team`.`status`='1'"; 
@@ -40,7 +49,10 @@ include_once("conexion.php");
 	 		$Conexion->mysql_close();
 	 	}
 
-	 	function AceptarHacker($Hacker,$Proyecto){	 		
+	 	function AceptarHacker($Hacker,$Proyecto){	
+	 		$Hacker=sanitizar($Hacker);
+	 		$Proyecto=sanitizar($Proyecto); 	
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="UPDATE `team` SET `status`='1' WHERE `comunidad_id`='$Hacker' and `Proyecto_id`='$Proyecto'";
@@ -49,7 +61,11 @@ include_once("conexion.php");
 	 		$Conexion->mysql_close();
 	 	}
 
-	 	function EliminarHacker($Hacker,$Proyecto){	 		
+	 	function EliminarHacker($Hacker,$Proyecto){	
+	 		
+	 		$Hacker=sanitizar($Hacker);
+	 		$Proyecto=sanitizar($Proyecto);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="DELETE FROM `team` WHERE `comunidad_id`='$Hacker'and `Proyecto_id`='$Proyecto'";
@@ -58,11 +74,14 @@ include_once("conexion.php");
 	 		$Conexion->mysql_close();
 	 	}
 
-	 	/*Hacker Buscar proyectos*/
-		 
+	 
+		 function sanitizar($text){ 		
+	 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
+	 		return htmlspecialchars($variable);
+	 	}
 	 	 
 
 	 }
  
 
- ?>
+ ?> 

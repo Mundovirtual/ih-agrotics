@@ -22,6 +22,11 @@ include_once("conexion.php");
 		 
 	 
 	 	function ActualizarDatosHacker($id,$Email,$psw,$Celular){ 
+	 		$id=sanitizar($id);
+	 		$Email=sanitizar($Email);
+	 		$psw=sanitizar($psw);
+	 		$Celular=sanitizar($Celular);
+	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion(); 
  	 		$sql="UPDATE `comunidad` SET `E-mail`='$Email',`psw`='$psw',`Celular`='$Celular'  WHERE `id`='$id'"; 
@@ -30,6 +35,12 @@ include_once("conexion.php");
 	 		$Conexion->mysql_close();
 
 	 	}
+
+	 	function sanitizar($text){ 		
+	 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
+	 		return htmlspecialchars($variable);
+	 	}
+
   		 
 
 	 }

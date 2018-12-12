@@ -25,6 +25,11 @@
 	 	}
 
 	 	function InsertarVertical($Vertical,$Descripcion,$asesoria,$Hackaton){
+	 		$Vertical=sanitizar($Vertical);
+	 		$Descripcion=sanitizar($Descripcion);
+	 		$asesoria=sanitizar($asesoria);
+	 		$Hackaton=sanitizar($Hackaton);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="INSERT INTO `vertical`(`Nombre`, `Descripcion`, `InfAsesoria`, `HackatonEdicion_id`) VALUES ('$Vertical','$Descripcion','$asesoria','$Hackaton')";
@@ -37,9 +42,14 @@
 	 	}
 
 	 	function ActualizarVertical($id,$Nombre,$Descripcion,$asesoria,$Hackaton){
+	 		$id=sanitizar($id);
+	 		$Nombre=sanitizar($Nombre);
+	 		$Descripcion=sanitizar($Descripcion);
+	 		$asesoria=sanitizar($asesoria);
+	 		$Hackaton=sanitizar($Hackaton);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-
 	 		$sql="UPDATE `vertical` SET `Nombre`='$Nombre',`Descripcion`='$Descripcion',`InfAsesoria`='$asesoria',`HackatonEdicion_id`='$Hackaton' WHERE `id`='$id'";
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		if ($resultado=true) {
@@ -49,6 +59,9 @@
 	 	}
 
 	 	function EliminarVertical($id){
+
+	 		$id=sanitizar($id);
+
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 
@@ -59,6 +72,13 @@
 	 		} 
 	 		$Conexion->mysql_close();
 	 	}
+
+
+	 	function sanitizar($text){ 		
+	 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
+	 		return htmlspecialchars($variable);
+	 	}
+
 
 	 }
  

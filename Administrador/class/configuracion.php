@@ -14,6 +14,8 @@
 	 	}
 
 	 	function validar($idHack,$idFase){
+	 		$idHack=sanitizar($idHack);
+	 		$idFase=sanitizar($idFase);
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="SELECT `Id`, `HackatonEdicion_id`, `Fases_idFases`, `EquiposLimite` FROM `infconfiguracion` WHERE `HackatonEdicion_id`='$idHack' and `Fases_idFases`='$idFase' ";
@@ -22,6 +24,9 @@
 	 		$Conexion->mysql_close();
 	 	}
 	 	function Insertar($idHack,$idfase,$EquiposLimite){
+	 		$idHack=sanitizar($idHack);
+	 		$idfase=sanitizar($idfase);
+	 		$EquiposLimite=sanitizar($EquiposLimite);
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="INSERT INTO `infconfiguracion`( `HackatonEdicion_id`, `Fases_idFases`, `EquiposLimite`) VALUES ('$idHack','$idfase','$EquiposLimite')";  
@@ -33,6 +38,7 @@
 
 	  
 	 	function eliminar($id){
+	 		$id=sanitizar($id);
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="DELETE FROM `infconfiguracion` WHERE `Id`='$id'"; 
@@ -40,6 +46,13 @@
 	 		return $resultado;
 	 		$Conexion->mysql_close();
 	 	}
+
+
+		 	function sanitizar($text){ 		
+	 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
+	 		return htmlspecialchars($variable);
+	 	}
+
 
 	 }
  
