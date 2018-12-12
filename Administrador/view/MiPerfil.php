@@ -42,10 +42,6 @@
 			<div class="row justify-content-center">
 				<div class="col-md-10">
 					
-					<div class="form-group">
-						<h2>Datos personales</h2>
-					</div>
-
 					<div class="form-group row">
 					  <label for="example-text-input" class="col-2 col-form-label">Nombre</label>
 					  <div class="col-10">

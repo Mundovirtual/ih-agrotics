@@ -27,7 +27,7 @@
 
 	 	function Actualizar($id,$Pregunta){
 	 		$id=sanitizar($id);
-	 		$Pregunta=sanitizar($preg);
+	 		$Pregunta=sanitizar($Pregunta);
 
 
 	 		$con=new Conectar();
@@ -49,12 +49,14 @@
 	 		$Conexion->mysql_close();
 	 	}
 
-	 	function sanitizar($text){ 		
-	 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
-	 		return htmlspecialchars($variable);
-	 	}
+	 	
 
 	 }
+	 
+	 function sanitizar($text){ 		
+ 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
+ 		return htmlspecialchars($variable);
+ 	}
  
 
  ?>

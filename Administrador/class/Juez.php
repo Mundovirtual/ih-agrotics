@@ -60,14 +60,13 @@ include_once("conexion.php");
 
 	 	}
 
-	 	function sanitizar($text){ 		
-	 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
-	 		return htmlspecialchars($variable);
-	 	}
-
-  		 
-
+	 	
 	 }
+
+	 function sanitizar($text){ 		
+ 		$variable=filter_var($text, FILTER_SANITIZE_STRING);
+ 		return htmlspecialchars($variable);
+ 	 }
  
 
  ?>
