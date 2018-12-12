@@ -27,6 +27,7 @@
 
 
 <script type="text/javascript">
+
  $('#b').click(function(){
     var datos = $('#guardarDatos').serialize();
      $.ajax({
@@ -43,6 +44,5 @@
           }
       })
    });
-
  
 </script>

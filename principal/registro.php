@@ -116,24 +116,25 @@
                           ?>
                         </select>
                        </div>
+
                        <div class="col-xs-4 col-md-4">
                         <label>Mes</label>
                         <select name="mes" class="form-control">
-                           <option value="1">Ene</option>
-                           <option value="2">Feb</option>
-                           <option value="3">Marz</option>
+                           <option value="1">Enero</option>
+                           <option value="2">Febrero</option>
+                           <option value="3">Marzo</option>
                            <option value="4">Abril</option>
-                           <option value="5">May</option>
-                           <option value="6">Jun</option>
-                           <option value="7">Jul</option>
-                           <option value="8">Ago</option>
-                           <option value="9">Sep</option>
-                           <option value="10">Oct</option>
-                           <option value="11">Nov</option>
-                           <option value="12">Dic</option>
-                        </select>
-                          
+                           <option value="5">Mayo</option>
+                           <option value="6">Junio</option>
+                           <option value="7">Julio</option>
+                           <option value="8">Agosto</option>
+                           <option value="9">Septiembre</option>
+                           <option value="10">Octubre</option>
+                           <option value="11">Noviembre</option>
+                           <option value="12">Diciembre</option>
+                        </select>                          
                        </div>
+
                        <div class="col-xs-4 col-md-4">
                         <label>Año</label>
                            <select name="ano" class="form-control">
@@ -182,7 +183,7 @@
                       $resultado = $con->query($sql);
                       while($row = mysqli_fetch_array($resultado)){
                         ?>
-                        <option value="<?php echo $row['idTalla_Playera'] ?>"><?php echo $row['Talla_Playeracol'] ?></option>
+                        <option value="<?php echo $row['idTalla_Playera'] ?>"><?php echo $row['TallaCompleta'] ?></option>
                         <?php
                       }
 
@@ -204,6 +205,7 @@
                      <input type="text" class="form-control" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies" onkeypress="return sololetras(event)">   
                   </div>
              </div>
+             
              <div class="form-row">
                <div class="form-group col-md-6">
                 <label for="#">Rol :<small class="text-danger"> (Required)</small></label>
