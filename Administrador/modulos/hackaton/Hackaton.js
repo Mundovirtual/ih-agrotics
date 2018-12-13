@@ -36,7 +36,7 @@ jQuery(document).on('submit', "#ModalRegistroHackaton", function(event){
  /*actualizar Hackaton*/
  let actualizar="";
 function ActualizarHackaton(idd,Edicion,IH,FlP,TH){  
-  c
+  
 	actualizar =idd;  
  	$("#EditarNombreHack").val(Edicion);
 	$("#EditarInicioHack").val(IH);
