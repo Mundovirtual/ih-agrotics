@@ -160,14 +160,14 @@ transform: translateX(0);
 div.textoImagen h1.textoencima1{
 	position: absolute;
 	top: 15%;
-	color: #fff;
+	color: #2a0ee6;
 	left: 7%;
 }
 
 div.textoImagen h3.textoencima2{
 	position: absolute;
 	top: 25%;
-	color: #fff;
+	color: #f00;
 	left: 7%;
 
 }

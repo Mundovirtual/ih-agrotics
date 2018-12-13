@@ -1,5 +1,3 @@
- 
- 
 <?php 
   include 'conexion/abrirconexion.php';
   $con = new Conexion();
@@ -61,7 +59,7 @@
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="#">Email :<small class="text-danger"> (Required)</small> </label>
-                     <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com /Usuario registro" required="">
+                     <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com " required="">
                      <div id="infoemail">
                      </div>
                   </div>
@@ -193,7 +191,6 @@
                  </div>
                   
              </div>
-
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Habilidades :</label>

@@ -7,7 +7,8 @@ include_once("../../class/Hackaton.php");
 	$i=1; 
  foreach ($ver as $key) {
  
- 	 $Editar='<button type=\"button\" class=\"btn btn-primary fas fa-edit\" onclick=\"ActualizarHackaton('."'".$key['0']."','".$key['1']."','".$key['2']."','".$key['3']."','".$key['4']."','null'".')\" data-toggle=\"modal\" data-target=\"#EditarHackaton\"></button>';
+ 	 $Editar='<button type=\"button\" class=\"btn btn-primary fas fa-edit\" onclick=\"ActualizarHackaton('."'".$key['0']."','".$key['1']."','".$key['2']."','".$key['3']."','".$key['4']."'".')\" data-toggle=\"modal\" data-target=\"#EditarHackaton\"></button>';
+
  	 if ($key['6']=='0') {
  	 	 $estado='<input type=\"radio\"style=\"width:20px;height:20px\"  name=\"ActivarHack\"  onclick=\"ActivarHackaton('."'".$key['0']."','".$key['1']."'".')\">';
  	 }else {

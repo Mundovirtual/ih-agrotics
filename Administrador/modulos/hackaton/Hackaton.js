@@ -32,16 +32,16 @@ jQuery(document).on('submit', "#ModalRegistroHackaton", function(event){
  
  
 });      
-
+ 
  /*actualizar Hackaton*/
  let actualizar="";
-function ActualizarHackaton(idd,Edicion,IH,FlP,TH/*,Imagen*/){  
-	actualizar =idd; 
-	$("#EditarNombreHack").val(Edicion);
+function ActualizarHackaton(idd,Edicion,IH,FlP,TH){  
+  c
+	actualizar =idd;  
+ 	$("#EditarNombreHack").val(Edicion);
 	$("#EditarInicioHack").val(IH);
 	$("#EditarEntregaProyectos").val(FlP);
-	$("#EditarFinHack").val(TH);
-	/*$("#EditarImagenPrincipal").val(Imagen);*/
+	$("#EditarFinHack").val(TH); 
 }
  
 function ActualizandoHackaton() { 

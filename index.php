@@ -1,3 +1,8 @@
+<?php 
+include_once 'principal/conexion/abrirconexion.php';
+$con = new Conexion();
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -79,32 +84,50 @@
                 </div>
             </nav>
             <div class="verticales">
+
                 <div class="form-group textoImagen">
                     <div class="carousel slide" data-ride="carousel" id="carouselExampleSlidesOnly">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img alt="First slide" class="img-responsive d-block w-100" src="principal/imagenes/labsol/banner33.png">
+                                <img alt="First slide" class="img-responsive d-block w-100" src="principal/imagenes/labsol/iw.jpg">
                                 </img>
                             </div>
                             <div class="carousel-item">
-                                <img alt="Second slide" class="d-block w-100" src="principal/imagenes/labsol/banner33.png">
+                                <img alt="Second slide" class="d-block w-100" src="principal/imagenes/labsol/iw.jpg">
                                 </img>
                             </div>
                             <div class="carousel-item">
-                                <img alt="Third slide" class="d-block w-100" src="principal/imagenes/labsol/banner33.png">
+                                <img alt="Third slide" class="d-block w-100" src="principal/imagenes/labsol/iw.jpg">
                                 </img>
                             </div>
                         </div>
                     </div>
-                    <h1 class="textoencima1">
-                        Registra tu equipo
-                    </h1>
-                    <h3 class="textoencima2">
-                        No te quedes fuera de este gran evento,
-                        <a href="principal/registro.php">
-                            da clic aquí
-                        </a>
-                    </h3>
+                    <?php 
+                           
+                           $sql = "SELECT `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack` FROM `hackatonedicion` where `status`='1'";
+                           $resultado = $con->query($sql);
+                          $fechas= mysqli_fetch_array($resultado);
+                          if (!empty($fechas)) { 
+                                $hoy=date('Y-m-d') ."\n"; 
+                                $Flimit=$fechas['1']; 
+
+                                if($Flimit>$hoy){
+                                 ?>
+                                   <h1 class="textoencima1">
+                                        Registra tu equipo
+                                    </h1>
+                                    <h3 class="textoencima2">
+                                        No te quedes fuera de este gran evento,
+                                        <a href="principal/registro.php">
+                                            da clic aquí
+                                        </a>
+                                    </h3>
+                                 <?php
+                                }                                  
+                            }
+  
+                           ?>
+                   
                 </div>
             </div>
             <div class="container-aliados">
@@ -149,7 +172,7 @@
             <div class="InfoJueces">
                 <div class="row">
                     <div class="Imagen col-lg-5">
-                        <img src="principal/imagenes/labsol/banner.png" width="100%">
+                        <img src="principal/imagenes/labsol/iwpngblue.png" width="100%">
                         </img>
                     </div>
                     <div class="Informacion col-lg-7">
@@ -357,12 +380,7 @@
                             ¿Tienes una idea que aborde alguna de las verticales? ¿Cuentas con un equipo de trabajo? ¿Quieres ser parte de este gran evento? Registrate, no te quedes con las ganas y acompañanos en esta gran oportunidad.
                         </p>
                     </div>
-                    <div class="col-lg-3 cajabotonRegistrame">
-                        <div class="boton2">
-                            <a href="principal/registro.php">
-                                !REGISTRAME!
-                            </a>
-                        </div>
+                    <div class="col-lg-3 cajabotonRegistrame"> 
                     </div>
                 </div>
             </div>

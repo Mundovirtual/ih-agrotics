@@ -6,8 +6,7 @@ $vistadeProyectos= new RegistroProyHack();
 $ver=$vistadeProyectos->BuscarProyectos();
  
  /*Validar Fechas*/ 
-$FinRegistro=$vistadeProyectos->validarFecha();
-
+$FinRegistro=$vistadeProyectos->validarFecha(); 
 $fechalimite='0';
 if (!empty($FinRegistro)) {
 	

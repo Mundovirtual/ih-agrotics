@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,8 @@
   <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
   <link rel="shortcut icon" href="imagenes/labsol/banner1b.jpeg" type="image/x-icon">
 </head>
-<body>
+
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="form-group">
           <div class="row col-md-12">
@@ -41,6 +43,9 @@
                </ul>
           </div>
        </nav>
+
+<body>
+
 
        <div class="container-portada bg-dark">
 
@@ -83,8 +88,26 @@
                   <div class="row botones">
                     <div class="col-lg-12">
                      <button type="button" class="btn btn-danger" id="a" onclick="acep();"><i class="fas fa-user-check"></i> ACEPTAR</button>
-                     <a href="registro.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-user-plus"></i> REGISTRARSE</a>
-                     
+
+                          <?php 
+                           include_once 'conexion/abrirconexion.php';
+                           $con = new Conexion();
+                           $sql = "SELECT `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack` FROM `hackatonedicion` where `status`='1'";
+                           $resultado = $con->query($sql);
+                          $fechas= mysqli_fetch_array($resultado);
+                          if (!empty($fechas)) { 
+                                $hoy=date('Y-m-d') ."\n"; 
+                                $Flimit=$fechas['1']; 
+
+                                if($Flimit>$hoy){
+                                 ?>
+                                  <a href="registro.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-user-plus"></i> REGISTRARSE</a>
+                                 <?php
+                                }                                  
+                            }
+  
+                           ?>
+                   
                     </div>
                   </div>
               </form>
@@ -93,18 +116,7 @@
 
 
           <div class="row img-portada col-xs-12 col-lg-5 align-items-center">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                   <div class="carousel-item active">
-                        <img class="" src="imagenes/labsol/banner.png" alt="First slide">
-                   </div>
-                   <div class="carousel-item">
-                        <img class="" src="imagenes/labsol/banner.png" alt="Second slide">
-                   </div>
-                   <div class="carousel-item">
-                        <img class="" src="imagenes/labsol/banner.png" alt="Third slide" height="305px">
-                   </div>
-               </div>
+             
            </div>
           </div>
         </div>
