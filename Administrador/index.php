@@ -18,8 +18,34 @@
     <link rel="stylesheet" type="text/css" href="js/alertifyjs/css/alertify.css">
 </head>
 
-<body class="login-page sidebar-collapse">
-   
+<body class="login-page sidebar-collapse bg-dark">
+   <nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+         
+        <a class="py-2 d-none d-md-inline-block">
+          <img src="img/COZCYT.png" width="300" height="50">
+          <font style="vertical-align: inherit;">
+          </font>
+        </a>
+        <a class="py-2 d-none d-md-inline-block" >
+          <img src="img/LogoLabsol.png" width="170" height="40">
+          <font style="vertical-align: inherit;">            
+          </font>
+        </a>
+        <a class="py-2 d-none d-md-inline-block" >
+          <img src="img/inovahackNavbar.png" width="150" height="40">
+          <font style="vertical-align: inherit;">            
+          </font>
+        </a>
+        <a class="py-2 d-none d-md-inline-block" >
+          <img src="img/iwpng.png" width="150" height="40">
+          <font style="vertical-align: inherit;">            
+          </font>
+        </a>
+      </div>
+    </nav>
+
+
   <div class="page-header header-filter" style="background-image: url('img/innovahack.png'); background-size: cover; background-position: top center;">
     <div class="container">
       <div class="row">
