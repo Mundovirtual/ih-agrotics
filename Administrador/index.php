@@ -33,7 +33,7 @@
           </font>
         </a>
         <a class="py-2 d-none d-md-inline-block" >
-          <img src="img/inovahackNavbar.png" width="150" height="40">
+          <img src="img/inovahackNavbar.png" width="150" height="25">
           <font style="vertical-align: inherit;">            
           </font>
         </a>
