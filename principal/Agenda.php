@@ -69,11 +69,7 @@
               <div class="col-lg-8">
                 <p>¿Tienes una idea que aborde alguna de las verticales? ¿Cuentas con un equipo de trabajo? ¿Quieres ser parte de este gran evento? Registrate, no te quedes con las ganas y acompañanos en esta gran oportunidad.</p>
               </div>
-
-              <div class="col-lg-3 cajaboton">
-                <div class="boton"><a href="registro1.php">!REGISTRAME!</a></div>
-              </div>
-               
+ 
              </div>
            </div>
             </div>

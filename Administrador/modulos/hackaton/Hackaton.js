@@ -35,13 +35,19 @@ jQuery(document).on('submit', "#ModalRegistroHackaton", function(event){
  
  /*actualizar Hackaton*/
  let actualizar="";
-function ActualizarHackaton(idd,Edicion,IH,FlP,TH){  
-  
+function ActualizarHackaton(idd,Edicion,IH,FlP,TH){   
 	actualizar =idd;  
  	$("#EditarNombreHack").val(Edicion);
-	$("#EditarInicioHack").val(IH);
-	$("#EditarEntregaProyectos").val(FlP);
-	$("#EditarFinHack").val(TH); 
+	$("#EditarInicioHack").val(moment(IH).format('MM/DD/YYYY'));
+	$("#EditarEntregaProyectos").val(moment(FlP).format('MM/DD/YYYY'));
+	$("#EditarFinHack").val(moment(TH).format('MM/DD/YYYY')); 
+ 
+ alert(moment(IH).format('MM/DD/YYYY'));
+ alert(moment(FlP).format('MM/DD/YYYY'));
+ alert(moment(TH).format('MM/DD/YYYY'));
+
+
+ 
 }
  
 function ActualizandoHackaton() { 
@@ -54,8 +60,7 @@ function ActualizandoHackaton() {
 	EhN=$("#EditarNombreHack").val();
 	EhI=$("#EditarInicioHack").val();
 	EhE=$("#EditarEntregaProyectos").val();
-	EhF=$("#EditarFinHack").val();  
-	/*var EhImg=$("#EditarImagenPrincipal").val();*/
+	EhF=$("#EditarFinHack").val();   
 	jQuery.ajax({				
 		url:'../modulos/hackaton/Hackaton.php',
 		type: 'POST', 
@@ -197,3 +202,6 @@ $( document ).ready(function() {
         }
     });
 }
+
+$.getScript("../../js/moment.js", function(){ 
+});

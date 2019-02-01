@@ -3,11 +3,9 @@
  if (isset($_POST['Usuario']) and isset($_POST['Password']) ) {
     $user = $_POST['Usuario'];
     $passwd = $_POST['Password'];
-    login($user, $passwd);
-    
+    login($user, $passwd);    
 }
  
-
 function login($usr,$pss){ 
 	$psw=base64_encode($pss);
 	include_once("../../class/conexion.php");

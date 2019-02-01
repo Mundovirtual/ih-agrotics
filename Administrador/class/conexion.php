@@ -5,7 +5,7 @@ class Conectar{
 private $servidor="localhost";
 		private $usuario="root";
 		private $bd="hacky";
-		private $password="";
+		private $password="123";
 		 
  
 		public function conexion(){

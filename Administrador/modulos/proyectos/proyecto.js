@@ -1,3 +1,7 @@
+$( document ).ready(function() {
+    Tablaproyectos();
+});
+
 /*Declarando valores para consulta de integrantes*/
 let idproyectos="";
 function detalles(id,descProyecto,lider,email,cel,fRegistro){
@@ -20,18 +24,7 @@ function detalles(id,descProyecto,lider,email,cel,fRegistro){
     });
     
 }
-
-
-
-$( document ).ready(function() {
- 	Tablaproyectos();
-});
-
  
-
-
-
-
  var tabla_nombre;
  function Tablaproyectos() {
   

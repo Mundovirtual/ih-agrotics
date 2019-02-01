@@ -45,7 +45,6 @@
         </button>
       </div>
       <div class="modal-body">
-
        	<div class="form-row ">
 		    <div class="col-md-12">
 		      <label for="Descripcion">Descripcion</label>
@@ -69,20 +68,14 @@
 			    	<label for="Descripcion">Telefono</label>
 		      		<input  type="text" class="form-control" id="telefono"  disabled=""></input> 
 			    </div>
-			    
-
-		    </div>
-
-		    		     
+		    </div>		    		     
 	 	</div>
-
 	   	<div class="form-row"> 
 				<div class="col-md-1">
 				</div>
 				<div class="col-md-10">
 					 <header class="text-center">Integrantes</header>
 					<div id="TablaIntegrantes">
-						
 					</div>	  					     
 				</div>
 				<div class="col-md-1">
@@ -94,11 +87,8 @@
       </div>
     </div>
   </div>
-</div>
-
- 
+</div> 
 <!-- Eliminar -->	
-
 <div class="modal fade" id="EliminarEquipos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

@@ -64,12 +64,12 @@
               </div>
               <form class="miperfil" id="miperfil" method="post">
                  <div class="form-group">
-                    <label for="exampleInputEmail1" class="texto text-success">Usuario</label>
+                    <label for="exampleInputEmail1" class="texto text-success">Correo</label>
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                       </div>
-                      <input type="text" class="form-control" id="exampleInputEmail1" name="usuario" aria-describedby="emailHelp" placeholder="labsol@gmail.com">
+                      <input type="text" class="form-control" id="exampleInputEmail1" name="usuario" aria-describedby="emailHelp" placeholder=" labsol@cozcyt.gob.mx ">
                     </div> 
                     
                   </div>
@@ -79,7 +79,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-lock"></i></span>
                       </div>
-                      <input type="password" class="form-control" id="exampleInputPassword1" name="contra" placeholder="Ingresar contraseña">
+                      <input type="password" class="form-control" id="exampleInputPassword1" name="contra" placeholder="**********">
                     </div>
 
                 
