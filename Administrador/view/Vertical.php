@@ -54,15 +54,15 @@
 	       	<form class="form" id="RV" method="POST">
 			  <div class="form-group">
 			    <label>Nombre*</label>
-			    <input type="text"   id="NombreVertical"  name="NombreVertical" class="form-control letras" placeholder="Vertical">
+			    <input type="text"   id="NombreVertical"  name="NombreVertical" class="form-control " placeholder="Vertical">
 			  </div>
 			  <div class="form-group">
 			    <label >Descripcion*</label>
-			    <textarea class="form-control letras" id="DescripcionVertical"  name="DescripcionVertical" rows="2" placeholder="Descripcion"></textarea>
+			    <textarea class="form-control " id="DescripcionVertical"  name="DescripcionVertical" rows="2" placeholder="Descripcion"></textarea>
 			  </div>
 			  <div class="form-group">
 			    <label>Asesoria*</label>
-			    <textarea class="form-control letras" id="AsesoriaVertical"  name="AsesoriaVertical" rows="2" placeholder="Asesoria" ></textarea>
+			    <textarea class="form-control" id="AsesoriaVertical"  name="AsesoriaVertical" rows="2" placeholder="Asesoria" ></textarea>
 			  </div>
 		      <div class="input-group mb-3"> 
 			    <div class="input-group-prepend">
@@ -111,20 +111,20 @@
 	       	<form class="form" id="EV" method="POST">
 			  <div class="form-group">
 			    <label for="inputNombre">Nombre*</label> 
-			    <input type="text" class="form-control letras" id="eNv" name="eNv" placeholder="Hackaton">
+			    <input type="text" class="form-control " id="eNv" name="eNv" placeholder="Hackaton">
 			  </div>
 
 			  <div class="form-group">
 			    <label >Descripcion*</label>
-			    <textarea class="form-control letras" id="eDv" name="eDv" rows="2" placeholder="Descripcion"  ></textarea>
+			    <textarea class="form-control " id="eDv" name="eDv" rows="2" placeholder="Descripcion"  ></textarea>
 			  </div>
 			  <div class="form-group">
 			    <label >Asesoria*</label>
-			    <textarea class="form-control letras" id="eAv" name="eAv" rows="2"  placeholder="Asesoria"></textarea>
+			    <textarea class="form-control " id="eAv" name="eAv" rows="2"  placeholder="Asesoria"></textarea>
 			  </div>
 		    <div class="input-group mb-3"> 
 			  <div class="input-group-prepend">
-			    <label class="input-group-text letras" >Edición</label>
+			    <label class="input-group-text " >Edición</label>
 			  </div>
 			  <select required class="custom-select" id="eHv" name="eHv">
 			    <option selected>Selecciona...</option>
@@ -169,7 +169,6 @@
 	      </div>
 	    </div>
 	  </div>
-	</div>
-	<script src="../js/letras.js"></script>
+	</div> 
   <script src="../modulos/vertical/ValidatorVertical.js"></script>
  

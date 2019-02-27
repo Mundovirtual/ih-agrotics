@@ -23,6 +23,7 @@ $con = new Conexion();
         </meta>
     </head>
     <body>
+      
         <div class="ventanaprincipal">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="form-group">
@@ -70,7 +71,7 @@ $con = new Conexion();
                         <li class="nav-item">
                             <a class="nav-link" href="principal/Lideres.html">
                                 <i class="fas fa-user-circle"></i>
-                                LÍDERES
+                                ECOSISTEMA
                             </a>
                         </li>
                         <li class="nav-item">
@@ -83,6 +84,17 @@ $con = new Conexion();
                     </ul>
                 </div>
             </nav>
+
+
+             <div style="padding-top:100px; padding-bottom: 20px; background-color:#E6E6E6;" align="center">
+                <img class="img-responsive" src="principal/imagenes/COZCYT.png" width="300" height="50"> 
+                <img class="img-responsive" src="principal/imagenes/labsol/iwpng.png" width="150" height="40"> 
+                <img class="img-responsive" src="principal/imagenes/labsol/LogoLabsol.png" width="170" height="40"> 
+                <img class="img-responsive" src="principal/imagenes/InnovaHackblanco.png" width="150" height="25"> 
+                <img class="img-responsive" src="principal/imagenes/innovationLabs.png" width="150" height="40"> 
+             </div>
+
+
             <div class="verticales">
 
                 <div class="form-group textoImagen">
@@ -189,14 +201,7 @@ $con = new Conexion();
                                 </h5>
                                 <p>
                                     Seras asesorado por mentores con gran experiencia en las diferentes areas...
-                                </p>
-                               <!-- <div class="cajaboton">
-                                    <div class="boton">
-                                        <a href="#">
-                                            CONOCE MÁS...
-                                        </a>
-                                    </div>
-                                </div>-->
+                                </p> 
                             </div>
                             <div class="col-lg-6">
                                 <h5 class="titulo">

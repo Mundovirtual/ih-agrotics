@@ -43,7 +43,7 @@
      }
 
     }/*Cierre del metodo validacion*/
-    function busqueda($u,$c){
+    function busqueda($u,$c){ 
     	require_once '../../conexion/abrirconexion.php';
 
     	$con = new Conexion();

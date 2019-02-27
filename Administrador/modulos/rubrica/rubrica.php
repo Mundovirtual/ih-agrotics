@@ -6,9 +6,10 @@ if (isset($_POST['idVertical']) && isset($_POST['Rubricas'])) {
   $Rubricas=$_POST['Rubricas'];
   $reemplazar= str_replace('%5B%5D=', '', $Rubricas); 
   $reemplazar= str_replace('&', ',', $reemplazar);  
+  /*Reemplazar saltos de linea*/
+  $reemplazar= str_replace('%0D%0A', '', $reemplazar); 
   $reemplazar= str_replace('rubricas', '', $reemplazar); 
-  $array = explode(",", $reemplazar); 
-
+  $array = explode(",", $reemplazar);  
   $msj="";
   $Aux="0";
   if ($id=='s') {

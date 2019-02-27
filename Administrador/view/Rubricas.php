@@ -162,4 +162,4 @@
  
   
 <script src="../modulos/rubrica/rubrica.js"></script>
-<script src="../js/letras.js"></script>
+ 

@@ -9,6 +9,7 @@
     <title>Registro</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <link rel="stylesheet" href="css/registro.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
@@ -43,6 +44,28 @@
     <form class="formulario" name="formulario" id="formulario" method="post">
       
       <div class="container">
+
+        <div class="form-row">
+               <div class="form-group col-md-6">
+                <label for="#">Rol :<small class="text-danger"> (Required)</small></label>
+                <select class="form-control" id="rol" name="rol">
+                  <option>Seleccionar Rol</option>
+                <?php 
+                require_once 'conexion/abrirconexion.php';
+                $con = new Conexion();
+                $sql = "SELECT * FROM `rol`";
+                $resultado = $con->query($sql);
+                while($row = mysqli_fetch_array($resultado)){
+                  ?>
+                  <option value="<?php echo $row['idRol']?>"><?php echo $row['Rol']?></option>
+                  <?php
+                }
+                ?>
+                </select>
+               </div>
+             </div>
+
+
         <div class="form-group">
           <h1 class="text-white"><i class="far fa-address-card"></i> Datos personales</h1>
         </div>
@@ -203,26 +226,7 @@
                   </div>
              </div>
              
-             <div class="form-row">
-               <div class="form-group col-md-6">
-                <label for="#">Rol :<small class="text-danger"> (Required)</small></label>
-                <select class="form-control" id="rol" name="rol">
-                  <option>Seleccionar Rol</option>
-                <?php 
-                require_once 'conexion/abrirconexion.php';
-                $con = new Conexion();
-                $sql = "SELECT * FROM `rol`";
-                $resultado = $con->query($sql);
-                while($row = mysqli_fetch_array($resultado)){
-                  ?>
-                  <option value="<?php echo $row['idRol']?>"><?php echo $row['Rol']?></option>
-                  <?php
-                }
-                ?>
-                </select>
-               </div>
-             </div>
-
+             
              <div class="form-row">
                    <div class="form-group col-md-6">
                      <label for="#">Contraseña :<small class="text-danger"> (Required)</small></label>

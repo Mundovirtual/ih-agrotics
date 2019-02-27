@@ -51,7 +51,7 @@
               <h1 class="text-dark text-center shadow-none p-3 mb-5 bg-light rounded">AGENDA</h1>
             </div>
             <div class="img-portada col-xs-12 col-lg-8 bg-dark">
-              <img src="imagenes/labsol/iw.jpg" alt="">
+              <img src="imagenes/esalud/agenda.jpg" alt="" height="570">
             </div>
           </div>
          </div>
@@ -91,15 +91,7 @@
                        </div>
                   </div>
                   <div class="col-lg-2">
-                    <h2>Quick Links</h2>
-                    <div class="form-group">
-                      <ul>
-                        <li><a href="index.php">Inicio</a></li>
-                        <li><a href="Agenda.php">Agenda</a></li>
-                        <li><a href="index.php">Invitados</a></li>
-                        <li><a href="index.php">Taller de emprendimiento</a></li>
-                      </ul>
-                    </div>
+              
                   </div>
                   <div class="col-lg-4">
                     <h2>Contáctanos</h2>

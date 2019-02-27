@@ -35,11 +35,7 @@ include_once("conexion.php");
 	 		$Conexion->mysql_close();
 
 	 	}
-
-	 	
-
-  		 
-
+ 
 	 }
 	 
 	 function sanitizar($text){ 		

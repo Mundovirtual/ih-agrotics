@@ -38,17 +38,10 @@ jQuery(document).on('submit', "#ModalRegistroHackaton", function(event){
 function ActualizarHackaton(idd,Edicion,IH,FlP,TH){   
 	actualizar =idd;  
  	$("#EditarNombreHack").val(Edicion);
-	$("#EditarInicioHack").val(moment(IH).format('MM/DD/YYYY'));
-	$("#EditarEntregaProyectos").val(moment(FlP).format('MM/DD/YYYY'));
-	$("#EditarFinHack").val(moment(TH).format('MM/DD/YYYY')); 
- 
- alert(moment(IH).format('MM/DD/YYYY'));
- alert(moment(FlP).format('MM/DD/YYYY'));
- alert(moment(TH).format('MM/DD/YYYY'));
-
-
- 
-}
+	$("#EditarInicioHack").val(IH);
+	$("#EditarEntregaProyectos").val(FlP);
+	$("#EditarFinHack").val(TH); 
+ }
  
 function ActualizandoHackaton() { 
 	 

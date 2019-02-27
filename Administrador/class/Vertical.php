@@ -42,12 +42,11 @@
 	 	}
 
 	 	function ActualizarVertical($id,$Nombre,$Descripcion,$asesoria,$Hackaton){
-	 		$id=sanitizar($id);
+	 		$id=$id;
 	 		$Nombre=sanitizar($Nombre);
 	 		$Descripcion=sanitizar($Descripcion);
 	 		$asesoria=sanitizar($asesoria);
-	 		$Hackaton=sanitizar($Hackaton);
-
+	 		$Hackaton=$Hackaton;
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 	 		$sql="UPDATE `vertical` SET `Nombre`='$Nombre',`Descripcion`='$Descripcion',`InfAsesoria`='$asesoria',`HackatonEdicion_id`='$Hackaton' WHERE `id`='$id'";
@@ -60,8 +59,7 @@
 
 	 	function EliminarVertical($id){
 
-	 		$id=sanitizar($id);
-
+	 		$id=$id;
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
 
@@ -76,8 +74,9 @@
  
 	 }
  
-	function sanitizar($text){ 		
-  		return filter_var($text, FILTER_SANITIZE_STRING);
+	function sanitizar($text){ 
+		$cadena=filter_var($text, FILTER_SANITIZE_STRING);		
+  		return trim(preg_replace('/\s+/', ' ', $cadena));;
  	}  
  
  

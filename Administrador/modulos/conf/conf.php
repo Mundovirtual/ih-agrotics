@@ -62,21 +62,21 @@ if (isset($_POST['Registro'])) {
 		/*Insertar registros uno*/
 		$val=$Validar->validar($idHack,$idFaseUno);
 		 if (empty($val)) { 
-		 	$registrar=$Validar->Insertar(json_decode($idHack),json_decode($idFaseUno),json_decode($valFaseUno));
+		 	$registrar=$Validar->Insertar($idHack,$idFaseUno,$valFaseUno);
 
 		 	$msj="1";
 		}
 		/*Fase dos*/
 		$val=$Validar->validar($idHack,$idFaseDos);
 		 if (empty($val)) 	{ 
-		 	$registrar=$Validar->Insertar(json_decode($idHack),json_decode($idFaseDos),json_decode($valFaseDos));
+		 	$registrar=$Validar->Insertar($idHack,$idFaseDos,$valFaseDos);
 
 		 	$msj="1";
 		}
 		/*Fase tres*/
 		$val=$Validar->validar($idHack,$idFaseTres);
 		 if (empty($val)) 	{ 
-		 	$registrar=$Validar->Insertar(json_decode($idHack),json_decode($idFaseTres),json_decode($valFaseTres));
+		 	$registrar=$Validar->Insertar($idHack,$idFaseTres,$valFaseTres);
 
 		 	$msj="1";
 		}
