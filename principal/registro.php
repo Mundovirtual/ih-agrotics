@@ -75,8 +75,16 @@
                      <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar el Nombre" required="">
                   </div>
                   <div class="form-group col-md-6" id="nombre">
-                     <label for="inputPassword4">Apellidos :<small class="text-danger"> (Required)</small>:</label>
-                     <input type="text" name="apellidos" class="form-control" id="apellidos" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellidos" required="">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="inputPassword4">Apellido-P:<small class="text-danger"> (Required)</small>:</label>
+                        <input type="text" name="apellidop" class="form-control" id="apellidop" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellido paterno" required="">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputPassword4">Apellidos-M:<small class="text-danger"> (Required)</small>:</label>
+                        <input type="text" name="apellidom" class="form-control" id="apellidom" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellido Materno" required="">
+                      </div>
+                    </div>
                   </div>
              </div>
              <div class="form-row">
