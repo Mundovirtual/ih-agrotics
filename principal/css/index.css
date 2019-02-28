@@ -476,7 +476,7 @@ div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
 		position: absolute;
 		margin-top: 90px;
 	    top: 15%;
-	    color: #fff;
+	    color: #000;
 	    left: 3%;
 	    font-size: 90%;
 	}
@@ -484,7 +484,7 @@ div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
 	div.textoImagen h3.textoencima2{
 		position: absolute;
 	    top: 25%;
-	    color: #fff;
+	    color: #000;
 	    left: 3%;
 	    font-size: 70%;
 	    margin-top: 90px;

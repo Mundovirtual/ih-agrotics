@@ -8,7 +8,7 @@ $con = new Conexion();
     <head>
         <meta charset="utf-8">
             <title>
-                Menu principal
+                innovaweekend
             </title>
             <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
             <link rel="shortcut icon" href="principal/imagenes/labsol/banner1b.jpeg" type="image/x-icon">
@@ -98,21 +98,9 @@ $con = new Conexion();
             <div class="verticales">
 
                 <div class="form-group textoImagen">
-                    <div class="carousel slide" data-ride="carousel" id="carouselExampleSlidesOnly">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img alt="First slide" class="img-responsive d-block w-100" src="principal/imagenes/labsol/iw.jpg">
-                                </img>
-                            </div>
-                            <div class="carousel-item">
-                                <img alt="Second slide" class="d-block w-100" src="principal/imagenes/labsol/iw.jpg">
-                                </img>
-                            </div>
-                            <div class="carousel-item">
-                                <img alt="Third slide" class="d-block w-100" src="principal/imagenes/labsol/iw.jpg">
-                                </img>
-                            </div>
-                        </div>
+                    <div class="carousel " >
+			            <img  class="img-responsive d-block mx-auto" src="principal/imagenes/esalud/esalud.jpg"  >
+                        </img>
                     </div>
                     <?php 
                            
