@@ -47,11 +47,11 @@
          <div class="container-portada">
 
           <div class="row align-items-center">
-            <div class="col-lg-3 text-center">
-              <h1 class="text-dark text-center shadow-none p-3 mb-5 bg-light rounded">AGENDA</h1>
+            <div class="agenda col-lg-3 text-center">
+              <h1 class="text-dark text-center shadow p-3 mb-5  rounded">AGENDA</h1>
             </div>
-            <div class="img-portada col-xs-12 col-lg-8 bg-dark">
-              <img src="imagenes/esalud/agenda.jpg" alt="" height="570">
+            <div class="img-portada col-xs-12 col-lg-8">
+              <img src="imagenes/esalud/agenda.jpg" class="img-thumbnail shadow">
             </div>
           </div>
          </div>

@@ -46,7 +46,7 @@ div.container-portada div.row div.img-portada{
 	height: 550px;
 	margin:auto;
     margin-top: 15px;
-    background-color: red;
+    background-color: #fff;
 }
 
 div.container-portada div.row div.img-portada img{
@@ -148,16 +148,15 @@ div.datosempresa div.col-lg-4 div.imagen1 img.imagen{
 
 	/*Imagen Agenda*/
 	div.container-portada{
-		margin-top: 117px;
-		background-color: green;
+		margin-top: 100px;
 	}
-
 	div.container-portada div.row div.img-portada{
 		width: 100%;
 	}
 
 	div.container-portada div.row div.img-portada img{
 		height: 470px;
+		padding: 0px;
 	}
 
 

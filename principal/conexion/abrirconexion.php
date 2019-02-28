@@ -4,7 +4,7 @@ class Conexion extends mysqli
  private $HOST = "localhost";
     private $USER = "root";
     private $PASS = ""; 
-    private $BASE = "hacky"; 
+    private $BASE = "hackyy"; 
     public function __construct()
     {
         parent::__construct($this->HOST, $this->USER, $this->PASS, $this->BASE);
