@@ -15,7 +15,7 @@
   	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="form-group">
             <div class="row col-md-12">
-              <a class="navbar-brand" href="../index.php" class="img-responsive"><img src="imagenes/logoinnovahack.png" class="img-responsive" width="30%"></a>
+              <a class="navbar-brand" href="../index.php" class="img-responsive"><img class="img-responsive"  src="imagenes/logoinnovahack.png" class="img-responsive" width="30%"></a>
             </div>
           </div>
             <a class="navbar-brand" href="../index.php"><i class="fas fa-sign-in-alt"></i> INICIO</a>
@@ -51,7 +51,7 @@
               <h1 class="text-dark text-center shadow-none p-3 mb-5 bg-light rounded">AGENDA</h1>
             </div>
             <div class="img-portada col-xs-12 col-lg-8 bg-dark">
-              <img src="imagenes/esalud/agenda.jpg" alt="" height="570">
+              <img class="img-responsive"  src="imagenes/esalud/agenda.jpg">
             </div>
           </div>
          </div>

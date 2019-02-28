@@ -8,7 +8,7 @@ $con = new Conexion();
     <head>
         <meta charset="utf-8">
             <title>
-                innovaweekend
+                Menu principal
             </title>
             <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
             <link rel="shortcut icon" href="principal/imagenes/labsol/banner1b.jpeg" type="image/x-icon">
@@ -23,7 +23,6 @@ $con = new Conexion();
         </meta>
     </head>
     <body>
-      
         <div class="ventanaprincipal">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="form-group">
@@ -71,7 +70,7 @@ $con = new Conexion();
                         <li class="nav-item">
                             <a class="nav-link" href="principal/Lideres.html">
                                 <i class="fas fa-user-circle"></i>
-                                ECOSISTEMA
+                                LÍDERES
                             </a>
                         </li>
                         <li class="nav-item">
@@ -85,51 +84,67 @@ $con = new Conexion();
                 </div>
             </nav>
 
-
-             <div style="padding-top:100px; padding-bottom: 20px; background-color:#E6E6E6;" align="center">
-                <img class="img-responsive" src="principal/imagenes/COZCYT.png" width="300" height="50"> 
-                <img class="img-responsive" src="principal/imagenes/labsol/iwpng.png" width="150" height="40"> 
-                <img class="img-responsive" src="principal/imagenes/labsol/LogoLabsol.png" width="170" height="40"> 
-                <img class="img-responsive" src="principal/imagenes/InnovaHackblanco.png" width="150" height="25"> 
-                <img class="img-responsive" src="principal/imagenes/innovationLabs.png" width="150" height="40"> 
+             <div style="padding-top:100px; padding-bottom: 5px; background-color:#E6E6E6;" align="center">
+                <img class="img-responsive" src="principal/imagenes/esalud/logosconvocantes.png">  
              </div>
-
-
-            <div class="verticales">
-
-                <div class="form-group textoImagen">
-                    <div class="carousel " >
-			            <img  class="img-responsive d-block mx-auto" src="principal/imagenes/esalud/esalud.jpg"  >
-                        </img>
-                    </div>
-                    <?php 
+                
+             <?php 
                            
-                           $sql = "SELECT `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack` FROM `hackatonedicion` where `status`='1'";
-                           $resultado = $con->query($sql);
-                          $fechas= mysqli_fetch_array($resultado);
-                          if (!empty($fechas)) { 
-                                $hoy=date('Y-m-d') ."\n"; 
-                                $Flimit=$fechas['1']; 
+               $sql = "SELECT `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack` FROM `hackatonedicion` where `status`='1'";
+               $resultado = $con->query($sql);
+              $fechas= mysqli_fetch_array($resultado);
+              if (!empty($fechas)) { 
+                    $hoy=date('Y-m-d') ."\n"; 
+                    $Flimit=$fechas['1']; 
 
-                                if($Flimit>$hoy){
-                                 ?>
-                                   <h1 class="textoencima1">
-                                        Registra tu equipo
-                                    </h1>
-                                    <h3 class="textoencima2">
-                                        No te quedes fuera de este gran evento,
-                                        <a href="principal/registro.php">
-                                            da clic aquí
-                                        </a>
-                                    </h3>
-                                 <?php
-                                }                                  
-                            }
-  
-                           ?>
-                   
+                    if($Flimit>$hoy){
+                     ?>
+                        <div>
+                              <div class="col-lg-12">
+                            <a href="principal/registro.php">
+                                <img class="img-responsive mx-auto d-block img-thumbnail" src="principal/imagenes/esalud/registro.jpg" width="350" height="350">
+                            </a>
+                            </div>                          
+                        </div>                                    
+                             
+                     <?php
+                    }                                  
+                }
+
+               ?>       
+            <div>
+                <div class="form-group">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="img-responsive mx-auto rounded d-block" src="principal/imagenes/esalud/v1.jpg">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="img-responsive mx-auto rounded d-block" src="principal/imagenes/esalud/v2.png">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="img-responsive mx-auto rounded d-block" src="principal/imagenes/esalud/v3.png">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="img-responsive mx-auto rounded d-block" src="principal/imagenes/esalud/v4.png">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="img-responsive mx-auto rounded d-block" src="principal/imagenes/esalud/v5.png">
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                    
                 </div>
             </div>
+
             <div class="container-aliados">
                 <div class="row">
                     <div class="col-lg-12">
@@ -141,38 +156,29 @@ $con = new Conexion();
                 <div class="container-cuadro">
                     <div class="row">
                         <div class="contenedor">
-                           <img src="principal/imagenes/labsol/Logo PTLC_V1.jpg">
+                           <img class="img-responsive" src="principal/imagenes/labsol/Logo PTLC_V1.jpg">
                         </div>
                         <div class="contenedor">
-                           <img src="principal/imagenes/labsol/nuevo.png">
+                           <img class="img-responsive" src="principal/imagenes/labsol/nuevo.png">
                         </div>
                         <div class="contenedor">
-                           <img src="principal/imagenes/labsol/Logo_SF2018_2(1).png">
+                           <img class="img-responsive" src="principal/imagenes/labsol/Logo_SF2018_2(1).png">
+                        </div>
+                        <div class="contenedor">
+                           <img class="img-responsive" src="principal/imagenes/labsol/LABSOL1/Innovation Labs Network Logo.png">
+                        </div>
+                        <div class="contenedor">
+                           <img class="img-responsive" src="principal/imagenes/labsol/LABSOL1/LogoUAZ.jpg">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="contenedor">
-                           <img src="principal/imagenes/labsol/LABSOL1/Innovation Labs Network Logo.png">
-                        </div>
-                        <div class="contenedor">
-                           <img src="principal/imagenes/labsol/LABSOL1/Logo COZCYT Trabajemosunidos.png">
-                        </div>
-                        <div class="contenedor">
-                           <img src="principal/imagenes/labsol/LABSOL1/LogoLabsol.png">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="contenedor">
-                           <img src="principal/imagenes/labsol/LABSOL1/LogoUAZ.jpg">
-                        </div>
-                    </div>
+                     
+ 
                 </div>
             </div>
             <div class="InfoJueces">
                 <div class="row">
                     <div class="Imagen col-lg-5">
-                        <img src="principal/imagenes/labsol/iwpngblue.png" width="100%">
+                        <img class="img-responsive" src="principal/imagenes/labsol/iwpngblue.png">
                         </img>
                     </div>
                     <div class="Informacion col-lg-7">
@@ -189,7 +195,14 @@ $con = new Conexion();
                                 </h5>
                                 <p>
                                     Seras asesorado por mentores con gran experiencia en las diferentes areas...
-                                </p> 
+                                </p>
+                               <!-- <div class="cajaboton">
+                                    <div class="boton">
+                                        <a href="#">
+                                            CONOCE MÁS...
+                                        </a>
+                                    </div>
+                                </div>-->
                             </div>
                             <div class="col-lg-6">
                                 <h5 class="titulo">
@@ -394,33 +407,7 @@ $con = new Conexion();
                         </div>
                     </div>
                     <div class="col-lg-2">
-                        <h2>
-                            Quick Links
-                        </h2>
-                        <div class="form-group">
-                            <ul>
-                                <li>
-                                    <a href="index.php">
-                                        Inicio
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Agenda.php">
-                                        Agenda
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Lideres.html">
-                                        Invitados
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="index.php">
-                                        Taller de emprendimiento
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                    
                     </div>
                     <div class="col-lg-4">
                         <h2>
