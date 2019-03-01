@@ -1,8 +1,8 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>agenda</title>
+  <title>Lideres</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css"> 
   <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -66,32 +66,47 @@
     </div>
 
     <!--Fin Menu-->  
-        <div class="row">
-            <div class="col-md-12">
-                <div style="background-color:#E6E6E6;" align="center">
-                  <img class="img-responsive" src="imagenes/esalud/logosconvocantes.png" width="850">  
-                </div>
-            </div>
-        </div>
-        <hr>
-
- <div class="row">
+ <hr>
+ <br>
+  <div class="row">
     <div class="col-md-12">
       <div class="row">
-        <div class="col-md-1">
-          
+        <div class="col-md-2">
         </div>
-        <div class="col-md-10">
-          <h3 class="text-dark display-5 text-center">
-            Agenda
+        <div class="col-md-8">
+          <h3 class="text-dark display-4 text-center">
+            Líderes
           </h3>
-          <img class="img-responsive mx-auto d-block"  src="imagenes/esalud/agenda.jpg" width="800">
-          <hr>
+          <br>
+          <div class="row">
+            <div class="col-md-4">
+               <img class="img-responsive" src="imagenes/labsol/Logo PTLC_V1.jpg" width="200" height="100">
+            </div>
+            <div class="col-md-4">
+              <img class="img-responsive" src="imagenes/labsol/nuevo.png" width="250" height="70">
+            </div>
+            <div class="col-md-4">
+               <img class="img-responsive" src="imagenes/labsol/Logo_SF2018_2(1).png" width="170" height="100">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+               <img class="img-responsive" src="imagenes/labsol/LABSOL1/Innovation Labs Network Logo.png" width="200" height="100">
+            </div>
+            <div class="col-md-4">
+               <img class="img-responsive" src="imagenes/labsol/LABSOL1/LogoUAZ.jpg" width="150" height="100">
+            </div>
+            <div class="col-md-4">
+              <img class="img-responsive" src="imagenes/labsol/LABSOL1/Template_Banner03_AGREGARLOGO.png" width="150" height="100">
+            </div>
+          </div>
+          <hr>  
         </div>
-        
+        <div class="col-md-2">
+        </div>
       </div>
     </div>
-
   </div>
 
 
@@ -289,19 +304,3 @@
 
 
 
-
-<!--
- 
- 
-         <div class="container-portada">
-
-          <div class="row align-items-center">
-            <div class="col-lg-3 text-center">
-              <h1 class="text-dark text-center shadow-none p-3 mb-5 bg-light rounded">AGENDA</h1>
-            </div>
-            <div class="img-portada col-xs-12 col-lg-8 bg-dark">
-              <img class="img-responsive"  src="imagenes/esalud/agenda.jpg">
-            </div>
-          </div>
-         </div>
- 

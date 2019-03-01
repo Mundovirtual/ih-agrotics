@@ -10,43 +10,78 @@
   <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
   <link rel="shortcut icon" href="imagenes/labsol/banner1b.jpeg" type="image/x-icon">
 </head>
-
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="form-group">
-          <div class="row col-md-12">
-            <a class="navbar-brand" href="../index.php" class="img-responsive"><img src="imagenes/logoinnovahack.png" class="img-responsive" width="30%"></a>
-          </div>
-        </div>
-          <a class="navbar-brand" href="../index.php"><i class="fas fa-sign-in-alt"></i> INICIO</a>
-          <button class="boton navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-               <ul class="navbar-nav">
-                  <li class="nav-item active">
-                     <a class="nav-link" href="InnovaWeeKend.html"><i class="fas fa-file-alt"></i> INNOVAWEEKEND <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="InnovaHack.html"><i class="far fa-address-book"></i> INNOVAHACK</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="Agenda.php"><i class="far fa-address-book"></i> AGENDA</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="Lideres.html"><i class="fas fa-user-lock"></i> LÍDERES</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="miperfil.php"><i class="fas fa-user-plus"></i> MI PERFIL</a>
-                  </li>
-       
-               </ul>
-          </div>
-       </nav>
-
+ 
 <body>
+    <!--Menu-->
+    <div class="row">
+        <div class="col-md-12" >
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <img class="img-responsive" src="imagenes/logoinnovahack.png" width="150"/>    
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 40%;" >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                   <a class="navbar-brand" href="../index.php">
+                      <i class="fas fa-sign-in-alt"></i>
+                      Inicio
+                   </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="innovaweekend.php">
+                        <i class="fas fa-file-alt"></i>
+                        Innovaweekend
+                        <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="InnovaHack.php">
+                        <i class="far fa-address-book"></i>
+                        Innovahack
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Agenda.php">
+                          <i class="far fa-address-book">
+                          </i>
+                          Agenda
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Lideres.php">
+                          <i class="fas fa-user-circle"></i>
+                          Lideres
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="miperfil.php">
+                          <i class="fas fa-user-plus">
+                          </i>
+                          Mi perfil
+                      </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+    </div>
 
+    <!--Fin Menu
 
+      Banner--> 
+
+       <div class="row">
+            <div class="col-md-12">
+                <div style="background-color:#E6E6E6;" align="center">
+                  <img class="img-responsive" src="imagenes/esalud/logosconvocantes.png" width="850">  
+                </div>
+            </div>
+        </div>
+
+ <!--Fin banner
+
+    --> 
        <div class="container-portada bg-dark">
 
         <div class="row align-items-center">

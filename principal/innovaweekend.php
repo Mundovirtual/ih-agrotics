@@ -1,10 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>agenda</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.min.css"> 
+	<meta charset="UTF-8">
+	<title>Innovaweekend</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css"> 
   <link rel="stylesheet" href="css/fontawesome.min.css">
   <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
   <link rel="shortcut icon" href="imagenes/labsol/banner1b.jpeg" type="image/x-icon">
@@ -74,28 +74,46 @@
             </div>
         </div>
         <hr>
-
- <div class="row">
+  <div class="row">
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-1">
-          
         </div>
         <div class="col-md-10">
-          <h3 class="text-dark display-5 text-center">
-            Agenda
-          </h3>
-          <img class="img-responsive mx-auto d-block"  src="imagenes/esalud/agenda.jpg" width="800">
-          <hr>
+         <h2 align="center">Presentación</h2>
+           <p>El evento Innova Hack (IH) es un esfuerzo del Consejo Zacatecano de Ciencia, Tecnología e Innovación para fortalecer estrategias que impulsen la consolidación de proyectos tecnológicos para cualquiera de los sectores productivos el Estado; adoptando la nueva cultura de innovación y emprendimiento de nuestros jovenes que con su talento garantizan el desarrollo de proyectos sorprendentes.
+          </p>
+          <p>
+            La planeación organizacional se ha concebido con la misión de impulsar actividades y metodologías que formalicen la innovación tecnológica en instancias públicas, privadas, civiles y ciudadanas con las ventajas que la innovación abierta genera; de manera semestral se llevarán a cabo eventos focalizados a resolver problematicas de  instancias en particular llamados “Innova Hack” (IH).
+          </p> 
         </div>
-        
+        <div class="col-md-1">
+        </div>
+      </div>
+      <div class="row"> 
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-3">
+          <h2 align="center">Objetivos</h2>
+           <p> 
+            Integrar equipos talentosos de especialistas que analicen las necesidades que se estan intentando resolver dentro de las verticales de desarrollo que se generarán en base a las instancias públicas, privadas y sociales que se posicionen como futuros beneficiarios de los resultados del evento.
+           </p>
+        </div>
+        <div class="col-md-3">
+          <h2 align="center">Misión</h2>
+           <p>
+            Alcanzar de manera eficiente, novedosa e innovadora el desarrollo de soluciones tecnológicas abiertas que resuelvan las debilidades de las instancias que se integren como aliados, beneficiarios y protagonistas del evento.
+           </p>
+        </div>
+        <div class="col-md-3">
+          <h2 align="center">Estructura</h2>
+          <p>
+            En base a las debilidades a resolver y estrategias de innovación a implementar de las instancias que se integren como beneficiarios, se generará la estructura de temas transversales y de los cuales se derivan verticales específicas.
+          </p> 
+        </div>
       </div>
     </div>
-
   </div>
-
-
-
           <!--Footer-->
             <div class="row" style="background-color: #000;color: white; ">
                 <div class="col-md-12">
@@ -271,37 +289,9 @@
             </div>
          <!--fin Footer-->  
     
-  
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+	
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
- 
- 
-         <div class="container-portada">
-
-          <div class="row align-items-center">
-            <div class="col-lg-3 text-center">
-              <h1 class="text-dark text-center shadow-none p-3 mb-5 bg-light rounded">AGENDA</h1>
-            </div>
-            <div class="img-portada col-xs-12 col-lg-8 bg-dark">
-              <img class="img-responsive"  src="imagenes/esalud/agenda.jpg">
-            </div>
-          </div>
-         </div>
- 

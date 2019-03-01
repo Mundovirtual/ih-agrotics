@@ -1,39 +1,7 @@
-.collapse ul li
-{
-    padding: 8px;
-}
-
-nav.navbar{
-	border-bottom: 5px solid #1293d4;
-	width: 100%;
-	left: 0;
-	top: 0;
-	z-index: 100;
-	position: fixed;
-}
-nav.navbar div.collapse{
-	float: right;
-}
-nav.navbar a.navbar-brand{
-	color: #1293d4;
-	font-weight: bold;
-}
-.collapse ul.navbar-nav li.nav-item a.nav-link{
-	color: #fff;
-}
-div.contenedor{
-	 width: 100%;
-	 position: relative;
-	 opacity: .9;
-}
-a.nav-link:hover{
-	color: #ccc;
-	font-weight: bold;
  
-}
 /*PORTADA ESTRATEGIA*/
 div.container-portada{
-	margin-top: 30px;
+	margin-top: 0px;
 	height: 640px;
 	max-height:640 px;
 	width: 100%;
