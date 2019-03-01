@@ -49,7 +49,7 @@
                <div class="form-group col-md-6">
                 <label for="#">Rol :<small class="text-danger"> (Required)</small></label>
                 <select class="form-control" id="rol" name="rol">
-                  <option>Seleccionar Rol</option>
+                  <option> -- Seleccionar Rol --</option>
                 <?php 
                 require_once 'conexion/abrirconexion.php';
                 $con = new Conexion();
@@ -135,10 +135,11 @@
                        <div class="col-xs-4 col-md-4">
                         <label> Dia</label>
                         <select name="dia" class="form-control">
+                          <option value="selected">-- Seleccionar--</option>
                           <?php
                           for ($i=1; $i<=31; $i++) {
                               if ($i == date('j'))
-                                  echo '<option value="'.$i.'" selected>'.$i.'</option>';
+                                  echo '<option value="'.$i.'">'.$i.'</option>';
                               else
                                   echo '<option value="'.$i.'">'.$i.'</option>';
                           }
@@ -149,6 +150,7 @@
                        <div class="col-xs-4 col-md-4">
                         <label>Mes</label>
                         <select name="mes" class="form-control">
+                          <option value="selected">-- Seleccionar--</option>
                            <option value="1">Enero</option>
                            <option value="2">Febrero</option>
                            <option value="3">Marzo</option>
@@ -167,10 +169,11 @@
                        <div class="col-xs-4 col-md-4">
                         <label>Año</label>
                            <select name="ano" class="form-control">
+                            <option value="selected">-- Seleccionar--</option>
                             <?php
                             for($i=date('o'); $i>=1910; $i--){
                                 if ($i == date('o'))
-                                    echo '<option value="'.$i.'" selected>'.$i.'</option>';
+                                    echo '<option value="'.$i.'">'.$i.'</option>';
                                 else
                                     echo '<option value="'.$i.'">'.$i.'</option>';
                             }
@@ -186,7 +189,7 @@
                   <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Sexo :<small class="text-danger"> (Required)</small></label>
                      <select id="sexo" class="form-control" name = "sexo">
-                      <option>Seleccionar sexo</option>
+                      <option>-- Seleccionar sexo --</option>
                      <?php 
                      include_once 'conexion/abrirconexion.php';
                      $con = new Conexion();
@@ -203,7 +206,7 @@
                   <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Tallas :<small class="text-danger"> (Required)</small></label>
                      <select class="form-control" id="talla" name="talla">
-                       <option>Seleccionar talla</option>
+                       <option>-- Seleccionar talla --</option>
                      
                       <?php 
                       require_once 'conexion/abrirconexion.php';

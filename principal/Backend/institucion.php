@@ -8,7 +8,7 @@
 			     <div class="input-group">
 			     <span class="input-group-addon btn btn-danger" data-toggle = "modal" id="" data-target = "#miModal"><i class="fas fa-external-link-alt fa-1x">Agregar</i></span>
 			     <select id="institucion" name="institucion" class="form-control">
-				   <option>Seleccionar Institucion</option>
+				   <option value="selected">-- Seleccionar Institución--</option>
 				     <?php 
 					while ($row = mysqli_fetch_array($resultado)) {
 						?>
