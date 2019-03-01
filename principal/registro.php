@@ -72,17 +72,17 @@
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="#">Nombre :<small class="text-danger"> (Required)</small></label>
-                     <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar el Nombre" required="">
+                     <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar Nombre" required="" onpaste = "alert('No permitido Ctrl + v');return false">
                   </div>
                   <div class="form-group col-md-6" id="nombre">
                     <div class="row">
                       <div class="col-md-6">
                         <label for="inputPassword4">Apellido-P:<small class="text-danger"> (Required)</small>:</label>
-                        <input type="text" name="apellidop" class="form-control" id="apellidop" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellido paterno" required="">
+                        <input type="text" name="apellidop" class="form-control" id="apellidop" onkeypress="return palabra(event)"  placeholder="Ingresar Apellido paterno" required="" onpaste = "alert('No permitido Ctrl + v');return false">
                       </div>
                       <div class="col-md-6">
                         <label for="inputPassword4">Apellidos-M:<small class="text-danger"> (Required)</small>:</label>
-                        <input type="text" name="apellidom" class="form-control" id="apellidom" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellido Materno" required="">
+                        <input type="text" name="apellidom" class="form-control" id="apellidom" onkeypress="return palabra(event)"  placeholder="Ingresar Apellido Materno" required="" onpaste = "alert('No permitido Ctrl + v');return false">
                       </div>
                     </div>
                   </div>
@@ -90,14 +90,14 @@
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="#">Email :<small class="text-danger"> (Required)</small> </label>
-                     <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com " required="">
+                     <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com " required="" onpaste = "alert('No permitido Ctrl + v');return false">
                      <div id="infoemail">
                      </div>
                   </div>
                   <div class="" id="checkemailresponse"></div>
                   <div class="form-group col-md-6">
                      <label for="#">Cel :<small class="text-danger"> (Required)</small></label>
-                     <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="953-155-01-93" required="">
+                     <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="953 155 01 93" required="" onpaste = "alert('No permitido Ctrl + v');return false">
                   </div>
              </div>
                    <div class="form-row">
@@ -113,7 +113,7 @@
              <div class="form-row" >
                   <div class="form-group col-md-6">
                      <label for="#">Facebook :</label>
-                     <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta">
+                     <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta" onpaste = "alert('No permitido Ctrl + v');return false">
                   </div>
                   <div class="form-group col-md-6">
 
@@ -127,14 +127,14 @@
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="#">Twitter :</label>
-                     <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta">
+                     <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta" onpaste = "alert('No permitido Ctrl + v');return false">
                   </div>
                   <div class="form-group col-md-6">
                      <label for="#">Fecha de Nacimiento :<small class="text-danger"> (Required)</small></label>
                      <div class="row">
                        <div class="col-xs-4 col-md-4">
                         <label> Dia</label>
-                        <select name="dia" class="form-control">
+                        <select name="dia" class="form-control" id="dia">
                           <option value="selected">-- Seleccionar--</option>
                           <?php
                           for ($i=1; $i<=31; $i++) {
@@ -149,7 +149,7 @@
 
                        <div class="col-xs-4 col-md-4">
                         <label>Mes</label>
-                        <select name="mes" class="form-control">
+                        <select name="mes" id="mes" class="form-control">
                           <option value="selected">-- Seleccionar--</option>
                            <option value="1">Enero</option>
                            <option value="2">Febrero</option>
@@ -168,7 +168,7 @@
 
                        <div class="col-xs-4 col-md-4">
                         <label>Año</label>
-                           <select name="ano" class="form-control">
+                           <select name="año" id="año" class="form-control">
                             <option value="selected">-- Seleccionar--</option>
                             <?php
                             for($i=date('o'); $i>=1910; $i--){
@@ -228,12 +228,12 @@
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Habilidades :</label>
-                     <input type="text" class="form-control" name="habilidades" id="habilidades" onkeypress="return sololetras(event)" placeholder="Ingresar habilidad">   
+                     <input type="text" class="form-control" name="habilidades" id="habilidades" onkeypress="return sololetras(event)" placeholder="Ingresar habilidad" onpaste = "alert('No permitido Ctrl + v');return false">   
                   </div>
 
                   <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Hobbies :</label>
-                     <input type="text" class="form-control" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies" onkeypress="return sololetras(event)">   
+                     <input type="text" class="form-control" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies" onkeypress="return sololetras(event)" onpaste = "alert('No permitido Ctrl + v');return false">   
                   </div>
              </div>
              
@@ -241,11 +241,11 @@
              <div class="form-row">
                    <div class="form-group col-md-6">
                      <label for="#">Contraseña :<small class="text-danger"> (Required)</small></label>
-                     <input type="password" class="form-control" name="contraseña"  id="password" placeholder="********" required="">
+                     <input type="password" class="form-control" name="contraseña"  id="password" placeholder="********" required="" onpaste = "alert('No permitido Ctrl + v');return false">
                   </div>
                   <div class="form-group col-md-6">
                      <label for="#">Confirmar contraseña :<small class="text-danger"> (Required)</small></label>
-                     <input type="password" class="form-control" name="contraseña" id="rpassword" id="contraseña" placeholder="********" required="">
+                     <input type="password" class="form-control" name="contraseña" id="rpassword" id="contraseña" placeholder="********" required="" onpaste = "alert('No permitido Ctrl + v');return false">
 
                   </div>
             </div>
@@ -364,213 +364,26 @@
       }
   }
 
+  function palabra(e) {
+      key = e.keyCode || e.which;
+      teclado = String.fromCharCode(key).toLowerCase();
+      letras = "abcdefghijklmnñopqrstuvwxyzáéíóú";
+      especiales = "8-9-32-37-38-46-164";
+      teclado_especial = false;
+      for (var i in especiales) {
+          if (key == especiales[i]) {
+              teclado_especial = true;
+              break;
+          }
+      }
+      if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+          return false;
+      }
+  }
+
   /*FIN DE VALIDACION DE CAMPO*/
   /*-------INICIO DE CAMBIAR COLOR A LOS IMPUT*/
-  $(function() {
-      $("#nombre").keyup(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('nombre').value;
-          if (capturado.length > 2) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-
-  $(function() {
-      $("#apellidos").keyup(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('apellidos').value;
-          if (capturado.length > 2) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-
-
-  $(function() {
-      $("#email").keyup(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('email').value;
-          if (capturado.length > 2) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-
-  $(function() {
-      $("#cel").keyup(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('cel').value;
-          if (capturado.length > 2) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-  $(function() {
-      $("#habilidades").keyup(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('habilidades').value;
-          if (capturado.length > 2) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-
-  $(function() {
-      $("#hobbies").keyup(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('hobbies').value;
-          if (capturado.length > 2) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-
-  $(function() {
-      $("#password").keyup(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('password').value;
-          if (capturado.length > 0) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-
-  $(function() {
-      $("#rpassword").keyup(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('rpassword').value;
-          if (capturado.length > 0) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-
-  $(function() {
-      $("#carrera").click(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('carrera').value;
-          if (capturado>0) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  }); 
-
-  $(function() {
-      $("#exampleFormControlSelect1").click(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('exampleFormControlSelect1').value;
-          if (capturado>0) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  }); 
-
-  $(function() {
-      $("#sexo").click(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('sexo').value;
-          if (capturado>0) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-
-  $(function() {
-      $("#talla").click(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('talla').value;
-          if (capturado>0) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-
-  $(function() {
+  $(function(){
       $("#rol").click(function() {
           var nuevoCSS = {
               "border": '1px solid #66ff33'
@@ -585,20 +398,249 @@
               $(this).css(error);
           }
       });
-  }); 
 
-  $(function() {
-      $("#fecha").click(function() {
+      $("#nombre").keyup(function() {
           var nuevoCSS = {
               "border": '1px solid #66ff33'
           };
           var error = {
               "border": '1px solid red'
           };
-          var capturado = document.getElementById('fecha').value;
+          var capturado = document.getElementById('nombre').value;
+          if (capturado.length > 2) {
               $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
       });
-  }); 
+
+      $("#apellidop").keyup(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('apellidop').value;
+          if (capturado.length > 3 && capturado.length <15) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#apellidom").keyup(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('apellidom').value;
+          if (capturado.length > 3 && capturado.length <15) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#email").keyup(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('email').value;
+          if (capturado.length > 5) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#cel").keyup(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('cel').value;
+          if (capturado.length == 10) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#facebook").keyup(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('facebook').value;
+          if (capturado.length == 10) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#twitter").keyup(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('twitter').value;
+          if (capturado.length == 10) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#dia").click(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('dia').value;
+          if (capturado>0) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#mes").click(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('mes').value;
+          if (capturado>0) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#año").click(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('año').value;
+          if (capturado>0) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#sexo").click(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('sexo').value;
+          if (capturado>0) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#talla").click(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('talla').value;
+          if (capturado>0) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#habilidades").keyup(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('habilidades').value;
+          if (capturado.length > 2) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#hobbies").keyup(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('hobbies').value;
+          if (capturado.length > 2) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#password").keyup(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('password').value;
+          if (capturado.length > 0) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+      $("#rpassword").keyup(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturado = document.getElementById('rpassword').value;
+          if (capturado.length > 0) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+
+
+  });/*CIERRE DE LA FUNCION*/ 
 
    
 

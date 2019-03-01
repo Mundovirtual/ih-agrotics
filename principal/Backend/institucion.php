@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
 	<?php
 	     class Institucion{
 	     	public function vis(){
@@ -26,10 +33,25 @@
 
 	     $inst = new Institucion();
 	     $inst->vis();
-
-	  
-	    		 
-	 
-	 
 	 
 	?>
+
+	<script type="text/javascript">
+			$("#institucion").click(function() {
+          var nuevoCSS = {
+              "border": '1px solid #66ff33'
+          };
+          var error = {
+              "border": '1px solid red'
+          };
+          var capturadoi = document.getElementById('institucion').value;
+          if (capturadoi>0) {
+              $(this).css(nuevoCSS);
+          } else {
+              $(this).css(error);
+          }
+      });
+	</script>
+	
+</body>
+</html>
