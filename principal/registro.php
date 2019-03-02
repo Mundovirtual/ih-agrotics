@@ -17,7 +17,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="Backend/funciones.js"></script>
   </head>
-  <body>
+  <body class="bg-dark">
     <?php include("Backend/modal_institucion.php");?>
     <?php include("Backend/modal_carrera.php");?>
     <div class="boton text-right">
@@ -45,11 +45,11 @@
       
       <div class="container">
 
-        <div class="form-row">
+        <div class="form-row justify-content-lg-center">
                <div class="form-group col-md-6">
                 <label for="#">Rol :<small class="text-danger"> (Required)</small></label>
                 <select class="form-control" id="rol" name="rol">
-                  <option> -- Seleccionar Rol --</option>
+                  <option value="0"> -- Seleccionar Rol --</option>
                 <?php 
                 require_once 'conexion/abrirconexion.php';
                 $con = new Conexion();
@@ -63,7 +63,7 @@
                 ?>
                 </select>
                </div>
-             </div>
+        </div>
 
 
         <div class="form-group">
@@ -72,32 +72,32 @@
              <div class="form-row">
                   <div class="form-group col-md-6">
                      <label for="#">Nombre :<small class="text-danger"> (Required)</small></label>
-                     <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar Nombre" required="" onpaste = "alert('No permitido Ctrl + v');return false">
+                     <input type="text" class="input form-control nombress" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar Nombre" onpaste = "alert('No permitido Ctrl + v');return false">
                   </div>
                   <div class="form-group col-md-6" id="nombre">
                     <div class="row">
                       <div class="col-md-6">
-                        <label for="inputPassword4">Apellido-P:<small class="text-danger"> (Required)</small>:</label>
-                        <input type="text" name="apellidop" class="form-control" id="apellidop" onkeypress="return palabra(event)"  placeholder="Ingresar Apellido paterno" required="" onpaste = "alert('No permitido Ctrl + v');return false">
+                        <label for="inputPassword4">Apellido-P:<small class="text-danger "> (Required)</small>:</label>
+                        <input type="text" name="apellidop" class="form-control nombress" id="apellidop" onkeypress="return palabra(event)"  placeholder="Apellido paterno"  onpaste = "alert('No permitido Ctrl + v');return false">
                       </div>
                       <div class="col-md-6">
                         <label for="inputPassword4">Apellidos-M:<small class="text-danger"> (Required)</small>:</label>
-                        <input type="text" name="apellidom" class="form-control" id="apellidom" onkeypress="return palabra(event)"  placeholder="Ingresar Apellido Materno" required="" onpaste = "alert('No permitido Ctrl + v');return false">
+                        <input type="text" name="apellidom" class="form-control nombress" id="apellidom" onkeypress="return palabra(event)"  placeholder="Apellido Materno" onpaste = "alert('No permitido Ctrl + v');return false">
                       </div>
                     </div>
                   </div>
              </div>
              <div class="form-row">
                   <div class="form-group col-md-6">
-                     <label for="#">Email :<small class="text-danger"> (Required)</small> </label>
-                     <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com " required="" onpaste = "alert('No permitido Ctrl + v');return false">
+                     <label for="#">Email :<small class="text-danger"> (Required)</small> Caracteres válidos [ a-z ][ 0-9 ][ .-_@]</label>
+                     <input type="email" class="form-control" id="email" name="correo" placeholder="Labsol@gmail.com" onkeypress="return letrasnumeros(event)" onpaste = "alert('No permitido Ctrl + v');return false">
                      <div id="infoemail">
                      </div>
                   </div>
                   <div class="" id="checkemailresponse"></div>
                   <div class="form-group col-md-6">
                      <label for="#">Cel :<small class="text-danger"> (Required)</small></label>
-                     <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="953 155 01 93" required="" onpaste = "alert('No permitido Ctrl + v');return false">
+                     <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="953 155 01 93"  onpaste = "alert('No permitido Ctrl + v');return false">
                   </div>
              </div>
                    <div class="form-row">
@@ -112,8 +112,8 @@
                    </div>     
              <div class="form-row" >
                   <div class="form-group col-md-6">
-                     <label for="#">Facebook :</label>
-                     <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta" onpaste = "alert('No permitido Ctrl + v');return false">
+                     <label for="#">Facebook (Caracteres válidos [ a-z ][ 0-9 ][ .-_@])</label>
+                     <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta" onpaste = "alert('No permitido Ctrl + v');return false" onkeypress="return letrasnumeros(event)">
                   </div>
                   <div class="form-group col-md-6">
 
@@ -126,8 +126,8 @@
 
              <div class="form-row">
                   <div class="form-group col-md-6">
-                     <label for="#">Twitter :</label>
-                     <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta" onpaste = "alert('No permitido Ctrl + v');return false">
+                     <label for="#">Twitter (Caracteres válidos [ a-z ][ 0-9 ][ .-_@])</label>
+                     <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta" onpaste = "alert('No permitido Ctrl + v');return false" onkeypress="return letrasnumeros(event)">
                   </div>
                   <div class="form-group col-md-6">
                      <label for="#">Fecha de Nacimiento :<small class="text-danger"> (Required)</small></label>
@@ -135,7 +135,7 @@
                        <div class="col-xs-4 col-md-4">
                         <label> Dia</label>
                         <select name="dia" class="form-control" id="dia">
-                          <option value="selected">-- Seleccionar--</option>
+                          <option value="0">-- Seleccionar--</option>
                           <?php
                           for ($i=1; $i<=31; $i++) {
                               if ($i == date('j'))
@@ -150,7 +150,7 @@
                        <div class="col-xs-4 col-md-4">
                         <label>Mes</label>
                         <select name="mes" id="mes" class="form-control">
-                          <option value="selected">-- Seleccionar--</option>
+                          <option value="0">-- Seleccionar--</option>
                            <option value="1">Enero</option>
                            <option value="2">Febrero</option>
                            <option value="3">Marzo</option>
@@ -169,7 +169,7 @@
                        <div class="col-xs-4 col-md-4">
                         <label>Año</label>
                            <select name="año" id="año" class="form-control">
-                            <option value="selected">-- Seleccionar--</option>
+                            <option value="0">-- Seleccionar--</option>
                             <?php
                             for($i=date('o'); $i>=1910; $i--){
                                 if ($i == date('o'))
@@ -189,7 +189,7 @@
                   <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Sexo :<small class="text-danger"> (Required)</small></label>
                      <select id="sexo" class="form-control" name = "sexo">
-                      <option>-- Seleccionar sexo --</option>
+                      <option value="0">-- Seleccionar sexo --</option>
                      <?php 
                      include_once 'conexion/abrirconexion.php';
                      $con = new Conexion();
@@ -206,7 +206,7 @@
                   <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Tallas :<small class="text-danger"> (Required)</small></label>
                      <select class="form-control" id="talla" name="talla">
-                       <option>-- Seleccionar talla --</option>
+                       <option value="0">-- Seleccionar talla --</option>
                      
                       <?php 
                       require_once 'conexion/abrirconexion.php';
@@ -227,25 +227,25 @@
              </div>
              <div class="form-row">
                   <div class="form-group col-md-6">
-                     <label for="exampleFormControlSelect1">Habilidades :</label>
-                     <input type="text" class="form-control" name="habilidades" id="habilidades" onkeypress="return sololetras(event)" placeholder="Ingresar habilidad" onpaste = "alert('No permitido Ctrl + v');return false">   
+                     <label for="exampleFormControlSelect1">Habilidades (Caracteres válidos [ a-z ][ 0-9 ][ .-_@])</label>
+                     <input type="text" class="form-control habhob" name="habilidades" id="habilidades" onkeypress="return sololetras(event)" placeholder="Ingresar habilidad" onpaste = "alert('No permitido Ctrl + v');return false">   
                   </div>
 
                   <div class="form-group col-md-6">
-                     <label for="exampleFormControlSelect1">Hobbies :</label>
-                     <input type="text" class="form-control" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies" onkeypress="return sololetras(event)" onpaste = "alert('No permitido Ctrl + v');return false">   
+                     <label for="exampleFormControlSelect1">Hobbies : (Caracteres válidos [ a-z ][ 0-9 ][ .-_@])</label>
+                     <input type="text" class="form-control habhob" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies" onkeypress="return sololetras(event)" onpaste = "alert('No permitido Ctrl + v');return false">   
                   </div>
              </div>
              
              
              <div class="form-row">
                    <div class="form-group col-md-6">
-                     <label for="#">Contraseña :<small class="text-danger"> (Required)</small></label>
-                     <input type="password" class="form-control" name="contraseña"  id="password" placeholder="********" required="" onpaste = "alert('No permitido Ctrl + v');return false">
+                     <label for="#">Contraseña :<small class="text-danger"> (Required)</small> Caracteres válidos [ a-zA-Z ][ 0-9 ][ .-_@]</label>
+                     <input type="text" class="form-control" name="contraseña"  id="password" onkeypress="return psw(event)" placeholder="********" onpaste = "alert('No permitido Ctrl + v');return false">
                   </div>
                   <div class="form-group col-md-6">
-                     <label for="#">Confirmar contraseña :<small class="text-danger"> (Required)</small></label>
-                     <input type="password" class="form-control" name="contraseña" id="rpassword" id="contraseña" placeholder="********" required="" onpaste = "alert('No permitido Ctrl + v');return false">
+                     <label for="#">Confirmar contraseña :<small class="text-danger"> (Required)</small> Caracteres válidos [ a-zA-Z][ 0-9 ][ .-_@]</label>
+                     <input type="text" class="form-control" name="contraseña" id="rpassword" id="contraseña" onkeypress="return psw(event)" placeholder="********" onpaste = "alert('No permitido Ctrl + v');return false">
 
                   </div>
             </div>
@@ -330,7 +330,7 @@
           })
 
       });
-  /*--------------VALIDACION DE CAMPOS DEL FORMULARIO ----------------------------*/
+  /*--------------VALIDACION CON LETRAS NUMEROS PALABRAS ----------------------------*/
   function solonumeros(e) {
       key = e.keyCode || e.which;
       teclado = String.fromCharCode(key);
@@ -364,6 +364,40 @@
       }
   }
 
+  function letrasnumeros(e) {
+      key = e.keyCode || e.which;
+      teclado = String.fromCharCode(key).toLowerCase();
+      letras = "abcdefghijklmnñopqrstuvwxyzáéíóú1234567890._-@";
+      especiales = "9-32-37-38-46-164";
+      teclado_especial = false;
+      for (var i in especiales) {
+          if (key == especiales[i]) {
+              teclado_especial = true;
+              break;
+          }
+      }
+      if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+          return false;
+      }
+  }
+
+  function psw(e) {
+      key = e.keyCode || e.which;
+      teclado = String.fromCharCode(key).toLowerCase();
+      letras = "abcdefghijklmnñopqrstuvwxyz1234567890._-@";
+      especiales = "9-32-37-38-46-164";
+      teclado_especial = false;
+      for (var i in especiales) {
+          if (key == especiales[i]) {
+              teclado_especial = true;
+              break;
+          }
+      }
+      if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+          return false;
+      }
+  }
+
   function palabra(e) {
       key = e.keyCode || e.which;
       teclado = String.fromCharCode(key).toLowerCase();
@@ -381,7 +415,7 @@
       }
   }
 
-  /*FIN DE VALIDACION DE CAMPO*/
+  /*FIN DE VALIDACION DE LETRAS NUMEROS PALABRAS*/
   /*-------INICIO DE CAMBIAR COLOR A LOS IMPUT*/
   $(function(){
       $("#rol").click(function() {
@@ -482,7 +516,7 @@
               "border": '1px solid red'
           };
           var capturado = document.getElementById('facebook').value;
-          if (capturado.length == 10) {
+          if (capturado.length >=6) {
               $(this).css(nuevoCSS);
           } else {
               $(this).css(error);
@@ -497,7 +531,7 @@
               "border": '1px solid red'
           };
           var capturado = document.getElementById('twitter').value;
-          if (capturado.length == 10) {
+          if (capturado.length >=6) {
               $(this).css(nuevoCSS);
           } else {
               $(this).css(error);

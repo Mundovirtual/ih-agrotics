@@ -16,7 +16,7 @@
           <div class="input-group">
             <span class="input-group-addon btn btn-danger" data-toggle = "modal" id = "ca" data-target = "#ca"><i class="fas fa-external-link-alt fa-1x">Agregar</i></span>
           <select id="carrera" name="carrera" class="form-control">
-            <option value="selected">-- Seleccionar Carrera --</option>
+            <option value="0">-- Seleccionar Carrera --</option>
             <?php
 
             while($row = mysqli_fetch_array($resultado)){
