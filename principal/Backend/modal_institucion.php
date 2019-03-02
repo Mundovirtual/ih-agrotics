@@ -11,7 +11,7 @@
                             <div class="form-group">
                               <div id="datos-registrado-ajax"></div>
                               <label class="control-label text-danger">Institucion</label>
-                              <input type="text" class="form-control text-dark" id="i" name="i" placeholder="Ingresar Institucion" name = "i">
+                              <input type="text" class="form-control text-dark" id="i" name="i" placeholder="Ingresar Institucion" name = "i" onkeypress="return carrerainstitucion(event)">
                             </div>
                           </div>
 
@@ -44,5 +44,22 @@
           }
       })
    });
+
+ function carrerainstitucion(e) {
+        key = e.keyCode || e.which;
+        teclado = String.fromCharCode(key).toLowerCase();
+        letras = "abcdefghijklmnñopqrstuvwxyzáéíóú1234567890 ";
+        especiales = "9-32-37-38-46-164";
+        teclado_especial = false;
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                teclado_especial = true;
+                break;
+            }
+        }
+        if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+            return false;
+        }
+     }
  
 </script>

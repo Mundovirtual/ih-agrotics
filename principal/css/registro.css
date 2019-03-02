@@ -3,7 +3,6 @@
     padding: 0px;
 }
 body {
-    background-image: url(../imagenes/fondo1.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -42,7 +41,41 @@ div.contenedor-img div.caja-img img{
     text-align: left;
     padding: 8px 0;
 }
+.container .form-row .form-group input.propio, select.form-control, option, input.propio {
+    background: rgba(0, 0, 0, .6);
+    margin: auto;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+
+.container .form-row .form-group input.nombre, select.form-control, option, input.nombress {
+    background: rgba(0, 0, 0, .6);
+    margin: auto;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 3px; 
+}
+
+.container .form-row .form-group input.habhob, select.form-control, option, input.habhob {
+    background: rgba(0, 0, 0, .6);
+    margin: auto;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 3px;
+    text-transform: lowercase;
+}
+
 .container .form-row .form-group input, select.form-control, option, input {
+    background: rgba(0, 0, 0, .6);
+    margin: auto;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 3px;
+}
+
+.container .form-row .form-group input.inicial, select.form-control, option, input.inicial {
     background: rgba(0, 0, 0, .6);
     margin: auto;
     color: #fff;

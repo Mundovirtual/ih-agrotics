@@ -7,7 +7,7 @@
              $resultado = $esqueleto->setRead("SELECT `id`, `Institucion` FROM `institucion`");
 		     ?>
 		     <select name="institucion" id="select" class="form-control">
-			   <option selected="">Seleccionar Institucion</option>
+		     	<option value="selected">-- Seleccionar--</option>
 			     <?php 
 				while ($row = mysqli_fetch_array($resultado)) {
 					?>
