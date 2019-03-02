@@ -13,7 +13,6 @@
 	             $resultado = $esqueleto->InsertarRegistro("SELECT `id`, `Institucion` FROM `institucion`");
 			     ?>
 			     <div class="input-group">
-			     <span class="input-group-addon btn btn-danger" data-toggle = "modal" id="" data-target = "#miModal"><i class="fas fa-external-link-alt fa-1x">Agregar</i></span>
 			     <select id="institucion" name="institucion" class="form-control">
 				   <option value="0">-- Seleccionar Institución--</option>
 				     <?php 

@@ -14,7 +14,7 @@
                               
                             </div>
                             <label class="control-label text-danger">Carrera</label>
-                            <input type="text" class="form-control text-dark" id="ca" name="ca" placeholder="Ingresar Carrera">
+                            <input type="text" class="form-control text-dark" id="ca" name="ca" placeholder="Ingresar Carrera" onkeypress="return carrerainstitucion(event)" onpaste = "alert('No permitido Ctrl + v');return false">
                           </div>
                         </div>
 
@@ -28,21 +28,38 @@
                  </form>
 <!--Fin del modal-->
 
-<!--Ajax para guardar datos del modal-->
-<script type="text/javascript">
-$('#h').click(function(){
-  var datos = $('#guardarDatoscarrera').serialize();
-   $.ajax({
-        type: 'post',
-        url: 'Backend/guardarcarrera.php',
-        data: datos,
-        beforeSend:function(c){
-         $("#datos-registrado-a").html('<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i><strong> Procesando..... !</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
-        },
-        success: function(respuesta) {
-         $("#datos-registrado-a").html(respuesta);
-         visualizarCarrera();
+    <!--Ajax para guardar datos del modal-->
+    <script type="text/javascript">
+    $('#h').click(function(){
+      var datos = $('#guardarDatoscarrera').serialize();
+       $.ajax({
+            type: 'post',
+            url: 'Backend/guardarcarrera.php',
+            data: datos,
+            beforeSend:function(c){
+             $("#datos-registrado-a").html('<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i><strong> Procesando..... !</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            },
+            success: function(respuesta) {
+             $("#datos-registrado-a").html(respuesta);
+             visualizarCarrera();
+            }
+        })
+     });
+
+      function carrerainstitucion(e) {
+        key = e.keyCode || e.which;
+        teclado = String.fromCharCode(key).toLowerCase();
+        letras = "abcdefghijklmnñopqrstuvwxyzáéíóú1234567890 ";
+        especiales = "9-32-37-38-46-164";
+        teclado_especial = false;
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                teclado_especial = true;
+                break;
+            }
         }
-    })
- });
+        if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+            return false;
+        }
+     }
 </script>
