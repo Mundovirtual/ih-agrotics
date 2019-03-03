@@ -60,7 +60,11 @@ if (isset($_POST['idrubrica'])&&isset($_POST['rubrica'])) {
     }else if ($tamano<=20) { 
         $msj="Criterio: Campo mayor a 20 caractères ";
         $Aux="1";
-    }else if ($Aux=='0') {
+    }else if ($tamano>=145) { 
+        $msj="Criterio: Solo 145 caractères permitidos ";
+        $Aux="1";
+    }
+    else if ($Aux=='0') {
       $editar=new rubricas();
       $edit=$editar->Actualizar($id,$rubrica);
       if ($edit=='1') {
