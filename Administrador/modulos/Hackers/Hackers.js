@@ -71,14 +71,39 @@ function ActualizarHacker(){
  $('#EditarHacker').on('shown.bs.modal', function () {
    $('#password').attr('type', 'password');  
 })
-/*Activar el Id para eliminar*/
+
 let idhackerEliminar="";
+
 function Eliminar(idhacker){
     idhackerEliminar=idhacker;
 }
-/*Obtener datos y actualizar*/
-
+ 
 /*Funcion de eliminar usuario*/
+function Eliminando(){
+    $.ajax({
+            url: '../modulos/Juez/juez.php',
+            type: 'POST',
+            dataType: 'json',
+            data: {idEliminar: idEliminar},
+        })
+        .done(function(respuesta) {
+            if (respuesta=='0') {
+            alertify.set('notifier','position', 'top-right');
+            alertify.success('Juez eliminado');         
+            $("#EliminarJueces").modal('hide');
+            CargarTablaJuez();
+            } else {
+                alertify.set('notifier','position', 'top-right');
+            alertify.error('Error inesperado');         
+            $("#EliminarJueces").modal('hide');
+            }
+            
+        });
+ 
+            
+} 
+
+
 
 /*Datos de la tabla con DataTable de jquery*/
  var tabla_nombre;

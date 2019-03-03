@@ -150,7 +150,7 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-danger" >Continuar</button>
+        <button type="button" class="btn btn-danger" onclick="Eliminando()">Continuar</button>
       </div>
     </div>
   </div>

@@ -14,7 +14,7 @@ include_once("conexion.php");
 	 	function EliminarHacker($id){	 		
 	 		$con=new Conectar();
 	 		$Conexion=$con->conexion();
-	 		$sql="DELETE FROM `comunidad` WHERE `id`='".$id."'";
+	 		$sql="DELETE FROM `comunidad` WHERE `id`='".$id."'"; 
 	 		$resultado=mysqli_query($Conexion,$sql);
 	 		return $resultado;
 	 		$Conexion->mysql_close();
