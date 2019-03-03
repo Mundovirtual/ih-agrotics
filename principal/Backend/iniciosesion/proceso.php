@@ -45,9 +45,9 @@
     }/*Cierre del metodo validacion*/
     function busqueda($u,$c){ 
     	require_once '../../conexion/abrirconexion.php';
-
     	$con = new Conexion();
     	$contenido = $con->query("SELECT `comunidad`.`id`,`comunidad`.`Nombre`,`comunidad`.`Apellidos`,`comunidad`.`E-mail`,`comunidad`.`Celular`,`comunidad`.`Rol_idRol` FROM `comunidad`  inner join `hackatonedicion` on `comunidad`.`hackaton`=`hackatonedicion`.`id` WHERE `comunidad`.`E-mail`='$u' and `comunidad`.`psw` = '$c' and `hackatonedicion`.`status`='1'"); 
+      
       while($row = mysqli_fetch_array($contenido)) { 
       	$id=$row[`comunidad`.'id'];
         $nombre = utf8_encode($row[`comunidad`.'Nombre']);

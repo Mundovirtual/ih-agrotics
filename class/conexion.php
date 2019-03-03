@@ -4,7 +4,7 @@ class Conectar{
   
 	private $servidor="localhost";
 		private $usuario="root";
-		private $bd="hacky";
+		private $bd="prueba";
 		private $password=""; 
 		public function conexion(){
 			$conexion=mysqli_connect($this->servidor,

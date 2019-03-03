@@ -1,7 +1,7 @@
 <?php 
 include_once("../../class/Juez.php");
 	$Juez=new Juez();
-	$ver=$Juez->MostrarJuezPorActivar();
+	$ver=$Juez->MostrarJuezPorActivar(); 
  	$tabla="";
 	$i=1;
 
