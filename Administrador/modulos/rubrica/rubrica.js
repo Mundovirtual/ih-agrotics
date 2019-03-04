@@ -31,12 +31,13 @@ function registrar_rubricas(){
                 alertify.set('notifier','position', 'top-right');
                 CargarTablaRubricas();
                 alertify.success('Rubricas registradas');
+                $('#RegistrarEvaluacion')[0].reset();  
               }else{ 
                 $('#ModalRubricas').modal('show');
                 alertify.set('notifier','position', 'top-right');
                 alertify.error(respuesta.Estado);
               }
-              //$('#RegistrarEvaluacion')[0].reset();  
+              
           }) ;
           
 }

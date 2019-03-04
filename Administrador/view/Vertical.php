@@ -10,12 +10,12 @@
 				<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalVertical">Nuevo
 				</button>
 	</div>	   
-</div>
+ 
  	
 	 <div class="row">
 		<div class="col-md-1">
 		</div>
-		<div class="col-md-10">
+		<div class="col-md-10 table-responsive">
 			 				 
 			 <table id="MostrarVertical" class="table display">
 			  <thead>

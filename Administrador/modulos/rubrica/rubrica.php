@@ -9,6 +9,7 @@ if (isset($_POST['idVertical']) && isset($_POST['Rubricas'])) {
   /*Reemplazar saltos de linea*/
   $reemplazar= str_replace('%0D%0A', '', $reemplazar); 
   $reemplazar= str_replace('rubricas', '', $reemplazar); 
+  $reemplazar= str_replace('%20', ' ', $reemplazar); 
   $array = explode(",", $reemplazar);  
   $msj="";
   $Aux="0";
@@ -21,15 +22,22 @@ if (isset($_POST['idVertical']) && isset($_POST['Rubricas'])) {
       $rubrica= $array[$i]; 
       if ($rubrica=='') {
           $msj="Campos vacios";
-          $Aux="1"; 
-          break;
+          $Aux="1";
+          break;  
       }else if (strlen($rubrica)<=10) {
            $msj="Longitud menor a 10";
           $Aux="1";
+          break; 
+      }
+      else if (strlen($rubrica)>150) { 
+          $msj="Criterio: Solo 150 caractères permitidos ";
+          $Aux="1";
           break;
       }
+
     }
   }
+
   if ($Aux=="0") {
      for ($i=0; $i <count($array) ; $i++) { 
         $rubrica= $array[$i];  
@@ -60,8 +68,8 @@ if (isset($_POST['idrubrica'])&&isset($_POST['rubrica'])) {
     }else if ($tamano<=20) { 
         $msj="Criterio: Campo mayor a 20 caractères ";
         $Aux="1";
-    }else if ($tamano>=145) { 
-        $msj="Criterio: Solo 145 caractères permitidos ";
+    }else if ($tamano>150) { 
+        $msj="Criterio: Solo 150 caractères permitidos ";
         $Aux="1";
     }
     else if ($Aux=='0') {

@@ -111,7 +111,7 @@
 
 
 
-          <!--Footer-->
+         <!--Footer-->
             <div class="row" style="background-color: #000;color: white; ">
                 <div class="col-md-12">
                     <div class="row">
@@ -145,26 +145,29 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
+        
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="text-center text-dark">
+                            <h2 class="text-center text-dark">
                                 Innovación
-                            </h1> 
+                            </h2> 
                         </div>
                     </div>
                     <div class="row col-md-12">
                         <div class="col-md-3">
                             <p class="text-center">
-                                <i class="fas fa-bolt fa-3x">
+                                <i class="fas fa-bolt fa-2x">
                                 </i>
                             </p>
                             <blockquote class="blockquote">
-                                <p class="mb-0">
+                                <h6>
+                                    <p class="mb-0">
                                      El corazón y el alma de la empresa es la creatividad y la innovación.
-                                </p>
+                                     </p>
+                                </h6>
                                 <footer class="blockquote-footer">
                                   <cite> Bob Iger</cite>
                                 </footer>
@@ -172,13 +175,15 @@
                         </div>
                         <div class="col-md-3">
                             <p class="text-center">
-                                <i class="fas fa-bolt fa-3x">
+                                <i class="fas fa-bolt fa-2x">
                                 </i>
                             </p>
                             <blockquote class="blockquote">
-                                <p class="mb-0">
+                               <h6>
+                                    <p class="mb-0">
                                     La innovación es lo que distingue a un lider de los demas.
-                                </p>
+                                    </p>
+                               </h6>
                                 <footer class="blockquote-footer">
                                   <cite>Steve Jobs</cite>
                                 </footer>
@@ -186,13 +191,15 @@
                         </div>
                         <div class="col-md-3">
                             <p class="text-center">
-                                <i class="fas fa-bolt fa-3x">
+                                <i class="fas fa-bolt fa-2x">
                                 </i>
                             </p>
                             <blockquote class="blockquote">
-                                <p class="mb-0">
+                                <h6>
+                                    <p class="mb-0">
                                     La persistencia es muy importante. No debes renunciar a menos que te veas obligado a hacerlo.
-                                </p>
+                                    </p>
+                                </h6>
                                 <footer class="blockquote-footer">
                                     <cite>Elon Musk</cite>
                                 </footer>
@@ -200,13 +207,15 @@
                         </div>
                         <div class="col-md-3">
                             <p class="text-center">
-                                <i class="fas fa-bolt fa-3x">
+                                <i class="fas fa-bolt fa-2x">
                                 </i>
                             </p>
                             <blockquote class="blockquote">
-                                <p class="mb-0">
+                                <h6>
+                                    <p class="mb-0">
                                    La innovación es la herramienta especifica del emprendimiento.
-                                </p>
+                                   </p>
+                                </h6>
                                 <footer class="blockquote-footer">
                                      <cite> Peter Druker</cite>
                                 </footer>
@@ -222,15 +231,15 @@
                 </div>   
                 <div class="col-md-10">
                     <p>
-                        <h6>
+                        <h7>
                             ¿Tienes una idea que aborde alguna de las verticales? ¿Cuentas con un equipo de trabajo? ¿Quieres ser parte de este gran evento? Registrate, no te quedes con las ganas y acompañanos en esta gran oportunidad.
-                        </h6>
+                        </h7>
                     </p>
                 </div> 
                 <div class="col-md-1">
                 </div>   
             </div>
-             <div class="row"  style="background-color: #302A30;color: white; ">
+             <div class="row"  style="background-color: black;color: white; ">
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-1">
@@ -284,9 +293,7 @@
                     </div>
                 </div>
             </div>
-         <!--fin Footer-->  
-    
-  
+         <!--fin Footer-->          
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>

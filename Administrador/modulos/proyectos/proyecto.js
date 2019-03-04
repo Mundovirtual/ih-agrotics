@@ -23,7 +23,7 @@ function detalles(id,descProyecto,lider,email,cel,fRegistro){
         $("#TablaIntegrantes").html(respuesta); 
     });
     
-}
+} 
  
  var tabla_nombre;
  function Tablaproyectos() {
@@ -42,8 +42,7 @@ function detalles(id,descProyecto,lider,email,cel,fRegistro){
             { "data": "Equipo" },
             { "data": "Vertical" },
             { "data": "proyecto" },
-            { "data": "Detalles" }, 
-            { "data": "delete" } 
+            { "data": "Detalles" },
         ],
         "oLanguage": {
             "sProcessing": "Procesando...",

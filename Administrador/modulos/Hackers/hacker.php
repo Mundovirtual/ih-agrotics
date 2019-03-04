@@ -40,6 +40,22 @@ if (isset($_POST['IdHack'])&&isset($_POST['pass'])&&isset($_POST['celular'])&&is
 
 }
 
+/*Eliminar*/
+if (isset($_POST['idEliminar'])) {
+ 
+	if ($_POST['idEliminar']!='') {
+		$idEliminar=$_POST['idEliminar'];
+		$Eliminar=new Hacker();
+		$EliminarHacker=$Eliminar->EliminarHacker($idEliminar); 
+		if ($EliminarHacker=='1') {
+			 $msg='1';
+		}else{
+			$msg="Dato referenciado: No se puede Eliminar";
+		}
+		
+	} 
+	echo json_encode(array('Estado'=>$msg));
+}
 
 
 

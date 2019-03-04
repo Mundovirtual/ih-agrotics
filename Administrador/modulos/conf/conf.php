@@ -87,6 +87,7 @@ if (isset($_POST['Registro'])) {
 		 
 	}
 	 echo json_encode(array('Estado'=>$msj));
+	 $array="";
 }
 
 

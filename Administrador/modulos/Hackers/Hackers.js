@@ -1,107 +1,108 @@
+  /*Cargar tabla*/
+    $( document ).ready(function() { 
+        CargarTablaHackers();
 
-    /*Cargar tabla*/
-$( document ).ready(function() { 
-    CargarTablaHackers();
-
-});
- 
-//controlador boton password
-$( "#MostrarPsw" ).on( "click", function() { 
-
-    if ($('#password').attr('type') == 'text') {
-          $('#password').attr('type', 'password');
-    } else {
-      $('#password').attr('type', 'text');
-    } 
-});
-
-/*Detalles */
-function DetallesHacker(institucion,Carrera,Habilidades,Hobbies,feNac,Sexo){ 
-$("#Institucion").val(institucion);
-$("#Carrera").val(Carrera);
-$("#Habilidades").val(Habilidades);
-$("#Hobbies").val(Hobbies);
-$("#FechaNacimiento").val(feNac);
-$("#sexo").val(Sexo); 
-}
-
-/*Mostrar en el DOM Editar datos*/
-idhackerEditar="";
-function editarDatos(id,psw,celular,correoEdit){ 
-    idhackerEditar=id; 
-    $("#password").val(atob(psw));
-    $("#CelularEdit").val(celular);
-    $("#ActCorreoHacker").val(correoEdit);  
-}
-function ActualizarHacker(){
-     psw=$("#password").val();
-     cel=$("#CelularEdit").val();
-     correo=$("#ActCorreoHacker").val(); 
-    $.ajax({
-        url: '../modulos/Hackers/hacker.php',
-        type: 'POST',
-        dataType: 'json',
-        data: {'IdHack': idhackerEditar,"pass":btoa(psw),"celular":cel,"Correo":correo}
-    })
-    .done(function(respuesta) {
-        if (respuesta.Estado!="0") {
-            alertify.set('notifier','position', 'top-right');
-            $("#EditarHacker").modal('show'); 
-            alertify.error(respuesta.Estado); 
-            $('#password').attr('type', 'password'); 
-        }else{
-            alertify.set('notifier','position', 'top-right');
-            alertify.success("Datos actualizados");
-            $("#EditarHacker").modal('hide');
-            $('#password').attr('type', 'password'); 
-            CargarTablaHackers();
-           
-        }  
-    })
-    .fail(function() {
-        console.log("error");
-    })
-    .always(function() {
-        console.log("complete");
     });
-    
+     
+    //controlador boton password
+    $( "#MostrarPsw" ).on( "click", function() { 
 
-}
-/*Ocultar contrasena►4*/
- $('#EditarHacker').on('shown.bs.modal', function () {
-   $('#password').attr('type', 'password');  
-})
+        if ($('#password').attr('type') == 'text') {
+              $('#password').attr('type', 'password');
+        } else {
+          $('#password').attr('type', 'text');
+        } 
+    });
 
-let idhackerEliminar="";
+    /*Detalles */
+    function DetallesHacker(institucion,Carrera,Habilidades,Hobbies,feNac,Sexo){ 
+    $("#Institucion").val(institucion);
+    $("#Carrera").val(Carrera);
+    $("#Habilidades").val(Habilidades);
+    $("#Hobbies").val(Hobbies);
+    $("#FechaNacimiento").val(feNac);
+    $("#sexo").val(Sexo); 
+    }
 
-function Eliminar(idhacker){
-    idhackerEliminar=idhacker;
-}
- 
-/*Funcion de eliminar usuario*/
-function Eliminando(){
-    $.ajax({
-            url: '../modulos/Juez/juez.php',
+    /*Mostrar en el DOM Editar datos*/
+    idhackerEditar="";
+    function editarDatos(id,psw,celular,correoEdit){ 
+        idhackerEditar=id; 
+        $("#password").val(atob(psw));
+        $("#CelularEdit").val(celular);
+        $("#ActCorreoHacker").val(correoEdit);  
+    }
+
+
+    function ActualizarHacker(){
+         psw=$("#password").val();
+         cel=$("#CelularEdit").val();
+         correo=$("#ActCorreoHacker").val(); 
+        $.ajax({
+            url: '../modulos/Hackers/hacker.php',
             type: 'POST',
             dataType: 'json',
-            data: {idEliminar: idEliminar},
+            data: {'IdHack': idhackerEditar,"pass":btoa(psw),"celular":cel,"Correo":correo}
         })
         .done(function(respuesta) {
-            if (respuesta=='0') {
-            alertify.set('notifier','position', 'top-right');
-            alertify.success('Juez eliminado');         
-            $("#EliminarJueces").modal('hide');
-            CargarTablaJuez();
-            } else {
+            if (respuesta.Estado!="0") {
                 alertify.set('notifier','position', 'top-right');
-            alertify.error('Error inesperado');         
-            $("#EliminarJueces").modal('hide');
-            }
-            
+                $("#EditarHacker").modal('show'); 
+                alertify.error(respuesta.Estado); 
+                $('#password').attr('type', 'password'); 
+            }else{
+                alertify.set('notifier','position', 'top-right');
+                alertify.success("Datos actualizados");
+                $("#EditarHacker").modal('hide');
+                $('#password').attr('type', 'password'); 
+                CargarTablaHackers();
+               
+            }  
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
         });
- 
-            
-} 
+        
+
+    }
+    /*Ocultar contrasena►4*/
+     $('#EditarHacker').on('shown.bs.modal', function () {
+       $('#password').attr('type', 'password');  
+    })
+
+    let idhackerEliminar="";
+    function Eliminar(id){
+        idhackerEliminar=id;
+    }
+
+
+    /*Funcion de eliminar usuario*/
+    function Eliminando(){
+        $.ajax({
+                url: '../modulos/Hackers/hacker.php',
+                type: 'POST',
+                dataType: 'json',
+                data: {idEliminar: idhackerEliminar},
+            })
+            .done(function(res) {
+                if (res.Estado=='1') {
+                    CargarTablaHackers();
+                    $("#EliminarHackers").modal('hide');
+                    alertify.set('notifier','position', 'top-right');
+                    alertify.success('Dato eliminado'); 
+                } else{ 
+                    $("#EliminarHackers").modal('hide');
+                    alertify.set('notifier','position', 'top-right');
+                    alertify.error(res.Estado);      
+                }
+                
+            });
+     
+                
+    } 
 
 
 

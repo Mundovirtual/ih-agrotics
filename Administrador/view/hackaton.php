@@ -7,24 +7,14 @@
 	<div class="container">
 	<h1 align="center">Hackaton</h1>     
 </div>
- 
- 
-<div class="d-flex"> 
-	<div class="col-md-1"></div>
-	<div class="col-md-5">	 
-	</div>
-	<div class="col-md-6">
-		<div align="right">
-			<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalHackaton">Nuevo
-			</button>
-		</div>			 
-	</div>
-</div>
-   
- <div class="row">
+  <div align="right">
+	<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalHackaton">Nuevo
+	</button>
+</div>	 
+<div class="row">
 	<div class="col-md-1">
 	</div>
-	<div class="col-md-10">
+	<div class="col-md-10 table-responsive">
 		<table id="MostrarHackaton" class="table display">
 		  <thead>
 		    <tr>

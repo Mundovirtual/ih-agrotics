@@ -6,25 +6,16 @@
 <div class="container">
 	<h1 align="center">Configuración  de Ediciones</h1>     
 </div>
+ <div align="right">
+	<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalConfiguraciones">		Nuevo
+	</button>
+</div>
  
- <header>
- 	<div class="d-flex"> 
- 		<div class="col-md-1"></div>
-	 	<div class="col-md-5"> 
-		</div>
-		<div class="col-md-6">
-			<div align="right">
-				<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalConfiguraciones">Nuevo
-				</button>
-			</div>			 
-		</div>
-	</div>
- </header>
 <body>
 	 <div class="row">
 		<div class="col-md-1">
 		</div>
-		<div class="col-md-10">
+		<div class="col-md-10 table-responsive">
 			<table class="table table-hover" id="TablaConfiguracion">
 			  <thead>
 			    <tr>
@@ -88,7 +79,7 @@
 						        <div class="input-group-prepend">
 						          <div class="input-group-text"><?php echo $key['1']; ?></div>
 						        </div>
-						        <input type="text" class="numero form-control col-sm-3 " placeholder="N` de Finalistas" id="<?php echo $key['0']; ?>" name="<?php echo $key['0']; ?>"step="1"  value="No aplica" readonly >
+						        <input type="text" class="numero form-control col-sm-3 " placeholder="Equipos Finalistas" id="<?php echo $key['0']; ?>" name="<?php echo $key['0']; ?>"step="1"  value="No aplica" readonly >
 						      </div>
 						    </div>
 						    <hr> 
@@ -99,7 +90,7 @@
 						        <div class="input-group-prepend">
 						          <div class="input-group-text"><?php echo $key['1']; ?></div>
 						        </div>
-						        <input type="text"  class="numero form-control col-sm-3 " placeholder="N` de Finalistas" id="<?php echo $key['0']; ?>" name="<?php echo $key['0']; ?>"step="1"  min="0">
+						        <input type="text"  class="numero form-control col-sm-3 " placeholder="Equipos Finalistas" id="<?php echo $key['0']; ?>" name="<?php echo $key['0']; ?>"step="1"  min="0">
 						      </div>
 						    </div>
 						    <hr> 

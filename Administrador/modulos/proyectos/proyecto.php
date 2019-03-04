@@ -18,7 +18,8 @@ if (isset($_POST['idproyectos'])) {
 	 }
 	 echo json_encode($InicioTabla.$tabla.$finTabla);
 }
- 
+  
+
  ?>
 
  		

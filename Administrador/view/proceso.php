@@ -4,25 +4,18 @@
 <div class="container">
 	<h1 align="center">Tabla de proyectos</h1></br>  
 </div>
- 
  <header>
- 	 
- 		 
- 		 
- 			 <div class="input-group mb-3"> 
-			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="VertEquipo">Vertical</label>
-			  </div>
-			  <div id="InsertVerticales">
-			  	
-			  </div>
-			</div>
- 		 
-		 
-	 
- </header>
+	<div class="input-group mb-3"> 
+		<div class="input-group-prepend">
+		<label class="input-group-text" for="VertEquipo">Vertical</label>
+		</div>
+		<div id="InsertVerticales">
+
+		</div>
+	</div>
+  </header>
 	<div class="row" id="Calificaciones" style="display: none;">
- 		<div class="col-md-12">
+ 		<div class="col-md-12 table-responsive">
 			<table  id="TablaCalificaciones" class="table table-hover">
 			  <thead>
 			    <tr>

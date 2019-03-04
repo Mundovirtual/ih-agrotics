@@ -1,28 +1,20 @@
- <?php
- include_once("../modulos/login/security.php");    
- include_once("../class/Vertical.php");
+<?php
+include_once("../modulos/login/security.php");    
+include_once("../class/Vertical.php");
 ?>  
 <div class="container">
 	<h1 align="center">Criterios de evaluación</h1></br>  
 </div>
- 
- <header>
- 	<div class="d-flex"> 
- 		<div class="col-md-11"> 			 
- 		</div> 		 
-		<div class="col-md-1">
-			<div align="right">
-				<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalRubricas">Nueva
+ <div align="right">
+	<button type="button" class="btn btn-success fas fa-plus" data-toggle="modal" data-target="#ModalRubricas">Nueva
 				</button>
-			</div>			 
-		</div>
-	</div>
- </header>
+</div>	
+ 
 <body>
 	 <div class="row">
 		<div class="col-md-1">
 		</div>
-		<div class="col-md-10">
+		<div class="col-md-10 table-responsive">
 			<table class="table table-hover" id="MostrarRubricas">
 			  <thead>
 			    <tr>

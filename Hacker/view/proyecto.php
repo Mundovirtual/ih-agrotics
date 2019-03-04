@@ -27,7 +27,7 @@ include_once("../login/securityHacker.php");
         </tbody>
       </table>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-2">
     </div>
   </div>
 </div>

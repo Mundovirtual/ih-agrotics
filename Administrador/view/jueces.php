@@ -1,6 +1,5 @@
  <?php
  include_once("../modulos/login/security.php");  
-require_once("../modulos/Juez/juez.php"); 
 ?> 
 
 <div class="container">
@@ -13,7 +12,7 @@ require_once("../modulos/Juez/juez.php");
 	 <div class="row">
 		<div class="col-md-1">
 		</div>
-		<div class="col-md-10">
+		<div class="col-md-10 table-responsive">
 			<table id="TablaJuezAceptado" class="table table-hover">
 			  <thead>
 				<tr>
@@ -140,6 +139,8 @@ require_once("../modulos/Juez/juez.php");
 	</div>
   </div>
 </div>
+
+
 <!-- Eliminar -->	
 
 <div class="modal fade" id="EliminarJueces" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
