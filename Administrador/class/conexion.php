@@ -4,8 +4,8 @@ class Conectar{
  
 private $servidor="localhost";
 		private $usuario="root";
-		private $bd="innovahack";
-		private $password="InnovaHack18";
+		private $bd="prueba";
+		private $password="";
 		 
  
 		public function conexion(){
