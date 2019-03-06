@@ -4,13 +4,8 @@
   <meta charset="UTF-8">
   <title>agenda</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.min.css"> 
-  <link rel="stylesheet" href="css/fontawesome.min.css">
-  <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
-  <link rel="shortcut icon" href="imagenes/labsol/banner1b.jpeg" type="image/x-icon">
-  <link href='js/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
-  <link href='js/fullcalendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
-
+  <link rel="stylesheet" href="css/bootstrap.min.css">   
+  <link href='js/fullcalendar/fullcalendar.min.css' rel='stylesheet' /> 
 </head>
 <body>
 <!--Menu-->

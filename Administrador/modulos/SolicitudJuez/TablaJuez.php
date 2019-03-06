@@ -10,7 +10,7 @@ include_once("../../class/Juez.php");
  
  	$nombre=$key['1']." ".$key['2'];
 
-	$detalles='<button type=\"button\" class=\"btn btn-default fa fa-eye fa-1x\" data-toggle=\"modal\" data-target=\"#Detalles\" onclick=\"DetallesJuez('."'".$nombre."','".$key['8']."','".$key['3']."','".$key['7']."','".$key['6']."'".')\"></button>';
+	$detalles='<button type=\"button\" class=\"btn btn-default fa fa-eye fa-1x\" data-toggle=\"modal\" data-target=\"#Detalles\" onclick=\"DetallesJuez('."'".$nombre."','".$key['11']."','".$key['3']."','".$key['8']."','".$key['7']."'".')\"></button>';
 	$Aceptar='<button type=\"button\" class=\"btn btn-success fa fa-check\" data-toggle=\"modal\" data-target=\"#AceptarJuez\" onclick=\"AceptarJuez('."'".$key['0']."'".')\"></button>';
 
 	$Rechazar='<button type=\"button\" class=\"btn btn-danger fa fa-trash\" data-toggle=\"modal\"  data-target=\"#EliminarJuez\" onclick=\"RechazarJuez('."'".$key['0']."'".')\"></button>';
