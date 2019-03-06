@@ -8,285 +8,247 @@
   <link rel="stylesheet" href="css/fontawesome.min.css">
   <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
   <link rel="shortcut icon" href="imagenes/labsol/banner1b.jpeg" type="image/x-icon">
+  <link href='js/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
+  <link href='js/fullcalendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+
 </head>
 <body>
-    <!--Menu-->
+<!--Menu-->
+<?php 
+  include("menu.php");
+?> 
+<!--Fin Menu-->   
+
+
+<div class="row">
+  <div class="col-md-12">
     <div class="row">
-        <div class="col-md-12" >
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <img class="img-responsive" src="imagenes/logoinnovahack.png" width="150"/>    
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 40%;" >
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                   <a class="navbar-brand" href="../index.php">
-                      <i class="fas fa-sign-in-alt"></i>
-                      Inicio
-                   </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="innovaweekend.php">
-                        <i class="fas fa-file-alt"></i>
-                        Innovaweekend
-                        <span class="sr-only">(current)</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="InnovaHack.php">
-                        <i class="far fa-address-book"></i>
-                        Innovahack
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="Agenda.php">
-                          <i class="far fa-address-book">
-                          </i>
-                          Agenda
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="Lideres.php">
-                          <i class="fas fa-user-circle"></i>
-                          Lideres
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="miperfil.php">
-                          <i class="fas fa-user-plus">
-                          </i>
-                          Mi perfil
-                      </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-        </div>
-    </div>
-
-    <!--Fin Menu-->  
-        <div class="row">
-            <div class="col-md-12">
-                <div style="background-color:#E6E6E6;" align="center">
-                  <img class="img-responsive" src="imagenes/esalud/logosconvocantes.png" width="850">  
-                </div>
-            </div>
-        </div>
-        <hr>
-
- <div class="row">
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-1">
-          
-        </div>
-        <div class="col-md-10">
-          <h3 class="text-dark display-5 text-center">
-            Agenda
-          </h3>
-          <img class="img-responsive mx-auto d-block"  src="imagenes/esalud/agenda.jpg" width="800">
-          <hr>
-        </div>
+      <div class="col-md-1">
         
       </div>
+      <div class="col-md-10">
+        <h3 class="text-dark display-5 text-center">
+          Agenda
+        </h3>
+         <div id='calendar'></div>
+        <hr>
+      </div>
+      
     </div>
-
   </div>
 
+</div>
 
 
 
-         <!--Footer-->
-            <div class="row" style="background-color: #000;color: white; ">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <img  class="img-responsive " src="imagenes/labsol/iwpngblue.png" width="170"  height="100"></img>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="row">
-                                <div class="col-md-12" >
-                                    <h2>Participación</h2>
-                                    <span>
-                                        Contaremos con una gran variedad de mentores jueces e invitados especiales.
-                                    </span>
-                                    <hr>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                     <h5>Equipo de mentores</h5>
-                                    <p>
-                                    Seras asesorado por mentores con gran experiencia en las diferentes areas...
-                                    </p>
-                                    </div>
-                                <div class="col-md-6">
-                                    <h5>Invitados especiales</h5>
-                                    <p>
-                                        Contaremos con pláticas de nuestros invitados especiales.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2 class="text-center text-dark">
-                                Innovación
-                            </h2> 
-                        </div>
-                    </div>
-                    <div class="row col-md-12">
-                        <div class="col-md-3">
-                            <p class="text-center">
-                                <i class="fas fa-bolt fa-2x">
-                                </i>
-                            </p>
-                            <blockquote class="blockquote">
-                                <h6>
-                                    <p class="mb-0">
-                                     El corazón y el alma de la empresa es la creatividad y la innovación.
-                                     </p>
-                                </h6>
-                                <footer class="blockquote-footer">
-                                  <cite> Bob Iger</cite>
-                                </footer>
-                            </blockquote> 
-                        </div>
-                        <div class="col-md-3">
-                            <p class="text-center">
-                                <i class="fas fa-bolt fa-2x">
-                                </i>
-                            </p>
-                            <blockquote class="blockquote">
-                               <h6>
-                                    <p class="mb-0">
-                                    La innovación es lo que distingue a un lider de los demas.
-                                    </p>
-                               </h6>
-                                <footer class="blockquote-footer">
-                                  <cite>Steve Jobs</cite>
-                                </footer>
-                            </blockquote> 
-                        </div>
-                        <div class="col-md-3">
-                            <p class="text-center">
-                                <i class="fas fa-bolt fa-2x">
-                                </i>
-                            </p>
-                            <blockquote class="blockquote">
-                                <h6>
-                                    <p class="mb-0">
-                                    La persistencia es muy importante. No debes renunciar a menos que te veas obligado a hacerlo.
-                                    </p>
-                                </h6>
-                                <footer class="blockquote-footer">
-                                    <cite>Elon Musk</cite>
-                                </footer>
-                            </blockquote> 
-                        </div>
-                        <div class="col-md-3">
-                            <p class="text-center">
-                                <i class="fas fa-bolt fa-2x">
-                                </i>
-                            </p>
-                            <blockquote class="blockquote">
-                                <h6>
-                                    <p class="mb-0">
-                                   La innovación es la herramienta especifica del emprendimiento.
-                                   </p>
-                                </h6>
-                                <footer class="blockquote-footer">
-                                     <cite> Peter Druker</cite>
-                                </footer>
-                            </blockquote> 
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-                    
-            <div class="row"  style="background-color: red;color: white; ">
-                <div class="col-md-1">
-                </div>   
-                <div class="col-md-10">
-                    <p>
-                        <h7>
-                            ¿Tienes una idea que aborde alguna de las verticales? ¿Cuentas con un equipo de trabajo? ¿Quieres ser parte de este gran evento? Registrate, no te quedes con las ganas y acompañanos en esta gran oportunidad.
-                        </h7>
-                    </p>
-                </div> 
-                <div class="col-md-1">
-                </div>   
-            </div>
-             <div class="row"  style="background-color: black;color: white; ">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-1">
-                        </div>
-                        <div class="col-md-3">
-                            <h3>
-                                InnovaHack
-                            </h3>
-                            <div class="form-group">
-                                <span>
-                                    No te quedes fuera de este gran evento, asiste con tu equipo y se parte de la innovación
-                                </span>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-3">
-                            <h3>
-                                Contáctanos
-                            </h3>
-                            <span>
-                                <i class="fas fa-map-marker-alt">
-                                </i>
-                                Avenida de la Juventud #504,col.Barros Sierra, C.P.98090 Zacatecas,Zac.
-                            </span>
-                            <div class="form-group">
-                                <span>
-                                    <a href="#">
-                                        <i class="fas fa-phone-volume">
-                                        </i>
-                                        (492)921 28 16
-                                    </a>
-                                    y 921 30 18 ext 1516
-                                </span>
-                            </div>
-                            <div class="form-group">
-                                <span>
-                                    <i class="far fa-envelope">
-                                    </i>
-                                    labsol@cozcyt.gob.mx
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <h3>
-                                Mapa
-                            </h3>
-                            <span>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.1237548223157!2d-102.5806774990537!3d22.76078814452632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86824e5e36e6fae5%3A0xbb92c4708de888e0!2sAv.+de+la+Juventud+504%2C+Zona+A%2C+La+Encantada%2C+98090+Zacatecas%2C+Zac.!5e0!3m2!1ses!2smx!4v1551412372458" width="300" height="150" frameborder="1" style="border:0" allowfullscreen></iframe> 
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-         <!--fin Footer-->          
-    
-  
+
+ <!--Footer-->
+  <?php 
+    include("fotter.php");
+  ?>
+ <!--fin Footer--> 
+
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src='js/fullcalendar/lib/moment.min.js'></script>
+  <script src='js/fullcalendar/lib/jquery.min.js'></script>
+  <script src='js/fullcalendar/fullcalendar.min.js'></script>
+  <script src='js/fullcalendar/locale-all.js'></script>
 </body>
 </html>
 
+<script>
+
+  $(document).ready(function() {
+    var initialLocaleCode = 'es';
+
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'liajsdl',
+        right: 'month,agendaWeek,agendaDay,listMonth'
+      }, 
+      locale: initialLocaleCode,
+      buttonIcons: true, // show the prev/next text
+      weekNumbers: true,
+      navLinks: true, // can click day/week names to navigate views
+      editable: false,
+      eventLimit: true, // allow "more" link when too many events
+      events: [ 
+        {
+          title: 'Confirmar verticales y rúbricas para su publicación',
+          start: '2019-02-15',
+          end: '2019-02-15'
+        },
+        {
+          title: 'Lanzamiento de Convocatoria InnovaHack “eSalud”',
+          start: '2019-02-17',
+          end: '2019-02-17'
+        }, 
+        {
+          title: 'Recepción de proyectos e ideas propuestas para las verticales',
+          start: '2019-02-17',
+          end: '2019-02-17'
+        },
+        {
+          title: 'Lanzamiento de plataforma de colaboración y desarrollo IH2018',
+          start: '2019-02-17',
+          end: '2019-02-17'
+        },
+        {
+          title: 'Rueda de Prensa para Presentar Innova Hack 2018',
+          start: '2019-03-07',
+          end: '2019-03-07'
+        },
+        {
+          title: 'Cierre de recepción de proyectos',
+          start: '2019-03-10',
+          end: '2019-03-10'
+        },
+        {
+          title: 'Cierre de Plataforma',
+          start: '2019-03-10',
+          end: '2019-03-10'
+        },
+        {
+          title: 'Publicación de Proyectos Aceptados para InnovaHack “eSalud”',
+          start: '2019-03-12',
+          end: '2019-03-12'
+        },
+        {
+          title: 'Taller para el Desarrollo de Proyectos de Innovación para Empresarios',
+          start: '2019-03-12',
+          end: '2019-03-12'
+        },
+        {
+          title: 'Reunión de planeación con mentores y jurados',
+          start: '2019-03-20',
+          end: '2019-03-20'
+        },
+        {
+          title: 'Capacitación de mentores y jueces',
+          start: '2019-03-20',
+          end: '2019-03-20'
+        },
+        {
+          title: 'Taller Especializado a Mentores y Jueces',
+          start: '2019-03-20',
+          end: '2019-03-20'
+        },
+
+        {
+          title: 'Arranque de InnovaHack',
+          start: '2019-03-22',
+          end: '2019-03-22'
+        },
+        {
+          title: 'Presentación de verticales y rúbricas por vertical ',
+          start: '2019-03-22',
+          end: '2019-03-22'
+        },
+        {
+          title: 'Conferencia Magistral ',
+          start: '2019-03-22',
+          end: '2019-03-22'
+        },
+        {
+          title: 'Apertura Oficial de InnovaHack',
+          start: '2019-03-22',
+          end: '2019-03-22'
+        },
+        {
+          title: 'Apertura de la Arena Hacker',
+          start: '2019-03-22',
+          end: '2019-03-22'
+        },
+        {
+          title: 'Apertura de la Zona de Camping para Hackers',
+          start: '2019-03-22',
+          end: '2019-03-22'
+        },
+
+
+        {
+          title: 'Llegada de Participantes e instalación en zona camping',
+          start: '2019-03-23T07:00:00' 
+        },
+        {
+          title: 'Llegada de Mentores y Especialistas',
+          start: '2019-03-23T09:00:00' 
+        },
+        {
+          title: 'Primera Evaluación de ideas',
+          start: '2019-03-23T12:00:00' 
+        },
+        {
+          title: 'Platica Temática',
+          start: '2019-03-23T17:00:00' 
+        },
+        {
+          title: 'Segunda evaluación de ideas',
+          start: '2019-03-23T20:00:00' 
+        },
+        {
+          title: 'Reunión estratégica con Mentores y Jueces',
+          start: '2019-03-23T21:00:00' 
+        }, 
+
+        
+        {
+          title: 'Actividad de reactivación',
+          start: '2019-03-24T08:00:00' 
+        },
+        {
+          title: 'Tercera evaluación de ideas',
+          start: '2019-03-24T10:00:00' 
+        },
+        {
+          title: 'Platica temática',
+          start: '2019-03-24T10:00:00' 
+        },
+        {
+          title: 'Publicación de los 3 mejores proyectos por vertical',
+          start: '2019-03-24T12:00:00' 
+        },
+        {
+          title: 'Evaluación Final de ideas',
+          start: '2019-03-24T14:00:00' 
+        },
+        {
+          title: 'Publicación de Ganadores por Vertical',
+          start: '2019-03-24T15:00:00' 
+        },
+        {
+          title: 'Presentación de ganadores y entrega de premios',
+          start: '2019-03-24T15:30:00' 
+        },
+        {
+          title: 'Clausura de InnovaHack “eSalud”',
+          start: '2019-03-24T16:00:00' 
+        }
+         
+      ]
+    });
+
+     
+  });
+
+</script>
+<style>
+
+  body {
+    margin: 40px 10px;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+  }
+
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+</style>
 
 
  

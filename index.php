@@ -42,12 +42,18 @@ $con = new Conexion();
                             <span class="sr-only">(current)</span>
                         </a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="principal/InnovaHack.php">
+                       
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="menuu" data-toggle="dropdown" href="">
                             <i class="far fa-address-book"></i>
-                            Innovahack
+                             Innovahack
                         </a>
-                      </li>
+                        <div class="dropdown-menu" aria-labelledby="menuu">
+                             <a class="dropdown-item" href="principal/agrotecnologias.php">1° Edición: Agrotecnologías</a> 
+                             <a class="dropdown-item" href="principal/esalud.php">2° Edición: eSalud</a> 
+                        </div>
+                    </li>
+                      
                       <li class="nav-item">
                           <a class="nav-link" href="principal/Agenda.php">
                               <i class="far fa-address-book">
@@ -205,9 +211,14 @@ $con = new Conexion();
                                     </p>
                                     </div>
                                 <div class="col-md-6">
-                                    <h5>Invitados especiales</h5>
+                                    <h5>Invitados especiales y conferencistas</h5>
                                     <p>
-                                        Contaremos con pláticas de nuestros invitados especiales.
+                                       <ul>
+                                           <li>Francisco Neri, Especialista en desarrollo de proyectos; Nearsof</li>
+                                           <li>Héctor Benitéz, Especialista en desarrollo de proyectos, Nearsoft</li>
+                                           <li>Sergio Camacho, Director del Laboratorio de Innovación del ITESM Campus Monterrey</li>
+                                           <li>Rafael Echeverría, Coordinador del Hackaton Agro de Tabasco</li>
+                                       </ul>
                                     </p>
                                 </div>
                             </div>
@@ -225,7 +236,7 @@ $con = new Conexion();
                             </h2> 
                         </div>
                     </div>
-                    <div class="row col-md-12">
+                    <div class="row col-md-12" align="center">
                         <div class="col-md-3">
                             <p class="text-center">
                                 <i class="fas fa-bolt fa-2x">
@@ -301,7 +312,12 @@ $con = new Conexion();
                 <div class="col-md-10">
                     <p>
                         <h7>
-                            ¿Tienes una idea que aborde alguna de las verticales? ¿Cuentas con un equipo de trabajo? ¿Quieres ser parte de este gran evento? Registrate, no te quedes con las ganas y acompañanos en esta gran oportunidad.
+                            <ul>
+                                <li type="disc">¿Tienes una idea que aborde alguna de las verticales?</li>
+                                <li type="disc">¿Cuentas con un equipo de trabajo?</li>
+                                <li type="disc">¿Quieres ser parte de este gran evento?</li>
+                            </ul>
+                               Registrate, no te quedes con las ganas y acompañanos en esta gran oportunidad.
                         </h7>
                     </p>
                 </div> 
