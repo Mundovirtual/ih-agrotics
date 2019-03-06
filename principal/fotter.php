@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-2">
-                <img  class="img-responsive " src="imagenes/labsol/iwpngblue.png" width="170"  height="100"></img>
+                <img  class="img-responsive " src="imagenes/labsol/iwpngblue.png" width="190"  height="100" style="position: absolute;margin-top: 70px;"></img>
             </div>
             <div class="col-md-10">
                 <div class="row">
@@ -42,9 +42,9 @@
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="text-center text-dark">
+                <h3 class="text-center text-dark">
                     Innovación
-                </h2> 
+                </h3> 
             </div>
         </div>
         <div class="row col-md-12" align="center">
@@ -141,47 +141,51 @@
             <div class="col-md-1">
             </div>
             <div class="col-md-3">
-                <h3>
+                <hr>
+                <h5>
                     InnovaHack
-                </h3>
+                </h5>
                 <div class="form-group">
                     <span>
-                        No te quedes fuera de este gran evento, asiste con tu equipo y se parte de la innovación
+                       <h7 align="justify">No te quedes fuera de este gran evento, asiste con tu equipo y se parte de la innovación</h7>
                     </span>
                 </div>
             </div>
             
             <div class="col-md-3">
-                <h3>
+                <hr>
+                <h5>
                     Contáctanos
-                </h3>
+                </h5>
                 <span>
-                    <i class="fas fa-map-marker-alt">
-                    </i>
+                     
                     Avenida de la Juventud #504,col.Barros Sierra, C.P.98090 Zacatecas,Zac.
                 </span>
-                <div class="form-group">
-                    <span>
-                        <a href="#">
-                            <i class="fas fa-phone-volume">
+                <h7>
+                    <div class="form-group">
+                        <span>
+                            <a href="#">
+                                <i class="fas fa-phone-volume">
+                                </i>
+                                (492)921 28 16
+                            </a>
+                            y 921 30 18 ext 1516
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span>
+                            <i class="far fa-envelope">
                             </i>
-                            (492)921 28 16
-                        </a>
-                        y 921 30 18 ext 1516
-                    </span>
-                </div>
-                <div class="form-group">
-                    <span>
-                        <i class="far fa-envelope">
-                        </i>
-                        labsol@cozcyt.gob.mx
-                    </span>
-                </div>
+                            labsol@cozcyt.gob.mx
+                        </span>
+                    </div>
+                </h7>
             </div>
             <div class="col-md-4">
-                <h3>
+                <hr>
+                <h5>
                     Mapa
-                </h3>
+                </h5>
                 <span>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.1237548223157!2d-102.5806774990537!3d22.76078814452632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86824e5e36e6fae5%3A0xbb92c4708de888e0!2sAv.+de+la+Juventud+504%2C+Zona+A%2C+La+Encantada%2C+98090+Zacatecas%2C+Zac.!5e0!3m2!1ses!2smx!4v1551412372458" width="300" height="150" frameborder="1" style="border:0" allowfullscreen></iframe> 
                 </span>
