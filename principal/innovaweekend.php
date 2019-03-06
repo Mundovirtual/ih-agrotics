@@ -19,7 +19,7 @@ include_once("menu.php");
 <!--Fin Menu-->  
         
 <hr>
-  <div class="row">
+   
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-1">
@@ -69,8 +69,7 @@ include_once("menu.php");
         </div>
       </div>
     </div>
-  </div>
-	
+  
 
 <!--Footer--> 
 <?php 

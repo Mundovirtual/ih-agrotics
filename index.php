@@ -22,7 +22,7 @@ $con = new Conexion();
         <!--Menu-->
         <div class="row">
             <div class="col-md-12" >
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                     <img class="img-responsive" src="principal/imagenes/logoinnovahack.png" width="150"/>    
                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -191,7 +191,7 @@ $con = new Conexion();
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-2">
-                        <img  class="img-responsive " src="principal/imagenes/labsol/iwpngblue.png" width="190"  height="100" style="position: absolute;margin-top: 70px;"></img>
+                        <img  class="img-responsive " src="principal/imagenes/labsol/iwpngblue.png" width="190"  height="100"></img>
                     </div>
                     <div class="col-md-10">
                         <div class="row">

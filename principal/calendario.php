@@ -26,7 +26,7 @@
     $('#calendar').fullCalendar({
       header: {
         left: 'prev,next today',
-        center: '',
+        center: 'title',
         right: 'month,agendaWeek,agendaDay,listMonth'
       },  
       locale: initialLocaleCode,
