@@ -38,8 +38,7 @@
    
     <form class="formulario" name="formulario" id="formulario" method="post">
       
-      <div class="container">
-
+      <div class="container"> 
         <div class="form-row justify-content-lg-center">
                <div class="form-group col-md-6">
                 <label for="#">Rol :<small class="text-danger"> (Required)</small></label>
