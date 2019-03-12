@@ -175,11 +175,15 @@
 
 	}
 
+
+		
+	}
+
+
 	function Calificar_Fase($Fase){
 		$Panel=new panel_control();
 		$Consultar_N_Equipos=$Panel->NumeroPorFase($Fase);  
-		$Consultar_verticales=$Panel->verticales();
-		
+		$Consultar_verticales=$Panel->verticales(); 
 		if ($Fase!=4) {
 			$Nequipo=$Consultar_N_Equipos['0']['0'];
 	 	 
@@ -197,24 +201,18 @@
 		 	}
 
 		}
-		else if($Fase==4){
-			/*Fase tres*/ 
-			foreach ($Consultar_verticales as $key ) {
-				$Calificar=$Panel-> Calificar($key['0'],($Fase-1),'1');
-				foreach ($Calificar as $key2 ) {
-					
-					$update=$Panel->Update($key2['0'],$Fase-1); 
-					$insertar=$Panel->guardarDatos($key2['0'],$key2['1'],$key2['2'],$key2['3'],$key2['4']);
-				}
-		 	}
-		}
+			else if($Fase==4){
+				/*Fase tres*/ 
+				foreach ($Consultar_verticales as $key ) {
+					$Calificar=$Panel-> Calificar($key['0'],($Fase-1),'1');
+					foreach ($Calificar as $key2 ) {
+						
+						$update=$Panel->Update($key2['0'],$Fase-1); 
+						$insertar=$Panel->guardarDatos($key2['0'],$key2['1'],$key2['2'],$key2['3'],$key2['4']);
+					}
+			 	}
+			}
 	 
-			
-	 
-
-		}
-		
-	}
-
+ 		}
  
  ?>

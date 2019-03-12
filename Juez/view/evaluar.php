@@ -2,12 +2,12 @@
 include_once("../login/securityJuez.php");   
 
  ?>
- 
+  
  <div id="MostrarEstado" style="display: none;"> 	
  	<div class="starter-template text-center">
 		<h1 class="display-1" id="MostrarMensajeFase"></h1>
         <h1 id="MostrarEstadoFase"></h1>
-        <p class="lead" id="MensajeInformacion">Espere a que el administrador active la siguiente fase</p>
+        <p class="lead" id="MensajeInformacion">Espere a que el administrador active la fase correspondiente</p>
       
       </div>
  </div>
@@ -39,7 +39,7 @@ include_once("../login/securityJuez.php");
 			
 		</div>
 		<div class="container">
-			<h1 align="center">Proyectos</h1></br>  
+			 
 	</div>
 	 </div>
 	<body>

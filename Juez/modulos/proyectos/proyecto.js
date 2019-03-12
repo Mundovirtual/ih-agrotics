@@ -26,10 +26,12 @@ function ControlFases(){
         data: {'Key': 'True'},
     })
     .done(function(respuesta) { 
+
         if (respuesta.Estatus!=2) { 
+             $("#MostrarEstado").show();
             $("#MostrarMensajeFase").text(respuesta.Fase);
             $("#MostrarEstadoFase").text(respuesta.Mensaje); 
-            $("#MostrarEstado").show();
+            
             if (respuesta.Estatus==3 && respuesta.Fase=="Fase 3") {
                 $("#MensajeInformacion").hide();
             } 

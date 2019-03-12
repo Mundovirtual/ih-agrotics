@@ -29,7 +29,7 @@ if (count($idhack)!=0) {
 			$Aux="2";						 
 		}else if ($FaseUno==3 && $FaseDos==1 && $FaseTres==1) {
 			$fase="Fase 1";
-			$Estado="Evaluacion Finalizada";
+			$Estado="Evaluación Finalizada";
 			$Aux="3";						 
 		}else if ($FaseUno==3 && $FaseDos==1 && $FaseTres==1) {
 			$fase="Fase 2";
@@ -41,7 +41,7 @@ if (count($idhack)!=0) {
 			$Aux="2"; 
 		}else if ($FaseUno==3 && $FaseDos==3 && $FaseTres==1) {
 			$fase="Fase 2";
-			$Estado="Evaluacion Finalizada";
+			$Estado="Evaluación Finalizada";
 			$Aux="3"; 
 		}else 	if ($FaseUno==3 && $FaseDos==3 && $FaseTres==1) {
 			$fase="Fase 3";
