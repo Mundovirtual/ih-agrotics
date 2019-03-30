@@ -91,7 +91,7 @@
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-10" align="justify">
-                      <img src="imagenes/esalud/ihe.png" class="Responsive image rounded mx-auto d-block  " height="20%" width="70%">
+                      <img src="imagenes/esalud/ihe.png" class="Responsive image rounded mx-auto d-block img-fluid  " height="20%" width="70%">
                       <p>
                       La eSalud (eHealth en su terminología en inglés) es el término con el que se define al conjunto de
                       Tecnologías de la Información y la Comunicación (TICs) que, a modo de herramientas, se emplean en

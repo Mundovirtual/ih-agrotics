@@ -22,7 +22,7 @@
  <div class="row">
     <div class="col-md-12">
         <div style="background-color:#E6E6E6;" align="center">
-          <img class="img-responsive" src="img/logosconvocantes.png" width="850">  
+          <img class="img-responsive img-fluid" src="img/logosconvocantes.png" width="850">  
         </div>
     </div>
 </div>

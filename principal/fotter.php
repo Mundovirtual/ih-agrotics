@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-2">
-                <img  class="img-responsive " src="imagenes/labsol/iwpngblue.png" width="190"  height="100"></img>
+                <img  class="img-responsive img-fluid" src="imagenes/labsol/iwpngblue.png" width="190"  height="100"></img>
             </div>
             <div class="col-md-10">
                 <div class="row">
