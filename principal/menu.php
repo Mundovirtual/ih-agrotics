@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12" >
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <img class="img-responsive" src="imagenes/logoinnovahack.png" width="150"/>    
+            <img class="img-responsive" src="imagenes/esalud/iheb.png" width="130"/>    
            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

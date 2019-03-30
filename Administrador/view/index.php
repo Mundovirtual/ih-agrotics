@@ -118,7 +118,7 @@
                   <i class="fas fa-bars"></i>
                 </a>
                   <a href="index.php">
-                    <img src="../img/inovahackNavbar.png" height="20" width="100" align="center">
+                    <img src="../img/iheb.png"  width="130" align="center">
                   </a>
                   
                 

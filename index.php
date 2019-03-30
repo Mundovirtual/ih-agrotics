@@ -23,7 +23,7 @@ $con = new Conexion();
         <div class="row">
             <div class="col-md-12" >
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <img class="img-responsive" src="principal/imagenes/logoinnovahack.png" width="150"/>    
+                    <img class="img-responsive" src="principal/imagenes/esalud/iheb.png" width="130"/>    
                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -120,7 +120,7 @@ $con = new Conexion();
                 <div id="cc" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img class="d-block w-100" src="principal/imagenes/esalud/v1.jpg">
+                      <img class="d-block w-100" src="principal/imagenes/esalud/v1.png">
                     </div>
                     <div class="carousel-item">
                       <img class="d-block w-100" src="principal/imagenes/esalud/v2.png">

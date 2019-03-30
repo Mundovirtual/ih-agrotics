@@ -87,7 +87,7 @@ include_once("../login/securityJuez.php");
                 <a id="toggle-btn" href="#" class="menu-btn">
                   <i class="fas fa-bars"></i>
                 </a>
-                  <img src="../img/inovahackNavbar.png" height="20" width="100" align="center">
+                  <img src="../img/iheb.png" width="140" align="center">
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center"> 
                 <!-- Log out-->
