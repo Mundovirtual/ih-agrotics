@@ -23,33 +23,66 @@
         <div class="col-md-2">
         </div>
         <div class="col-md-8">
-          <h3 class="text-dark display-4 text-center">
+          <h4 class="text-dark display-4 text-center">
             Líderes
-          </h3>
-          <br>
-          <div class="row">
-            <div class="col-md-4">
-               <img class="img-responsive" src="imagenes/labsol/Logo PTLC_V1.jpg" width="200" height="100">
-            </div>
-            <div class="col-md-4">
-              <img class="img-responsive" src="imagenes/labsol/nuevo.png" width="250" height="70">
-            </div>
-            <div class="col-md-4">
-               <img class="img-responsive" src="imagenes/labsol/Logo_SF2018_2(1).png" width="170" height="100">
-            </div>
-          </div>
+          </h4> 
+                      <div class="row align-items-center">
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/1sjuventud.png" >
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                              <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/2scampo.png" >
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/3sprevencion.png" >
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/4ssalud.png" >
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/5talent.png" >
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/6logo_cunorte.jpg" >
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/7uad.jpg" >
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/10upzac1.png">
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                                <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/9hospitalsanagustin.jpg" >
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/8itz.png" width="100">                              
+                          </div>
+                        </div>
+                      </div>
+ 
 
-          <div class="row">
-            <div class="col-md-4">
-               <img class="img-responsive" src="imagenes/labsol/LABSOL1/Innovation Labs Network Logo.png" width="200" height="100">
-            </div>
-            <div class="col-md-4">
-               <img class="img-responsive" src="imagenes/labsol/LABSOL1/LogoUAZ.jpg" width="150" height="100">
-            </div>
-            <div class="col-md-4">
-              <img class="img-responsive" src="imagenes/labsol/LABSOL1/Template_Banner03_AGREGARLOGO.png" width="150" height="100">
-            </div>
-          </div>
+
+
+
           <hr>  
         </div>
         <div class="col-md-2">

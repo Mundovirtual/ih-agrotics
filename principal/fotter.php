@@ -1,6 +1,6 @@
 <div class="row" style="background-color: #000;color: white; ">
     <div class="col-md-12">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-md-2">
                 <img  class="img-responsive img-fluid" src="imagenes/labsol/iwpngblue.png" width="190"  height="100"></img>
             </div>

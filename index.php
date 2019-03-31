@@ -23,7 +23,7 @@ $con = new Conexion();
         <div class="row">
             <div class="col-md-12" >
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <img class="img-responsive" src="principal/imagenes/esalud/iheb.png" width="130"/>    
+                    <img class="img-responsive img-fluid" src="principal/imagenes/esalud/iheb.png" width="130"/>    
                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -117,22 +117,22 @@ $con = new Conexion();
          </div>
             <div class="col-md-9">
                 <h2 align="center">Verticales participantes</h2>
-                <div id="cc" class="carousel slide" data-ride="carousel">
+                <div id="cc" class="carousel slide " data-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img class="d-block w-100" src="principal/imagenes/esalud/v1.png">
+                      <img class="d-block w-90 img-fluid mx-auto d-block" src="principal/imagenes/esalud/v1.png" >
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" src="principal/imagenes/esalud/v2.png">
+                      <img class="d-block w-90 img-fluid mx-auto d-block" src="principal/imagenes/esalud/v2.png" >
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" src="principal/imagenes/esalud/v3.png">
+                      <img class="d-block w-90 img-fluid mx-auto d-block" src="principal/imagenes/esalud/v3.png" >
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" src="principal/imagenes/esalud/v4.png">
+                      <img class="d-block w-90 img-fluid mx-auto d-block" src="principal/imagenes/esalud/v4.png" >
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" src="principal/imagenes/esalud/v5.png">
+                      <img class="d-block w-90 img-fluid mx-auto d-block" src="principal/imagenes/esalud/v5.png" >
                     </div>
                   </div>
                   <a class="carousel-control-prev" href="#cc" role="button" data-slide="prev">
@@ -153,33 +153,70 @@ $con = new Conexion();
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="text-center text-dark">
+                        <h2 class="text-center text-dark">
                             Aliados estratégicos
-                        </h1>
+                        </h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-1">
+                <div class="row justify-content-center" >
+                    <div class="col-md-1 ">
                     </div>
-                    <div class=" container-fluid col-md-8">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img class="img-responsive" src="principal/imagenes/labsol/Logo PTLC_V1.jpg" width="200" height="100">
-                            </div>
-                            <div class="col-md-4">
-                                <img class="img-responsive " src="principal/imagenes/labsol/logo_fich_unl.png" width="300" height="50">
-                            </div>
-                            <div class="col-md-4">
-                                <img class="img-responsive" src="principal/imagenes/labsol/Logo_SF2018_2(1).png" width="200" height="150">
-                            </div>
-                            <div class="col-md-4">
-                                <img class="img-responsive" src="principal/imagenes/labsol/LABSOL1/Innovation Labs Network Logo.png" width="200" height="120">
-                            </div>
-                            <div class="col-md-4">
-                                <img class="img-responsive" src="principal/imagenes/labsol/LABSOL1/LogoUAZ.jpg" width="170" height="130">
-                            </div>
+                    <div class="container-fluid col-md-8">
+
+                      <div class="row align-items-center">
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/1sjuventud.png" width="60%">
+                          </div>
                         </div>
-                    </div> 
+                        <div class="col-sm-4">
+                          <div>
+                              <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/2scampo.png" width="60%">
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/3sprevencion.png" width="60%">
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/4ssalud.png" width="60%">
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/5talent.png" width="60%">
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/6logo_cunorte.jpg" width="60%">
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/7uad.jpg" width="60%">
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/10upzac1.png" width="30%">
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div>
+                                <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/9hospitalsanagustin.jpg" width="60%">
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/8itz.png" width="10%">                              
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>                      
                     <div class="col-md-2">
                     </div>
                 </div>
@@ -190,7 +227,7 @@ $con = new Conexion();
          <!--Footer-->
            <div class="row" style="background-color: #000;color: white; ">
             <div class="col-md-12">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-2">
                         <img  class="img-responsive img-fluid" src="principal/imagenes/labsol/iwpngblue.png" width="190"  height="100"></img>
                     </div>
