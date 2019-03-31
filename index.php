@@ -115,24 +115,24 @@ $con = new Conexion();
             ?>   
 
          </div>
-            <div class="col-md-9">
+            <div class="col-md-9 col-sm-2">
                 <h2 align="center">Verticales participantes</h2>
                 <div id="cc" class="carousel slide " data-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img class="d-block w-90 img-fluid mx-auto d-block" src="principal/imagenes/esalud/v1.png" >
+                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v1.png" width="770">
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-90 img-fluid mx-auto d-block" src="principal/imagenes/esalud/v2.png" >
+                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v2.png" width="770">
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-90 img-fluid mx-auto d-block" src="principal/imagenes/esalud/v3.png" >
+                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v3.png" width="770">
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-90 img-fluid mx-auto d-block" src="principal/imagenes/esalud/v4.png" >
+                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v4.png" width="770">
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-90 img-fluid mx-auto d-block" src="principal/imagenes/esalud/v5.png" >
+                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v5.png" width="770">
                     </div>
                   </div>
                   <a class="carousel-control-prev" href="#cc" role="button" data-slide="prev">
@@ -152,9 +152,10 @@ $con = new Conexion();
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-12">
+                	<div class="col-md-2"></div>
+                    <div class="col-md-12 ">
                         <h2 class="text-center text-dark">
-                            Aliados estratégicos
+                            <a href="principal/Lideres.php">Aliados estratégicos</a>
                         </h2>
                     </div>
                 </div>
@@ -164,54 +165,59 @@ $con = new Conexion();
                     <div class="container-fluid col-md-8">
 
                       <div class="row align-items-center">
-                        <div class="col-sm-4">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/1sjuventud.png" width="60%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/1sjuventud.png" width="105%">
                           </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
                           <div>
-                              <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/2scampo.png" width="60%">
+                              <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/2scampo.png" width="105%">
                           </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/3sprevencion.png" width="60%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/3sprevencion.png" width="105%">
                           </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/4ssalud.png" width="60%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/4ssalud.png" width="105%">
                           </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/5talent.png" width="60%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/5talent.png" width="105%">
                           </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/6logo_cunorte.jpg" width="60%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/6logo_cunorte.jpg" width="105%">
                           </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/7uad.jpg" width="60%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/7uad.jpg" width="105%">
                           </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/10upzac1.png" width="30%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/10upzac1.png" width="70%">
                           </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
                           <div>
-                                <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/9hospitalsanagustin.jpg" width="60%">
+                                <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/9hospitalsanagustin.jpg" width="85%">
                           </div>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-2 col-md-2 col-xs-2">
                           <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/8itz.png" width="10%">                              
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/8itz.png" width="65%">                              
+                          </div>
+                        </div> 
+                        <div class="col-sm-2 col-md-2 col-xs-2">
+                          <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/11LogoUAZ.jpg" width="65%">                              
                           </div>
                         </div>
                       </div>

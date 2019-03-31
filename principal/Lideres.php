@@ -72,9 +72,15 @@
                                 <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/9hospitalsanagustin.jpg" >
                           </div>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-4">
                           <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/8itz.png" width="100">                              
+                            <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/8itz.png" width="50%">                              
+                          </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                        <div class="col-sm-4">
+                          <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/11LogoUAZ.jpg" width="50%">                              
                           </div>
                         </div>
                       </div>
