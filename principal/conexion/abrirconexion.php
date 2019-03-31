@@ -3,7 +3,7 @@ class Conexion extends mysqli
 {
  private $HOST = "localhost";
     private $USER = "root";
-    private $BASE = "innonahack";
+    private $BASE = "innovahack";
     private $PASS = "InnovaHack18"; 
      
     public function __construct()
