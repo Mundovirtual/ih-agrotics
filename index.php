@@ -202,7 +202,7 @@ $con = new Conexion();
                 	<div class="col-xs-2 col-sm-2 col-md-2"></div>
                     <div class="col-xs-12 col-sm-12 col-md-12 ">
                         <h2 class="text-center text-dark">
-                            <a href="principal/Lideres.php">Alíados estratégicos</a>
+                            <a href="principal/Lideres.php">Aliados estratégicos</a>
                         </h2>
                     </div>
                 </div>
