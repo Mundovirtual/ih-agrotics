@@ -8,19 +8,42 @@ $con = new Conexion();
     <head>
         <meta charset="utf-8">
             <title>
-                Menu principal
+                Innovaweekend
             </title>
             <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
             <link rel="shortcut icon" href="principal/imagenes/labsol/banner1b.jpeg" type="image/x-icon">
             <link href="principal/css/bootstrap.min.css" rel="stylesheet">
             <link rel="stylesheet" href="principal/fontawesome-free-5.3.1-web/css/all.min.css">
+            <style>
+				.carousel-control-prev-icon {
+				    background-color: black;				    
+					  height: 30px;
+					  width: 30px;
+					  outline: white;
+					  background-size: 100%, 100%;
+					  border-radius: 50%; 
+					  border-top: 100%;
+					  margin-right: 70%;
+				} 
+				.carousel-control-next-icon {
+				    background-color: black;				    
+					  height: 30px;
+					  width: 30px;
+					  outline: white;
+					  background-size: 100%, 100%;
+					  border-radius: 50%; 
+					  border-top: 100%;
+					  margin-left: 70%
+				} 
+				</style>
             
         </meta>
     </head>
 
+
 <body> 
         <!--Menu-->
-        <div class="row">
+        <div class="row ">
             <div class="col-md-12" >
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <img class="img-responsive img-fluid" src="principal/imagenes/esalud/iheb.png" width="130"/>    
@@ -90,50 +113,72 @@ $con = new Conexion();
             </div>
         </div>
         <hr>
-        <div class="row">
-            <div class="col-md-2">
+        <div class="row container-fluid">
+            <div class="col-md-2 col-sm-12 col-xs-2">
+	            <?php                            
+	                $sql = "SELECT `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack` FROM `hackatonedicion` where `status`='1'";
+	                $resultado = $con->query($sql);
+	                $fechas= mysqli_fetch_array($resultado);
+	                if (!empty($fechas)) { 
+	                    $hoy=date('Y-m-d') ."\n"; 
+	                    $Flimit=$fechas['1']; 
 
-            <?php                            
-                $sql = "SELECT `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack` FROM `hackatonedicion` where `status`='1'";
-                $resultado = $con->query($sql);
-                $fechas= mysqli_fetch_array($resultado);
-                if (!empty($fechas)) { 
-                    $hoy=date('Y-m-d') ."\n"; 
-                    $Flimit=$fechas['1']; 
+	                    if($Flimit>$hoy){
+	                     ?>
+	                        
+	                            <a href="principal/registro.php">
+	                                <img align="center" class="img-responsive mx-auto d-block img-thumbnail" src="principal/imagenes/esalud/registro.jpg" >
+	                            </a>
+	                                
+	                             
+	                     <?php
+	                    }                                  
+	                }
+	            ?>   
 
-                    if($Flimit>$hoy){
-                     ?>
-                        
-                            <a href="principal/registro.php">
-                                <img align="center" class="img-responsive mx-auto d-block img-thumbnail" src="principal/imagenes/esalud/registro.jpg" >
-                            </a>
-                                
-                             
-                     <?php
-                    }                                  
-                }
-            ?>   
-
-         </div>
-            <div class="col-md-9 col-sm-2">
+        	</div >
+            <div class="col-md-9 col-sm-12 col-xs-10 ">
                 <h2 align="center">Verticales participantes</h2>
                 <div id="cc" class="carousel slide " data-ride="carousel">
+            	 <ol class="carousel-indicators">
+				    <li data-target="#cc" data-slide-to="0" class="active"></li>
+				    <li data-target="#cc" data-slide-to="1"></li>
+				    <li data-target="#cc" data-slide-to="2"></li>
+				    <li data-target="#cc" data-slide-to="3"></li>
+				    <li data-target="#cc" data-slide-to="4"></li>
+				 </ol>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v1.png" width="770">
+                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v1.png" width="100%" >
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v2.png" width="770">
+                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v2.png" width="100%" >
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v3.png" width="770">
+                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v3.png" width="100%" >
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v4.png" width="770">
+                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v4.png" width="100%" >
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v5.png" width="770">
+                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v5.png" width="100%" >
                     </div>
+                    <?php 
+	                if (!empty($fechas)) { 
+	                    $hoy=date('Y-m-d') ."\n"; 
+	                    $Flimit=$fechas['1']; 
+
+		                    if($Flimit>$hoy){
+		                     ?>		   
+		                     	<div class="carousel-item">
+			                      <a href="principal/registro.php">
+		                                <img align="center" class="img-responsive mx-auto d-block" src="principal/imagenes/esalud/registro.jpg" width="100%" >
+		                           </a>
+			                    </div>                              
+		                     <?php
+		                    }                                  
+		                }
+		            ?>   
                   </div>
                   <a class="carousel-control-prev" href="#cc" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -148,86 +193,120 @@ $con = new Conexion();
             <div class="col-md-1"> 
             </div>
         </div>
+
         <hr>
-        <div class="row">
-            <div class="col-md-12">
+        <div class="container-fluid">
+        	<div class="row">
+          		 <div class="col-xs-12 col-sm-12 col-md-12 ">
                 <div class="row">
-                	<div class="col-md-2"></div>
-                    <div class="col-md-12 ">
+                	<div class="col-xs-2 col-sm-2 col-md-2"></div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 ">
                         <h2 class="text-center text-dark">
-                            <a href="principal/Lideres.php">Aliados estratégicos</a>
+                            <a href="principal/Lideres.php">Alíados estratégicos</a>
                         </h2>
                     </div>
                 </div>
-                <div class="row justify-content-center" >
-                    <div class="col-md-1 ">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2">
                     </div>
-                    <div class="container-fluid col-md-8">
+                    <div class="col-xs-8 col-sm-5 col-md-8 ">
 
                       <div class="row align-items-center">
-                        <div class="col-sm-2 col-md-2 col-xs-2">
+                        <div class="col-xs-2 col-sm-2 col-md-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/1sjuventud.png" width="105%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/1sjuventud.png" vspace="10" width="200">
                           </div>
                         </div>
-                        <div class="col-sm-2 col-md-2 col-xs-2">
+                        <div class="col-xs-2 col-sm-2 col-md-2">
                           <div>
-                              <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/2scampo.png" width="105%">
+                              <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/2scampo.png" vspace="10" width="200">
                           </div>
                         </div>
-                        <div class="col-sm-2 col-md-2 col-xs-2">
+                        <div class="col-xs-2 col-sm-2 col-md-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/3sprevencion.png" width="105%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/3sprevencion.png" vspace="10" width="200">
                           </div>
                         </div>
-                        <div class="col-sm-2 col-md-2 col-xs-2">
+                        <div class="col-xs-2 col-sm-2 col-md-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/4ssalud.png" width="105%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/4ssalud.png" vspace="10" width="200">
                           </div>
                         </div>
-                        <div class="col-sm-2 col-md-2 col-xs-2">
+                        <div class="col-xs-2 col-sm-2 col-md-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/5talent.png" width="105%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/5talent.png" vspace="10" width="130">
                           </div>
                         </div>
-                        <div class="col-sm-2 col-md-2 col-xs-2">
+                        <div class="col-xs-2 col-sm-2 col-md-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/6logo_cunorte.jpg" width="105%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/6logo_cunorte.jpg" vspace="10" width="150">
                           </div>
                         </div>
-                        <div class="col-sm-2 col-md-2 col-xs-2">
+                        <div class="col-xs-2 col-sm-2 col-md-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/7uad.jpg" width="105%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/7uad.jpg" vspace="10" width="200">
                           </div>
                         </div>
-                        <div class="col-sm-2 col-md-2 col-xs-2">
+                        <div class="col-xs-2 col-sm-2 col-md-2">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/10upzac1.png" width="70%">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/10upzac1.png" vspace="10" width="100">
                           </div>
                         </div>
-                        <div class="col-sm-2 col-md-2 col-xs-2">
+                        <div class="col-xs-2 col-sm-2 col-md-2">
                           <div>
-                                <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/9hospitalsanagustin.jpg" width="85%">
+                                <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/9hospitalsanagustin.jpg" vspace="10" width="200">
                           </div>
                         </div>
-                        <div class="col-sm-2 col-md-2 col-xs-2">
+                        <div class="col-xs-2 col-sm-2 col-md-2">
                           <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/8itz.png" width="65%">                              
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/8itz.png" vspace="10" width="80">                              
                           </div>
                         </div> 
-                        <div class="col-sm-2 col-md-2 col-xs-2">
+                        <div class="col-xs-2 col-sm-2 col-md-2">
                           <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/11LogoUAZ.jpg" width="65%">                              
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/11LogoUAZ.jpg" vspace="10" width="80">                              
+                          </div>
+                        </div>                        
+                        <div class="col-xs-2 col-sm-2 col-md-2">
+                          <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/13intel.png" vspace="10" width="100">                              
+                          </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2">
+                          <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/15MITEF-Mx.png" vspace="10" width="100">                              
+                          </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2">
+                          <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/12cesantoni.jpg" vspace="10" width="200">                              
+                          </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2">
+                          <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/14googledev.png" vspace="10" width="150">                              
+                          </div>
+                        </div>                        
+                        <div class="col-xs-2 col-sm-2 col-md-2">
+                          <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/16nearsoft.png" vspace="10" width="150">                              
+                          </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2">
+                        <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/17ppinsa.jpg" vspace="10" width="150">                              
                           </div>
                         </div>
                       </div>
 
                     </div>                      
-                    <div class="col-md-2">
+                    <div class="col-xs-2 col-md-2 col-sm-2">
                     </div>
                 </div>
             </div>
+       		 </div>
         </div>
+        
         <hr>
          
          <!--Footer-->
@@ -248,10 +327,10 @@ $con = new Conexion();
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-xs-12">
                                  <h5>Equipo de mentores</h5>
                                 <p>
-                                Seras asesorado por mentores con gran experiencia en las diferentes areas...
+                                Serás asesorado por mentores con gran experiencia en las diferentes áreas...
                                 </p>
                                 </div>
                             <div class="col-md-6">
@@ -305,7 +384,7 @@ $con = new Conexion();
                         <blockquote class="blockquote">
                            <h6>
                                 <p class="mb-0">
-                                La innovación es lo que distingue a un lider de los demas.
+                                La innovación es lo que distingue a un líder de los demás.
                                 </p>
                            </h6>
                             <footer class="blockquote-footer">
@@ -337,7 +416,7 @@ $con = new Conexion();
                         <blockquote class="blockquote">
                             <h6>
                                 <p class="mb-0">
-                               La innovación es la herramienta especifica del emprendimiento.
+                               La innovación es la herramienta específica del emprendimiento.
                                </p>
                             </h6>
                             <footer class="blockquote-footer">
@@ -361,7 +440,7 @@ $con = new Conexion();
                             <li type="disc">¿Cuentas con un equipo de trabajo?</li>
                             <li type="disc">¿Quieres ser parte de este gran evento?</li>
                         </ul>
-                           Registrate, no te quedes con las ganas y acompañanos en esta gran oportunidad.
+                           Regístrate, no te quedes con las ganas y acompáñanos en esta gran oportunidad.
                     </h7>
                 </p>
             </div> 
@@ -380,7 +459,7 @@ $con = new Conexion();
                         </h5>
                         <div class="form-group">
                             <span>
-                               <h7 align="justify">No te quedes fuera de este gran evento, asiste con tu equipo y se parte de la innovación</h7>
+                               <h7 align="justify">No te quedes fuera de este gran evento, asíste con tu equipo y sé parte de la innovación</h7>
                             </span>
                         </div>
                     </div>
@@ -392,17 +471,14 @@ $con = new Conexion();
                         </h5>
                         <span>
                              
-                            Avenida de la Juventud #504,col.Barros Sierra, C.P.98090 Zacatecas,Zac.
+                            Avenida de la Juventud #504, Colonia Barros Sierra, C.P. 98090 Zacatecas,Zac.
                         </span>
                         <h7>
                             <div class="form-group">
                                 <span>
-                                    <a href="#">
                                         <i class="fas fa-phone-volume">
-                                        </i>
-                                        (492)921 28 16
-                                    </a>
-                                    y 921 30 18 ext 1516
+                                        </i>                                        
+                                    (492) 921 28 16 y (492) 921 30 18 ext 1516
                                 </span>
                             </div>
                             <div class="form-group">
@@ -414,7 +490,7 @@ $con = new Conexion();
                             </div>
                         </h7>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" align="center">
                         <hr>
                         <h5>
                             Mapa

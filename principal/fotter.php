@@ -1,4 +1,5 @@
-<div class="row" style="background-color: #000;color: white; ">
+ <!--Footer-->
+   <div class="row" style="background-color: #000;color: white; ">
     <div class="col-md-12">
         <div class="row align-items-center">
             <div class="col-md-2">
@@ -18,7 +19,7 @@
                     <div class="col-md-6">
                          <h5>Equipo de mentores</h5>
                         <p>
-                        Seras asesorado por mentores con gran experiencia en las diferentes areas...
+                        Serás asesorado por mentores con gran experiencia en las diferentes áreas...
                         </p>
                         </div>
                     <div class="col-md-6">
@@ -72,7 +73,7 @@
                 <blockquote class="blockquote">
                    <h6>
                         <p class="mb-0">
-                        La innovación es lo que distingue a un lider de los demas.
+                        La innovación es lo que distingue a un líder de los demás.
                         </p>
                    </h6>
                     <footer class="blockquote-footer">
@@ -104,7 +105,7 @@
                 <blockquote class="blockquote">
                     <h6>
                         <p class="mb-0">
-                       La innovación es la herramienta especifica del emprendimiento.
+                       La innovación es la herramienta específica del emprendimiento.
                        </p>
                     </h6>
                     <footer class="blockquote-footer">
@@ -128,7 +129,7 @@
                     <li type="disc">¿Cuentas con un equipo de trabajo?</li>
                     <li type="disc">¿Quieres ser parte de este gran evento?</li>
                 </ul>
-                   Registrate, no te quedes con las ganas y acompañanos en esta gran oportunidad.
+                   Regístrate, no te quedes con las ganas y acompáñanos en esta gran oportunidad.
             </h7>
         </p>
     </div> 
@@ -147,7 +148,7 @@
                 </h5>
                 <div class="form-group">
                     <span>
-                       <h7 align="justify">No te quedes fuera de este gran evento, asiste con tu equipo y se parte de la innovación</h7>
+                       <h7 align="justify">No te quedes fuera de este gran evento, asíste con tu equipo y sé parte de la innovación</h7>
                     </span>
                 </div>
             </div>
@@ -159,17 +160,14 @@
                 </h5>
                 <span>
                      
-                    Avenida de la Juventud #504,col.Barros Sierra, C.P.98090 Zacatecas,Zac.
+                    Avenida de la Juventud #504, Colonia Barros Sierra, C.P. 98090 Zacatecas,Zac.
                 </span>
                 <h7>
                     <div class="form-group">
                         <span>
-                            <a href="#">
                                 <i class="fas fa-phone-volume">
-                                </i>
-                                (492)921 28 16
-                            </a>
-                            y 921 30 18 ext 1516
+                                </i>                                        
+                            (492) 921 28 16 y (492) 921 30 18 ext 1516
                         </span>
                     </div>
                     <div class="form-group">
@@ -193,3 +191,4 @@
         </div>
     </div>
 </div>
+ <!--fin Footer-->   
