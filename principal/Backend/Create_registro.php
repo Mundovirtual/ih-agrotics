@@ -31,21 +31,21 @@
                  			</div>
             			<?php
 		    		}
-		    		else if(empty($this->nombre)){
+		    		else if(empty($this->nombre) || is_numeric($this->nombre)){
 		    			?>
                 			<div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
                        			<strong> Nombre inválido</strong>
                  			</div>
             			<?php
 		    		}
-		    		else if(empty($_POST['apellidop'])){
+		    		else if(empty($_POST['apellidop']) || is_numeric($_POST['apellidop'])){
 		    			?>
                 			<div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
                        			<strong> Apellido paterno inválido</strong>
                  			</div>
             			<?php
 		    		}
-		    		else if(empty($_POST['apellidom'])){
+		    		else if(empty($_POST['apellidom']) || is_numeric($_POST['apellidom'])){
 		    			?>
                 			<div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
                        			<strong> Apellido materno inválido</strong>
@@ -141,12 +141,13 @@
 				    			if($resultado){
 				    				?>
 				    				<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-check"></i>
-			                             <strong>Usuario registrado! ir a mi perfil para iniciar sesion</strong>
+			                             <strong>Usuario registrado! Favor de iniciar sesión</strong>
 			                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 			                             <span aria-hidden="true">&times;</span>
 			                             </button>
-			                             
+
 			                        </div>
+
 				    				<?php
 				    			}else {
 				    				?>

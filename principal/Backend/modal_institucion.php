@@ -11,7 +11,7 @@
                             <div class="form-group">
                               <div id="datos-registrado-ajax"></div>
                               <label class="control-label text-danger">Institucion</label>
-                              <input type="text" class="form-control text-dark" id="i" name="i" placeholder="Ingresar Institucion" name = "i" onkeypress="return carrerainstitucion(event)">
+                              <input type="text" class="form-control text-dark" id="i" name="i" placeholder="Ingresar Institucion" name = "i" onkeypress="return carrerainstitucion(event)" onpaste = "alert('No permitido Ctrl + v');return false">
                             </div>
                           </div>
 
