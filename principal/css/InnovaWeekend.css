@@ -1,0 +1,176 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.collapse ul li
+{
+    padding: 8px;
+}
+nav.navbar{
+	border-bottom: 5px solid #1293d4;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	position: fixed;
+}
+nav.navbar div.collapse{
+	float: right;
+}
+nav.navbar a.navbar-brand{
+	color: #1293d4;
+	font-weight: bold;
+}
+.collapse ul.navbar-nav li.nav-item a.nav-link{
+	color: #fff;
+}
+a.nav-link:hover{
+	color: #ccc;
+	font-weight: bold;
+ 
+}
+div.contenedor{
+	width: 100%;
+	margin-top: 80px;
+	background-color: #FBFBFB;
+	border: 1px solid transparent;
+	border-bottom: 2px solid red;
+	text-align: center;
+}
+
+div.invitacion{
+	width: 100%;
+	background-color: #F93838;
+	font-size: 120%;
+	color: #fff;
+	padding: 30px;
+}
+
+div.cajaboton div.boton{
+	text-align: center;
+	background-color: #fff;
+	width: 170px;
+	height: 50px;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.cajaboton div.boton a{
+	padding: 20px;
+	font-size: 20px;
+	text-decoration: none;
+	line-height: 200px;
+}
+
+div.cajaboton div.boton:hover{
+    	border: 2px solid #fff;
+    	background-color:#F93838; 
+}
+
+
+div.contenido{
+
+	padding: 20px;
+	padding-right: 4%;
+	font-family: 'Gochi Hand', cursive;
+	font-weight: bold;
+	font-size: 25px;
+    text-align: justify;
+    background-color: rgba(221,212,210,.3);
+    margin-top: 10px;
+    
+    
+}
+
+div.contenido div.imagen{
+	float: left;
+
+}
+
+div.datosempresa{
+	width: 100%;
+	background-color: #302A30;
+	color: #fff;
+	padding: 40px;
+	text-align: justify;
+}
+/*DATOS DE LA EMPRESA*/
+div.datosempresa div.col-lg-2 div.form-group ul li{
+   list-style: none;
+}
+
+div.datosempresa div.col-lg-2 div.form-group ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
+	color: red;
+}
+div.datosempresa div.col-lg-4 div.imagen1 img.imagen{
+  width: 100px;
+  float: left;
+  display: flex;
+}
+
+
+div.titulo{
+	width: 100%;
+	padding: 20px;
+	font-weight: bold;
+	animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: inherit;
+	
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+div.titulo h2{
+	border-bottom: 5px solid #ccc9c9;
+	padding-bottom: : 2px;
+	color: #1293d4;
+	font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+	div.contenedor{
+		margin-top: 102px;
+	}
+	nav.navbar button.boton{
+		background-color: red;
+		color: white;
+	}
+	div.collapse ul.navbar-nav li.nav-item a.nav-link{
+      font-size: 14px;
+      margin: 0px;
+      background-color: #1293d4;
+      color: white;
+      text-align: left;
+      padding-left: 15px;
+	}
+	div.titulo{
+		font-size: 50px;
+	}
+    div.contenido{
+    	width: 93%;
+    	margin:0px auto; 
+    	font-size: 100%;
+    	font-family: 'Arial', cursive;
+    	padding-right: 25px; 
+    }
+}

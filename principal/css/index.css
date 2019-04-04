@@ -1,0 +1,517 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.collapse ul li
+{
+    padding: 7px;
+}
+/*Inicio verticales*/
+div.contenedor-vertical{
+	width: 80%;
+	padding:5px;
+	margin: auto;
+	text-align: center;
+}
+div.contenedor-vertical div.caja-vertical{
+	width: 550px;
+	padding: 20px;
+	background-color: white;/*#96e1f0*/
+	margin-top: 25px;
+	margin: 15px;
+	display: inline-grid;
+	word-wrap: break-word;
+	vertical-align: top;
+
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+div.contenedor-vertical div.caja-vertical p{
+	text-align: justify;
+}
+/*Fin verticales*/
+/*Menu desplegable*/
+nav.navbar{
+	border-bottom: 4px solid #1293d4;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	position: fixed;
+}
+
+nav.navbar div.collapse{
+	float: right;
+}
+nav.navbar a.navbar-brand{
+	color: #1293d4;
+	font-weight: bold;
+}
+.collapse ul.navbar-nav li.nav-item a.nav-link{
+	color: #fff;
+}
+div.contenedor #DatosImagen{
+	min-height: 400px;
+}
+
+div.contenedor #DatosImagen h1.left{
+	position: absolute;
+	color: #fff;
+	top: 60px;
+	font-weight: bold;
+	font-size: 200%;
+	left: 100px;
+}
+
+div.contenedor #DatosImagen h2.left{
+	position: absolute;
+	color: #fff;
+	top: 120px;
+	font-weight: bold;
+	font-size: 200%;
+	left: 100px;
+}
+
+ 
+
+/*TEXTO EN UNA IMAGEN*/
+div.textoImagen
+{
+	width: 100%;
+	position: relative;
+}
+
+div.textoImagen{
+-webkit-animation: swing 1s ease;
+animation: swing 1s ease;
+-webkit-animation-iteration-count: 1;
+animation-iteration-count: 1;
+
+
+}
+
+@-webkit-keyframes swing
+{
+15%
+{
+-webkit-transform: translateX(5px);
+transform: translateX(5px);
+}
+30%
+{
+-webkit-transform: translateX(-5px);
+transform: translateX(-5px);
+}
+50%
+{
+-webkit-transform: translateX(3px);
+transform: translateX(3px);
+}
+65%
+{
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+80%
+{
+-webkit-transform: translateX(2px);
+transform: translateX(2px);
+}
+100%
+{
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+}
+@keyframes swing
+{
+15%
+{
+-webkit-transform: translateX(5px);
+transform: translateX(5px);
+}
+30%
+{
+-webkit-transform: translateX(-5px);
+transform: translateX(-5px);
+}
+50%
+{
+-webkit-transform: translateX(3px);
+transform: translateX(3px);
+}
+65%
+{
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+80%
+{
+-webkit-transform: translateX(2px);
+transform: translateX(2px);
+}
+100%
+{
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+}
+div.textoImagen h1.textoencima1{
+	position: absolute;
+	top: 15%;
+	color: #2a0ee6;
+	left: 7%;
+}
+
+div.textoImagen h3.textoencima2{
+	position: absolute;
+	top: 25%;
+	color: #f00;
+	left: 7%;
+
+}
+
+div.textoImagen h3.textoencima2 a{
+	text-decoration: none;
+	color: #1293d4;
+	text-shadow: 0 0 30px #fff;
+    box-shadow: 7 0 70px #fff;
+    text-align: left; 
+	font-family: Arial Black; 
+	font-weight: bold; 
+	font-size: 30px; 
+	color: red; 
+	text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+}
+/*////////////////////////////////FIN///////////////////////////////////////*/
+/*EFECTOS EN EL TEXTO DE UNA IMAGEN*/
+div.textoImagen h1.textoencima1, h3.textoencima2{
+	animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: inherit;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/*FIN*/
+
+/*CATEGORIAS*/
+div.verticales{
+	width: 100%;
+	margin-top: 77px;
+}
+
+div.verticales div.form-group div.titulo{
+	margin-bottom: 22px;
+  
+}
+div.verticales div.form-group div.carousel img{
+	height: 500px;
+}
+div.verticales div.marco{
+	width: 100%;
+	margin: 0 auto;
+}
+
+div.verticales div.form-group div.col-lg-5 div.contenedor{
+  border: 1px solid #DAD1D1;
+  height: 450px;
+}
+
+div.verticales div.form-group div.col-lg-5 div.contenedor span i{
+	font-size: 40px;
+    margin:40px auto;
+    display: block;
+}
+
+/*----------FIN CATEGORIAS--------------*/
+/*CONTENIDO DE ALIADOS ESTRATEGICOS*/
+ div.container-aliados h1.aliado{
+ 	text-shadow: 2px 3px #999;
+ }
+ div.container-cuadro{
+ 	width: 60%;
+	margin: auto;
+ }
+
+ div.container-cuadro div.contenedor{
+ 	width: 300px;
+ 	margin: 3px;
+ 	height: 230px;
+ 	text-align: center;
+ 	max-height: 230px;
+ 	display: inline-grid;
+	word-wrap: break-word;
+	margin-bottom: 4px;
+ }
+ div.container-cuadro div.contenedor img{
+ 	width: 80%;
+ 	max-height: 200px;
+ 	margin: 2px;
+ 	margin: auto;
+ }
+
+/*Fin*/
+
+/*Inicio de Información de Jueces*/
+div.InfoJueces{
+	width: 100%;
+	color: #fff;
+	background-color: black;
+}
+
+div.InfoJueces div.row div.Imagen{
+  background-color: black;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+
+div.InfoJueces div.row div.Imagen img{
+	height: 270px;
+}
+
+div.InfoJueces div.texto{
+	margin-top: 35px;
+}
+div.InfoJueces div.texto h5.titulo{
+	border-left: 5px solid red;
+	padding-left: 21px;
+} 
+
+div.InfoJueces div.texto p{
+	padding-left: 14px;
+}
+
+div.InfoJueces div.texto div.cajaboton{
+	background-color: #F93838;
+	width: 45%;
+	font-size: 11px;
+	padding: 12px;
+	margin-left: 14px;
+}
+
+div.InfoJueces div.texto div.cajaboton:hover{
+		background-color: #FA5858;
+		border:1px solid #fff;
+
+}
+
+div.InfoJueces div.texto div.cajaboton div.boton{
+		text-align: center;
+
+}
+
+div.InfoJueces div.texto div.cajaboton div.boton a{
+	padding: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+
+}
+
+div.InfoJueces div.row div.Informacion{
+	background-color: #000000;
+	padding: 50px;
+}
+
+/*---------FIN DE JUECES------------*/
+
+/*Invitacion de la empresa*/
+div.invitacionIndice{
+	width: 100%;
+	background-color: #F93838;
+	font-size: 120%;
+	color: #fff;
+	padding: 30px;
+}
+
+div.cajabotonRegistrame div.boton2{
+	text-align: center;
+	background-color: #fff;
+	width: 170px;
+	height: 50px;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.cajabotonRegistrame div.boton2:hover{
+    	border: 2px solid #fff;
+    	background-color:#F93838; 
+}
+
+/*Fin de invitacion de verticales*/
+
+div.cajabotonRegistrame div.boton2 a{
+	padding: 20px;
+	font-size: 20px;
+	text-decoration: none;
+	line-height: 200px;
+}
+
+
+
+
+/*--------FIN----------------*/
+/*FRASES*/
+section article div.Frases{
+	width: 100%;
+	background-color: #fff;
+	color: black;
+	height: 300px;
+	margin-bottom: 15PX;
+	margin-top: 18	px;
+}
+
+section article div.Frases div.titulofrase{
+	margin-bottom: 12px;
+	font-weight: bold;
+}
+
+section article div.Frases div.ventanas{
+	margin-top: 8%;
+	text-align: justify;
+	width: 80%;
+	margin: auto;
+
+}
+
+section article div.Frases div.ventanas p i{
+	font-size: 55px;
+}
+/*FIN FRASES*/
+
+/*Datos de la empresa*/
+div.datosempresa{
+	width: 100%;
+	background-color: #302A30;
+	color: #fff;
+	padding: 40px;
+	text-align: justify;
+}
+
+div.datosempresa div.col-lg-2 div.form-group ul li{
+   list-style: none;
+}
+
+div.datosempresa div.col-lg-2 div.form-group ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
+	color: red;
+}
+
+
+/*Fin de la empresa*/
+@media(max-width: 768px) {
+	/*INFORMACION DE VERTICAL*/
+	div.verticales{
+		margin-top: 25px;
+	}
+	div.contenedor-vertical{
+	width: 100%;
+	text-align: center;
+    }
+
+    div.contenedor-vertical div.caja-vertical{
+	padding: 20px;
+	width: 90%;
+	background-color: #96e1f0;
+	border-style: solid;
+	margin-top: 5px;
+	margin: 2px;
+    }
+
+    div.verticales div.form-group div.carousel img{
+	height: 240px;
+	}
+	/*FIN DE VERTICAL*/
+	nav.navbar button.boton{
+		background-color: red;
+		color: white;
+	}
+	div.collapse ul.navbar-nav li.nav-item a.nav-link{
+      font-size: 14px;
+      margin: 0px;
+      background-color: #1293d4;
+      color: white;
+      text-align: left;
+      padding-left: 15px;
+	}
+
+
+	
+	div.verticales div.textoImagen img{
+		margin-top: 90px;
+		height: 200px;
+1
+	}
+	div.contenedor #DatosImagen h1.left{
+		font-size: 25px;
+		left: 10px;
+		top: 20px;
+	}
+	div.contenedor #DatosImagen h2.left{
+	 
+		font-size: 20px;
+		left: 10px;
+		top: 40px;
+	}
+
+	div.textoImagen h1.textoencima1{
+		position: absolute;
+		margin-top: 90px;
+	    top: 15%;
+	    color: #000;
+	    left: 3%;
+	    font-size: 90%;
+	}
+
+	div.textoImagen h3.textoencima2{
+		position: absolute;
+	    top: 25%;
+	    color: #000;
+	    left: 3%;
+	    font-size: 70%;
+	    margin-top: 90px;
+	}
+
+	div.textoImagen h3.textoencima2 a{
+		color: red;
+		font-weight: bold;
+		font-size: 14px;
+		margin-top: 4px;
+		
+	} 
+
+	div.verticales div.form-group div.titulo h1{
+		font-size: 25px;
+		padding-top: 10px;
+	}
+
+	/*Informacion de Jueces*/
+
+	div.InfoJueces div.row div.Imagen{
+		width: 80%;
+		margin: auto;
+		background-color: black;
+		border-top: 12px;
+		margin-top: 80px;
+	}
+
+	div.InfoJueces div.texto div.cajaboton{
+		font-size: 70%
