@@ -43,7 +43,7 @@
                <div class="form-group col-md-6">
                 <label for="#">Rol :<small class="text-danger"> (Required)</small></label>
                 <select class="form-control" id="rol" name="rol">
-                  <option value="0"> -- Seleccionar Rol --</option>
+                  <option value="0"> -- Seleccionar --</option>
                 <?php 
                 require_once 'conexion/abrirconexion.php';
                 $con = new Conexion();
@@ -71,11 +71,11 @@
                   <div class="form-group col-md-6" id="nombre">
                     <div class="row">
                       <div class="col-md-6">
-                        <label for="inputPassword4">Apellido Paterno:<small class="text-danger "> (Required)</small>:</label>
+                        <label for="inputPassword4">Apellido paterno:<small class="text-danger "> (Required)</small>:</label>
                         <input type="text" name="apellidop" class="form-control nombress" id="apellidop" onkeypress="return palabra(event)"  placeholder="Apellido paterno"  onpaste = "alert('No permitido Ctrl + v');return false">
                       </div>
                       <div class="col-md-6">
-                        <label for="inputPassword4">Apellidos Materno:<small class="text-danger"> (Required)</small>:</label>
+                        <label for="inputPassword4">Apellido materno:<small class="text-danger"> (Required)</small>:</label>
                         <input type="text" name="apellidom" class="form-control nombress" id="apellidom" onkeypress="return palabra(event)"  placeholder="Apellido Materno" onpaste = "alert('No permitido Ctrl + v');return false">
                       </div>
                     </div>
@@ -124,10 +124,10 @@
                      <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta" onpaste = "alert('No permitido Ctrl + v');return false" onkeypress="return letrasnumeros(event)">
                   </div>
                   <div class="form-group col-md-6">
-                     <label for="#">Fecha de Nacimiento :<small class="text-danger"> (Required)</small></label>
+                     <label for="#">Fecha de nacimiento :<small class="text-danger"> (Required)</small></label>
                      <div class="row">
                        <div class="col-xs-4 col-md-4">
-                        <label> Dia</label>
+                        <label> Día</label>
                         <select name="dia" class="form-control" id="dia">
                           <option value="0">-- Seleccionar--</option>
                           <?php
@@ -181,9 +181,9 @@
 
              <div class="form-row">
                   <div class="form-group col-md-6">
-                     <label for="exampleFormControlSelect1">Sexo :<small class="text-danger"> (Required)</small></label>
+                     <label for="exampleFormControlSelect1">Género :<small class="text-danger"> (Required)</small></label>
                      <select id="sexo" class="form-control" name = "sexo">
-                      <option value="0">-- Seleccionar sexo --</option>
+                      <option value="0">-- Seleccionar --</option>
                      <?php 
                      include_once 'conexion/abrirconexion.php';
                      $con = new Conexion();
@@ -200,7 +200,7 @@
                   <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Tallas :<small class="text-danger"> (Required)</small></label>
                      <select class="form-control" id="talla" name="talla">
-                       <option value="0">-- Seleccionar talla --</option>
+                       <option value="0">-- Seleccionar --</option>
                      
                       <?php 
                       require_once 'conexion/abrirconexion.php';
@@ -320,9 +320,9 @@
               },
               success: function(respuesta) {
                  $("#insertado").html(respuesta);
+                 
               }
           })
-
       });
   /*--------------VALIDACION CON LETRAS NUMEROS PALABRAS ----------------------------*/
   function solonumeros(e) {
