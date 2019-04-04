@@ -83,14 +83,14 @@
              </div>
              <div class="form-row">
                   <div class="form-group col-md-6">
-                     <label for="#">Email :<small class="text-danger"> (Required)</small> </label>
+                     <label for="#">Correo :<small class="text-danger"> (Required)</small> </label>
                      <input type="email" class="form-control" id="email" name="correo" placeholder="Labsol@gmail.com" onkeypress="return letrasnumeros(event)" onpaste = "alert('No permitido Ctrl + v');return false">
                      <div id="infoemail">
                      </div>
                   </div>
                   <div class="" id="checkemailresponse"></div>
                   <div class="form-group col-md-6">
-                     <label for="#">Cel :<small class="text-danger"> (Required)</small></label>
+                     <label for="#">Celular :<small class="text-danger"> (Required)</small></label>
                      <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="000 000 00 00"  onpaste = "alert('No permitido Ctrl + v');return false">
                   </div>
              </div>
