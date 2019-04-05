@@ -17,7 +17,7 @@
 
                           <div class="modal-footer">
                               <button type = "button" class="btn btn-danger" data-dismiss = "modal"><i class="fas fa-times"> Cerrar</i> </button>
-                              <button type = "submit" id="b" class="btn btn-danger"><i class="fas fa-check"> Guardar datos</i> </button>
+                              <button type = "button" id="b" class="btn btn-danger"><i class="fas fa-check"> Guardar datos</i> </button>
                           </div>
                         </div>
                       </div>

@@ -11,16 +11,26 @@ class guardar1
     public function guardarCarrera()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (empty($_POST["ca"])) {
+            if (empty($this->carrera)) {
                 ?>
-                   <div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i>
-                           <strong> Rellenar el campo Carrera !</strong>
+                   <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+                           <strong> Rellenar el campo Carrera :(</strong>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                  <span aria-hidden="true">&times;</span>
                             </button>
                    </div>
                 <?php
-            } else {
+            } else if(strlen($this->carrera)<=10){
+                ?>
+                   <div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i>
+                        <strong> Longitud mayor a 10 !</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                            </button>
+                   </div>
+                <?php
+            }
+            else {
                 require_once 'esqueleto-crud.php';
                 $esqueleto = new registro();
                 $convertir = utf8_decode($this->carrera);

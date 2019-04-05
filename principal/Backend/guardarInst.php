@@ -9,14 +9,25 @@ class guardar{
           if($_SERVER["REQUEST_METHOD"] == "POST"){
               if(empty($_POST["i"])){
                 ?>
-                  <div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i>
-                      <strong> Rellenar el campo Institución !</strong>
+                  <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+                      <strong> Rellenar el campo Institución :(</strong>
                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                       </button>
                   </div>
                 <?php
-              }else{
+              }else
+              if(strlen($this->institucion)<=10){
+                ?>
+                  <div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i>
+                      <strong> Longitud mayor a 10 !</strong>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                <?php
+              }
+              else{
                      require_once 'esqueleto-crud.php';
                      $esqueleto = new registro();
                      $convertir = utf8_decode($this->institucion);
