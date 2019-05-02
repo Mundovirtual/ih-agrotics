@@ -297,6 +297,21 @@ $con = new Conexion();
                             <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/17ppinsa.jpg" vspace="10" width="150">                              
                           </div>
                         </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2">
+                          <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/18Conalep.png" vspace="10" width="150">                              
+                          </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2">
+                          <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/19hackergarage.png" vspace="10" width="150">                              
+                          </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2">
+                          <div>
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/20logo-mpiozac.png" vspace="10" width="150">                              
+                          </div>
+                        </div>
                       </div>
 
                     </div>                      
