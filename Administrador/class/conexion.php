@@ -4,7 +4,7 @@ class Conectar{
  
 private $servidor="localhost";
 		private $usuario="root";
-		private $bd="hackyy";
+		private $bd="hack";
 		private $password="";
 		 
  
