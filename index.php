@@ -163,6 +163,9 @@ $con = new Conexion();
                     <div class="carousel-item">
                       <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/v5.png" width="100%" >
                     </div>
+                    <div class="carousel-item">
+                      <img class="d-block img-fluid mx-auto d-block" src="principal/imagenes/esalud/D1.jpg" width="100%" >
+                    </div>
                     <?php 
 	                if (!empty($fechas)) { 
 	                    $hoy=date('Y-m-d') ."\n"; 
