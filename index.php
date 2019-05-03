@@ -302,7 +302,7 @@ $con = new Conexion();
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2">
                           <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/18Conalep.png" vspace="10" width="150">                              
+                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/18Conalep.png" vspace="10" width="120">                              
                           </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2">
