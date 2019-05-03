@@ -76,7 +76,7 @@
  
 	function sanitizar($text){ 
 		$cadena=filter_var($text, FILTER_SANITIZE_STRING);		
-  		return trim(preg_replace('/\s+/', ' ', $cadena));;
+  		return trim(preg_replace('/\s+/', ' ', $cadena));
  	}  
  
  
