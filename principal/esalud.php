@@ -338,30 +338,6 @@
                        Vertical 2 “Diagnóstico Asistido y Prevención de Enfermedades” 
                       </h5>
                       <p class="card-text">
-                        El avance de la tecnología permite la manipulación e interpretación de grandes volúmenes de datos los cuales ofrecen una gran alternativa para el análisis y comportamiento de patrones que sigue la evolución de enfermedades de alto impacto a nuestra sociedad; el aprovechamiento de las tecnologías actuales ofrece la posibilidad de diseñar herramientas y algoritmos de diagnóstico y predicción  médica.
-                      </p> 
-                      <i>* Tecnologías de manipulación e interpretación de grandes volúmenes de datos como alternativa para el análisis y comportamiento de patrones para enfermedades multifactoriales</i>
-                      <p>Rúbricas Específicas de la Vertical. </p>
-                      <ul>
-                         PROYECTO 
-                        <li>Dispositivo tecnológico con capacidad para medir y detectar niveles de contaminantes en el agua potable</li>
-                        <li>Medición de PH y presencia de cloración, metales pesados y contaminantes</li>
-                        <li>Creación de banco de datos para alimentación en tiempo real</li>
-                        <li> Aplicación de algoritmos analíticos multifactoriales sobre banco de dátos</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-               
-               <div class="col-md-12">
-                  <br>
-                  <div class="card" style="background-color: #F3EFEE;">
-                    <div class="card-block">
-                      <h5 class="card-title" align="center">
-                        <br>
-                        Vertical 3 “Biónica y Robótica”
-                      </h5>
-                      <p class="card-text">
                         La integación tecnológica de dispositivos electrónicos con un diseño bastante complejo y eficiente interactuando con avanzados algoritmos de software impulsan la creación de increíbles componentes que pueden incorporarse a funciones motrices y orgánicas tanto de personas como de algunos tipos de animales, una de las líneas de mayor tendencia global son sin duda la robótica y biónica.
                       </p> 
                       <i>* Herramienta tecnológica para medir el nivel de contaminación por diversos factores para abatir brotes epidemiológicos, generar bancos de datos y aplicar algoritmos de análisis</i>
@@ -373,6 +349,30 @@
                         <li>Diseño de algoritmos de análisis complejo de datos y detección de patrones que detecten valores de riesgo para enfermedades multifactoriales </li>
                         <li>Aplicación práctica de alimentación y registro inteligente de valores médicos</li>
                       </ul>
+                    </div>
+                  </div><!--Fin-->
+                </div>
+               
+               <div class="col-md-12">
+                  <br>
+                  <div class="card" style="background-color: #F3EFEE;">
+                    <div class="card-block">
+                      <h5 class="card-title" align="center">
+                        <br>
+                        Vertical 3 “Biónica y Robótica”
+                      </h5>
+                      <p class="card-text">
+                        El avance de la tecnología permite la manipulación e interpretación de grandes volúmenes de datos los cuales ofrecen una gran alternativa para el análisis y comportamiento de patrones que sigue la evolución de enfermedades de alto impacto a nuestra sociedad; el aprovechamiento de las tecnologías actuales ofrece la posibilidad de diseñar herramientas y algoritmos de diagnóstico y predicción  médica.
+                      </p> 
+                      <i>* Tecnologías de manipulación e interpretación de grandes volúmenes de datos como alternativa para el análisis y comportamiento de patrones para enfermedades multifactoriales</i>
+                      <p>Rúbricas Específicas de la Vertical. </p>
+                      <ul>
+                         PROYECTO 
+                        <li>Dispositivo tecnológico con capacidad para medir y detectar niveles de contaminantes en el agua potable</li>
+                        <li>Medición de PH y presencia de cloración, metales pesados y contaminantes</li>
+                        <li>Creación de banco de datos para alimentación en tiempo real</li>
+                        <li> Aplicación de algoritmos analíticos multifactoriales sobre banco de dátos</li>
+                      </ul>   
                     </div>
                   </div>
                 </div>
