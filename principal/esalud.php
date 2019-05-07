@@ -70,7 +70,7 @@
               Premios y Seguimiento
             </a> 
             <a class="nav-item nav-link"  data-toggle="tab" href="#nav-mentores">
-               Mentores y Jueces 
+               Mentores y Juecess 
             </a> 
 
 
