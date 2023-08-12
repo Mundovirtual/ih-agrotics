@@ -80,16 +80,23 @@ include_once("../login/securityJuez.php");
     <div class="page ">
       <!-- navbar-->
       <header class="header sticky-top  ">
-        <nav class="navbar">
+        <nav class="navbar navbar-light bg-light">
           <div class="container-fluid ">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <div class="navbar-header">
                 <a id="toggle-btn" href="#" class="menu-btn">
+                  &nbsp;
                   <i class="fas fa-bars"></i>
                 </a>
-                  <img src="../img/iheb.png" width="140" align="center">
+                <a href="index.php">
+                  <img src="../img/dedica/challenge.png"  width="45" align="center">  
+                </a>
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center"> 
+                <img src="../img/dedica/dedicafundacion.png"  width="72" align="center"> 
+                &nbsp;&nbsp;
+                <img src="../img/dedica/inovationlab.png"  width="72" align="center"> 
+                &nbsp;&nbsp;
                 <!-- Log out-->
                 <li class="nav-item"><a href="#" class="nav-link logout" data-toggle = "modal" data-target = "#cerrar"><span class="fas fa-power-off text-danger"></span> Salir</a></li>
               </ul>
@@ -147,7 +154,7 @@ include_once("../login/securityJuez.php");
               <p>El mejor modo de predecir el futuro es inventándolo. –Alan Key</p>
             </div>
             <div class="col-sm-2 text-right">
-              <p>Equipo LABSOL</p>
+              <p>ISC</p>
               <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions and it helps me to run Bootstrapious. Thank you for understanding :)-->
             </div>
           </div>

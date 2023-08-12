@@ -18,7 +18,7 @@
   ?>
 <!--Fin Menu-->
  
-   <div class="container-portada bg-dark">
+   <div class="container-portada ">
 
     <div class="row align-items-center">
       <div class="col-lg-7">

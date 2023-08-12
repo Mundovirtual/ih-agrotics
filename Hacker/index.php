@@ -81,20 +81,25 @@ include_once("../login/securityHacker.php");
       </div>
     </div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 149px; max-height: 233px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></nav>
     <div class="page ">
-      <!-- navbar-->
+      <!-- navbar--> 
       <header class="header sticky-top  ">
-        <nav class="navbar">
+        <nav class="navbar navbar-light bg-light">
           <div class="container-fluid ">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <div class="navbar-header">
-                <a id="toggle-btn" href="#" class="menu-btn">
+                <a id="toggle-btn"  href="#" class="menu-btn">
+                  &nbsp;
                   <i class="fas fa-bars"></i>
-                </a>
-                 
-                  <img src="../img/iheb.png"  width="140" align="center">
-                
+                </a> 
+                <a href="index.php">
+                  <img src="../img/dedica/challenge.png"  width="45" align="center">  
+                </a>  
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center"> 
+                <img src="../img/dedica/dedicafundacion.png"  width="72" align="center"> 
+                &nbsp;&nbsp;
+                <img src="../img/dedica/inovationlab.png"  width="72" align="center"> 
+                &nbsp;&nbsp;
                 <!-- Log out-->
                 <li class="nav-item"><a href="#" class="nav-link logout" data-toggle = "modal" data-target = "#cerrar"><span class="fas fa-power-off text-danger"></span> Salir</a></li>
               </ul>
@@ -156,7 +161,7 @@ include_once("../login/securityHacker.php");
               <p>El mejor modo de predecir el futuro es inventándolo. –Alan Key</p>
             </div>
             <div class="col-sm-2 text-right">
-              <p>Equipo LABSOL</p>
+              <p>ISC</p>
               <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions and it helps me to run Bootstrapious. Thank you for understanding :)-->
             </div>
           </div>

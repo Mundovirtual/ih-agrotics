@@ -110,20 +110,21 @@
     <div class="page ">
       <!-- navbar-->
       <header class="header sticky-top">
-        <nav class="navbar">
+        <nav class="navbar navbar-light bg-light">
           <div class="container-fluid ">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
-              <div class="navbar-header">
-                <a id="toggle-btn" href="#" class="menu-btn">
+              <div >
+                <a id="toggle-btn"  href="#" class="menu-btn">
                   <i class="fas fa-bars"></i>
                 </a>
-                  <a href="index.php">
-                    <img src="../img/iheb.png"  width="130" align="center">
-                  </a>
-                  
-                
+                <a href="index.php">
+                  <img src="../../img/dedica/challenge.png"  width="42" > 
+                </a>  
               </div>
-              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">             
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">  
+                <img src="../../img/dedica/dedicafundacion.png"  width="72" align="center">
+                &nbsp;&nbsp;
+                <img src="../../img/dedica/inovationlab.png"  width="72" align="center">            
                 <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                   <li class="nav-item"><a href="#" class="nav-link logout" data-toggle = "modal" data-target = "#cerrar"><span class="fas fa-power-off text-danger"></span> Salir</a></li><!--Se utiliza para salir del sistema-->  
                 </ul>

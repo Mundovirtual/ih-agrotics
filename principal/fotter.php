@@ -1,9 +1,9 @@
  <!--Footer-->
-   <div class="row" style="background-color: #000;color: white; ">
+   <div class="row" style="background-color: #004193;color: white; ">
     <div class="col-md-12">
         <div class="row align-items-center">
-            <div class="col-md-2">
-                <img  class="img-responsive img-fluid" src="imagenes/labsol/iwpngblue.png" width="190"  height="100"></img>
+            <div class="col-md-2"> 
+                <img  class="img-responsive img-fluid" src="img/dedica/challenge_white.png" width="150"></img>
             </div>
             <div class="col-md-10">
                 <div class="row">
@@ -39,7 +39,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row " >
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-12">
@@ -118,7 +118,7 @@
     
 </div>
         
-<div class="row"  style="background-color: red;color: white; ">
+<div class="row"  style="background-color: #004193;color: white; ">
     <div class="col-md-1">
     </div>   
     <div class="col-md-10">
@@ -136,7 +136,7 @@
     <div class="col-md-1">
     </div>   
 </div>
- <div class="row"  style="background-color: black;color: white; ">
+ <div class="row"  style="background-color: #004193;color: white; ">
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-1">
