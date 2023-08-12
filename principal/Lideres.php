@@ -26,27 +26,8 @@
       <h4 class="text-dark display-4 text-center">
         Líderes
       </h4> 
-          <div class="row align-items-center">
-            <div class="col-xs-4 col-sm-2 col-md-4">
-              <div>
-                   <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/1sjuventud.png" width="300" vspace="20" >
-              </div>
-            </div>
-            <div class="col-xs-4 col-sm-2 col-md-4">
-              <div>
-                  <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/2scampo.png" width="350" vspace="20">
-              </div>
-            </div>
-            <div class="col-xs-4 col-sm-2 col-md-4">
-              <div>
-                   <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/3sprevencion.png"  width="300" vspace="20">
-              </div>
-            </div>
-            <div class="col-xs-4 col-sm-2 col-md-4">
-              <div>
-                   <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/4ssalud.png"  width="280" vspace="20">
-              </div>
-            </div>
+          <div class="row align-items-center">  
+             
             <div class="col-xs-4 col-sm-2 col-md-4">
               <div>
                    <img class="img-responsive img-fluid mx-auto d-block" src="imagenes/esalud/5talent.png"  width="250" vspace="20">

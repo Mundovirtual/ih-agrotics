@@ -21,14 +21,14 @@
 <body>
  <div class="row">
     <div class="col-md-12">
-        <div style="background-color:#E6E6E6;" align="center">
-          <img class="img-responsive img-fluid" src="img/logosconvocantes.png" width="850">  
+        <div style="background-color:#FFFFFF;" align="center">  
+          <img class="img-responsive img-fluid" src="../img/dedica/banner.png" width="850">  
         </div>
     </div>
 </div>
 
 
-  <div class="page-header header-filter" style="background-image: url('img/innovahack.png'); background-size: cover; background-position: top center;">
+  <div class="page-header header-filter" style="background-image: url('../img/dedica/fondo.jpg'); background-size: cover; background-position: top center;">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6 ml-auto mr-auto">

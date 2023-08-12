@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12" >
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <img class="img-responsive" src="imagenes/esalud/iheb.png" width="130"/>    
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img class="img-responsive" src="../img/dedica/challenge.png" width="45"/>    
            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -61,8 +61,8 @@
 
 <div class="row">
     <div class="col-md-12">
-        <div style="background-color:#E6E6E6;" align="center">
-          <img class="img-responsive img-fluid " src="imagenes/esalud/logosconvocantes.png" width="850">  
+        <div style="background-color:#FFFFFF;" align="center">
+          <img class="img-responsive img-fluid " src="../img/dedica/banner.png" width="850">  
         </div>
     </div>
 </div>

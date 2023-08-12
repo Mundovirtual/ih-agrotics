@@ -1,5 +1,5 @@
 <?php 
-include_once 'principal/conexion/abrirconexion.php';
+include_once 'principal/conexion/abrirconexion.php'; 
 $con = new Conexion();
 
  ?>
@@ -45,8 +45,8 @@ $con = new Conexion();
         <!--Menu-->
         <div class="row ">
             <div class="col-md-12" >
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <img class="img-responsive img-fluid" src="principal/imagenes/esalud/iheb.png" width="130"/>    
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <img class="img-responsive img-fluid" src="img/dedica/challenge.png" width="52" heigth="20"/>    
                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -107,8 +107,8 @@ $con = new Conexion();
 
         <div class="row">
             <div class="col-md-12">
-                <div style="background-color:#E6E6E6;" align="center">
-                  <img class="img-responsive img-fluid " src="principal/imagenes/esalud/logosconvocantes.png" width="850">  
+                <div style="background-color:#FFFFFF;" align="center"> 
+                  <img class="img-responsive img-fluid " src="img/dedica/banner.png" width="750" >  
                 </div>
             </div>
         </div>
@@ -125,10 +125,10 @@ $con = new Conexion();
 
 	                    if($Flimit>$hoy){
 	                     ?>
-	                        
+                               <h1>Registra tu equipo</h1>
 	                            <a href="principal/registro.php">
-	                                <img align="center" class="img-responsive mx-auto d-block img-thumbnail" src="principal/imagenes/esalud/registro.jpg" >
-	                            </a>
+                                <h3>Da clik aquí</h3>
+                              </a>
 	                                
 	                             
 	                     <?php
@@ -212,111 +212,25 @@ $con = new Conexion();
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-2">
                     </div>
-                    <div class="col-xs-8 col-sm-5 col-md-8 ">
-
+                    <div class="col-xs-8 col-sm-5 col-md-8 "> 
                       <div class="row align-items-center">
-                        <div class="col-xs-2 col-sm-2 col-md-2">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/1sjuventud.png" vspace="10" width="200">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="img/dedica/dedicafundacion.png" vspace="10" width="200">
                           </div>
                         </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
                           <div>
-                              <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/2scampo.png" vspace="10" width="200">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="img/dedica/inovationlab.png" vspace="10" width="200">
                           </div>
                         </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
                           <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/3sprevencion.png" vspace="10" width="200">
+                               <img class="img-responsive img-fluid mx-auto d-block" src="img/dedica/challenge.png" vspace="10" width="90">
                           </div>
                         </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/4ssalud.png" vspace="10" width="200">
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/5talent.png" vspace="10" width="130">
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/6logo_cunorte.jpg" vspace="10" width="150">
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/7uad.jpg" vspace="10" width="200">
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                               <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/10upzac1.png" vspace="10" width="100">
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                                <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/9hospitalsanagustin.jpg" vspace="10" width="200">
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/8itz.png" vspace="10" width="80">                              
-                          </div>
-                        </div> 
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/11LogoUAZ.jpg" vspace="10" width="80">                              
-                          </div>
-                        </div>                        
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/13intel.png" vspace="10" width="100">                              
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/15MITEF-Mx.png" vspace="10" width="100">                              
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/12cesantoni.jpg" vspace="10" width="200">                              
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/14googledev.png" vspace="10" width="150">                              
-                          </div>
-                        </div>                        
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/16nearsoft.png" vspace="10" width="150">                              
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                        <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/17ppinsa.jpg" vspace="10" width="150">                              
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/18Conalep.png" vspace="10" width="120">                              
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/19hackergarage.png" vspace="10" width="150">                              
-                          </div>
-                        </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                          <div>
-                            <img class="img-responsive img-fluid mx-auto d-block" src="principal/imagenes/esalud/20logo-mpiozac.png" vspace="10" width="150">                              
-                          </div>
-                        </div>
-                      </div>
-
+                         
+                      </div> 
                     </div>                      
                     <div class="col-xs-2 col-md-2 col-sm-2">
                     </div>
@@ -326,200 +240,9 @@ $con = new Conexion();
         </div>
         
         <hr>
-         
-         <!--Footer-->
-           <div class="row" style="background-color: #000;color: white; ">
-            <div class="col-md-12">
-                <div class="row align-items-center">
-                    <div class="col-md-2">
-                        <img  class="img-responsive img-fluid" src="principal/imagenes/labsol/iwpngblue.png" width="190"  height="100"></img>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="row">
-                            <div class="col-md-12" >
-                                <h2>Participación</h2>
-                                <span>
-                                    Contaremos con una gran variedad de mentores jueces e invitados especiales.
-                                </span>
-                                <hr>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-12">
-                                 <h5>Equipo de mentores</h5>
-                                <p>
-                                Serás asesorado por mentores con gran experiencia en las diferentes áreas...
-                                </p>
-                                </div>
-                            <div class="col-md-6">
-                                <h5>Invitados especiales y conferencistas</h5>
-                                <p>
-                                   <ul>
-                                       <li>Francisco Neri, Especialista en desarrollo de proyectos; Nearsof</li>
-                                       <li>Héctor Benitéz, Especialista en desarrollo de proyectos, Nearsoft</li>
-                                       <li>Sergio Camacho, Director del Laboratorio de Innovación del ITESM Campus Monterrey</li>
-                                       <li>Rafael Echeverría, Coordinador del Hackaton Agro de Tabasco</li>
-                                   </ul>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="text-center text-dark">
-                            Innovación
-                        </h3> 
-                    </div>
-                </div>
-                <div class="row col-md-12" align="center">
-                    <div class="col-md-3">
-                        <p class="text-center">
-                            <i class="fas fa-bolt fa-2x">
-                            </i>
-                        </p>
-                        <blockquote class="blockquote">
-                            <h6>
-                                <p class="mb-0">
-                                 El corazón y el alma de la empresa es la creatividad y la innovación.
-                                 </p>
-                            </h6>
-                            <footer class="blockquote-footer">
-                              <cite> Bob Iger</cite>
-                            </footer>
-                        </blockquote> 
-                    </div>
-                    <div class="col-md-3">
-                        <p class="text-center">
-                            <i class="fas fa-bolt fa-2x">
-                            </i>
-                        </p>
-                        <blockquote class="blockquote">
-                           <h6>
-                                <p class="mb-0">
-                                La innovación es lo que distingue a un líder de los demás.
-                                </p>
-                           </h6>
-                            <footer class="blockquote-footer">
-                              <cite>Steve Jobs</cite>
-                            </footer>
-                        </blockquote> 
-                    </div>
-                    <div class="col-md-3">
-                        <p class="text-center">
-                            <i class="fas fa-bolt fa-2x">
-                            </i>
-                        </p>
-                        <blockquote class="blockquote">
-                            <h6>
-                                <p class="mb-0">
-                                La persistencia es muy importante. No debes renunciar a menos que te veas obligado a hacerlo.
-                                </p>
-                            </h6>
-                            <footer class="blockquote-footer">
-                                <cite>Elon Musk</cite>
-                            </footer>
-                        </blockquote> 
-                    </div>
-                    <div class="col-md-3">
-                        <p class="text-center">
-                            <i class="fas fa-bolt fa-2x">
-                            </i>
-                        </p>
-                        <blockquote class="blockquote">
-                            <h6>
-                                <p class="mb-0">
-                               La innovación es la herramienta específica del emprendimiento.
-                               </p>
-                            </h6>
-                            <footer class="blockquote-footer">
-                                 <cite> Peter Druker</cite>
-                            </footer>
-                        </blockquote> 
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-                
-        <div class="row"  style="background-color: red;color: white; ">
-            <div class="col-md-1">
-            </div>   
-            <div class="col-md-10">
-                <p>
-                    <h7>
-                        <ul>
-                            <li type="disc">¿Tienes una idea que aborde alguna de las verticales?</li>
-                            <li type="disc">¿Cuentas con un equipo de trabajo?</li>
-                            <li type="disc">¿Quieres ser parte de este gran evento?</li>
-                        </ul>
-                           Regístrate, no te quedes con las ganas y acompáñanos en esta gran oportunidad.
-                    </h7>
-                </p>
-            </div> 
-            <div class="col-md-1">
-            </div>   
-        </div>
-         <div class="row"  style="background-color: black;color: white; ">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-3">
-                        <hr>
-                        <h5>
-                            InnovaHack
-                        </h5>
-                        <div class="form-group">
-                            <span>
-                               <h7 align="justify">No te quedes fuera de este gran evento, asíste con tu equipo y sé parte de la innovación</h7>
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-3">
-                        <hr>
-                        <h5>
-                            Contáctanos
-                        </h5>
-                        <span>
-                             
-                            Avenida de la Juventud #504, Colonia Barros Sierra, C.P. 98090 Zacatecas,Zac.
-                        </span>
-                        <h7>
-                            <div class="form-group">
-                                <span>
-                                        <i class="fas fa-phone-volume">
-                                        </i>                                        
-                                    (492) 921 28 16 y (492) 921 30 18 ext 1516
-                                </span>
-                            </div>
-                            <div class="form-group">
-                                <span>
-                                    <i class="far fa-envelope">
-                                    </i>
-                                    labsol@cozcyt.gob.mx
-                                </span>
-                            </div>
-                        </h7>
-                    </div>
-                    <div class="col-md-4" align="center">
-                        <hr>
-                        <h5>
-                            Mapa
-                        </h5>
-                        <span>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.1237548223157!2d-102.5806774990537!3d22.76078814452632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86824e5e36e6fae5%3A0xbb92c4708de888e0!2sAv.+de+la+Juventud+504%2C+Zona+A%2C+La+Encantada%2C+98090+Zacatecas%2C+Zac.!5e0!3m2!1ses!2smx!4v1551412372458" width="300" height="150" frameborder="1" style="border:0" allowfullscreen></iframe> 
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php 
+          include_once("principal/fotter.php");
+        ?> 
          <!--fin Footer-->           
     </div>
 
